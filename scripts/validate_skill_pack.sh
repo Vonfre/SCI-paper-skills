@@ -22,6 +22,7 @@ SKILLS=(
 )
 
 required_root_files=(
+  LICENSE
   README.md
   README.zh-CN.md
   manifest.yaml

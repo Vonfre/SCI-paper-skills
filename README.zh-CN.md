@@ -131,6 +131,10 @@ bash scripts/validate_skill_pack.sh
 
 发布较大的技能改动前，也应使用 skill creator 的 `quick_validate.py` 工具验证每个技能。如果内置运行时缺少 PyYAML，请使用已安装 `yaml` 的系统 `python3`。
 
+## 许可证
+
+本项目基于 [MIT License](LICENSE) 开源。
+
 ## 新增技能规范
 
 新增模块应包含：

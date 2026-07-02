@@ -131,6 +131,10 @@ bash scripts/validate_skill_pack.sh
 
 Before publishing larger skill changes, also validate each skill with the skill creator `quick_validate.py` tool. If the bundled runtime lacks PyYAML, use a system `python3` that has `yaml` installed.
 
+## License
+
+This project is released under the [MIT License](LICENSE).
+
 ## Adding A Skill
 
 New modules should include:
