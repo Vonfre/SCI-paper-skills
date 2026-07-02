@@ -2,6 +2,12 @@
 
 All notable changes to `SCI-paper-skills` are documented here.
 
+## 0.6.1 - Complete Zero-To-One Example
+
+- Reworked `examples/` around a complete synthetic zero-to-one SCI manuscript workflow.
+- Added an initial user brief, staged skill-call run log, final manuscript package, and final `manuscript_state` snapshot.
+- Updated README files, manifest metadata, and validation checks so the complete example is part of the published package.
+
 ## 0.6.0 - Release-Ready Project Polish
 
 - Added `examples/` with a compact manuscript-state example.

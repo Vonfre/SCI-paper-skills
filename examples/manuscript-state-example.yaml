@@ -1,16 +1,22 @@
+# Synthetic final state for examples/zero-to-one-sci-manuscript/.
+# This is a workflow fixture, not a scientific record.
 manuscript_state:
   state_version: "0.4"
   project_id: "aba-stomatal-closure-demo"
-  updated_by_skill: "sci-storyline-planner"
-  current_stage: "storyline planning"
-  next_skill: "sci-reviewer-simulator"
+  updated_by_skill: "sci-submission-revision"
+  current_stage: "submission readiness check"
+  next_skill: "final repair before submission"
   global_blockers:
-    - "[CITE: direct evidence linking DRK1 to ABA signaling]"
+    - "[NEED: exact sample sizes, biological replicates, statistical tests, and P values]"
+    - "[CITE: verified ABA guard-cell pathway sources]"
+    - "[NEED: verify current target-journal author instructions]"
 
 project:
-  user_goal: "Prepare a target-journal-ready plant biology manuscript."
+  user_goal: "Use SCI-paper-skills from zero to one to build a target-journal-adaptive manuscript package."
   target_journal: "The Plant Cell"
-  candidate_journals: []
+  candidate_journals:
+    - "Plant Physiology"
+    - "[NEED: one lower-risk plant signaling journal]"
   target_level: "plant biology society journal"
   article_type: "research article"
   topic: "DRK1 and ABA-induced stomatal closure"
@@ -20,101 +26,211 @@ project:
     - stomatal aperture assay
     - mutant complementation
     - ROS imaging
+    - qPCR marker-gene assay
   available_artifacts:
-    - rough figure list
-    - result bullets
-    - candidate target journal
+    - rough result bullets
+    - candidate figure list
+    - target-journal preference
   deadline_or_decision_context: ""
   missing_inputs:
-    - "[NEED: exact sample sizes and statistical tests]"
+    - "[NEED: genotype details]"
+    - "[NEED: raw figure panels]"
+    - "[NEED: exact statistics]"
 
 journal_landscape:
-  journal_portrait: "Target journal expects mechanistic plant biology with strong genetic and physiological evidence."
+  journal_portrait: "Target journal likely requires mechanistic plant biology, strong genetic evidence, and clear advance for plant biology readers."
   author_constraints:
-    - "[NEED: verify current author instructions before submission]"
+    - "[NEED: verify current author instructions, article type, figure limits, reference style, and data policy]"
   article_type_constraints:
-    - "[NEED: verify current article type and figure limits]"
+    - "[NEED: verify current research-article limits before submission]"
   comparable_papers:
     - paper_id: "P1"
-      citation: "[CITE: comparable guard-cell signaling paper]"
-      doi_or_url: "[NEED: DOI]"
-      why_comparable: "Same target audience and signaling depth."
-      pattern_to_reuse: "Phenotype -> mechanism -> rescue logic."
+      citation: "[CITE: same-journal guard-cell ABA signaling paper]"
+      doi_or_url: "[NEED: DOI/URL]"
+      why_comparable: "Same broad target audience and ABA guard-cell signaling scope."
+      pattern_to_reuse: "Phenotype -> rescue -> pathway-associated signal -> bounded mechanism."
+    - paper_id: "P2"
+      citation: "[CITE: peer-journal kinase/stomatal closure paper]"
+      doi_or_url: "[NEED: DOI/URL]"
+      why_comparable: "Comparable evidence ladder for a kinase-linked stomatal phenotype."
+      pattern_to_reuse: "Use cautious pathway wording until direct mechanism is shown."
   fit_verdict: "Possible but risky"
   manuscript_must_prove:
-    - "DRK1 phenotype is reproducible."
-    - "DRK1 effect is linked to ABA response rather than general stress."
-    - "Mechanistic claim is supported or softened."
+    - "DRK1 phenotype is reproducible and statistically supported."
+    - "DRK1 complementation links the phenotype to DRK1 disruption."
+    - "ROS and transcript data support context without overstating direct mechanism."
   retrieval_dates:
-    - "[NEED: retrieval date]"
+    - "[NEED: retrieval date for current journal requirements]"
   journal_blockers:
-    - "Mechanism evidence may be incomplete."
+    - "Mechanistic depth may be insufficient for the first-choice journal."
 
 source_ledger:
   research_questions:
-    - "What is known about ABA-induced stomatal closure pathways?"
-    - "Are DRK-family kinases reported in guard-cell signaling?"
+    - "What is established for ABA-induced stomatal closure?"
+    - "How is ABA-induced ROS interpreted in guard-cell signaling?"
+    - "What evidence is expected to place a kinase in an ABA pathway?"
   sources:
     - source_id: "S1"
-      citation: "[CITE: ABA guard-cell review]"
+      citation: "[CITE: verified ABA guard-cell signaling review]"
       doi_pmid_url: "[NEED: DOI/URL]"
       source_type: "review"
       metadata_status: "needs check"
-      evidence_location: "background framing"
+      evidence_location: "Introduction background"
       supports_claim_ids:
         - "C1"
       contradicts_or_qualifies_claim_ids: []
       confidence: "plausible"
+    - source_id: "S2"
+      citation: "[CITE: verified ABA-induced ROS primary paper]"
+      doi_pmid_url: "[NEED: DOI/URL]"
+      source_type: "primary"
+      metadata_status: "needs check"
+      evidence_location: "Results interpretation and Discussion"
+      supports_claim_ids:
+        - "C3"
+      contradicts_or_qualifies_claim_ids: []
+      confidence: "plausible"
+    - source_id: "S3"
+      citation: "[CITE: verified ABA-responsive marker-gene source]"
+      doi_pmid_url: "[NEED: DOI/URL]"
+      source_type: "primary"
+      metadata_status: "needs check"
+      evidence_location: "Results 4 and Methods"
+      supports_claim_ids:
+        - "C4"
+      contradicts_or_qualifies_claim_ids: []
+      confidence: "unknown"
 
 claim_registry:
   claims:
     - claim_id: "C1"
       linked_result_or_figure_ids:
         - "F1"
-      observation: "drk1 mutants show wider stomatal aperture after ABA treatment than wild type."
+      observation: "drk1 mutants retain larger stomatal aperture than wild type after ABA treatment."
       user_interpretation: "DRK1 participates in ABA-induced stomatal closure."
       claim_level: "regulation"
       safe_wording: "DRK1 is required for full ABA-induced stomatal closure under the tested conditions."
       stronger_wording_if_fixed: "DRK1 directly regulates ABA-induced stomatal closure."
       evidence_needed_for_stronger_claim:
-        - "direct substrate or pathway evidence"
-        - "rescue/complementation"
+        - "direct pathway placement or substrate evidence"
+        - "complete statistics and replicate reporting"
       citation_needs:
-        - "[CITE: ABA stomatal closure pathway]"
+        - "[CITE: ABA guard-cell closure pathway]"
+      status: "needs evidence"
+    - claim_id: "C2"
+      linked_result_or_figure_ids:
+        - "F2"
+      observation: "DRK1 complementation partially restores ABA-induced closure."
+      user_interpretation: "The phenotype is linked to DRK1 disruption."
+      claim_level: "causality"
+      safe_wording: "Complementation supports a DRK1-linked contribution to the ABA response."
+      stronger_wording_if_fixed: "DRK1 is sufficient to restore the pathway response."
+      evidence_needed_for_stronger_claim:
+        - "construct details"
+        - "line expression validation"
+        - "independent lines"
+      citation_needs: []
+      status: "needs evidence"
+    - claim_id: "C3"
+      linked_result_or_figure_ids:
+        - "F3"
+      observation: "ABA-induced ROS signal is weaker in drk1 guard cells."
+      user_interpretation: "DRK1 may act in a ROS-linked ABA response branch."
+      claim_level: "association"
+      safe_wording: "DRK1 disruption is associated with reduced ABA-induced ROS accumulation."
+      stronger_wording_if_fixed: "DRK1 acts upstream of ABA-induced ROS production."
+      evidence_needed_for_stronger_claim:
+        - "pathway ordering experiment"
+        - "ROS rescue or epistasis analysis"
+      citation_needs:
+        - "[CITE: ABA-induced ROS in guard cells]"
+      status: "needs evidence"
+    - claim_id: "C4"
+      linked_result_or_figure_ids:
+        - "F4"
+      observation: "Selected ABA-responsive marker genes change in drk1."
+      user_interpretation: "DRK1 affects ABA-responsive transcription."
+      claim_level: "association"
+      safe_wording: "DRK1 perturbation alters selected ABA-responsive transcript markers."
+      stronger_wording_if_fixed: "DRK1 controls the ABA transcriptional program."
+      evidence_needed_for_stronger_claim:
+        - "validated marker choice"
+        - "broader transcriptomic or time-course evidence"
+      citation_needs:
+        - "[CITE: ABA-responsive marker-gene validation]"
       status: "needs evidence"
 
 figure_registry:
   figures:
     - figure_id: "F1"
-      title_or_label: "ABA stomatal aperture assay"
+      title_or_label: "ABA stomatal aperture phenotype"
       role: "opening"
       answered_question: "Does DRK1 affect ABA-induced stomatal closure?"
       linked_claim_ids:
         - "C1"
       placement: "main"
       missing_panels_controls_stats:
-        - "[NEED: sample size]"
-        - "[NEED: statistical test]"
-      transition_to_next_figure: "Test whether the phenotype is rescued by DRK1 complementation."
+        - "[NEED: ABA concentration and time point]"
+        - "[NEED: sample size and statistical test]"
+      transition_to_next_figure: "Test whether DRK1 complementation restores the response."
+    - figure_id: "F2"
+      title_or_label: "DRK1 complementation"
+      role: "central proof"
+      answered_question: "Is the phenotype linked to DRK1 disruption?"
+      linked_claim_ids:
+        - "C2"
+      placement: "main"
+      missing_panels_controls_stats:
+        - "[NEED: complementation line validation]"
+        - "[NEED: replicate count]"
+      transition_to_next_figure: "Ask whether the DRK1-linked phenotype connects to ABA-induced ROS."
+    - figure_id: "F3"
+      title_or_label: "ABA-induced ROS imaging"
+      role: "validation"
+      answered_question: "Is DRK1 associated with ABA-triggered ROS accumulation?"
+      linked_claim_ids:
+        - "C3"
+      placement: "main"
+      missing_panels_controls_stats:
+        - "[NEED: imaging quantification]"
+        - "[NEED: ROS probe and controls]"
+      transition_to_next_figure: "Add transcript marker evidence without overclaiming mechanism."
+    - figure_id: "F4"
+      title_or_label: "ABA-responsive marker-gene qPCR"
+      role: "extension"
+      answered_question: "Are selected ABA-responsive transcripts altered in drk1?"
+      linked_claim_ids:
+        - "C4"
+      placement: "main or supplement"
+      missing_panels_controls_stats:
+        - "[NEED: marker gene validation]"
+        - "[NEED: normalization and replicate details]"
+      transition_to_next_figure: "Move to Discussion and limitations."
 
 story:
   candidate_stories:
-    - "DRK1 as a guard-cell ABA response regulator."
+    - "DRK1 as a guard-cell ABA response contributor."
     - "DRK1 as a broader stress-response modifier."
   recommended_story:
     story_id: "ST1"
     one_sentence_takeaway: "DRK1 supports ABA-induced stomatal closure in Arabidopsis guard cells."
     selected_claim_ids:
       - "C1"
+      - "C2"
+      - "C3"
+      - "C4"
     excluded_or_supplement_claim_ids: []
-    target_journal_fit_reason: "Potentially fits if genetic rescue and pathway evidence are strengthened."
-    risk: "Mechanistic depth may be insufficient."
-  backup_story: "Shorter physiology-focused manuscript for a lower-risk plant physiology journal."
-  manuscript_boundary: "Avoid direct mechanism claims unless pathway evidence is added."
+    target_journal_fit_reason: "The story may fit if genetic, statistical, and pathway evidence are strengthened."
+    risk: "Direct mechanism remains unresolved."
+  backup_story: "A physiology-focused manuscript for a lower-risk plant physiology journal."
+  manuscript_boundary: "Avoid direct mechanism claims unless pathway placement evidence is added."
 
 storyline:
   result_order:
     - "F1"
+    - "F2"
+    - "F3"
+    - "F4"
   section_registry:
     - section_id: "SEC1"
       section_type: "results"
@@ -125,58 +241,137 @@ storyline:
         - "F1"
       needed_source_ids:
         - "S1"
+      draft_status: "drafted"
+    - section_id: "SEC2"
+      section_type: "results"
+      purpose: "Show complementation support."
+      linked_claim_ids:
+        - "C2"
+      linked_figure_ids:
+        - "F2"
+      needed_source_ids: []
       draft_status: "skeleton"
-  drafting_brief: "Draft as phenotype-first with careful claim strength and visible missing statistics."
+    - section_id: "SEC3"
+      section_type: "results"
+      purpose: "Connect DRK1 disruption to ABA-induced ROS accumulation."
+      linked_claim_ids:
+        - "C3"
+      linked_figure_ids:
+        - "F3"
+      needed_source_ids:
+        - "S2"
+      draft_status: "drafted"
+    - section_id: "SEC4"
+      section_type: "results"
+      purpose: "Present bounded marker-gene support."
+      linked_claim_ids:
+        - "C4"
+      linked_figure_ids:
+        - "F4"
+      needed_source_ids:
+        - "S3"
+      draft_status: "skeleton"
+  drafting_brief: "Use phenotype-first structure with cautious mechanism language and visible placeholders."
   draft_readiness: "skeleton only"
   draft_blockers:
-    - "Missing statistics."
-    - "Missing direct pathway evidence."
+    - "Statistics and citation metadata are incomplete."
+    - "Mechanistic pathway placement is unresolved."
 
 reviewer_risk:
   scorecard:
     - dimension: "Evidence strength"
       score: 3
-      reason: "Phenotype is plausible but mechanism is not controlled."
+      reason: "Phenotype and complementation are promising, but mechanism is not fully controlled."
+    - dimension: "Journal fit"
+      score: 3
+      reason: "First-choice journal may require stronger mechanistic novelty."
   blocking_objections: []
   major_objections:
     - issue_id: "R1"
       objection: "Mechanistic claim exceeds current evidence."
       minimum_fix: "Soften wording and add limitation."
-      stronger_fix: "Add pathway or rescue evidence."
+      stronger_fix: "Add pathway ordering, substrate, or epistasis evidence."
+    - issue_id: "R2"
+      objection: "Statistics and biological replication are incomplete."
+      minimum_fix: "Report n, tests, exact P values, and biological replicates."
+      stronger_fix: "Add independent validation or replicate experiment."
+    - issue_id: "R3"
+      objection: "Target-journal fit may be weak without a clear mechanistic advance."
+      minimum_fix: "Reframe as a bounded physiological contribution."
+      stronger_fix: "Add mechanistic evidence or choose fallback journal."
   repair_queue:
     - "R1"
+    - "R2"
+    - "R3"
   decision: "revise before submission"
 
 draft_registry:
   sections:
     - section_id: "SEC1"
-      status: "skeleton"
+      status: "drafted"
       linked_claim_ids:
         - "C1"
+    - section_id: "SEC2"
+      status: "skeleton"
+      linked_claim_ids:
+        - "C2"
+    - section_id: "SEC3"
+      status: "drafted"
+      linked_claim_ids:
+        - "C3"
+    - section_id: "SEC4"
+      status: "skeleton"
+      linked_claim_ids:
+        - "C4"
   open_needs:
-    - "[NEED: sample size]"
+    - "[NEED: ABA concentration and time point]"
+    - "[NEED: sample sizes]"
+    - "[NEED: exact statistical tests]"
+    - "[NEED: genotype and complementation details]"
   open_citations:
-    - "[CITE: ABA pathway]"
+    - "[CITE: ABA guard-cell signaling review]"
+    - "[CITE: ABA-induced ROS primary evidence]"
+    - "[CITE: ABA-responsive marker-gene validation]"
   high_risk_claim_ids:
     - "C1"
+    - "C3"
+    - "C4"
 
 citation_audit:
   unsupported_claim_ids:
-    - "C1"
+    - "C3"
+    - "C4"
   verified_reference_ids: []
   metadata_risks:
     - "S1 metadata unverified."
+    - "S2 metadata unverified."
+    - "S3 metadata unverified."
   citation_placement_plan:
-    - "Place ABA background citation in Introduction and Discussion, not as direct proof of DRK1."
-  citation_health: "needs repair"
+    - "Use S1 in the Introduction for ABA guard-cell background."
+    - "Use S2 when interpreting ROS as ABA-response context."
+    - "Use S3 only if selected qPCR markers are retained."
+  citation_health: "blocked"
 
 submission_package:
-  file_checklist: []
+  file_checklist:
+    - "manuscript draft"
+    - "main figures F1-F3"
+    - "figure F4 main/supplement decision"
+    - "supplementary methods/statistics"
+    - "cover letter"
+    - "data availability statement"
+    - "funding and conflict-of-interest statements"
   required_statements:
     - "[NEED: data availability statement]"
+    - "[NEED: funding statement]"
+    - "[NEED: author contributions]"
+    - "[NEED: conflict-of-interest statement]"
+    - "[NEED: verify current journal policy statements]"
   unresolved_placeholders:
-    - "[NEED: sample size]"
-    - "[CITE: ABA pathway]"
-  cover_letter_status: "not started"
+    - "[NEED: sample sizes]"
+    - "[NEED: statistical tests]"
+    - "[CITE: ABA guard-cell pathway]"
+    - "[CITE: ABA-induced ROS]"
+  cover_letter_status: "skeleton only"
   rebuttal_matrix_status: "not applicable"
   final_readiness: "blocked"

@@ -36,6 +36,10 @@ required_root_files=(
   docs/design-principles.md
   docs/skill-index.md
   examples/README.md
+  examples/zero-to-one-sci-manuscript/README.md
+  examples/zero-to-one-sci-manuscript/initial-user-brief.md
+  examples/zero-to-one-sci-manuscript/complete-workflow.md
+  examples/zero-to-one-sci-manuscript/final-package.md
   examples/manuscript-state-example.yaml
   .github/workflows/validate.yml
   scripts/sync_codex_skills.sh
@@ -48,6 +52,23 @@ for file in "${required_root_files[@]}"; do
     fail "Missing required file: $file"
   fi
 done
+
+manifest_declared_files="$(awk '
+  /^  github_actions: / {print $2}
+  /^  zero_to_one_workflow: / {print $2}
+  /^  initial_brief: / {print $2}
+  /^  complete_run: / {print $2}
+  /^  final_package: / {print $2}
+  /^  manuscript_state: / {print $2}
+  /^release_notes: / {print $2}
+' "$ROOT_DIR/manifest.yaml")"
+
+while IFS= read -r file; do
+  [[ -n "$file" ]] || continue
+  if [[ ! -f "$ROOT_DIR/$file" ]]; then
+    fail "manifest.yaml points to missing file: $file"
+  fi
+done <<< "$manifest_declared_files"
 
 manifest_version="$(awk -F': *' '$1 == "version" {print $2; exit}' "$ROOT_DIR/manifest.yaml" | tr -d '"')"
 if [[ ! "$manifest_version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
