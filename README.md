@@ -1,5 +1,7 @@
 # SCI-paper-skills
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 `SCI-paper-skills` is a target-journal-adaptive skill suite for turning real research results into a coherent SCI/SCIE manuscript.
 
 It is designed for graduate students and researchers who already have data, figures, conclusions, or a rough idea, but do not yet know how to organize the logic, support claims with literature, imitate the target journal's writing pattern, and prepare a submission-ready paper.
