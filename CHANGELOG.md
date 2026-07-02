@@ -2,6 +2,12 @@
 
 All notable changes to `SCI-paper-skills` are documented here.
 
+## 0.6.3 - Bilingual Paper-Format Example
+
+- Reworked the zero-to-one example into true paper-format Markdown outputs instead of workflow-style prose.
+- Added complete English and Chinese manuscript versions with Abstract/摘要, Introduction/引言, Results/结果, Discussion/讨论, Materials and Methods/材料与方法, declarations, figure legends, supplementary table, and references.
+- Updated README files, manifest metadata, package validation, and final package metadata for the bilingual manuscript example.
+
 ## 0.6.2 - Complete Manuscript Example
 
 - Added `complete-manuscript.md`, a full synthetic SCI-style paper generated from the example workflow.

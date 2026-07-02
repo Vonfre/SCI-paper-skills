@@ -38,6 +38,7 @@ required_root_files=(
   examples/README.md
   examples/zero-to-one-sci-manuscript/README.md
   examples/zero-to-one-sci-manuscript/complete-manuscript.md
+  examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md
   examples/zero-to-one-sci-manuscript/initial-user-brief.md
   examples/zero-to-one-sci-manuscript/complete-workflow.md
   examples/zero-to-one-sci-manuscript/final-package.md
@@ -56,7 +57,8 @@ done
 
 manifest_declared_files="$(awk '
   /^  github_actions: / {print $2}
-  /^  complete_manuscript: / {print $2}
+  /^  complete_manuscript_en: / {print $2}
+  /^  complete_manuscript_zh: / {print $2}
   /^  zero_to_one_workflow: / {print $2}
   /^  initial_brief: / {print $2}
   /^  complete_run: / {print $2}
@@ -71,6 +73,21 @@ while IFS= read -r file; do
     fail "manifest.yaml points to missing file: $file"
   fi
 done <<< "$manifest_declared_files"
+
+english_manuscript="$ROOT_DIR/examples/zero-to-one-sci-manuscript/complete-manuscript.md"
+chinese_manuscript="$ROOT_DIR/examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md"
+
+for heading in "## Abstract" "## Introduction" "## Results" "## Discussion" "## Materials and Methods" "## References"; do
+  if ! grep -q "^$heading$" "$english_manuscript"; then
+    fail "English complete manuscript is missing heading: $heading"
+  fi
+done
+
+for heading in "## 摘要" "## 引言" "## 结果" "## 讨论" "## 材料与方法" "## 参考文献"; do
+  if ! grep -q "^$heading$" "$chinese_manuscript"; then
+    fail "Chinese complete manuscript is missing heading: $heading"
+  fi
+done
 
 manifest_version="$(awk -F': *' '$1 == "version" {print $2; exit}' "$ROOT_DIR/manifest.yaml" | tr -d '"')"
 if [[ ! "$manifest_version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then

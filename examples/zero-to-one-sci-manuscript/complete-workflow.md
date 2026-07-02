@@ -396,10 +396,11 @@ Expected output:
 
 ```markdown
 Complete manuscript assembly:
-- Manuscript file: complete-manuscript.md.
-- Included sections: title, authors, abstract, significance statement, keywords, Introduction, Results, Discussion, Materials and Methods, Data Availability, Funding, Author Contributions, Conflict Of Interest, Acknowledgements, Figure Legends, Supplementary Table, and References.
+- English manuscript file: complete-manuscript.md.
+- Chinese manuscript file: complete-manuscript.zh-CN.md.
+- Included sections: title, authors, abstract/摘要, significance statement/重要性说明, keywords/关键词, Introduction/引言, Results/结果, Discussion/讨论, Materials and Methods/材料与方法, Data Availability/数据可用性, Funding/经费资助, Author Contributions/作者贡献, Conflict Of Interest/利益冲突, Acknowledgements/致谢, Figure Legends/图注, Supplementary Table/补充表, and References/参考文献.
 - Citation status: background references included and DOI redirects checked for the demo.
-- Final readiness: complete synthetic demo manuscript.
+- Final readiness: complete bilingual synthetic demo manuscripts.
 
 Real-project caution:
 1. Replace all synthetic DRK1 data before real submission.
@@ -407,4 +408,4 @@ Real-project caution:
 3. Add real raw data, figures, author details, funding, and policy statements.
 ```
 
-The complete paper is shown in `complete-manuscript.md`. The final package metadata is shown in `final-package.md`. The final state snapshot is `../manuscript-state-example.yaml`.
+The complete papers are shown in `complete-manuscript.md` and `complete-manuscript.zh-CN.md`. The final package metadata is shown in `final-package.md`. The final state snapshot is `../manuscript-state-example.yaml`.

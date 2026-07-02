@@ -1,10 +1,11 @@
 # Zero-To-One SCI Manuscript Example
 
-This example shows the final output of a full synthetic run of `SCI-paper-skills`: a user starts with rough results and no writing plan, then the orchestrator routes through the skill suite until a complete manuscript exists.
+This example shows the final output of a full synthetic run of `SCI-paper-skills`: a user starts with rough results and no writing plan, then the orchestrator routes through the skill suite until complete English and Chinese manuscripts exist.
 
 ## Files
 
-- `complete-manuscript.md`: the complete synthetic SCI-style manuscript produced by the example run.
+- `complete-manuscript.md`: the complete English SCI-style manuscript produced by the example run.
+- `complete-manuscript.zh-CN.md`: the complete Chinese SCI-style manuscript produced by the same example run.
 - `initial-user-brief.md`: the first message a user can paste after calling `$sci-paper-skills`.
 - `complete-workflow.md`: the staged run showing which skill is called, what it consumes, what it produces, and how the next handoff is chosen.
 - `final-package.md`: the manuscript package metadata behind the final manuscript: title decision, figure order, section map, citation audit, and readiness status.
@@ -13,7 +14,7 @@ This example shows the final output of a full synthetic run of `SCI-paper-skills
 ## How To Use
 
 1. Install the skill pack with `bash scripts/sync_codex_skills.sh`.
-2. Read `complete-manuscript.md` first to see the actual complete paper output.
+2. Read `complete-manuscript.md` and `complete-manuscript.zh-CN.md` first to see the actual bilingual paper output.
 3. Start a new Codex chat and invoke `$sci-paper-skills`.
 4. Paste the brief from `initial-user-brief.md`.
 5. Use `complete-workflow.md`, `final-package.md`, and `../manuscript-state-example.yaml` to inspect how the paper was built.

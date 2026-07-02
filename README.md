@@ -75,7 +75,8 @@ The tight workflow layer adds stateful handoff rules so the skills work as a con
 - Shared state: [manuscript-state-schema.md](skills/sci-paper-skills/references/manuscript-state-schema.md)
 - Stage contracts: [handoff-contracts.md](skills/sci-paper-skills/references/handoff-contracts.md)
 - End-to-end routes: [end-to-end-runbooks.md](docs/end-to-end-runbooks.md)
-- Complete example paper: [complete-manuscript.md](examples/zero-to-one-sci-manuscript/complete-manuscript.md)
+- Complete example paper (English): [complete-manuscript.md](examples/zero-to-one-sci-manuscript/complete-manuscript.md)
+- Complete example paper (Chinese): [complete-manuscript.zh-CN.md](examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md)
 - Example run notes: [zero-to-one-sci-manuscript](examples/zero-to-one-sci-manuscript/README.md)
 - Final example state: [manuscript-state-example.yaml](examples/manuscript-state-example.yaml)
 

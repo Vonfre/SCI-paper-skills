@@ -4,7 +4,7 @@ manuscript_state:
   state_version: "0.4"
   project_id: "aba-stomatal-closure-demo"
   updated_by_skill: "sci-submission-revision"
-  current_stage: "complete demo manuscript"
+  current_stage: "complete bilingual demo manuscripts"
   next_skill: "none"
   global_blockers: []
   real_project_caveats:
@@ -12,7 +12,7 @@ manuscript_state:
     - "Re-verify every reference, figure, statistic, author statement, and journal requirement."
 
 project:
-  user_goal: "Use SCI-paper-skills from zero to one to produce a complete SCI-style manuscript."
+  user_goal: "Use SCI-paper-skills from zero to one to produce complete English and Chinese SCI-style manuscripts."
   target_journal: "plant biology research journal"
   candidate_journals:
     - "The Plant Cell"
@@ -29,6 +29,7 @@ project:
     - qRT-PCR marker-gene assay
   available_artifacts:
     - "complete-manuscript.md"
+    - "complete-manuscript.zh-CN.md"
     - "final-package.md"
     - "complete-workflow.md"
   missing_inputs: []
@@ -211,7 +212,7 @@ story:
       - "C3"
       - "C4"
     excluded_or_supplement_claim_ids: []
-    target_journal_fit_reason: "Complete synthetic manuscript uses a bounded plant physiology story."
+    target_journal_fit_reason: "Complete bilingual synthetic manuscripts use a bounded plant physiology story."
     risk: "Real mechanism remains unproven, so the complete manuscript avoids direct pathway claims."
   backup_story: "DRK1 as a physiology-focused ABA-response modifier."
   manuscript_boundary: "No direct mechanism claim without real pathway-placement evidence."
@@ -278,8 +279,8 @@ storyline:
         - "S2"
         - "S3"
       draft_status: "complete"
-  drafting_brief: "Complete synthetic manuscript with bounded claim strength."
-  draft_readiness: "complete demo manuscript"
+  drafting_brief: "Complete English and Chinese paper-format manuscripts with bounded claim strength."
+  draft_readiness: "complete bilingual demo manuscripts"
   draft_blockers: []
 
 reviewer_risk:
@@ -297,10 +298,12 @@ reviewer_risk:
       minimum_fix: "Keep bounded wording."
       stronger_fix: "Add real epistasis, substrate, or rescue experiments."
   repair_queue: []
-  decision: "complete synthetic demo"
+  decision: "complete bilingual synthetic demo"
 
 draft_registry:
-  manuscript_file: "examples/zero-to-one-sci-manuscript/complete-manuscript.md"
+  manuscript_files:
+    english: "examples/zero-to-one-sci-manuscript/complete-manuscript.md"
+    chinese: "examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md"
   sections:
     - section_id: "SEC1"
       status: "complete"
@@ -344,9 +347,12 @@ citation_audit:
   citation_health: "complete for demo"
 
 submission_package:
-  manuscript_file: "examples/zero-to-one-sci-manuscript/complete-manuscript.md"
+  manuscript_files:
+    english: "examples/zero-to-one-sci-manuscript/complete-manuscript.md"
+    chinese: "examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md"
   file_checklist:
-    - "complete manuscript"
+    - "complete English manuscript"
+    - "complete Chinese manuscript"
     - "synthetic figure legends"
     - "synthetic supplementary statistical table"
     - "data availability statement"
@@ -362,4 +368,4 @@ submission_package:
   unresolved_placeholders: []
   cover_letter_status: "not included in manuscript example"
   rebuttal_matrix_status: "not applicable"
-  final_readiness: "complete synthetic demo manuscript"
+  final_readiness: "complete bilingual synthetic demo manuscripts"

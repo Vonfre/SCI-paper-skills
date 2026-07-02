@@ -1,13 +1,14 @@
 # Final Package From The Example Run
 
-This package records the manuscript-level decisions behind `complete-manuscript.md`. The manuscript is complete as a synthetic example, but it is not a scientific record and must not be submitted as real research.
+This package records the manuscript-level decisions behind the bilingual paper outputs. The manuscripts are complete as a synthetic example, but they are not scientific records and must not be submitted as real research.
 
 ## Final Manuscript
 
-- File: `complete-manuscript.md`
+- English file: `complete-manuscript.md`
+- Chinese file: `complete-manuscript.zh-CN.md`
 - Title: DRK1 Supports ABA-Induced Stomatal Closure in Arabidopsis Guard Cells
 - Article type: synthetic research article
-- Readiness: complete demo manuscript
+- Readiness: complete bilingual demo manuscripts
 
 ## Central Claim
 
@@ -33,7 +34,7 @@ Claim boundary:
 
 | Section ID | Section | Status | Output Location |
 |---|---|---|---|
-| SEC1 | Introduction | complete | `complete-manuscript.md` |
+| SEC1 | Introduction / 引言 | complete | bilingual manuscripts |
 | SEC2 | Results 1 | complete | Figure 1 section |
 | SEC3 | Results 2 | complete | Figure 2 section |
 | SEC4 | Results 3 | complete | Figure 3 section |

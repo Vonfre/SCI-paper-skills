@@ -75,7 +75,8 @@ $sci-paper-skills
 - 共享状态：[manuscript-state-schema.md](skills/sci-paper-skills/references/manuscript-state-schema.md)
 - 阶段交接：[handoff-contracts.md](skills/sci-paper-skills/references/handoff-contracts.md)
 - 端到端路线：[end-to-end-runbooks.md](docs/end-to-end-runbooks.md)
-- 完整论文示例：[complete-manuscript.md](examples/zero-to-one-sci-manuscript/complete-manuscript.md)
+- 完整论文示例（英文）：[complete-manuscript.md](examples/zero-to-one-sci-manuscript/complete-manuscript.md)
+- 完整论文示例（中文）：[complete-manuscript.zh-CN.md](examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md)
 - 示例运行说明：[zero-to-one-sci-manuscript](examples/zero-to-one-sci-manuscript/README.md)
 - 最终状态示例：[manuscript-state-example.yaml](examples/manuscript-state-example.yaml)
 
