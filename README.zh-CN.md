@@ -75,6 +75,7 @@ $sci-paper-skills
 - 共享状态：[manuscript-state-schema.md](skills/sci-paper-skills/references/manuscript-state-schema.md)
 - 阶段交接：[handoff-contracts.md](skills/sci-paper-skills/references/handoff-contracts.md)
 - 端到端路线：[end-to-end-runbooks.md](docs/end-to-end-runbooks.md)
+- 状态示例：[manuscript-state-example.yaml](examples/manuscript-state-example.yaml)
 
 每个阶段现在都要读取上游 state，更新自己负责的字段，保留 `C#`、`F#`、`S#`、`SEC#` 等 ID，并在输出结尾给出 `Manuscript State Update` 和 `Handoff`。
 
@@ -99,8 +100,10 @@ $sci-paper-skills
 ```text
 README.md
 README.zh-CN.md
+CHANGELOG.md
 manifest.yaml
 docs/
+examples/
 scripts/
 skills/
   sci-paper-skills/
@@ -139,6 +142,8 @@ python skills/sci-paper-skills/scripts/init_journal_project.py \
 ```bash
 bash scripts/validate_skill_pack.sh
 ```
+
+同一检查会在 GitHub Actions 的 push 和 pull request 中自动运行。版本变化和升级说明见 [CHANGELOG.md](CHANGELOG.md)。
 
 发布较大的技能改动前，也应使用 skill creator 的 `quick_validate.py` 工具验证每个技能。如果内置运行时缺少 PyYAML，请使用已安装 `yaml` 的系统 `python3`。
 

@@ -75,6 +75,7 @@ The tight workflow layer adds stateful handoff rules so the skills work as a con
 - Shared state: [manuscript-state-schema.md](skills/sci-paper-skills/references/manuscript-state-schema.md)
 - Stage contracts: [handoff-contracts.md](skills/sci-paper-skills/references/handoff-contracts.md)
 - End-to-end routes: [end-to-end-runbooks.md](docs/end-to-end-runbooks.md)
+- Example state: [manuscript-state-example.yaml](examples/manuscript-state-example.yaml)
 
 Every stage now consumes upstream state, updates its owned fields, preserves IDs such as `C#`, `F#`, `S#`, `SEC#`, and ends with `Manuscript State Update` plus `Handoff` blocks.
 
@@ -99,8 +100,10 @@ See [docs/inspiration-high-star-writing-research-projects.md](docs/inspiration-h
 ```text
 README.md
 README.zh-CN.md
+CHANGELOG.md
 manifest.yaml
 docs/
+examples/
 scripts/
 skills/
   sci-paper-skills/
@@ -139,6 +142,8 @@ Run the local pack check:
 ```bash
 bash scripts/validate_skill_pack.sh
 ```
+
+The same check runs in GitHub Actions on pushes and pull requests. See [CHANGELOG.md](CHANGELOG.md) for release history and upgrade notes.
 
 Before publishing larger skill changes, also validate each skill with the skill creator `quick_validate.py` tool. If the bundled runtime lacks PyYAML, use a system `python3` that has `yaml` installed.
 

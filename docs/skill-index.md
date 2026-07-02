@@ -1,6 +1,6 @@
 # SCI-paper-skills Index
 
-Use `sci-paper-skills` as the orchestrator unless the user explicitly requests a focused module. In the v0.4 tight workflow, every module reads and updates `manuscript_state` and preserves IDs across handoffs.
+Use `sci-paper-skills` as the orchestrator unless the user explicitly requests a focused module. In the tight workflow, every module reads and updates `manuscript_state` and preserves IDs across handoffs.
 
 | Stage | Skill | Use When | Primary Output | Typical Next Step |
 |---:|---|---|---|---|

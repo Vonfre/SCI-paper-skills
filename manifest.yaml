@@ -1,5 +1,5 @@
 name: SCI-paper-skills
-version: 0.5.0
+version: 0.6.0
 license: MIT
 description: Target-journal-adaptive Codex skills for SCI/SCIE manuscript planning, drafting, polishing, citation control, submission, and revision.
 workflow:
@@ -11,6 +11,10 @@ install:
   script: scripts/sync_codex_skills.sh
 validation:
   script: scripts/validate_skill_pack.sh
+  github_actions: .github/workflows/validate.yml
+examples:
+  manuscript_state: examples/manuscript-state-example.yaml
+release_notes: CHANGELOG.md
 skills:
   - name: sci-paper-skills
     status: stable

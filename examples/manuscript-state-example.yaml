@@ -1,0 +1,182 @@
+manuscript_state:
+  state_version: "0.4"
+  project_id: "aba-stomatal-closure-demo"
+  updated_by_skill: "sci-storyline-planner"
+  current_stage: "storyline planning"
+  next_skill: "sci-reviewer-simulator"
+  global_blockers:
+    - "[CITE: direct evidence linking DRK1 to ABA signaling]"
+
+project:
+  user_goal: "Prepare a target-journal-ready plant biology manuscript."
+  target_journal: "The Plant Cell"
+  candidate_journals: []
+  target_level: "plant biology society journal"
+  article_type: "research article"
+  topic: "DRK1 and ABA-induced stomatal closure"
+  field: "plant physiology"
+  organism_material_system: "Arabidopsis guard cells"
+  main_methods:
+    - stomatal aperture assay
+    - mutant complementation
+    - ROS imaging
+  available_artifacts:
+    - rough figure list
+    - result bullets
+    - candidate target journal
+  deadline_or_decision_context: ""
+  missing_inputs:
+    - "[NEED: exact sample sizes and statistical tests]"
+
+journal_landscape:
+  journal_portrait: "Target journal expects mechanistic plant biology with strong genetic and physiological evidence."
+  author_constraints:
+    - "[NEED: verify current author instructions before submission]"
+  article_type_constraints:
+    - "[NEED: verify current article type and figure limits]"
+  comparable_papers:
+    - paper_id: "P1"
+      citation: "[CITE: comparable guard-cell signaling paper]"
+      doi_or_url: "[NEED: DOI]"
+      why_comparable: "Same target audience and signaling depth."
+      pattern_to_reuse: "Phenotype -> mechanism -> rescue logic."
+  fit_verdict: "Possible but risky"
+  manuscript_must_prove:
+    - "DRK1 phenotype is reproducible."
+    - "DRK1 effect is linked to ABA response rather than general stress."
+    - "Mechanistic claim is supported or softened."
+  retrieval_dates:
+    - "[NEED: retrieval date]"
+  journal_blockers:
+    - "Mechanism evidence may be incomplete."
+
+source_ledger:
+  research_questions:
+    - "What is known about ABA-induced stomatal closure pathways?"
+    - "Are DRK-family kinases reported in guard-cell signaling?"
+  sources:
+    - source_id: "S1"
+      citation: "[CITE: ABA guard-cell review]"
+      doi_pmid_url: "[NEED: DOI/URL]"
+      source_type: "review"
+      metadata_status: "needs check"
+      evidence_location: "background framing"
+      supports_claim_ids:
+        - "C1"
+      contradicts_or_qualifies_claim_ids: []
+      confidence: "plausible"
+
+claim_registry:
+  claims:
+    - claim_id: "C1"
+      linked_result_or_figure_ids:
+        - "F1"
+      observation: "drk1 mutants show wider stomatal aperture after ABA treatment than wild type."
+      user_interpretation: "DRK1 participates in ABA-induced stomatal closure."
+      claim_level: "regulation"
+      safe_wording: "DRK1 is required for full ABA-induced stomatal closure under the tested conditions."
+      stronger_wording_if_fixed: "DRK1 directly regulates ABA-induced stomatal closure."
+      evidence_needed_for_stronger_claim:
+        - "direct substrate or pathway evidence"
+        - "rescue/complementation"
+      citation_needs:
+        - "[CITE: ABA stomatal closure pathway]"
+      status: "needs evidence"
+
+figure_registry:
+  figures:
+    - figure_id: "F1"
+      title_or_label: "ABA stomatal aperture assay"
+      role: "opening"
+      answered_question: "Does DRK1 affect ABA-induced stomatal closure?"
+      linked_claim_ids:
+        - "C1"
+      placement: "main"
+      missing_panels_controls_stats:
+        - "[NEED: sample size]"
+        - "[NEED: statistical test]"
+      transition_to_next_figure: "Test whether the phenotype is rescued by DRK1 complementation."
+
+story:
+  candidate_stories:
+    - "DRK1 as a guard-cell ABA response regulator."
+    - "DRK1 as a broader stress-response modifier."
+  recommended_story:
+    story_id: "ST1"
+    one_sentence_takeaway: "DRK1 supports ABA-induced stomatal closure in Arabidopsis guard cells."
+    selected_claim_ids:
+      - "C1"
+    excluded_or_supplement_claim_ids: []
+    target_journal_fit_reason: "Potentially fits if genetic rescue and pathway evidence are strengthened."
+    risk: "Mechanistic depth may be insufficient."
+  backup_story: "Shorter physiology-focused manuscript for a lower-risk plant physiology journal."
+  manuscript_boundary: "Avoid direct mechanism claims unless pathway evidence is added."
+
+storyline:
+  result_order:
+    - "F1"
+  section_registry:
+    - section_id: "SEC1"
+      section_type: "results"
+      purpose: "Show the primary ABA stomatal closure phenotype."
+      linked_claim_ids:
+        - "C1"
+      linked_figure_ids:
+        - "F1"
+      needed_source_ids:
+        - "S1"
+      draft_status: "skeleton"
+  drafting_brief: "Draft as phenotype-first with careful claim strength and visible missing statistics."
+  draft_readiness: "skeleton only"
+  draft_blockers:
+    - "Missing statistics."
+    - "Missing direct pathway evidence."
+
+reviewer_risk:
+  scorecard:
+    - dimension: "Evidence strength"
+      score: 3
+      reason: "Phenotype is plausible but mechanism is not controlled."
+  blocking_objections: []
+  major_objections:
+    - issue_id: "R1"
+      objection: "Mechanistic claim exceeds current evidence."
+      minimum_fix: "Soften wording and add limitation."
+      stronger_fix: "Add pathway or rescue evidence."
+  repair_queue:
+    - "R1"
+  decision: "revise before submission"
+
+draft_registry:
+  sections:
+    - section_id: "SEC1"
+      status: "skeleton"
+      linked_claim_ids:
+        - "C1"
+  open_needs:
+    - "[NEED: sample size]"
+  open_citations:
+    - "[CITE: ABA pathway]"
+  high_risk_claim_ids:
+    - "C1"
+
+citation_audit:
+  unsupported_claim_ids:
+    - "C1"
+  verified_reference_ids: []
+  metadata_risks:
+    - "S1 metadata unverified."
+  citation_placement_plan:
+    - "Place ABA background citation in Introduction and Discussion, not as direct proof of DRK1."
+  citation_health: "needs repair"
+
+submission_package:
+  file_checklist: []
+  required_statements:
+    - "[NEED: data availability statement]"
+  unresolved_placeholders:
+    - "[NEED: sample size]"
+    - "[CITE: ABA pathway]"
+  cover_letter_status: "not started"
+  rebuttal_matrix_status: "not applicable"
+  final_readiness: "blocked"
