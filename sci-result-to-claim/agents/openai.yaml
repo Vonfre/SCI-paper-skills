@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI Result To Claim"
+  short_description: "Convert results into defensible claims"
+  default_prompt: "Use $sci-result-to-claim to turn my results into manuscript claims and identify evidence gaps."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI Reviewer Simulator"
+  short_description: "Predict reviewer objections and fixes"
+  default_prompt: "Use $sci-reviewer-simulator to predict reviewer concerns and improve my manuscript before submission."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI Storyline Planner"
+  short_description: "Plan manuscript logic and case order"
+  default_prompt: "Use $sci-storyline-planner to design my manuscript logic, result order, and alternative story plans."

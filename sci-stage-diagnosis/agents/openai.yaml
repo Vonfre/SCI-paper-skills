@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI Stage Diagnosis"
+  short_description: "Diagnose manuscript stage and next action"
+  default_prompt: "Use $sci-stage-diagnosis to diagnose where my paper project is stuck and what to do next."

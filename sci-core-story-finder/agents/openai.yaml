@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI Core Story Finder"
+  short_description: "Find the central manuscript story"
+  default_prompt: "Use $sci-core-story-finder to identify the central story and best manuscript angle from my results."

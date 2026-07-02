@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI Literature Evidence"
+  short_description: "Search literature around questions and claims"
+  default_prompt: "Use $sci-literature-evidence to evaluate my scientific question or conclusion against the literature."

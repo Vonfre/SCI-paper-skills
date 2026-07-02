@@ -1,0 +1,6 @@
+interface:
+  display_name: "Deprecated SCI Manuscript Architecture"
+  short_description: "Deprecated; use final storyline modules"
+  default_prompt: "Use $sci-result-to-claim, $sci-core-story-finder, $sci-figure-story-builder, or $sci-storyline-planner instead."
+policy:
+  allow_implicit_invocation: false

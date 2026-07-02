@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI Journal Landscape"
+  short_description: "Journal profile and comparable paper scan"
+  default_prompt: "Use $sci-journal-landscape to profile my target journal and find similar papers in the journal or peer journals."

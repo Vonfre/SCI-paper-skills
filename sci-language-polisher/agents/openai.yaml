@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI Language Polisher"
+  short_description: "Final scientific expression polishing"
+  default_prompt: "Use $sci-language-polisher to polish my SCI manuscript text for clarity, precision, and journal style."

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Deprecated SCI Paper Writing"
+  short_description: "Deprecated; use Draft Mimic/Coach/Polish"
+  default_prompt: "Use $sci-draft-mimic, $sci-paragraph-coach, or $sci-language-polisher instead."
+policy:
+  allow_implicit_invocation: false

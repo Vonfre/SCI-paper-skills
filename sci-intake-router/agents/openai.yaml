@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI Intake Router"
+  short_description: "Start SCI workflow with the right questions"
+  default_prompt: "Use $sci-intake-router to start my SCI paper workflow and collect the target journal, field, and research content."

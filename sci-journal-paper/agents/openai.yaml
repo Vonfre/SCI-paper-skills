@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI Journal Paper"
+  short_description: "Stepwise SCI manuscript workflow"
+  default_prompt: "Use $sci-journal-paper to start a step-by-step SCI manuscript workflow."

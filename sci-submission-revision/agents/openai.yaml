@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI Submission Revision"
+  short_description: "Submission package, checks, and rebuttal"
+  default_prompt: "Use $sci-submission-revision to prepare my submission files or respond to reviewers."
