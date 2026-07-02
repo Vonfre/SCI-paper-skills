@@ -45,6 +45,7 @@ required_root_files=(
   examples/manuscript-state-example.yaml
   .github/workflows/validate.yml
   scripts/sync_codex_skills.sh
+  skills/sci-draft-mimic/references/manuscript-section-quality.md
   skills/sci-paper-skills/references/manuscript-state-schema.md
   skills/sci-paper-skills/references/handoff-contracts.md
 )
@@ -86,6 +87,12 @@ done
 for heading in "## 摘要" "## 引言" "## 结果" "## 讨论" "## 材料与方法" "## 参考文献"; do
   if ! grep -q "^$heading$" "$chinese_manuscript"; then
     fail "Chinese complete manuscript is missing heading: $heading"
+  fi
+done
+
+for heading in "## Introduction" "## Results" "## Discussion" "## Materials And Methods"; do
+  if ! grep -q "^$heading$" "$ROOT_DIR/skills/sci-draft-mimic/references/manuscript-section-quality.md"; then
+    fail "Manuscript section quality standard is missing heading: $heading"
   fi
 done
 

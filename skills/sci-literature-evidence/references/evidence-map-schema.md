@@ -40,6 +40,16 @@ Support levels:
 | Source ID | Full Citation Or Link | DOI/PMID/URL | Year | Source Type | Metadata Status | Main Finding | Supports Which Claim | Contradicts/Qualifies Which Claim | Evidence Location | Confidence |
 |---|---|---|---:|---|---|---|---|---|---|---|
 
+## Introduction Evidence Ladder
+
+| Introduction Rung | Purpose | Source IDs | What The Sources Establish | Gap Or Boundary Created | Draft Sentence Function |
+|---|---|---|---|---|---|
+| Field background | Why the topic matters | | | | |
+| Established mechanisms | What is known | | | | |
+| Unresolved boundary | What remains unclear | | | | |
+| Scientific question | What this study asks | | | | |
+| Study approach | Why these data answer it | | | | |
+
 ## Literature Handling Rules
 
 - Prefer primary papers for specific biological claims.

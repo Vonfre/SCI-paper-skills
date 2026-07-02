@@ -2,6 +2,12 @@
 
 All notable changes to `SCI-paper-skills` are documented here.
 
+## 0.6.4 - Manuscript Quality Gates
+
+- Strengthened writing skills with explicit quality gates for literature-backed Introductions, evidence-dense Results, result-anchored Discussions, and reproducible Methods.
+- Added manuscript section quality standards to `sci-draft-mimic` and expanded evidence, paragraph, result-to-claim, and manuscript-output templates.
+- Regenerated the bilingual complete manuscript example with a deeper Introduction, stronger result evidence packages, broader Discussion, and more reproducible Materials and Methods.
+
 ## 0.6.3 - Bilingual Paper-Format Example
 
 - Reworked the zero-to-one example into true paper-format Markdown outputs instead of workflow-style prose.

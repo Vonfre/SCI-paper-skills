@@ -8,7 +8,7 @@ This package records the manuscript-level decisions behind the bilingual paper o
 - Chinese file: `complete-manuscript.zh-CN.md`
 - Title: DRK1 Supports ABA-Induced Stomatal Closure in Arabidopsis Guard Cells
 - Article type: synthetic research article
-- Readiness: complete bilingual demo manuscripts
+- Readiness: complete bilingual demo manuscripts with strengthened Introduction, Results, Discussion, and Methods quality gates
 
 ## Central Claim
 
@@ -47,10 +47,11 @@ Claim boundary:
 
 | Claim | Status | Citation Behavior |
 |---|---|---|
-| ABA controls stomatal closure | background supported | References 1-7 |
-| ROS participates in ABA guard-cell signaling | background supported | References 1 and 3 |
-| OST1/SnRK2 context | background supported | Reference 2 |
-| Core ABA signaling network | background supported | References 4-7 |
+| ABA controls stomatal closure | background supported | References 1-2 |
+| ROS participates in ABA guard-cell signaling | background supported | References 3-4 |
+| Core ABA perception and kinase context | background supported | References 5-7 |
+| Guard-cell ion-channel output | background supported | References 8-9 |
+| Calcium specificity in guard-cell ABA signaling | background supported | Reference 10 |
 | DRK1 phenotype | synthetic user data | No literature citation used as proof |
 | DRK1 mechanism | not claimed | Explicitly bounded in Results and Discussion |
 
@@ -62,6 +63,15 @@ Claim boundary:
 | DRK1 complementation partially restores closure | included with synthetic means and P value |
 | ABA-induced ROS signal is reduced in drk1-1 | included with synthetic fold changes |
 | ABA marker transcript induction is attenuated | included with synthetic qRT-PCR results |
+
+## Quality Gate Summary
+
+| Section | Improvement Applied |
+|---|---|
+| Introduction | Expanded literature-backed funnel from field background to core ABA signaling, unresolved kinase-level regulation, and exact scientific question |
+| Results | Added controls, replicate logic, statistics, figure links, and short transition sentences between experiments |
+| Discussion | Expanded from the central result toward prior work, mechanism, alternative explanations, limitations, and future experiments |
+| Materials and Methods | Added growth conditions, transformation details, treatment timing, buffer composition, solvent controls, blinding, exclusion rules, RNA quality control, imaging settings, replicate definitions, quantification, statistics, and software |
 
 ## Real-Project Replacement Checklist
 

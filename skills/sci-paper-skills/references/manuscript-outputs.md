@@ -59,6 +59,17 @@ For a full journal-specific writing engagement, produce these in order:
 - Preserve the user's scientific contribution; do not overfit to superficial style.
 - For Chinese-to-English work, produce idiomatic scientific English rather than literal translation.
 
+## Quality Bar
+
+A manuscript is not full-draft quality until it passes four section gates:
+
+1. Introduction: literature-backed funnel from background to known mechanisms, unresolved gap, scientific question, and study objective.
+2. Results: evidence-dense subsections with controls, quantification/statistics, figure links, and short transition or reliability sentences.
+3. Discussion: result-anchored expansion into prior work, mechanism, alternative explanations, implications, limitations, and future experiments.
+4. Methods: reproducible procedural detail, including materials, treatments, replicates, instruments/software, quantification, statistics, and data/code availability.
+
+If one gate fails, produce a repair plan or placeholders instead of presenting the manuscript as complete.
+
 ## Section Guidance
 
 ### Title
@@ -96,6 +107,7 @@ Build 4-6 paragraphs unless comparable papers show a different norm:
 6. Concise contribution statement.
 
 Avoid generic textbook openings when comparable papers move quickly to a precise gap.
+Each paragraph should have a source role, and the gap should emerge from the literature rather than appearing as an unsupported assertion.
 
 ### Results
 
@@ -109,6 +121,7 @@ Each result subsection should have:
 - Short interpretive bridge to the next result.
 
 Use comparable papers to decide whether the journal favors mechanism-first, phenotype-first, cohort-first, resource-first, or method-validation-first sequencing.
+Allow brief discussion-like transition sentences in Results only when they improve continuity or explain why the next experiment is needed.
 
 ### Discussion
 
@@ -122,6 +135,8 @@ Use 4-7 paragraphs:
 6. Future work.
 7. Closing conclusion matched to evidence.
 
+Discussion should expand outward from result IDs and source IDs, not drift into broad claims unsupported by the manuscript.
+
 ### Methods
 
 Follow journal requirements exactly. Include enough detail for reproducibility:
@@ -132,6 +147,8 @@ Follow journal requirements exactly. Include enough detail for reproducibility:
 - Software versions.
 - Data and code availability.
 - Ethics and approvals.
+
+For wet-lab work, include treatment dose/time, buffer/media conditions, instrument settings, replicate definitions, exclusion rules, normalization, and exact statistical model whenever known.
 
 ## Supplementary-Material Strategy
 

@@ -15,10 +15,10 @@
 
 ## Sentence Scaffold
 1. Context/topic sentence:
-2. Specific gap or question:
-3. Evidence/result:
-4. Interpretation:
-5. Transition:
+2. Source-backed known point, method, or comparison:
+3. Gap, direct observation, or core result:
+4. Quantitative/statistical/control support:
+5. Interpretation or transition:
 
 ## Example Paragraph
 
@@ -33,5 +33,8 @@
 
 - One paragraph should do one job.
 - Results paragraphs should show evidence before interpretation.
+- Results paragraphs may include a short final bridge sentence when it increases continuity or reliability.
 - Discussion paragraphs should not introduce stronger claims than the results.
-- Introduction paragraphs should narrow from known field to exact gap.
+- Discussion paragraphs should expand outward from the result into literature, mechanism, alternatives, implications, and limits.
+- Introduction paragraphs should narrow from source-backed field context to exact gap and objective.
+- Methods paragraphs should contain enough procedural detail to reproduce the experiment or analysis.

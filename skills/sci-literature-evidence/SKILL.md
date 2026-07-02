@@ -42,6 +42,18 @@ Record these in a source ledger so the final recommendation is traceable.
 
 Explain whether each source is useful for background framing, gap identification, claim support, alternative explanation, method precedent, or discussion comparison. Do not treat one review as direct evidence for a precise mechanism when a primary paper is needed.
 
+## Introduction Evidence Ladder
+
+When literature will feed an Introduction, build a ladder rather than a flat bibliography:
+
+1. Field background and journal-relevant stakes.
+2. Established mechanisms, models, or consensus.
+3. Competing explanations, unresolved boundaries, or missing controls.
+4. The exact scientific question the manuscript answers.
+5. Why the user's approach is able to answer that question.
+
+Assign each source to one rung. Prefer multiple primary papers plus one or two reviews for framing. If an Introduction paragraph has no source role, mark it as under-supported.
+
 ## Evidence Grading
 
 - `Strong`: direct primary evidence plus user data can plausibly support the claim.
@@ -76,6 +88,7 @@ Return:
 - `Research question matrix`.
 - `Source ledger` with source role, metadata status, evidence location, and confidence.
 - `Evidence map` for each user question or conclusion.
+- `Introduction evidence ladder` when drafting or improving an Introduction.
 - `Support/conflict summary`.
 - `Gap assessment`.
 - `Writing recommendation`: safe wording, citations needed, or claim to avoid.

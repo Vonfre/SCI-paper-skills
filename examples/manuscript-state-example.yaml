@@ -212,7 +212,7 @@ story:
       - "C3"
       - "C4"
     excluded_or_supplement_claim_ids: []
-    target_journal_fit_reason: "Complete bilingual synthetic manuscripts use a bounded plant physiology story."
+    target_journal_fit_reason: "Complete bilingual synthetic manuscripts use a bounded plant physiology story with literature-backed framing, evidence-dense results, result-anchored discussion, and reproducible methods."
     risk: "Real mechanism remains unproven, so the complete manuscript avoids direct pathway claims."
   backup_story: "DRK1 as a physiology-focused ABA-response modifier."
   manuscript_boundary: "No direct mechanism claim without real pathway-placement evidence."
@@ -279,7 +279,7 @@ storyline:
         - "S2"
         - "S3"
       draft_status: "complete"
-  drafting_brief: "Complete English and Chinese paper-format manuscripts with bounded claim strength."
+  drafting_brief: "Complete English and Chinese paper-format manuscripts with bounded claim strength and four quality gates: literature-backed Introduction, evidence-dense Results, result-anchored Discussion, and reproducible Methods."
   draft_readiness: "complete bilingual demo manuscripts"
   draft_blockers: []
 
@@ -287,7 +287,7 @@ reviewer_risk:
   scorecard:
     - dimension: "Evidence strength"
       score: 4
-      reason: "Complete synthetic paper reports phenotype, complementation, ROS, and marker-gene support."
+      reason: "Complete synthetic paper reports phenotype, complementation, ROS, marker-gene support, controls, replicate logic, statistics, and methods detail."
     - dimension: "Claim control"
       score: 5
       reason: "Mechanistic claims are explicitly bounded."
@@ -340,7 +340,7 @@ citation_audit:
     - "S2"
     - "S3"
   metadata_risks:
-    - "References are suitable for demo background only; re-verify before real use."
+    - "References 1-10 are suitable for demo background only; re-verify before real use."
   citation_placement_plan:
     - "Use background references for ABA and ROS context."
     - "Do not use literature references as proof of synthetic DRK1 data."

@@ -43,6 +43,10 @@ Imitate these patterns only at the level of structure and rhetorical function.
 - Use `[CITE: claim]` for unverified literature support.
 - Tie results to figures/tables/supplements.
 - Keep claim strength no stronger than the result-to-claim matrix.
+- Make the Introduction literature-backed: move from field background to known mechanisms, unresolved gap, scientific question, and study objective with sources assigned to each role.
+- Make Results evidence-dense: each subsection needs direct data, controls, quantification/statistics, figure references, and a brief interpretive bridge that connects to the next result without over-discussing.
+- Make Discussion multi-angle: start from the main result, then expand through prior work, mechanism, alternative explanations, significance, limitations, and future experiments.
+- Make Methods reproducible: include biological material, treatment details, sample sizes, controls, instrumentation, analysis software, statistical model, and data availability when known.
 - List which model patterns were used and what must be verified.
 
 ## Drafting Gate
@@ -80,3 +84,4 @@ Return:
 - `High-risk claims`.
 
 Read `references/draft-mimic-schema.md` for templates.
+Read `references/manuscript-section-quality.md` before drafting a full manuscript, Introduction, Results, Discussion, or Methods section.

@@ -18,6 +18,10 @@
 | Desired Claim | Current Evidence | Minimum Fix | Stronger Fix | Priority |
 |---|---|---|---|---|
 
+## Evidence Package Table
+| Result/Figure | Experimental Design | Controls | Quantification/Statistics | Replicate Logic | Literature Context | Reliability Risk | Result-Paragraph Bridge |
+|---|---|---|---|---|---|---|---|
+
 ## User Guidance
 - Best current central claim:
 - Claims to soften:
@@ -31,3 +35,4 @@
 - Do not let one phenotype become a mechanism without intermediate evidence.
 - Treat "important", "novel", "first", and "directly regulates" as high-risk phrases.
 - Prefer the minimum additional evidence that unlocks a better claim.
+- A result is thin if it lacks controls, quantification/statistics, replicate logic, or a transition to the next experiment.

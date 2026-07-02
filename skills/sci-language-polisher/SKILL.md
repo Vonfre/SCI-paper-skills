@@ -43,8 +43,10 @@ Check whether the problem is language or logic:
 1. Identify paragraph/section purpose and claim strength.
 2. Remove ambiguity, redundancy, vague verbs, and unsupported superlatives.
 3. Improve transitions and sentence order when logic is local.
-4. Return before/after examples for recurring problems when useful.
-5. Flag claims that still need data, citation, or upstream logic repair.
+4. For Results, preserve evidence-first order while adding only short reliability or transition clauses.
+5. For Discussion, improve breadth by linking the main result to literature, mechanism, alternative explanations, limitations, and implications without inventing new evidence.
+6. Return before/after examples for recurring problems when useful.
+7. Flag claims that still need data, citation, or upstream logic repair.
 
 ## Polishing Rule
 

@@ -50,8 +50,9 @@ For each result, recover: condition, comparison, method, observation, quantifica
 1. List each result/figure and what it directly shows.
 2. Separate direct observation from interpretation.
 3. Assign the strongest defensible claim and the claims it does not support.
-4. Identify the smallest missing control, analysis, or citation that would unlock a stronger claim.
-5. Recommend safe wording and a next module.
+4. Build the evidence package for each result: experimental design, controls, quantification, statistics, representative figure, replicate logic, and relevant literature context.
+5. Identify the smallest missing control, analysis, or citation that would unlock a stronger claim.
+6. Recommend safe wording, result-paragraph bridge language, and a next module.
 
 ## Claim Discipline
 
@@ -90,6 +91,8 @@ Always end with `Manuscript State Update` and `Handoff`.
 Return:
 
 - `Result-to-claim matrix`.
+- `Evidence package table`.
+- `Result paragraph bridge notes`.
 - `Claim-strength summary`.
 - `Evidence gaps` ranked by importance.
 - `Safe wording` and `stronger wording if fixed`.

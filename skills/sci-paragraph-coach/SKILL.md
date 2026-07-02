@@ -24,9 +24,9 @@ Ask for data, figure, claim, and citation only when they are needed for that par
 
 ## Paragraph Patterns
 
-- Introduction: known field -> exact gap -> study objective.
-- Results: purpose -> method/comparison -> observation -> support -> interpretation bridge.
-- Discussion: principal finding -> relation to literature -> implication -> limitation when needed.
+- Introduction: broad field context -> source-backed known mechanisms -> unresolved boundary -> exact scientific question -> study objective.
+- Results: purpose -> method/comparison -> direct observation -> quantification/statistics/control -> short reliability or transition bridge.
+- Discussion: principal finding -> relation to literature -> mechanism or model -> alternative explanation -> implication -> limitation/future work.
 - Figure legend: what was tested -> what is shown -> sample/statistics -> abbreviations.
 - Cover letter: fit to journal -> contribution -> why readers care.
 
@@ -47,8 +47,9 @@ A paragraph should do one job:
 1. Define the paragraph purpose.
 2. List required evidence and citations.
 3. Create a sentence-by-sentence scaffold.
-4. Write an example paragraph using placeholders when facts are missing.
-5. If the user provides a draft, diagnose issue, explain why it hurts, and revise.
+4. Check whether the paragraph has enough evidence density for its section type.
+5. Write an example paragraph using placeholders when facts are missing.
+6. If the user provides a draft, diagnose issue, explain why it hurts, and revise.
 
 ## Teaching Rule
 
