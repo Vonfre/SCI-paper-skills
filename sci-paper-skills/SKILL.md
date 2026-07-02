@@ -110,6 +110,7 @@ Use these modules in order unless the user explicitly asks for one stage:
 
 ## References
 
+- Read `references/shared-operating-standards.md` at the start of any multi-stage workflow.
 - Read `references/workflow-architecture.md` when coordinating more than one stage.
 - Read `references/journal-intelligence.md` when a target journal or comparable-paper search is involved.
 - Read `references/manuscript-outputs.md` when drafting, polishing, submission, or revision outputs are needed.

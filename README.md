@@ -2,13 +2,27 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-`SCI-paper-skills` is a target-journal-adaptive skill suite for turning real research results into a coherent SCI/SCIE manuscript.
+`SCI-paper-skills` is a target-journal-adaptive Codex skill suite for turning real research results into a coherent SCI/SCIE manuscript.
 
-It is designed for graduate students and researchers who already have data, figures, conclusions, or a rough idea, but do not yet know how to organize the logic, support claims with literature, imitate the target journal's writing pattern, and prepare a submission-ready paper.
+It is designed for graduate students and researchers who already have data, figures, conclusions, a rough idea, a draft, model papers, or reviewer comments, but need help organizing logic, controlling claim strength, finding evidence, imitating target-journal structure, polishing language, and preparing submission or revision materials.
 
-## Entry Point
+## Quick Install
 
-Use the orchestrator:
+Clone the repository, then sync all skill folders into your local Codex skills directory:
+
+```bash
+git clone https://github.com/Vonfre/SCI-paper-skills.git
+cd SCI-paper-skills
+bash scripts/sync_codex_skills.sh
+```
+
+By default, the script installs to `~/.codex/skills`. To install elsewhere:
+
+```bash
+CODEX_SKILLS_DIR=/path/to/skills bash scripts/sync_codex_skills.sh
+```
+
+After installation, invoke the orchestrator:
 
 ```text
 $sci-paper-skills
@@ -20,84 +34,68 @@ The first response should ask only the next useful questions:
 2. What is your research topic, field, organism/material/system, and article type if known?
 3. What do you already have: scientific question, conclusions, figures/data, outline, draft, PDFs/model papers, or reviewer comments?
 
-If enough context is already provided, the skill should proceed directly and mark missing information with `[NEED: ...]`.
+If enough context is already provided, the skill proceeds directly and marks missing information with `[NEED: ...]`.
 
-## Core Workflow
+## Skill Index
 
-| Stage | Skill | Job | Main Artifact |
-|---:|---|---|---|
-| 0 | `sci-stage-diagnosis` | Diagnose where the paper project is stuck. | Stage diagnosis |
-| 1 | `sci-intake-router` | Collect journal, topic, system, materials, and route. | Intake brief |
-| 2 | `sci-journal-landscape` | Profile target journal and find comparable papers. | Journal landscape |
-| 3 | `sci-literature-evidence` | Check whether questions/conclusions are supported or contradicted. | Evidence map |
-| 4 | `sci-result-to-claim` | Convert results and figures into defensible claims. | Result-to-claim matrix |
-| 5 | `sci-core-story-finder` | Choose the central scientific story. | Story decision memo |
-| 6 | `sci-figure-story-builder` | Arrange figures, tables, and cases into reader logic. | Figure story map |
-| 7 | `sci-storyline-planner` | Design manuscript structure and alternative logics. | Storyline plan |
-| 8 | `sci-reviewer-simulator` | Predict editor/reviewer objections before submission. | Reviewer risk report |
-| 9 | `sci-draft-mimic` | Draft by imitating model-paper structure and rhetoric, not wording. | Draft package |
-| 10 | `sci-paragraph-coach` | Teach and write section-level paragraphs. | Paragraph coaching block |
-| 11 | `sci-language-polisher` | Polish expression while preserving meaning and evidence boundaries. | Polish report |
-| 12 | `sci-citation-control` | Verify claim-evidence-reference alignment and style. | Citation audit |
-| 13 | `sci-submission-revision` | Prepare submission files or reviewer-response materials. | Submission/revision package |
+| Status | Stage | Skill | Trigger | Main Artifact |
+|---|---:|---|---|---|
+| Stable | 0 | `sci-stage-diagnosis` | Unsure where the manuscript is stuck | Stage diagnosis |
+| Stable | 1 | `sci-intake-router` | New project or incomplete context | Intake brief |
+| Stable | 2 | `sci-journal-landscape` | Target journal, candidate journal, or journal-fit question | Journal landscape |
+| Stable | 3 | `sci-literature-evidence` | Need support, conflict, gap, novelty, or direction evidence | Evidence map |
+| Stable | 4 | `sci-result-to-claim` | Results/figures exist but claims are unclear | Result-to-claim matrix |
+| Stable | 5 | `sci-core-story-finder` | Several possible conclusions or weak central message | Story decision memo |
+| Stable | 6 | `sci-figure-story-builder` | Figures/tables/cases need ordering and main-vs-supplement decisions | Figure story map |
+| Stable | 7 | `sci-storyline-planner` | Need manuscript structure or alternative logic plans | Storyline plan |
+| Stable | 8 | `sci-reviewer-simulator` | Want editor/reviewer risk before submission | Reviewer risk report |
+| Stable | 9 | `sci-draft-mimic` | Draft from model papers without copying wording | Draft package |
+| Stable | 10 | `sci-paragraph-coach` | Need paragraph-level writing help | Paragraph coaching block |
+| Stable | 11 | `sci-language-polisher` | Meaning is stable and expression needs polishing | Polish report |
+| Stable | 12 | `sci-citation-control` | Need reference placement, evidence audit, or citation style | Citation audit |
+| Stable | 13 | `sci-submission-revision` | Submission files, cover letter, reviewer response, or revision plan | Submission/revision package |
 
-## How The Suite Adapts
+For a more detailed trigger and handoff map, see [docs/skill-index.md](docs/skill-index.md).
 
-- If the user has a target journal, it first builds a journal portrait and searches same-journal similar papers.
-- If the target journal has no close matches, it searches same-level or peer-journal papers and explains why they are comparable.
-- If the user has conclusions, it searches literature to support, challenge, or soften those conclusions.
-- If the user has no conclusions, it proposes possible research directions grounded in recent literature.
-- If the user has a writing logic, it improves that logic.
-- If the user has no writing logic, it derives several possible manuscript structures from comparable literature and the user's evidence.
-- If the user provides PDFs or model papers, it extracts structure, rhetorical moves, figure citation behavior, supplement style, and claim strength, then drafts by imitation without copying language.
-- If the user has no writing experience, it gives one concrete next task instead of a long abstract checklist.
+## Workflow
 
-## Active Skills
-
-- `sci-paper-skills`: main orchestrator and full workflow controller.
-- `sci-stage-diagnosis`: stage diagnosis and next-action selection.
-- `sci-intake-router`: first-step questions and routing.
-- `sci-journal-landscape`: journal profile and comparable-paper scan.
-- `sci-literature-evidence`: literature support, conflict, and direction mapping.
-- `sci-result-to-claim`: result-to-claim conversion and evidence-gap control.
-- `sci-core-story-finder`: central story selection.
-- `sci-figure-story-builder`: figure and case narrative construction.
-- `sci-storyline-planner`: manuscript logic planning.
-- `sci-reviewer-simulator`: pre-submission reviewer-risk simulation.
-- `sci-draft-mimic`: model-paper guided first drafting.
-- `sci-paragraph-coach`: paragraph-level writing coaching.
-- `sci-language-polisher`: final scientific-language polishing.
-- `sci-citation-control`: citation and evidence control.
-- `sci-submission-revision`: submission and revision support.
-
-## Project Scaffold
-
-The orchestrator includes a helper script:
-
-```bash
-python sci-paper-skills/scripts/init_journal_project.py   --journal "The Plant Cell"   --topic "ABA stomatal closure"   --out ./journal-projects
+```text
+diagnose -> intake -> journal landscape -> literature evidence -> result-to-claim
+-> core story -> figure story -> storyline -> reviewer simulation
+-> draft mimic -> paragraph coach -> language polish -> citation control
+-> submission or revision
 ```
 
-Generated project folders are working artifacts and are ignored by Git.
+The orchestrator uses the stages in order unless the user explicitly asks for a specific module.
 
-## Quality Rules
+## Design Principles
 
-- Do not invent data, references, statistics, approvals, accession numbers, methods, findings, or journal requirements.
-- Use current web research for journal facts, article lists, metrics, OA/APC, policies, and recent literature.
-- Distinguish user data, literature support, interpretation, speculation, and unsupported claims.
-- Match claim strength to evidence: observation, association, regulation, mechanism, causality, validation, and application are different.
-- Draft only after journal fit, literature support, result-to-claim mapping, central story, figure logic, and citation needs are sufficiently clear.
-- Keep every stage traceable by producing a handoff artifact for the next stage.
+- Diagnose before drafting.
+- Treat journal fit, literature evidence, claim strength, and figure logic as separate gates.
+- Produce a named handoff artifact at every stage.
+- Keep missing facts visible with `[NEED: ...]`.
+- Keep unverified citations visible with `[CITE: ...]`.
+- Imitate model-paper structure and rhetorical function, not distinctive wording.
+- Use current web research for journal facts, policies, metrics, APC/OA, and recent literature.
+- Never invent data, references, approvals, accession numbers, methods, findings, statistics, or journal requirements.
 
-## Packaging Notes
+See [docs/design-principles.md](docs/design-principles.md) for the shared operating standards.
 
-- Generated `journal-projects/` folders are local working artifacts and are ignored by git.
-- The final workflow uses the active 14-stage module set; removed legacy modules should not be reintroduced as working stages.
-- Each active module keeps `SKILL.md` short and links to one-level `references/` files for templates and quality rules.
+## Repository Layout
 
-## Validation
+```text
+README.md
+README.zh-CN.md
+manifest.yaml
+docs/
+scripts/
+sci-paper-skills/
+sci-stage-diagnosis/
+sci-intake-router/
+...
+```
 
-Each skill is a standard Codex skill folder with:
+Each skill folder follows the Codex skill shape:
 
 ```text
 SKILL.md
@@ -105,4 +103,38 @@ agents/openai.yaml
 references/
 ```
 
-Validate each skill with the skill creator `quick_validate.py` tool before publishing changes. If the bundled runtime lacks PyYAML, use the system `python3` that has `yaml` installed.
+The root-level skill folders are intentionally kept flat so they can be copied directly into a Codex skills directory.
+
+## Project Scaffold
+
+The orchestrator includes a helper script:
+
+```bash
+python sci-paper-skills/scripts/init_journal_project.py \
+  --journal "The Plant Cell" \
+  --topic "ABA stomatal closure" \
+  --out ./journal-projects
+```
+
+Generated `journal-projects/` folders are local working artifacts and are ignored by Git.
+
+## Validation
+
+Run the local pack check:
+
+```bash
+bash scripts/validate_skill_pack.sh
+```
+
+Before publishing larger skill changes, also validate each skill with the skill creator `quick_validate.py` tool. If the bundled runtime lacks PyYAML, use a system `python3` that has `yaml` installed.
+
+## Adding A Skill
+
+New modules should include:
+
+- `SKILL.md` with `name` and `description` frontmatter.
+- `agents/openai.yaml`.
+- At least one focused file under `references/` when templates or quality rules are needed.
+- One row in `manifest.yaml`.
+- One row in [docs/skill-index.md](docs/skill-index.md).
+- A clear handoff artifact that can feed another stage.

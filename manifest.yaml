@@ -1,0 +1,99 @@
+name: SCI-paper-skills
+version: 0.2.0
+description: Target-journal-adaptive Codex skills for SCI/SCIE manuscript planning, drafting, polishing, citation control, submission, and revision.
+install:
+  default_target: ~/.codex/skills
+  script: scripts/sync_codex_skills.sh
+validation:
+  script: scripts/validate_skill_pack.sh
+skills:
+  - name: sci-paper-skills
+    status: stable
+    stage: orchestrator
+    path: sci-paper-skills
+    trigger: Full SCI/SCIE manuscript coaching workflow.
+    artifact: Routed manuscript workflow.
+  - name: sci-stage-diagnosis
+    status: stable
+    stage: 0
+    path: sci-stage-diagnosis
+    trigger: The manuscript project is stuck or the user does not know where to begin.
+    artifact: Stage diagnosis.
+  - name: sci-intake-router
+    status: stable
+    stage: 1
+    path: sci-intake-router
+    trigger: New project or incomplete target journal/topic/material context.
+    artifact: Intake brief.
+  - name: sci-journal-landscape
+    status: stable
+    stage: 2
+    path: sci-journal-landscape
+    trigger: Target journal, candidate journal, or journal-fit question.
+    artifact: Journal landscape.
+  - name: sci-literature-evidence
+    status: stable
+    stage: 3
+    path: sci-literature-evidence
+    trigger: Scientific question, conclusion, novelty, gap, or evidence support check.
+    artifact: Evidence map.
+  - name: sci-result-to-claim
+    status: stable
+    stage: 4
+    path: sci-result-to-claim
+    trigger: Results, figures, tables, or observations need defensible claims.
+    artifact: Result-to-claim matrix.
+  - name: sci-core-story-finder
+    status: stable
+    stage: 5
+    path: sci-core-story-finder
+    trigger: Several possible conclusions or no clear central story.
+    artifact: Story decision memo.
+  - name: sci-figure-story-builder
+    status: stable
+    stage: 6
+    path: sci-figure-story-builder
+    trigger: Figures, tables, cases, and supplements need narrative order.
+    artifact: Figure story map.
+  - name: sci-storyline-planner
+    status: stable
+    stage: 7
+    path: sci-storyline-planner
+    trigger: Manuscript structure, result order, or alternative logic plans are needed.
+    artifact: Storyline plan.
+  - name: sci-reviewer-simulator
+    status: stable
+    stage: 8
+    path: sci-reviewer-simulator
+    trigger: Editor or reviewer objections need to be predicted.
+    artifact: Reviewer risk report.
+  - name: sci-draft-mimic
+    status: stable
+    stage: 9
+    path: sci-draft-mimic
+    trigger: Target-journal or model-paper patterns should guide drafting.
+    artifact: Draft package.
+  - name: sci-paragraph-coach
+    status: stable
+    stage: 10
+    path: sci-paragraph-coach
+    trigger: A section paragraph, figure legend, abstract, or cover-letter paragraph needs coaching.
+    artifact: Paragraph coaching block.
+  - name: sci-language-polisher
+    status: stable
+    stage: 11
+    path: sci-language-polisher
+    trigger: Draft meaning is stable and expression needs polishing.
+    artifact: Polish report.
+  - name: sci-citation-control
+    status: stable
+    stage: 12
+    path: sci-citation-control
+    trigger: Claim-evidence-reference alignment, citation placement, or reference style needs checking.
+    artifact: Citation audit.
+  - name: sci-submission-revision
+    status: stable
+    stage: 13
+    path: sci-submission-revision
+    trigger: Submission files, cover letter, reviewer response, or revision package is needed.
+    artifact: Submission/revision package.
