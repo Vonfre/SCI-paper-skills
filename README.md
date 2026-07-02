@@ -68,6 +68,16 @@ diagnose -> intake -> journal landscape -> literature evidence -> result-to-clai
 
 The orchestrator uses the stages in order unless the user explicitly asks for a specific module.
 
+## Tight Workflow
+
+Version `0.4` adds a stateful handoff layer so the skills work as a connected manuscript pipeline rather than isolated prompts.
+
+- Shared state: [manuscript-state-schema.md](sci-paper-skills/references/manuscript-state-schema.md)
+- Stage contracts: [handoff-contracts.md](sci-paper-skills/references/handoff-contracts.md)
+- End-to-end routes: [end-to-end-runbooks.md](docs/end-to-end-runbooks.md)
+
+Every stage now consumes upstream state, updates its owned fields, preserves IDs such as `C#`, `F#`, `S#`, `SEC#`, and ends with `Manuscript State Update` plus `Handoff` blocks.
+
 ## Design Principles
 
 - Diagnose before drafting.

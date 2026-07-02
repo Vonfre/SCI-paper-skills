@@ -55,6 +55,25 @@ Every reviewer response must map to one of three outcomes:
 
 Do not promise data, experiments, or analyses the user has not performed.
 
+## State Coupling
+
+Consume:
+
+- `journal_landscape`, `draft_registry`, `figure_registry`, `citation_audit`, `reviewer_risk`, and reviewer/editor comments when available.
+
+Update:
+
+- `submission_package.file_checklist`, `required_statements`, `unresolved_placeholders`, `cover_letter_status`, `rebuttal_matrix_status`, and `final_readiness`.
+- Reviewer issue IDs `R#` when parsing decision letters.
+- `global_blockers` for unresolved requirements, placeholders, unsupported claims, or missing declarations.
+
+Block:
+
+- If `[NEED: ...]` or `[CITE: ...]` remains in submission-facing text, mark the package blocked.
+- If target-journal requirements are unknown, route to `sci-journal-landscape` before final submission packaging.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

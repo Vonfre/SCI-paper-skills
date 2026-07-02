@@ -66,6 +66,25 @@ Use these boundaries:
 
 Do not allow phenotype-only data to become a mechanism claim. Do not allow correlation to become causation. Do not allow one model system to become a universal statement without support.
 
+## State Coupling
+
+Consume:
+
+- User result descriptions, figure/table inventory, draft result paragraphs, and existing `figure_registry` if available.
+- `journal_landscape` and `source_ledger` when they exist.
+
+Update:
+
+- `claim_registry.claims` with stable IDs `C1`, `C2`, `C3`.
+- `linked_result_or_figure_ids`, `claim_level`, `safe_wording`, `stronger_wording_if_fixed`, `evidence_needed_for_stronger_claim`, `citation_needs`, and `status`.
+- `global_blockers` for missing decisive controls, statistics, validation, or user data.
+
+Block:
+
+- If no result, observation, figure, or draft result text is available, route back to intake or ask for a result list.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

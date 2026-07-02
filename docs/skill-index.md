@@ -1,6 +1,6 @@
 # SCI-paper-skills Index
 
-Use `sci-paper-skills` as the orchestrator unless the user explicitly requests a focused module.
+Use `sci-paper-skills` as the orchestrator unless the user explicitly requests a focused module. In the v0.4 tight workflow, every module reads and updates `manuscript_state` and preserves IDs across handoffs.
 
 | Stage | Skill | Use When | Primary Output | Typical Next Step |
 |---:|---|---|---|---|
@@ -51,3 +51,12 @@ When two modules are plausible, route to the earliest unresolved gate:
 10. Language polishing.
 11. Citation audit.
 12. Submission or revision.
+
+## Handoff Discipline
+
+Each module should end with:
+
+- `Manuscript State Update`: fields changed, IDs created, blockers, next skill, user task.
+- `Handoff`: consumed artifact, produced artifact, blockers, next route.
+
+When a user jumps into the middle of the workflow, reconstruct only the state fields supported by the provided context and mark missing fields with `[NEED: ...]`.

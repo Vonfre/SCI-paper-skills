@@ -28,6 +28,14 @@ Each stage should produce a named artifact with:
 - Next recommended skill.
 - One concrete user task when progress depends on the user.
 
+## Shared State Discipline
+
+- Read `manuscript_state` if it exists; otherwise initialize only the fields supported by the user's input.
+- Preserve stable IDs across stages: claims `C#`, figures/tables `F#`/`T#`, sources `S#`, comparable papers `P#`, sections `SEC#`, reviewer issues `R#`.
+- Each output must include `Manuscript State Update` and `Handoff` blocks.
+- If a required upstream artifact is missing, mark the missing gate and produce a provisional artifact rather than inventing continuity.
+- Do not rename, merge, or discard upstream IDs unless the output explicitly records the change.
+
 ## Drafting And Mimicry
 
 - Draft only after the main gates are controlled, or label the draft as a skeleton.

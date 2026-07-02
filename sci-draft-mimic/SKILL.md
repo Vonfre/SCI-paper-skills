@@ -49,6 +49,25 @@ Imitate these patterns only at the level of structure and rhetorical function.
 
 If journal landscape, result-to-claim mapping, and storyline are missing, draft only a skeleton or partial section with placeholders. Do not create a confident full manuscript from vague conclusions.
 
+## State Coupling
+
+Consume:
+
+- `journal_landscape`, `source_ledger`, `claim_registry`, `figure_registry`, `story`, `storyline`, and `reviewer_risk`.
+- Model paper IDs `P#` and source IDs `S#` when available.
+
+Update:
+
+- `draft_registry.sections` with section IDs `SEC#` from `storyline.section_registry`.
+- `draft_registry.open_needs`, `open_citations`, and `high_risk_claim_ids`.
+- Section drafts that preserve linked claim IDs `C#`, figure/table IDs `F#`/`T#`, and source placeholders `S#` or `[CITE: ...]`.
+
+Block:
+
+- If journal, claim, story, figure, or citation gates are missing, produce a skeleton or section scaffold only.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

@@ -50,6 +50,24 @@ Check whether the problem is language or logic:
 
 Do not silently strengthen claims. If a sentence changes from association to mechanism, mechanism to causality, or observation to application, flag it and provide a safer alternative.
 
+## State Coupling
+
+Consume:
+
+- `draft_registry.sections`, source text, `claim_registry`, `citation_audit`, and target-journal tone/style when available.
+
+Update:
+
+- `draft_registry.sections[].draft_status` to `polished` only when meaning is stable.
+- `draft_registry.high_risk_claim_ids` when polishing reveals overclaiming.
+- A meaning-change log that lists any softened or preserved claims by `claim_id`.
+
+Block:
+
+- If meaning, evidence, or citation support is unstable, do not present the text as final-polished. Route to claim or citation repair.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

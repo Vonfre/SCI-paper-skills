@@ -59,6 +59,25 @@ If inputs are incomplete, run a provisional review and mark which risks cannot b
 
 For every blocking or major issue, give both the smallest credible fix and the stronger fix.
 
+## State Coupling
+
+Consume:
+
+- `journal_landscape`, `source_ledger`, `claim_registry`, `figure_registry`, `story`, `storyline`, `draft_registry`, and `citation_audit` if available.
+
+Update:
+
+- `reviewer_risk.scorecard`, `blocking_objections`, `major_objections`, `repair_queue`, and `decision`.
+- Reviewer issue IDs `R#`.
+- `claim_registry.claims[].status` when overclaims are found.
+- `storyline.draft_readiness` when reviewer risk blocks drafting.
+
+Block:
+
+- If blocking objections remain, route to the specific repair module before drafting or submission.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

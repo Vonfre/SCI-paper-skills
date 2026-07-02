@@ -50,6 +50,25 @@ Explain whether each source is useful for background framing, gap identification
 - `Conflicting`: credible literature suggests an alternative explanation.
 - `Unknown`: search coverage is insufficient.
 
+## State Coupling
+
+Consume:
+
+- `project`, `journal_landscape`, existing `claim_registry`, and any user questions/conclusions.
+- Existing `source_ledger` to avoid duplicate source IDs.
+
+Update:
+
+- `source_ledger.research_questions` and `source_ledger.sources` with stable IDs `S#`.
+- Literature support, conflict, novelty boundaries, and source confidence.
+- `claim_registry.claims[].citation_needs`, `evidence_needed_for_stronger_claim`, and status when claims already exist.
+
+Block:
+
+- If sources are unverified or only indirectly related, mark the evidence level and do not allow strong novelty/mechanism wording.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

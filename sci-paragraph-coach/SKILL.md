@@ -54,6 +54,25 @@ A paragraph should do one job:
 
 For novice users, give a scaffold first, then a filled example, then one sentence explaining why the logic works. Avoid only returning polished text.
 
+## State Coupling
+
+Consume:
+
+- `storyline.section_registry`, target `section_id`, draft paragraph if available, and linked `claim_id`, `figure_id`, and `source_id` values.
+- `claim_registry` for safe wording and claim strength.
+
+Update:
+
+- `draft_registry.sections` for the coached paragraph.
+- `draft_registry.open_needs`, `open_citations`, and high-risk claim IDs.
+- Section status: `skeleton`, `drafted`, or `needs evidence`.
+
+Block:
+
+- If the paragraph lacks purpose, claim, evidence, or citation need, produce a scaffold before prose.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

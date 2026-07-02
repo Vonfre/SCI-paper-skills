@@ -26,9 +26,12 @@ required_root_files=(
   README.md
   README.zh-CN.md
   manifest.yaml
+  docs/end-to-end-runbooks.md
   docs/design-principles.md
   docs/skill-index.md
   scripts/sync_codex_skills.sh
+  sci-paper-skills/references/manuscript-state-schema.md
+  sci-paper-skills/references/handoff-contracts.md
 )
 
 for file in "${required_root_files[@]}"; do
@@ -52,6 +55,11 @@ for skill in "${SKILLS[@]}"; do
 
   if ! grep -q '^description: ' "$skill_dir/SKILL.md"; then
     echo "Missing frontmatter description in $skill/SKILL.md" >&2
+    exit 1
+  fi
+
+  if ! grep -q '^## State Coupling' "$skill_dir/SKILL.md"; then
+    echo "Missing State Coupling section in $skill/SKILL.md" >&2
     exit 1
   fi
 done

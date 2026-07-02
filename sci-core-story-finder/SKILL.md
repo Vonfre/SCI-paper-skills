@@ -55,6 +55,27 @@ Classify candidate stories before choosing:
 
 Give a clear recommendation. Do not leave the user with equal options unless the evidence is genuinely tied. Include a backup story for a lower-risk journal, shorter manuscript, or reduced evidence package.
 
+## State Coupling
+
+Consume:
+
+- `claim_registry`, especially draftable claim IDs and unsafe/unsupported claims.
+- `journal_landscape.fit_verdict`, `manuscript_must_prove`, and comparable paper patterns.
+- `source_ledger` and optional `figure_registry`.
+
+Update:
+
+- `story.candidate_stories`.
+- `story.recommended_story` with selected `claim_id` values.
+- `story.backup_story` and `story.manuscript_boundary`.
+- `global_blockers` when no claim is strong enough for the requested journal level.
+
+Block:
+
+- If no draftable claims exist, route to `sci-result-to-claim` before choosing a story.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

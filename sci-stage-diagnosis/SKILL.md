@@ -63,6 +63,26 @@ Every diagnosis must name one premature action to avoid, for example:
 - Do not choose a high-impact target before evidence depth is assessed.
 - Do not add citations randomly before claims are decomposed.
 
+## State Coupling
+
+Consume:
+
+- User request and any existing `manuscript_state`.
+- Existing `project`, `current_stage`, `global_blockers`, and `next_skill` fields if provided.
+
+Update:
+
+- `manuscript_state.current_stage`.
+- `manuscript_state.global_blockers`.
+- `manuscript_state.next_skill`.
+- `project.missing_inputs` when the diagnosis reveals missing intake fields.
+
+Block:
+
+- If no topic, material, goal, or artifact is available, route to `sci-intake-router` and ask only the next useful intake questions.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

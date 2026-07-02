@@ -58,6 +58,25 @@ After routing, explain why that stage comes next in one short paragraph. End wit
 - "Send the target journal and 5 keywords for comparable-paper search."
 - "Paste your current abstract or figure legend for paragraph coaching."
 
+## State Coupling
+
+Consume:
+
+- Existing `manuscript_state.project` if present.
+- User-provided journal, topic, system, materials, stage, deadline, draft, PDFs, figures, or reviewer comments.
+
+Update:
+
+- `project.user_goal`, `target_journal`, `candidate_journals`, `target_level`, `article_type`, `topic`, `field`, `organism_material_system`, and `main_methods`.
+- `project.available_artifacts` and `project.missing_inputs`.
+- `manuscript_state.current_stage` and `next_skill`.
+
+Block:
+
+- If no topic/material/goal is known, do not route to literature, claim, or drafting modules. Keep intake open with a concrete user task.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return an `SCI workflow intake brief` with:

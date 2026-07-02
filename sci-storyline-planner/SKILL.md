@@ -69,6 +69,26 @@ A good plan should tell the user:
 - Where the argument is weakest.
 - What can be drafted now and what still needs evidence.
 
+## State Coupling
+
+Consume:
+
+- `journal_landscape`, `source_ledger`, `claim_registry`, `story`, and `figure_registry`.
+- User's existing outline or preferred logic if available.
+
+Update:
+
+- `storyline.result_order`.
+- `storyline.section_registry` with stable IDs `SEC#`.
+- `storyline.drafting_brief`, `draft_readiness`, and `draft_blockers`.
+- Section-to-claim, section-to-figure, and section-to-source links.
+
+Block:
+
+- If no story or claim/figure map exists, create only a provisional structure and route to the missing upstream module.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

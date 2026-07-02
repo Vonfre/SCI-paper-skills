@@ -60,6 +60,26 @@ Always translate journal facts into writing strategy:
 - What evidence would be expected in main figures.
 - What should be moved to supplements or removed.
 
+## State Coupling
+
+Consume:
+
+- `project.target_journal`, `candidate_journals`, `target_level`, `article_type`, `topic`, `field`, `organism_material_system`, and `main_methods`.
+- Existing `source_ledger` only when previous sources are already available.
+
+Update:
+
+- `journal_landscape.journal_portrait`, `author_constraints`, `article_type_constraints`, `fit_verdict`, `manuscript_must_prove`, `retrieval_dates`, and `journal_blockers`.
+- `journal_landscape.comparable_papers` using stable IDs `P1`, `P2`, `P3`.
+- `source_ledger.sources` for official journal pages and comparable papers when cited.
+
+Block:
+
+- If no target journal or target level is known, route back to `sci-intake-router`.
+- If topic keywords are too vague, produce a provisional landscape and mark `[NEED: topic keywords]`.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

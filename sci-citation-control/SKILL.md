@@ -59,6 +59,24 @@ When references are real or when a draft contains many citations, build a source
 5. Flag weak clusters, outdated reviews, missing primary sources, retractions, preprints used as definitive evidence, and metadata mismatches.
 6. Adapt reference style only after target-journal requirements are known.
 
+## State Coupling
+
+Consume:
+
+- `claim_registry`, `source_ledger`, `draft_registry`, `journal_landscape`, and target-journal citation style.
+
+Update:
+
+- `citation_audit.unsupported_claim_ids`, `verified_reference_ids`, `metadata_risks`, `citation_placement_plan`, and `citation_health`.
+- `source_ledger.sources[].metadata_status`, evidence location, and confidence.
+- `draft_registry.open_citations`.
+
+Block:
+
+- If unsupported claims, fake/unverified references, or unresolved metadata risks remain, block submission and route to literature evidence or writing repair.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

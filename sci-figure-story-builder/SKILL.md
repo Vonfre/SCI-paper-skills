@@ -50,6 +50,27 @@ Assign every figure or table one role:
 
 Order by reader learning, not experiment chronology. The reader should move from question to evidence to interpretation with no hidden required proof in the supplement.
 
+## State Coupling
+
+Consume:
+
+- `story.recommended_story.selected_claim_ids`.
+- `claim_registry` with safe wording and evidence gaps.
+- User figure/table/case inventory or existing `figure_registry`.
+
+Update:
+
+- `figure_registry.figures` with stable IDs `F#` or `T#`.
+- Each figure's role, answered question, linked claim IDs, placement, missing panels/controls/statistics, and transition.
+- `storyline.result_order` provisionally when figure order is clear.
+
+Block:
+
+- If the central story has no main-text evidence, mark the figure gate blocked and route to result/claim repair.
+- If figures are absent, produce a needed-figure plan rather than a figure order.
+
+Always end with `Manuscript State Update` and `Handoff`.
+
 ## Output Contract
 
 Return:

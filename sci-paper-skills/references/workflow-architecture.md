@@ -6,6 +6,8 @@ Use this reference when coordinating the full SCI-paper-skills collection.
 
 The workflow adapts to the user's real state. A novice with results but no story should not be pushed into full drafting. A user with a draft should not be sent back to early ideation unless the draft has a structural flaw.
 
+The workflow is stateful. Every module reads and updates `manuscript_state`, using stable IDs for claims, figures, sources, comparable papers, sections, and reviewer issues. This prevents each module from acting like an isolated writing prompt.
+
 ## Stage Map
 
 | Stage | Skill | Core Question | Artifact |
@@ -130,6 +132,18 @@ Every stage should leave a structured output the next stage can reuse:
 - Polish report: polished text, claim-strength changes, unresolved risks.
 - Citation audit: claim-reference placement, verification, style and metadata risks.
 - Submission package: file checklist, cover letter, declarations, rebuttal matrix when needed.
+
+For required upstream and downstream fields, follow `handoff-contracts.md`. For the shared state shape, follow `manuscript-state-schema.md`.
+
+## State-First Rule
+
+At the end of each stage, update:
+
+- Which state fields were consumed.
+- Which state fields were created or changed.
+- Which IDs were introduced.
+- Which blockers remain.
+- Which next skill should run.
 
 ## User Guidance Pattern
 

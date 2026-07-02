@@ -29,13 +29,36 @@ After the first move, always state:
 
 For every stage:
 
-1. Check the minimum inputs for that stage.
-2. Perform the stage-specific work.
-3. Produce a named handoff artifact.
-4. Identify blocking gaps and optional improvements separately.
-5. Route to the next skill or stop with a clear user task.
+1. Read or initialize `manuscript_state`.
+2. Check the minimum inputs and upstream artifacts for that stage.
+3. Perform the stage-specific work.
+4. Produce a named handoff artifact.
+5. Update `manuscript_state` using stable IDs for claims, figures, sources, sections, and reviewer issues.
+6. Identify blocking gaps and optional improvements separately.
+7. Route to the next skill or stop with a clear user task.
 
 Do not start full drafting until journal fit, claim strength, central story, figure order, and citation needs are at least provisionally controlled.
+
+Every stage output must end with `Manuscript State Update` and `Handoff` blocks. If the user enters mid-workflow, reconstruct only the relevant state fields from provided context and mark missing fields.
+
+## State Coupling
+
+Consume:
+
+- Any existing `manuscript_state`.
+- The user's latest goal, manuscript materials, target journal context, draft text, model papers, or reviewer comments.
+
+Update:
+
+- Initialize `manuscript_state` when absent.
+- Preserve and route all existing claim IDs `C#`, figure/table IDs `F#`/`T#`, source IDs `S#`, comparable paper IDs `P#`, section IDs `SEC#`, and reviewer issue IDs `R#`.
+- Update `current_stage`, `next_skill`, and `global_blockers` after every stage.
+
+Block:
+
+- Do not route to drafting, polishing, citation finalization, or submission packaging when upstream gates are missing. Produce a provisional artifact and name the missing gate.
+
+Always require downstream modules to end with `Manuscript State Update` and `Handoff`.
 
 ## Skill Collection
 
@@ -108,9 +131,19 @@ Use these modules in order unless the user explicitly asks for one stage:
 8. Draft traceable: text links to figures, evidence, citations, and placeholders.
 9. Submission controlled: references, statements, figures, supplements, and journal rules are checked.
 
+## Tight Workflow Rules
+
+- Use `C#` for claims, `F#`/`T#` for figures/tables, `S#` for sources, `P#` for comparable papers, `SEC#` for sections, and `R#` for reviewer issues.
+- A downstream stage must consume the upstream IDs instead of renaming or flattening them.
+- If an upstream artifact is missing, produce a provisional output only and name the missing gate.
+- The order may adapt to the user's state, but the handoff contracts still apply.
+- Do not let polishing, drafting, or submission override unresolved evidence, claim, citation, or journal-fit blockers.
+
 ## References
 
 - Read `references/shared-operating-standards.md` at the start of any multi-stage workflow.
+- Read `references/manuscript-state-schema.md` before coordinating or updating more than one manuscript stage.
+- Read `references/handoff-contracts.md` before routing from one skill to another.
 - Read `references/prompt-and-research-patterns.md` when designing reusable writing prompts, literature-research passes, model-paper analysis, or source-backed outlines.
 - Read `references/workflow-architecture.md` when coordinating more than one stage.
 - Read `references/journal-intelligence.md` when a target journal or comparable-paper search is involved.
