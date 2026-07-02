@@ -2,6 +2,12 @@
 
 All notable changes to `SCI-paper-skills` are documented here.
 
+## 0.6.5 - cc-switch Install Discovery
+
+- Updated the sync script to support `--target codex`, `--target ccswitch`, `--target both`, `--check`, `--pull`, `--prune`, and verified `rsync`-based installs.
+- Documented the cc-switch storage mismatch that can make a GitHub skill repo appear registered while `sci-*` skills are not visible.
+- Added cc-switch install and verification commands to both English and Chinese READMEs.
+
 ## 0.6.4 - Manuscript Quality Gates
 
 - Strengthened writing skills with explicit quality gates for literature-backed Introductions, evidence-dense Results, result-anchored Discussions, and reproducible Methods.

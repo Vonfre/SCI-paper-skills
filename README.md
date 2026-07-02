@@ -8,7 +8,19 @@ It is designed for graduate students and researchers who already have data, figu
 
 ## Quick Install
 
-Clone the repository, then sync all skill folders into your local Codex skills directory:
+Clone the repository, then sync all skill folders into a local skills directory.
+
+For cc-switch users, install into the cc-switch skills directory:
+
+```bash
+git clone https://github.com/Vonfre/SCI-paper-skills.git
+cd SCI-paper-skills
+bash scripts/sync_codex_skills.sh --target ccswitch
+```
+
+If cc-switch is configured with `skillStorageLocation=cc_switch`, this installs to `~/.cc-switch/skills`, which is the directory cc-switch exposes to Codex/Claude/OpenCode. Restart the target app or start a new session after installation.
+
+For plain Codex users, install into the Codex skills directory:
 
 ```bash
 git clone https://github.com/Vonfre/SCI-paper-skills.git
@@ -16,10 +28,14 @@ cd SCI-paper-skills
 bash scripts/sync_codex_skills.sh
 ```
 
-By default, the script installs to `~/.codex/skills`. To install elsewhere:
+By default, the script installs to `~/.codex/skills`. Useful variants:
 
 ```bash
-CODEX_SKILLS_DIR=/path/to/skills bash scripts/sync_codex_skills.sh
+bash scripts/sync_codex_skills.sh --target both
+bash scripts/sync_codex_skills.sh --check --target ccswitch
+bash scripts/sync_codex_skills.sh --pull --target ccswitch
+CODEX_SKILLS_DIR=/path/to/skills bash scripts/sync_codex_skills.sh --target codex
+CCSWITCH_SKILLS_DIR=/path/to/skills bash scripts/sync_codex_skills.sh --target ccswitch
 ```
 
 After installation, invoke the orchestrator:
@@ -125,6 +141,15 @@ references/
 ```
 
 The installable skill folders live under `skills/`. Copy or sync the complete skill folders, not just individual `SKILL.md` files.
+
+If a UI such as cc-switch records this GitHub repository but does not show `sci-*` skills, the usual cause is that the repository was added but the skill folders were not copied into the active local skill storage. Run:
+
+```bash
+bash scripts/sync_codex_skills.sh --target ccswitch --check
+bash scripts/sync_codex_skills.sh --target ccswitch
+```
+
+Then restart the consuming app or open a new session.
 
 ## Project Scaffold
 

@@ -8,7 +8,19 @@
 
 ## 快速安装
 
-克隆仓库后，将所有技能文件夹同步到本地 Codex skills 目录：
+克隆仓库后，将所有技能文件夹同步到本地可识别的 skills 目录。
+
+如果你使用 cc-switch，优先安装到 cc-switch 的 skills 目录：
+
+```bash
+git clone https://github.com/Vonfre/SCI-paper-skills.git
+cd SCI-paper-skills
+bash scripts/sync_codex_skills.sh --target ccswitch
+```
+
+当 cc-switch 配置为 `skillStorageLocation=cc_switch` 时，它读取的是 `~/.cc-switch/skills`，不是 `~/.codex/skills`。安装后请重启目标软件或开启新会话。
+
+如果你只使用原生 Codex，则安装到 Codex skills 目录：
 
 ```bash
 git clone https://github.com/Vonfre/SCI-paper-skills.git
@@ -16,10 +28,14 @@ cd SCI-paper-skills
 bash scripts/sync_codex_skills.sh
 ```
 
-脚本默认安装到 `~/.codex/skills`。如果要安装到其他目录：
+脚本默认安装到 `~/.codex/skills`。常用变体：
 
 ```bash
-CODEX_SKILLS_DIR=/path/to/skills bash scripts/sync_codex_skills.sh
+bash scripts/sync_codex_skills.sh --target both
+bash scripts/sync_codex_skills.sh --check --target ccswitch
+bash scripts/sync_codex_skills.sh --pull --target ccswitch
+CODEX_SKILLS_DIR=/path/to/skills bash scripts/sync_codex_skills.sh --target codex
+CCSWITCH_SKILLS_DIR=/path/to/skills bash scripts/sync_codex_skills.sh --target ccswitch
 ```
 
 安装后调用主控技能：
@@ -125,6 +141,15 @@ references/
 ```
 
 可安装的技能文件夹统一放在 `skills/` 下。同步或复制时应复制完整技能文件夹，而不是只复制单个 `SKILL.md` 文件。
+
+如果 cc-switch 中已经记录了这个 GitHub 仓库，但界面里仍看不到 `sci-*` 技能，通常是因为仓库被添加了，但技能目录还没有复制到当前启用的本地 skill storage。请运行：
+
+```bash
+bash scripts/sync_codex_skills.sh --target ccswitch --check
+bash scripts/sync_codex_skills.sh --target ccswitch
+```
+
+然后重启目标软件或开启新会话。
 
 ## 项目脚手架
 
