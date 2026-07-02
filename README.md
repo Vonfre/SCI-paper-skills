@@ -73,6 +73,8 @@ The orchestrator uses the stages in order unless the user explicitly asks for a 
 - Diagnose before drafting.
 - Treat journal fit, literature evidence, claim strength, and figure logic as separate gates.
 - Produce a named handoff artifact at every stage.
+- Use reusable prompt cards and source-backed outlines for complex writing tasks.
+- Maintain source ledgers for literature, citation, novelty, and contradiction checks.
 - Keep missing facts visible with `[NEED: ...]`.
 - Keep unverified citations visible with `[CITE: ...]`.
 - Imitate model-paper structure and rhetorical function, not distinctive wording.
@@ -80,6 +82,7 @@ The orchestrator uses the stages in order unless the user explicitly asks for a 
 - Never invent data, references, approvals, accession numbers, methods, findings, statistics, or journal requirements.
 
 See [docs/design-principles.md](docs/design-principles.md) for the shared operating standards.
+See [docs/inspiration-high-star-writing-research-projects.md](docs/inspiration-high-star-writing-research-projects.md) for external project patterns adapted into this suite.
 
 ## Repository Layout
 

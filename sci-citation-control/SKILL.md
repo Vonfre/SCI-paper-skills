@@ -40,6 +40,16 @@ For each claim, assign the support type:
 
 Prefer primary papers for precise claims. Use reviews for broad framing unless the journal convention says otherwise.
 
+## Source Ledger Mode
+
+When references are real or when a draft contains many citations, build a source ledger before final advice. Track:
+
+- Claim ID and claim strength.
+- Source ID, DOI/PMID/URL, year, and source type.
+- Whether metadata and retraction/status were checked.
+- Exact evidence location when available.
+- Whether the source directly supports, indirectly supports, contradicts, or only frames the claim.
+
 ## Workflow
 
 1. Build a claim inventory.
@@ -54,6 +64,7 @@ Prefer primary papers for precise claims. Use reviews for broad framing unless t
 Return:
 
 - `Claim-evidence-citation map`.
+- `Source ledger` with metadata status and exact evidence location where available.
 - `Unsupported claim list`.
 - `Reference candidates` with DOI/PMID/URL and relevance notes.
 - `Citation placement plan`.
@@ -62,3 +73,4 @@ Return:
 - `Final citation audit`.
 
 Read `references/citation-audit-schema.md` for templates.
+Read `references/source-ledger-schema.md` when source tracking or claim-level evidence matching is needed.

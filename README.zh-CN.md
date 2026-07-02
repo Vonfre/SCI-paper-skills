@@ -73,6 +73,8 @@ $sci-paper-skills
 - 先诊断，再起草。
 - 将期刊适配、文献证据、论点强度和图表逻辑作为不同关卡处理。
 - 每个阶段都生成一个有名称的交接产物。
+- 对复杂写作任务使用可复用的 prompt card 和有来源支撑的提纲。
+- 对文献、引用、新颖性和矛盾证据检查维护来源台账（source ledger）。
 - 用 `[NEED: ...]` 明确标记缺失事实。
 - 用 `[CITE: ...]` 明确标记未核验的引用需求。
 - 只模仿范文的结构和修辞功能，不模仿有辨识度的原文表达。
@@ -80,6 +82,7 @@ $sci-paper-skills
 - 不编造数据、参考文献、审批信息、登录号、方法、发现、统计结果或期刊要求。
 
 共享运行标准见 [docs/design-principles.md](docs/design-principles.md)。
+外部高星项目的可迁移模式见 [docs/inspiration-high-star-writing-research-projects.md](docs/inspiration-high-star-writing-research-projects.md)。
 
 ## 仓库结构
 

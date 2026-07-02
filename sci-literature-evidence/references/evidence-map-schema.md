@@ -1,5 +1,12 @@
 # Literature Evidence Map Schema
 
+## Research Question Matrix
+
+| Research Question | Perspective | Search Terms Tried | Source Type Needed | Status | Next Query |
+|---|---|---|---|---|---|
+
+Use this before synthesis so the evidence map reflects multiple perspectives rather than a single broad search.
+
 ## For Existing Conclusions
 
 | User Conclusion | Claim Type | Supporting Literature | Conflicting/Alternative Literature | Support Level | Missing Evidence | Writing Recommendation |
@@ -28,9 +35,16 @@ Support levels:
 | Possible Direction | Prior Literature Did | Remaining Gap | Required Experiments/Data | Target-Journal Fit | Risk |
 |---|---|---|---|---|---|
 
+## Source Ledger
+
+| Source ID | Full Citation Or Link | DOI/PMID/URL | Year | Source Type | Metadata Status | Main Finding | Supports Which Claim | Contradicts/Qualifies Which Claim | Evidence Location | Confidence |
+|---|---|---|---:|---|---|---|---|---|---|---|
+
 ## Literature Handling Rules
 
 - Prefer primary papers for specific biological claims.
 - Do not use one review as evidence for a precise mechanism.
 - Track whether a paper supports the user's exact claim or only a neighboring idea.
 - Verify "first", "novel", and "previously unknown" claims with extra searches.
+- Track page, figure, table, section, or paragraph location when available.
+- Separate exact support from neighboring support and background-only support.

@@ -26,6 +26,18 @@ For each conclusion or possible direction, state whether the literature directly
 - Same-journal or same-level papers when journal fit matters.
 - Official database records for DOI/PMID and retraction checks when available.
 
+## Research Question Planning
+
+Before summarizing the literature, convert the task into a small question set:
+
+- One question for direct support of the user's claim.
+- One question for conflicting or alternative explanations.
+- One question for novelty boundary and prior similar work.
+- One question for methods, controls, datasets, or model-system precedent.
+- One target-journal framing question when a journal is known.
+
+Record these in a source ledger so the final recommendation is traceable.
+
 ## Citation Role Control
 
 Explain whether each source is useful for background framing, gap identification, claim support, alternative explanation, method precedent, or discussion comparison. Do not treat one review as direct evidence for a precise mechanism when a primary paper is needed.
@@ -42,6 +54,8 @@ Explain whether each source is useful for background framing, gap identification
 
 Return:
 
+- `Research question matrix`.
+- `Source ledger` with source role, metadata status, evidence location, and confidence.
 - `Evidence map` for each user question or conclusion.
 - `Support/conflict summary`.
 - `Gap assessment`.
@@ -49,3 +63,4 @@ Return:
 - `Next module`: usually `sci-result-to-claim`, `sci-core-story-finder`, or `sci-citation-control`.
 
 Read `references/evidence-map-schema.md` for templates.
+Read `references/source-ledger-template.md` when source tracking, novelty checks, or contradiction checks are needed.

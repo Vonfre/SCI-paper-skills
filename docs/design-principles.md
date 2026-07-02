@@ -55,3 +55,13 @@ Model papers are used to learn:
 - Supplement organization.
 
 Do not copy distinctive wording, title formulas, sentence sequences, or rhetorical signatures from model papers.
+
+## Research And Prompt Patterns
+
+High-quality writing assistance should use:
+
+- reusable prompt cards with role, task, inputs, constraints, method, output contract, and verification;
+- source-backed outlines before full prose;
+- multi-perspective questions before literature synthesis;
+- source ledgers that track metadata, evidence location, exactness, and confidence;
+- reviewer scorecards before submission decisions.

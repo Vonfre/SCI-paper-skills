@@ -19,6 +19,8 @@ Use the relevant modes:
 - `Field expert`: novelty, prior work, citation omissions, overclaiming.
 - `Writing reviewer`: structure, figure clarity, paragraph logic, tone.
 
+Run separate passes when enough input is available. Do not merge all concerns into one generic critique; preserve which reviewer type would raise each issue.
+
 ## Severity Scale
 
 - `Blocking`: likely desk reject or major rejection if unresolved.
@@ -43,9 +45,10 @@ If inputs are incomplete, run a provisional review and mark which risks cannot b
 
 1. Read the target journal, story, claims, figures, and draft if available.
 2. Identify the submission bar and most likely reviewer expertise.
-3. List objections with severity and evidence.
-4. Separate fixes that need new data from fixes possible by writing, analysis, citation, or figure reorganization.
-5. Recommend submit, revise before submission, do more work, or reconsider journal.
+3. Score journal fit, novelty, evidence strength, method rigor, figure logic, citation health, and writing logic.
+4. List objections with severity and evidence.
+5. Separate fixes that need new data from fixes possible by writing, analysis, citation, or figure reorganization.
+6. Recommend submit, revise before submission, do more work, or reconsider journal.
 
 ## Severity Rules
 
@@ -61,6 +64,7 @@ For every blocking or major issue, give both the smallest credible fix and the s
 Return:
 
 - `Desk-rejection risk`.
+- `Reviewer scorecard`.
 - `Reviewer objection matrix`.
 - `Overclaim audit`.
 - `Missing control/analysis`.
@@ -68,3 +72,4 @@ Return:
 - `Decision`.
 
 Read `references/reviewer-risk-report.md` for the template.
+Read `references/multi-reviewer-rubric.md` when running a full pre-submission or revision risk simulation.

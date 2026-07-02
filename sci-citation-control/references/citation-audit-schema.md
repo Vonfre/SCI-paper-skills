@@ -32,6 +32,26 @@ Evidence status:
 | Reference | Supports Which Claim | Source Type | Year | Strength | Concern | Action |
 |---|---|---|---:|---|---|---|
 
+## Source Ledger
+
+| Source ID | Reference | DOI/PMID/URL | Year | Source Type | Metadata Verified? | Retraction/Status Checked? | Supports Claim IDs | Exact Evidence Location | Concern |
+|---|---|---|---:|---|---|---|---|---|---|
+
+## Evidence Match
+
+| Claim | Source | Match Type | Citation Placement | Confidence | Needed Action |
+|---|---|---|---|---|---|
+
+Match types:
+
+- Direct primary support.
+- Indirect support.
+- Background framing.
+- Method precedent.
+- Contradiction or alternative explanation.
+- User-data support only.
+- Weak or irrelevant.
+
 ## Citation Placement Rules
 
 - Cite literature claims, not the user's own direct observations unless comparing to prior work.
@@ -46,6 +66,8 @@ Evidence status:
 - [ ] Every novelty claim is verified or softened.
 - [ ] Every method/tool/database has a citation if needed.
 - [ ] Every reference exists and metadata are accurate.
+- [ ] Exact evidence location is recorded where available.
+- [ ] Retraction/status concerns are checked where possible.
 - [ ] Reference style matches target journal.
 - [ ] In-text citations and reference list agree.
 - [ ] Supplement citations follow journal convention.
