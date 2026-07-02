@@ -2,6 +2,12 @@
 
 All notable changes to `SCI-paper-skills` are documented here.
 
+## 0.6.6 - Chinese GitHub README
+
+- Made `README.md` the Chinese-first GitHub landing page.
+- Removed the duplicate Chinese README file and simplified the root README around project purpose, skill modules, workflow, examples, and design principles.
+- Moved away from README-level implementation details so the homepage focuses on what the skill suite does.
+
 ## 0.6.5 - cc-switch Install Discovery
 
 - Updated the sync script to support `--target codex`, `--target ccswitch`, `--target both`, `--check`, `--pull`, `--prune`, and verified `rsync`-based installs.

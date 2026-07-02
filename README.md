@@ -1,138 +1,95 @@
 # SCI-paper-skills
 
-[English](README.md) | [简体中文](README.zh-CN.md)
+`SCI-paper-skills` 是一套面向 SCI/SCIE 论文写作的可复用 skills。它不是普通润色模板，而是一条从“研究结果”走向“目标期刊论文”的写作工作流：先判断项目卡在哪，再梳理论文故事、证据强度、图表顺序、文献支撑、正文结构和投稿/返修材料。
 
-`SCI-paper-skills` is a target-journal-adaptive Codex skill suite for turning real research results into a coherent SCI/SCIE manuscript.
+这套 skills 适合已经有数据、图表、结论、草稿、范文、目标期刊或审稿意见，但不知道如何组织成论文的研究者，尤其适合中文科研作者把分散结果整理成逻辑清楚、证据边界明确、接近投稿形态的 SCI manuscript。
 
-It is designed for graduate students and researchers who already have data, figures, conclusions, a rough idea, a draft, model papers, or reviewer comments, but need help organizing logic, controlling claim strength, finding evidence, imitating target-journal structure, polishing language, and preparing submission or revision materials.
+## 核心能力
 
-## Quick Install
+- 从目标期刊和研究内容出发，判断当前论文处于哪个阶段。
+- 把实验结果或分析结果转化为可防守的论文论点。
+- 区分“结果能证明什么”和“结果还不能证明什么”。
+- 根据文献建立背景、科学问题、研究缺口和讨论边界。
+- 组织 figure/storyline，让 Results 不只是罗列数据，而是形成证据链。
+- 起草摘要、引言、结果、讨论、方法、图注、投稿信和返修信。
+- 控制 claim strength，避免过度机制化、过度新颖性或无证据表达。
+- 生成中英文完整论文示例，保留方法、统计、图注、参考文献和可复现性清单。
 
-Clone the repository, then sync all skill folders into a local skills directory.
+## 技能总览
 
-For cc-switch users, install into the cc-switch skills directory:
+| 阶段 | Skill | 作用 |
+|---:|---|---|
+| 0 | `sci-stage-diagnosis` | 判断论文项目卡在哪一步，给出下一步动作 |
+| 1 | `sci-intake-router` | 收集目标期刊、研究方向、已有材料并路由 |
+| 2 | `sci-journal-landscape` | 分析目标期刊定位、同类论文和投稿匹配度 |
+| 3 | `sci-literature-evidence` | 建立文献证据、研究缺口、支持/冲突关系 |
+| 4 | `sci-result-to-claim` | 把结果转换为可防守的论文论点 |
+| 5 | `sci-core-story-finder` | 从多个可能结论中确定中心故事 |
+| 6 | `sci-figure-story-builder` | 安排图表顺序、主文/补充材料和图-论点关系 |
+| 7 | `sci-storyline-planner` | 设计论文结构和 Results/Discussion 逻辑 |
+| 8 | `sci-reviewer-simulator` | 模拟编辑和审稿人风险，提前修补弱点 |
+| 9 | `sci-draft-mimic` | 参考目标期刊范文的结构和修辞功能起草正文 |
+| 10 | `sci-paragraph-coach` | 写单个段落、图注、摘要或 cover letter 片段 |
+| 11 | `sci-language-polisher` | 在不改变科学含义的前提下润色中英文表达 |
+| 12 | `sci-citation-control` | 检查引用位置、参考文献格式和 claim-evidence 对齐 |
+| 13 | `sci-submission-revision` | 准备投稿材料、返修策略和逐点回复 |
 
-```bash
-git clone https://github.com/Vonfre/SCI-paper-skills.git
-cd SCI-paper-skills
-bash scripts/sync_codex_skills.sh --target ccswitch
-```
-
-If cc-switch is configured with `skillStorageLocation=cc_switch`, this installs to `~/.cc-switch/skills`, which is the directory cc-switch exposes to Codex/Claude/OpenCode. Restart the target app or start a new session after installation.
-
-For plain Codex users, install into the Codex skills directory:
-
-```bash
-git clone https://github.com/Vonfre/SCI-paper-skills.git
-cd SCI-paper-skills
-bash scripts/sync_codex_skills.sh
-```
-
-By default, the script installs to `~/.codex/skills`. Useful variants:
-
-```bash
-bash scripts/sync_codex_skills.sh --target both
-bash scripts/sync_codex_skills.sh --check --target ccswitch
-bash scripts/sync_codex_skills.sh --pull --target ccswitch
-CODEX_SKILLS_DIR=/path/to/skills bash scripts/sync_codex_skills.sh --target codex
-CCSWITCH_SKILLS_DIR=/path/to/skills bash scripts/sync_codex_skills.sh --target ccswitch
-```
-
-After installation, invoke the orchestrator:
+主控技能是：
 
 ```text
 $sci-paper-skills
 ```
 
-The first response should ask only the next useful questions:
-
-1. What journal do you want to submit to? If undecided, list candidate journals or target level.
-2. What is your research topic, field, organism/material/system, and article type if known?
-3. What do you already have: scientific question, conclusions, figures/data, outline, draft, PDFs/model papers, or reviewer comments?
-
-If enough context is already provided, the skill proceeds directly and marks missing information with `[NEED: ...]`.
-
-## Skill Index
-
-| Status | Stage | Skill | Trigger | Main Artifact |
-|---|---:|---|---|---|
-| Stable | 0 | `sci-stage-diagnosis` | Unsure where the manuscript is stuck | Stage diagnosis |
-| Stable | 1 | `sci-intake-router` | New project or incomplete context | Intake brief |
-| Stable | 2 | `sci-journal-landscape` | Target journal, candidate journal, or journal-fit question | Journal landscape |
-| Stable | 3 | `sci-literature-evidence` | Need support, conflict, gap, novelty, or direction evidence | Evidence map |
-| Stable | 4 | `sci-result-to-claim` | Results/figures exist but claims are unclear | Result-to-claim matrix |
-| Stable | 5 | `sci-core-story-finder` | Several possible conclusions or weak central message | Story decision memo |
-| Stable | 6 | `sci-figure-story-builder` | Figures/tables/cases need ordering and main-vs-supplement decisions | Figure story map |
-| Stable | 7 | `sci-storyline-planner` | Need manuscript structure or alternative logic plans | Storyline plan |
-| Stable | 8 | `sci-reviewer-simulator` | Want editor/reviewer risk before submission | Reviewer risk report |
-| Stable | 9 | `sci-draft-mimic` | Draft from model papers without copying wording | Draft package |
-| Stable | 10 | `sci-paragraph-coach` | Need paragraph-level writing help | Paragraph coaching block |
-| Stable | 11 | `sci-language-polisher` | Meaning is stable and expression needs polishing | Polish report |
-| Stable | 12 | `sci-citation-control` | Need reference placement, evidence audit, or citation style | Citation audit |
-| Stable | 13 | `sci-submission-revision` | Submission files, cover letter, reviewer response, or revision plan | Submission/revision package |
-
-For a more detailed trigger and handoff map, see [docs/skill-index.md](docs/skill-index.md).
-
-## Workflow
+## 推荐工作流
 
 ```text
-diagnose -> intake -> journal landscape -> literature evidence -> result-to-claim
--> core story -> figure story -> storyline -> reviewer simulation
--> draft mimic -> paragraph coach -> language polish -> citation control
--> submission or revision
+阶段诊断
+-> 输入收集
+-> 期刊画像
+-> 文献证据
+-> 结果到论点
+-> 中心故事
+-> 图表故事
+-> 论文结构
+-> 审稿模拟
+-> 范文模仿起草
+-> 段落辅导
+-> 语言润色
+-> 引用控制
+-> 投稿或返修
 ```
 
-The orchestrator uses the stages in order unless the user explicitly asks for a specific module.
+这条流程的关键不是“直接生成漂亮文字”，而是先把论文的科学逻辑搭稳：目标期刊、文献背景、结果证据、论点边界、图表顺序、讨论深度和方法可复现性都要彼此咬合。
 
-## Tight Workflow
+## 完整示例
 
-The tight workflow layer adds stateful handoff rules so the skills work as a connected manuscript pipeline rather than isolated prompts.
+仓库提供了一个从 0 到 1 的合成示例，展示如何把一个研究问题组织成真正论文格式的 Markdown：
 
-- Shared state: [manuscript-state-schema.md](skills/sci-paper-skills/references/manuscript-state-schema.md)
-- Stage contracts: [handoff-contracts.md](skills/sci-paper-skills/references/handoff-contracts.md)
-- End-to-end routes: [end-to-end-runbooks.md](docs/end-to-end-runbooks.md)
-- Complete example paper (English): [complete-manuscript.md](examples/zero-to-one-sci-manuscript/complete-manuscript.md)
-- Complete example paper (Chinese): [complete-manuscript.zh-CN.md](examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md)
-- Example run notes: [zero-to-one-sci-manuscript](examples/zero-to-one-sci-manuscript/README.md)
-- Final example state: [manuscript-state-example.yaml](examples/manuscript-state-example.yaml)
+- 英文完整论文：[complete-manuscript.md](examples/zero-to-one-sci-manuscript/complete-manuscript.md)
+- 中文完整论文：[complete-manuscript.zh-CN.md](examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md)
+- 示例状态文件：[manuscript-state-example.yaml](examples/manuscript-state-example.yaml)
+- 最终打包说明：[final-package.md](examples/zero-to-one-sci-manuscript/final-package.md)
 
-Every stage now consumes upstream state, updates its owned fields, preserves IDs such as `C#`, `F#`, `S#`, `SEC#`, and ends with `Manuscript State Update` plus `Handoff` blocks.
+示例论文包含摘要、引言、结果、讨论、材料与方法、数据可用性、作者贡献、图注、补充表和参考文献。它重点展示四个质量门槛：
 
-## Design Principles
+1. 引言必须由文献支撑，从背景、已知机制、未解决问题推进到科学问题。
+2. 结果必须以证据为核心，包含对照、统计、重复、图表引用和必要的过渡句。
+3. 讨论必须从结果出发，扩展到既有文献、机制可能性、替代解释、局限和未来实验。
+4. 材料与方法必须足够可复现，说明材料、处理、仪器/软件、重复、排除规则、定量和统计模型。
 
-- Diagnose before drafting.
-- Treat journal fit, literature evidence, claim strength, and figure logic as separate gates.
-- Produce a named handoff artifact at every stage.
-- Use reusable prompt cards and source-backed outlines for complex writing tasks.
-- Maintain source ledgers for literature, citation, novelty, and contradiction checks.
-- Keep missing facts visible with `[NEED: ...]`.
-- Keep unverified citations visible with `[CITE: ...]`.
-- Imitate model-paper structure and rhetorical function, not distinctive wording.
-- Use current web research for journal facts, policies, metrics, APC/OA, and recent literature.
-- Never invent data, references, approvals, accession numbers, methods, findings, statistics, or journal requirements.
-
-See [docs/design-principles.md](docs/design-principles.md) for the shared operating standards.
-See [docs/inspiration-high-star-writing-research-projects.md](docs/inspiration-high-star-writing-research-projects.md) for external project patterns adapted into this suite.
-
-## Repository Layout
+## 仓库结构
 
 ```text
-README.md
-README.zh-CN.md
-CHANGELOG.md
+skills/      # 可安装的 skill 模块
+examples/    # 从 0 到 1 的完整论文示例
+docs/        # 工作流、设计原则和技能索引
+scripts/     # 同步和校验脚本
 manifest.yaml
-docs/
-examples/
-  zero-to-one-sci-manuscript/
-scripts/
-skills/
-  sci-paper-skills/
-  sci-stage-diagnosis/
-  sci-intake-router/
-...
+CHANGELOG.md
+LICENSE
 ```
 
-Each skill folder follows the Codex skill shape:
+每个 skill 都是独立目录，核心文件为：
 
 ```text
 SKILL.md
@@ -140,53 +97,27 @@ agents/openai.yaml
 references/
 ```
 
-The installable skill folders live under `skills/`. Copy or sync the complete skill folders, not just individual `SKILL.md` files.
+## 安装与更新
 
-If a UI such as cc-switch records this GitHub repository but does not show `sci-*` skills, the usual cause is that the repository was added but the skill folders were not copied into the active local skill storage. Run:
-
-```bash
-bash scripts/sync_codex_skills.sh --target ccswitch --check
-bash scripts/sync_codex_skills.sh --target ccswitch
-```
-
-Then restart the consuming app or open a new session.
-
-## Project Scaffold
-
-The orchestrator includes a helper script:
+将仓库克隆到本地后，运行同步脚本即可把 `skills/` 下的完整技能目录复制到本地 skills 目录：
 
 ```bash
-python skills/sci-paper-skills/scripts/init_journal_project.py \
-  --journal "The Plant Cell" \
-  --topic "ABA stomatal closure" \
-  --out ./journal-projects
+git clone https://github.com/Vonfre/SCI-paper-skills.git
+cd SCI-paper-skills
+bash scripts/sync_codex_skills.sh
 ```
 
-Generated `journal-projects/` folders are local working artifacts and are ignored by Git.
+如果你的工具使用自定义 skills 目录，可以用脚本参数或环境变量指定目标目录。同步时请保留完整 skill 文件夹，不要只复制单个 `SKILL.md`。
 
-## Validation
+## 设计原则
 
-Run the local pack check:
-
-```bash
-bash scripts/validate_skill_pack.sh
-```
-
-The same check runs in GitHub Actions on pushes and pull requests. See [CHANGELOG.md](CHANGELOG.md) for release history and upgrade notes.
-
-Before publishing larger skill changes, also validate each skill with the skill creator `quick_validate.py` tool. If the bundled runtime lacks PyYAML, use a system `python3` that has `yaml` installed.
+- 先诊断，再写作。
+- 先证据，再论点。
+- 先结构，再润色。
+- 能证明什么就写什么，不能证明的内容用边界和未来实验处理。
+- 不编造数据、参考文献、审批信息、登录号、方法、统计结果或期刊要求。
+- 模仿范文的结构和功能，不复制有辨识度的原文表达。
 
 ## License
 
-This project is released under the [MIT License](LICENSE).
-
-## Adding A Skill
-
-New modules should include:
-
-- `SKILL.md` with `name` and `description` frontmatter.
-- `agents/openai.yaml`.
-- At least one focused file under `references/` when templates or quality rules are needed.
-- One row in `manifest.yaml`.
-- One row in [docs/skill-index.md](docs/skill-index.md).
-- A clear handoff artifact that can feed another stage.
+本项目基于 [MIT License](LICENSE) 开源。
