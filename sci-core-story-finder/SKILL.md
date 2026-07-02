@@ -7,17 +7,30 @@ description: Identify the central scientific story for an SCI manuscript. Use wh
 
 ## Overview
 
-Find the manuscript's center of gravity. This module turns a pile of results into one memorable scientific story that fits the target journal.
+Find the manuscript's center of gravity. Convert scattered results into one memorable, evidence-bounded scientific story that fits the target journal or explicitly names the mismatch.
 
 ## First Move
 
-Ask three questions if missing:
+Ask up to three missing items:
 
-1. What result is strongest or most surprising?
-2. What do you want readers to remember in one sentence?
-3. What target journal or journal level are you aiming for?
+1. What are the strongest 3-5 results or claims?
+2. What is the target journal or journal level?
+3. What broader problem or gap should the work address?
 
-If the user cannot answer, infer story options from the result-to-claim matrix and literature landscape.
+If results are messy, first ask for a rough bullet list; do not force a polished abstract.
+
+## Story Selection Criteria
+
+Compare candidate stories by:
+
+- Evidence strength.
+- Novelty and field relevance.
+- Target-journal fit.
+- Audience breadth.
+- Risk of overclaiming.
+- Writing feasibility with available data.
+
+The recommended story is not always the flashiest result; it is the best-supported publishable argument.
 
 ## Story Types
 
@@ -32,20 +45,11 @@ Classify candidate stories before choosing:
 
 ## Workflow
 
-1. Inventory possible stories.
-   - Mechanism, resource, method, phenotype, clinical/application, evolutionary/comparative, or conceptual model.
-
-2. Score each story.
-   - Novelty, evidence strength, target-journal fit, audience breadth, risk, and writing feasibility.
-
-3. Select a main story and backup story.
-   - Give a clear recommendation, not only options.
-
-4. Write the story sentence.
-   - Problem + gap + approach + central finding + significance.
-
-5. Define story boundaries.
-   - What belongs in the manuscript, what goes to supplement, what should be cut.
+1. Generate 2-4 possible story angles.
+2. Write a one-sentence takeaway for each.
+3. Score each angle by evidence, fit, risk, and feasibility.
+4. Choose one central story and one backup story.
+5. Define what belongs in the main text, supplement, or later paper.
 
 ## Recommendation Rule
 
@@ -53,6 +57,12 @@ Give a clear recommendation. Do not leave the user with equal options unless the
 
 ## Output Contract
 
-Produce a story decision memo.
+Return:
+
+- `Candidate stories`.
+- `Recommended core story`.
+- `Backup story`.
+- `Manuscript boundary`.
+- `Next step`: usually `sci-figure-story-builder` or `sci-storyline-planner`.
 
 Read `references/story-decision-memo.md` for the template.

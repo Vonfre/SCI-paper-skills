@@ -1,7 +1,7 @@
 # Reviewer Risk Report
 
 ```markdown
-# Reviewer Risk Report
+## Reviewer Risk Report
 
 ## Desk-Rejection Risk
 - Verdict:

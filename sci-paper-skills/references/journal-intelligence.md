@@ -1,5 +1,13 @@
 # Journal Intelligence And Benchmarking
 
+## Contents
+
+- Research Sequence
+- Search Tactics
+- Benchmark Paper Selection
+- Dossier Template
+- Quality Bar
+
 Use this reference when researching the target SCI journal and comparable papers.
 
 ## Research Sequence
@@ -78,7 +86,7 @@ Select 3-8 papers. For each, record:
 Use this structure in the output or local files:
 
 ```markdown
-# Target Journal Dossier
+## Target Journal Dossier
 
 ## Identity
 - Journal:

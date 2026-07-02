@@ -7,69 +7,58 @@ description: Evidence, reference, and citation management for SCI manuscripts. U
 
 ## Overview
 
-Control the relationship between claims, evidence, and references. This skill prevents unsupported statements, fabricated citations, weak literature framing, and target-journal citation-style errors.
+Control the relationship between claims, evidence, and references. Prevent fabricated citations, unsupported statements, weak literature framing, and target-journal citation-style errors.
 
 ## First Move
 
-Determine whether the task is:
+Classify the user's need:
 
-- `Claim audit`: inspect manuscript claims and identify missing evidence.
+- `Claim audit`: identify what needs support.
 - `Reference discovery`: find suitable sources for specific claims.
-- `Reference verification`: confirm metadata, DOI, PMID, journal, year, and relevance.
-- `Citation placement`: decide where citations belong in the manuscript.
+- `Reference verification`: confirm DOI, PMID, journal, year, metadata, retraction/status, and relevance.
+- `Citation placement`: decide where citations belong.
 - `Style adaptation`: match target journal reference and supplement citation style.
-- `Bibliography cleanup`: normalize and flag duplicates, retractions, stale reviews, or irrelevant citations.
+- `Bibliography cleanup`: normalize, deduplicate, and flag stale or irrelevant sources.
 
 Use current web or database verification when real references, current status, retractions, or exact metadata matter. Do not invent citations.
 
 ## Minimum Inputs
 
-Accept:
+Accept a draft paragraph, claim list, result-to-claim matrix, literature evidence map, DOI/PMID/BibTeX list, or target-journal citation style. If references are placeholders, keep them as `[CITE: claim]` until verified.
 
-- A draft paragraph or section.
-- A claim list.
-- A result-to-claim matrix.
-- A literature evidence map.
-- Existing reference list, DOI list, PMID list, or BibTeX.
-- Target journal or comparable-paper citation style.
+## Evidence Matching
 
-If references are placeholders, keep them as `[CITE: claim]` until verified.
+For each claim, assign the support type:
+
+- User data or figure/table.
+- Primary literature.
+- Review/meta-analysis.
+- Method/tool/database/software citation.
+- Guideline/reporting standard.
+- No citation needed.
+- Unsupported or unverifiable.
+
+Prefer primary papers for precise claims. Use reviews for broad framing unless the journal convention says otherwise.
 
 ## Workflow
 
 1. Build a claim inventory.
-   - Extract major background claims, method claims, result claims, mechanistic claims, translational claims, novelty claims, and limitation claims.
-
-2. Classify evidence needs.
-   - User data, figure/table, supplement, primary literature, review/meta-analysis, guideline, database, or no citation needed.
-
-3. Verify or find references.
-   - Prefer primary sources for factual claims and recent high-quality reviews for broad context.
-   - Use DOI/PMID/official article pages when possible.
-   - Flag retracted, superseded, predatory, off-topic, or low-relevance sources.
-
-4. Place citations.
-   - Put citations next to the claim they support.
-   - Avoid citation clusters that hide weak support.
-   - Match benchmark-paper behavior and target journal style.
-
-5. Format and audit.
-   - Adapt in-text citation style, reference list style, DOI/URL requirements, reference order, and supplement citation style.
-   - Return a risk list before submission.
-
-## Verification Rule
-
-When exact references matter, verify DOI/PMID/title/year/journal from authoritative pages or databases. Flag retractions, expression of concern, preprints used as definitive evidence, review-only support for precise claims, and metadata mismatches.
+2. Identify needed evidence type for each claim.
+3. Verify citation candidates using DOI/PMID/official article pages when possible.
+4. Place citations next to the claims they support.
+5. Flag weak clusters, outdated reviews, missing primary sources, retractions, preprints used as definitive evidence, and metadata mismatches.
+6. Adapt reference style only after target-journal requirements are known.
 
 ## Output Contract
 
-Produce:
+Return:
 
 - `Claim-evidence-citation map`.
 - `Unsupported claim list`.
 - `Reference candidates` with DOI/PMID/URL and relevance notes.
 - `Citation placement plan`.
 - `Journal style notes`.
-- `Risk flags`: missing primary source, outdated review, unsupported causality, unverifiable citation, metadata mismatch.
+- `Risk flags`.
+- `Final citation audit`.
 
 Read `references/citation-audit-schema.md` for templates.

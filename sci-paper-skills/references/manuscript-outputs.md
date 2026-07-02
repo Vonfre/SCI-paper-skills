@@ -1,5 +1,14 @@
 # Manuscript Outputs
 
+## Contents
+
+- Core Deliverables
+- Writing Rules
+- Section Guidance
+- Supplementary-Material Strategy
+- Cover Letter Skeleton
+- Final Checklist
+
 Use this reference after the journal landscape, evidence map, result-to-claim matrix, and storyline plan exist.
 
 ## Core Deliverables

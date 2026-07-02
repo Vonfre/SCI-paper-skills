@@ -7,18 +7,30 @@ description: Convert experimental or analytical results into defensible SCI manu
 
 ## Overview
 
-Help inexperienced authors translate results into manuscript claims. The goal is to prevent both under-writing and overclaiming.
+Turn results into evidence-bounded claims. This module protects the manuscript from saying mechanism, causality, novelty, or application when the current data only support observation or association.
 
 ## First Move
 
-Ask the user for their results in the easiest available form:
+Ask for results in the easiest available form:
 
-- Figure list with one sentence per figure.
-- Raw bullet-point results.
+- Figure/table list.
+- Key observations.
 - Current conclusions.
-- Uploaded draft/figure legends.
+- Raw result bullets.
+- Draft result paragraphs.
 
-If the user has no figure list, ask for 3-8 key observations and the methods used.
+If the user lacks polished figures, work from rough result descriptions and mark missing evidence.
+
+## Claim Ladder
+
+Use the weakest accurate claim level:
+
+1. `Descriptive`: X changes under Y.
+2. `Association`: X correlates with Y.
+3. `Regulation`: perturbing X changes Y.
+4. `Mechanism`: X changes Y through Z.
+5. `Causality`: X is necessary/sufficient under tested conditions.
+6. `Application`: X improves a practical outcome or predicts utility.
 
 ## Minimum Input Format
 
@@ -35,20 +47,11 @@ For each result, recover: condition, comparison, method, observation, quantifica
 
 ## Workflow
 
-1. Normalize results.
-   - Rewrite each result as: observation, comparison, condition, method, and confidence.
-
-2. Infer possible claims.
-   - Separate direct claims, supported interpretations, speculative implications, and claims not yet supported.
-
-3. Grade claim strength.
-   - Descriptive, association, regulation, mechanism, causality, application, or resource.
-
-4. Identify evidence gaps.
-   - Missing control, replicate, validation, causal test, rescue, orthogonal method, literature support, or statistical detail.
-
-5. Recommend wording.
-   - Provide safe manuscript wording and stronger wording only if additional evidence is supplied.
+1. List each result/figure and what it directly shows.
+2. Separate direct observation from interpretation.
+3. Assign the strongest defensible claim and the claims it does not support.
+4. Identify the smallest missing control, analysis, or citation that would unlock a stronger claim.
+5. Recommend safe wording and a next module.
 
 ## Claim Discipline
 
@@ -65,6 +68,12 @@ Do not allow phenotype-only data to become a mechanism claim. Do not allow corre
 
 ## Output Contract
 
-Produce a result-to-claim table plus next actions.
+Return:
+
+- `Result-to-claim matrix`.
+- `Claim-strength summary`.
+- `Evidence gaps` ranked by importance.
+- `Safe wording` and `stronger wording if fixed`.
+- `Next module`: usually `sci-core-story-finder`, `sci-figure-story-builder`, or `sci-citation-control`.
 
 Read `references/result-claim-matrix.md` for the output template.

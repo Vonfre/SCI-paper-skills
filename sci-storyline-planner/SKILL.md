@@ -7,16 +7,26 @@ description: Manuscript logic and storyline planning for SCI papers. Use when th
 
 ## Overview
 
-Turn literature findings, user conclusions, and key cases into a manuscript logic. This module decides the order of the argument before any full draft is written.
+Plan the manuscript's argument path before drafting. Compare possible result orders and choose the one that best teaches the reader, fits the target journal, and keeps claim strength honest.
 
 ## First Move
 
 Ask whether the user already has a preferred logic:
 
-- If yes: request the current outline or key cases and improve the order.
-- If no: use journal landscape and literature evidence to propose multiple logic plans.
+- If yes, evaluate it against claims, figure order, and journal fit.
+- If no, propose multiple logic plans using the journal landscape, evidence map, and figure story.
 
-Ask for the key cases/figures only if the user has data. If not, propose evidence modules needed for each plan.
+Ask for key cases/figures only if the user has data. If not, propose evidence modules needed for each plan.
+
+## Logic Archetypes
+
+Use or combine:
+
+- Problem -> mechanism -> validation.
+- Phenotype -> mechanism -> rescue/control.
+- Cohort/resource -> discovery -> validation.
+- Method -> benchmark -> biological/application insight.
+- Case series -> shared pattern -> explanatory model.
 
 ## Planning Inputs
 
@@ -34,30 +44,20 @@ If a required artifact is missing, make a provisional plan and mark the missing 
 
 ## Workflow
 
-1. Identify available story materials.
-   - Journal landscape, literature evidence, result-to-claim matrix, core story memo, figure story map, conclusions, figures, cases, methods, and benchmark paper patterns.
+1. Define the central message and target audience.
+2. Generate 2-3 storyline options.
+3. Compare strengths, risks, and missing evidence.
+4. Choose a recommended result order.
+5. Produce a drafting brief for title, abstract, introduction, results, and discussion.
 
-2. Choose storyline type.
-   - Mechanism-first.
-   - Phenotype-to-mechanism.
-   - Resource-to-validation.
-   - Method-to-application.
-   - Clinical/cohort-to-mechanism.
-   - Comparative/evolutionary.
+## Draft-Readiness Gate
 
-3. Generate plans.
-   - If the user has no plan, give 2-4 plausible structures with pros/cons.
-   - If the user has a plan, reorganize it and flag weak transitions.
+Drafting is ready only if:
 
-4. Map figures/cases.
-   - Decide which case is main text, supplementary, or not needed.
-   - Keep target-journal constraints in view.
-
-5. Create writing briefs.
-   - Give paragraph-level or subsection-level instructions for `sci-draft-mimic` and `sci-paragraph-coach`.
-
-6. Hand off risks.
-   - Send weak transitions, overclaims, and missing controls to `sci-reviewer-simulator`.
+- Each result section answers one scientific question.
+- Main figures support the central story in order.
+- High-risk claims have evidence or are softened.
+- Missing facts are visible as `[NEED: ...]`.
 
 ## Plan Quality Bar
 
@@ -71,13 +71,14 @@ A good plan should tell the user:
 
 ## Output Contract
 
-Produce:
+Return:
 
-- `Recommended storyline`.
-- `Alternative plans`.
-- `Figure/case order`.
-- `Transition logic`.
-- `Weak links and missing evidence`.
+- `Storyline options`.
+- `Recommended plan`.
+- `Core message`.
+- `Result order`.
+- `Main figures`.
+- `Weak links`.
 - `Drafting brief`.
 
 Read `references/storyline-plan-schema.md` for templates.

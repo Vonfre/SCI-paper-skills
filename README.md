@@ -73,19 +73,34 @@ If enough context is already provided, the skill should proceed directly and mar
 The orchestrator includes a helper script:
 
 ```bash
-python sci-paper-skills/scripts/init_journal_project.py \
-  --journal "The Plant Cell" \
-  --topic "ABA stomatal closure" \
-  --out ./journal-projects
+python sci-paper-skills/scripts/init_journal_project.py   --journal "The Plant Cell"   --topic "ABA stomatal closure"   --out ./journal-projects
 ```
 
 Generated project folders are working artifacts and are ignored by Git.
 
 ## Quality Rules
 
-- Do not invent data, references, statistics, approvals, accession numbers, or findings.
+- Do not invent data, references, statistics, approvals, accession numbers, methods, findings, or journal requirements.
 - Use current web research for journal facts, article lists, metrics, OA/APC, policies, and recent literature.
 - Distinguish user data, literature support, interpretation, speculation, and unsupported claims.
-- Match claim strength to evidence: observation, association, regulation, mechanism, causality, and application are different.
-- Draft only after journal fit, literature support, result-to-claim mapping, and storyline are sufficiently clear.
+- Match claim strength to evidence: observation, association, regulation, mechanism, causality, validation, and application are different.
+- Draft only after journal fit, literature support, result-to-claim mapping, central story, figure logic, and citation needs are sufficiently clear.
 - Keep every stage traceable by producing a handoff artifact for the next stage.
+
+## Packaging Notes
+
+- Generated `journal-projects/` folders are local working artifacts and are ignored by git.
+- The final workflow uses the active 14-stage module set; removed legacy modules should not be reintroduced as working stages.
+- Each active module keeps `SKILL.md` short and links to one-level `references/` files for templates and quality rules.
+
+## Validation
+
+Each skill is a standard Codex skill folder with:
+
+```text
+SKILL.md
+agents/openai.yaml
+references/
+```
+
+Validate each skill with the skill creator `quick_validate.py` tool before publishing changes. If the bundled runtime lacks PyYAML, use the system `python3` that has `yaml` installed.

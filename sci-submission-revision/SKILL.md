@@ -7,25 +7,15 @@ description: SCI journal submission package preparation, compliance checking, co
 
 ## Overview
 
-Own the final mile from manuscript draft to journal submission and peer-review revision. This skill checks compliance, prepares submission materials, and converts reviewer comments into a precise response and revision plan.
+Own the final mile from manuscript draft to journal submission and peer-review revision. Convert journal requirements or reviewer comments into a precise file checklist, cover/rebuttal strategy, and manuscript repair plan.
 
 ## Submission Workflow
 
-1. Confirm target journal and article type.
-   - Use the journal landscape and author-rule constraints from `sci-journal-landscape`.
-
-2. Build file inventory.
-   - Main manuscript, title page, cover letter, figures, tables, supplements, graphical abstract, highlights, reporting checklists, declarations, and source data if required.
-
-3. Check journal compliance.
-   - Word limits, abstract format, section order, reference style, figure resolution, supplement naming, data/code availability, ethics, conflict, funding, author contributions, AI-use disclosure, and reporting guidelines.
-
-4. Prepare cover letter and metadata.
-   - State article type, title, fit to journal scope, core contribution, originality, approval by authors, conflicts, and required declarations.
-
-5. Produce readiness verdict.
-   - Ready, conditionally ready, or not ready.
-   - List blocking issues separately from polish issues.
+1. Confirm target journal, article type, and submission goal.
+2. Use `sci-journal-landscape` constraints for author instructions, article type, files, limits, and policies.
+3. Build a file inventory: manuscript, title page, figures, tables, supplements, cover letter, highlights, graphical abstract, reporting checklists, declarations.
+4. Check compliance: word limits, abstract format, figure/table limits, supplement naming, data/code availability, ethics/consent/animal approval, funding, conflicts, author contributions, AI-use disclosure when relevant.
+5. Draft or repair cover-letter content with exact scope fit, contribution, novelty, and declarations.
 
 ## Readiness Rule
 
@@ -40,21 +30,20 @@ Do not call a manuscript ready if any of these are unresolved:
 
 ## Revision Workflow
 
-1. Parse decision letter and reviewer comments.
-   - Separate editor requirements, reviewer concerns, mandatory experiments/analyses, writing clarifications, and optional suggestions.
+1. Parse editor and reviewer comments into atomic issues.
+2. Classify each issue: scope/novelty, method detail, statistics, missing experiment/analysis, interpretation too strong, literature/citation gap, figure/table clarity, language/organization, ethics/data availability.
+3. Choose a strategy: agree and revise, add analysis, add citation, add limitation, clarify existing text, respectfully disagree with evidence, or defer as outside current scope.
+4. Map every promised change to a manuscript location.
+5. Draft a calm response that states what changed or why no change was made.
 
-2. Build a rebuttal matrix.
-   - Reviewer, comment, issue type, response strategy, manuscript change, location, evidence, and status.
+## Quality Gate
 
-3. Decide response strategy.
-   - Agree and change, agree with clarification, respectfully disagree with evidence, add analysis, add limitation, or defer when outside scope.
+Do not claim a file is submission-ready until:
 
-4. Draft responses.
-   - Be specific, polite, evidence-based, and traceable to manuscript changes.
-   - Quote only short comment fragments if needed; avoid long verbatim reproduction unless the user provided the letter and needs a working response.
-
-5. Prepare revised manuscript notes.
-   - Identify where text, figures, tables, supplements, methods, or citations must change.
+- Journal requirements are verified from current sources.
+- Every placeholder is listed.
+- Every declaration need is resolved or marked missing.
+- Every reviewer response maps to a manuscript change or justified no-change decision.
 
 ## Response Rule
 
@@ -68,21 +57,12 @@ Do not promise data, experiments, or analyses the user has not performed.
 
 ## Output Contract
 
-For submission:
+Return:
 
-- `Submission readiness verdict`.
-- `Required file checklist`.
-- `Compliance issues`.
-- `Cover letter`.
-- `Declarations and statements`.
-- `Blocking missing inputs`.
-
-For revision:
-
-- `Reviewer-response strategy`.
-- `Rebuttal matrix`.
-- `Draft response letter`.
-- `Manuscript change list`.
+- `Submission checklist` or `Rebuttal matrix`.
+- `Cover letter/rebuttal draft` when requested.
+- `Required manuscript changes`.
 - `Additional evidence/citation needs`.
+- `Risk flags before submission/resubmission`.
 
 Read `references/submission-revision-schema.md` for templates.

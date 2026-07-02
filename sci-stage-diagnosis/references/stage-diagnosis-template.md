@@ -1,7 +1,7 @@
 # Stage Diagnosis Template
 
 ```markdown
-# Manuscript Stage Diagnosis
+## Manuscript Stage Diagnosis
 
 ## Current Stage
 

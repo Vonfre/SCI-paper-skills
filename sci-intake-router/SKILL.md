@@ -7,17 +7,17 @@ description: First-step intake and routing for an adaptive SCI manuscript coachi
 
 ## Overview
 
-Start the workflow with the minimum useful questions, then route to the correct next skill. This module prevents generic writing and helps novice users understand what they should do next.
+Start the workflow with the minimum useful questions, then route to the correct next skill. Avoid generic writing help by anchoring the project in journal target, research content, available materials, and current bottleneck.
 
 ## First Response
 
-If the user only says they want to write or submit an SCI paper, ask exactly these three questions:
+Ask only the missing high-impact items, up to three:
 
-1. What target journal do you want to submit to? If undecided, list 1-3 candidate journals or say the target level.
-2. What is your research field/topic and model system?
-3. What do you already have: scientific question only, results/figures, conclusions, outline, draft, or reviewer comments?
+1. Target journal, candidate journals, or target level.
+2. Research topic, field, organism/material/system, and main method.
+3. Current materials: question, conclusions, figures/data, outline, draft, reviewer comments, deadline.
 
-If the user provides some answers, ask only for the missing high-impact item. Do not ask for all metadata at once.
+If the user answers partially, do not restart intake. Fill the brief with what is known and mark unknowns as `[NEED: ...]`.
 
 ## Minimum Useful Intake
 
@@ -31,18 +31,24 @@ Do not request full methods, all raw data, author information, or final declarat
 
 ## Routing Logic
 
-- User does not know where to start -> `sci-stage-diagnosis`.
 - Target journal plus topic given -> `sci-journal-landscape`.
-- Results/figures exist but claims are unclear -> `sci-result-to-claim`.
-- Conclusions/scientific question need literature -> `sci-literature-evidence`.
-- Multiple conclusions exist but no center -> `sci-core-story-finder`.
-- Figures/cases exist but order is unclear -> `sci-figure-story-builder`.
-- User asks how to arrange full manuscript logic -> `sci-storyline-planner`.
-- User wants pre-submission criticism -> `sci-reviewer-simulator`.
-- User wants initial draft from known logic/style -> `sci-draft-mimic`.
-- User asks how to write a specific paragraph -> `sci-paragraph-coach`.
-- User has text and wants final language improvement -> `sci-language-polisher`.
-- User is preparing submission or revision -> `sci-submission-revision`.
+- No target journal but clear research direction -> `sci-literature-evidence` or `sci-stage-diagnosis`.
+- Results/figures given but claims unclear -> `sci-result-to-claim`.
+- Claims given but story unclear -> `sci-core-story-finder`.
+- Figure inventory given -> `sci-figure-story-builder`.
+- Draft given -> `sci-reviewer-simulator` for logic risk or `sci-language-polisher` for expression-only polish.
+- Reviewer comments given -> `sci-submission-revision`.
+
+## Intake Quality Gate
+
+Before handing off, record enough context for the next module to start without re-asking basics:
+
+- Target journal or journal level.
+- Topic and model system/material.
+- Current manuscript stage.
+- Available artifacts.
+- Desired output and deadline if any.
+- Biggest uncertainty.
 
 ## Novice Guidance
 
@@ -54,14 +60,11 @@ After routing, explain why that stage comes next in one short paragraph. End wit
 
 ## Output Contract
 
-Produce an intake brief:
+Return an `SCI workflow intake brief` with:
 
-- Target journal/candidate level.
-- Field/topic/model system.
-- Current manuscript stage.
-- Available conclusions/data/figures.
-- User experience level if stated.
-- Missing critical inputs.
-- Next skill to run and why.
+- `User goal`.
+- `Available inputs`.
+- `Missing inputs` grouped by downstream stage.
+- `Route`: next skill, reason, first action.
 
 Read `references/intake-brief-schema.md` for the template.

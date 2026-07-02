@@ -7,15 +7,24 @@ description: Simulate reviewer and editor objections before SCI submission. Use 
 
 ## Overview
 
-Act as a strict but constructive pre-submission reviewer. The goal is to find preventable rejection risks early.
+Stress-test the manuscript as an editor and reviewer would. Prioritize objections that can block acceptance, not every possible nitpick.
 
 ## Reviewer Modes
 
-- `Editor screen`: desk-rejection risk and target-journal fit.
-- `Reviewer 1 mechanism`: mechanistic depth and causal evidence.
-- `Reviewer 2 methods/statistics`: controls, replicates, tests, reproducibility.
-- `Reviewer 3 field/literature`: novelty, prior work, interpretation.
-- `Reader clarity`: story, figures, writing, overclaim.
+Use the relevant modes:
+
+- `Editor screen`: scope, novelty, article type, and desk-rejection risk.
+- `Method reviewer`: design, controls, statistics, reproducibility, reporting.
+- `Mechanism reviewer`: causality, pathway depth, alternative explanations.
+- `Field expert`: novelty, prior work, citation omissions, overclaiming.
+- `Writing reviewer`: structure, figure clarity, paragraph logic, tone.
+
+## Severity Scale
+
+- `Blocking`: likely desk reject or major rejection if unresolved.
+- `Major`: revision required before submission or rebuttal.
+- `Moderate`: fix improves credibility.
+- `Minor`: wording, clarity, or formatting.
 
 ## Minimum Inputs
 
@@ -33,10 +42,10 @@ If inputs are incomplete, run a provisional review and mark which risks cannot b
 ## Workflow
 
 1. Read the target journal, story, claims, figures, and draft if available.
-2. Identify likely objections by severity.
-3. Separate blocking issues from optional improvements.
-4. Suggest the smallest credible fix and the stronger fix.
-5. Rewrite risky claims when a writing fix is enough.
+2. Identify the submission bar and most likely reviewer expertise.
+3. List objections with severity and evidence.
+4. Separate fixes that need new data from fixes possible by writing, analysis, citation, or figure reorganization.
+5. Recommend submit, revise before submission, do more work, or reconsider journal.
 
 ## Severity Rules
 
@@ -49,6 +58,13 @@ For every blocking or major issue, give both the smallest credible fix and the s
 
 ## Output Contract
 
-Produce a reviewer-risk report.
+Return:
+
+- `Desk-rejection risk`.
+- `Reviewer objection matrix`.
+- `Overclaim audit`.
+- `Missing control/analysis`.
+- `Prioritized repair plan`.
+- `Decision`.
 
 Read `references/reviewer-risk-report.md` for the template.

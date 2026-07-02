@@ -7,18 +7,24 @@ description: Build figure, table, and key-case narrative for SCI manuscripts. Us
 
 ## Overview
 
-Arrange evidence so the reader learns the argument step by step. This module converts figures and cases into a persuasive results narrative.
+Make figures teach the story. Decide main text, supplement, or cut by asking what question each figure answers and what claim it can support.
 
 ## First Move
 
 Ask for a simple figure inventory:
 
-- Figure/case name.
-- Method/data type.
+- Figure/case/table name.
 - Main observation.
+- Evidence type and statistics if available.
 - What the user thinks it proves.
+- Required controls or panels still missing.
 
-If figures do not exist yet, ask for planned experiments or result blocks and build a proposed figure plan.
+## Placement Rules
+
+- Main figures carry the central claim and reader learning path.
+- Supplements validate, extend, or document; they should not carry decisive proof.
+- Cut or defer figures that do not answer a clear question or distract from the central story.
+- Order figures by reader logic, not experiment chronology.
 
 ## Figure Roles
 
@@ -34,20 +40,11 @@ Assign every figure or table one role:
 
 ## Workflow
 
-1. Define each figure's job.
-   - Question answered, evidence type, direct conclusion, and next transition.
-
-2. Classify figure role.
-   - Main claim, mechanism, validation, extension, resource, control, supplement, or cut.
-
-3. Order the figures.
-   - Use reader logic, not experiment chronology.
-
-4. Detect missing panels.
-   - Controls, quantification, replicate display, validation, statistical annotation, model diagram.
-
-5. Build results-section bridge text.
-   - One-sentence transition from each figure to the next.
+1. Assign each figure a question answered.
+2. Map each figure to a direct claim and evidence type.
+3. Choose main/supplement/cut placement.
+4. Identify missing panels, controls, quantification, statistics, or legends.
+5. Build a result-section skeleton with transitions between figures.
 
 ## Ordering Rule
 
@@ -55,6 +52,13 @@ Order by reader learning, not experiment chronology. The reader should move from
 
 ## Output Contract
 
-Produce a figure story map and results order.
+Return:
+
+- `Recommended figure order`.
+- `Main-text figure plan`.
+- `Supplement plan`.
+- `Missing panel/control list`.
+- `Results section skeleton`.
+- `Next module`: usually `sci-storyline-planner` or `sci-reviewer-simulator`.
 
 Read `references/figure-story-map.md` for the template.

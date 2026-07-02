@@ -1,7 +1,7 @@
 # Figure Story Map
 
 ```markdown
-# Figure Story Map
+## Figure Story Map
 
 ## Recommended Figure Order
 | Order | Figure/Case | Question Answered | Evidence Type | Direct Claim | Main/Supplement/Cut | Missing Panel/Control | Transition |

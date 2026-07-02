@@ -1,7 +1,7 @@
 # Intake Brief Schema
 
 ```markdown
-# SCI Workflow Intake Brief
+## SCI Workflow Intake Brief
 
 ## User Goal
 - Target journal or journal level:

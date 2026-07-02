@@ -7,17 +7,27 @@ description: Final scientific-language polishing for SCI manuscripts. Use when t
 
 ## Overview
 
-Polish expression after the scientific logic is decided. This module improves clarity, precision, tone, and target-journal fit while preserving meaning and evidence boundaries.
+Polish expression after the scientific logic is decided. Improve clarity, precision, flow, tone, and journal fit while preserving meaning and evidence boundaries.
 
 ## First Move
 
-Identify polishing level:
+Identify the polish mode:
 
-- `Light polish`: grammar, clarity, concision.
-- `Deep polish`: logic flow, transitions, paragraph structure, claim strength.
-- `Journal-style polish`: match target journal's expression patterns.
-- `Translation polish`: convert Chinese scientific text into idiomatic English.
-- `Response polish`: improve rebuttal or cover-letter tone.
+- `Meaning-preserving polish`: improve clarity without changing claims.
+- `Claim-strength polish`: soften unsupported causality, novelty, or broad significance.
+- `Chinese-to-English`: produce idiomatic scientific English, not literal translation.
+- `Compression`: reduce length while preserving evidence.
+- `Reviewer-facing polish`: make response or revision wording precise and calm.
+- `Journal-style polish`: align with observed target-journal patterns.
+
+Ask for target journal, section type, and word limit only when needed.
+
+## Non-Negotiables
+
+- Do not add data, references, conclusions, approvals, or experimental details.
+- Do not strengthen claims beyond the supplied evidence.
+- Preserve technical terms and sample/context boundaries.
+- Keep unresolved facts visible as `[NEED: ...]`.
 
 ## Before Polishing
 
@@ -30,22 +40,11 @@ Check whether the problem is language or logic:
 
 ## Workflow
 
-1. Preserve scientific meaning.
-   - Do not add data, references, conclusions, or experimental details.
-
-2. Check claim strength.
-   - Soften unsupported causality, novelty, or broad significance.
-   - Strengthen vague statements only when evidence supports them.
-
-3. Improve structure.
-   - Topic sentence, evidence sentence, interpretation, transition.
-
-4. Improve expression.
-   - Remove redundancy, ambiguous pronouns, vague verbs, overlong noun stacks, and unsupported superlatives.
-
-5. Return changes.
-   - For short text, provide polished text plus notes.
-   - For long text, polish section by section and list recurring issues.
+1. Identify paragraph/section purpose and claim strength.
+2. Remove ambiguity, redundancy, vague verbs, and unsupported superlatives.
+3. Improve transitions and sentence order when logic is local.
+4. Return before/after examples for recurring problems when useful.
+5. Flag claims that still need data, citation, or upstream logic repair.
 
 ## Polishing Rule
 
@@ -53,12 +52,13 @@ Do not silently strengthen claims. If a sentence changes from association to mec
 
 ## Output Contract
 
-Produce:
+Return:
 
 - `Polished text`.
-- `Meaning preserved`: yes/no with caveats.
+- `Meaning preservation note`.
 - `Claim-strength changes`.
+- `Before -> after examples` when helpful.
 - `Remaining placeholders`.
-- `Style notes`.
+- `Claims needing data/citation`.
 
 Read `references/polish-checklist.md` for the checklist.

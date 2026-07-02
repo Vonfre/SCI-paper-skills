@@ -317,8 +317,8 @@ Topic: {topic or "[NEED: research topic]"}
 ## Section Drafts
 
 ## Placeholders
-- [NEED: ]
-- [CITE: ]
+- [NEED: missing scientific fact]
+- [CITE: unsupported literature claim]
 """,
     )
 
@@ -366,8 +366,8 @@ Topic: {topic or "[NEED: research topic]"}
 |---|---|---|
 
 ## Remaining Placeholders
-- [NEED: ]
-- [CITE: ]
+- [NEED: missing scientific fact]
+- [CITE: unsupported literature claim]
 """,
     )
 

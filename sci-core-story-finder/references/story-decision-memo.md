@@ -1,7 +1,7 @@
 # Story Decision Memo
 
 ```markdown
-# Core Story Decision Memo
+## Core Story Decision Memo
 
 ## Candidate Stories
 | Story | Type | One-Sentence Takeaway | Evidence Strength | Journal Fit | Risk | Recommendation |

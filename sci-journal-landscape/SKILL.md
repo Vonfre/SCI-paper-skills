@@ -7,19 +7,20 @@ description: Target journal profile plus comparable-paper landscape scan for SCI
 
 ## Overview
 
-Answer: "What kind of journal is this, and how does my topic fit the papers it publishes?" This module combines journal profiling with same-journal/same-level paper scouting.
+Answer: what kind of journal is this, what does it actually publish, and how does the user's topic fit? Combine journal facts, author-rule constraints, comparable-paper scouting, and a strategic submission opinion.
 
 ## Required Inputs
 
 - Target journal or candidate journals.
-- Research topic/direction.
-- Article type if known.
-
-If article type is missing, infer likely choices and mark as provisional.
+- Topic, field, organism/material/system, and main method.
+- Intended article type if known.
+- Main finding or expected contribution if available.
 
 ## Evidence Rules
 
-Use current web research. Journal information and recent article lists change. Prioritize official journal/publisher pages, author guidelines, PubMed/Crossref/DOI records, journal issue pages, and reputable metrics/indexing sources.
+Use current web research. Journal information and recent article lists change. Prioritize official journal/publisher pages, author instructions, PubMed/Crossref/DOI records, journal issue pages, and reputable metrics/indexing sources.
+
+Always separate verified facts from inferred patterns. Include retrieval dates for journal facts.
 
 ## Search Strategy
 
@@ -33,30 +34,22 @@ Use layered searches rather than one broad query:
 
 Do not say "no similar papers" until several query variants have been tried. If only peer-journal papers are found, label them as fallback evidence and explain why they are comparable.
 
-## Workflow
+## Search Ladder
 
-1. Resolve the journal.
-   - Confirm title, publisher, ISSN/eISSN, official website, author instructions, article types, OA/APC, metrics, indexing, and submission system.
+1. Resolve the exact journal identity: title, publisher/society, ISSN/eISSN, official domain, submission system.
+2. Capture author-facing constraints: scope, article types, limits, data/code/ethics/reporting requirements, APC/OA when relevant.
+3. Search same-journal similar papers using topic, organism/material, method, mechanism, disease/context, and article type.
+4. If same-journal matches are weak, search comparable journals and explain why they are comparable.
+5. Score fit and state what the manuscript must prove to be plausible for the target.
 
-2. Build the journal portrait.
-   - Scope, audience, paper types, novelty threshold, preferred evidence depth, desk-rejection risks.
+## Fit Judgment
 
-3. Search for same-journal similar papers.
-   - Use topic keywords, model system, method keywords, disease/organism/material terms, and article type.
-   - Prefer the last 1-3 years when possible.
+Use a plain verdict:
 
-4. If same-journal matches are weak or absent, search peer journals.
-   - Select journals at similar level/scope or sister journals in the same publisher/society family.
-   - State why each peer journal is considered comparable.
-
-5. Score journal fit.
-   - Assess novelty, evidence depth, article type fit, audience breadth, field saturation, and desk-rejection risk.
-
-6. Provide landscape opinion.
-   - What the field has already done.
-   - What the target journal seems to reward.
-   - What the user's manuscript must prove to fit.
-   - Whether the current target is ambitious, reasonable, or risky.
+- `Strong`: scope, article type, novelty bar, and evidence depth plausibly match.
+- `Possible but risky`: topic fits, but evidence depth, novelty, or audience breadth is uncertain.
+- `Weak`: scope or article type mismatch is likely.
+- `Unknown`: insufficient manuscript or journal evidence.
 
 ## Strategic Output
 
@@ -69,14 +62,13 @@ Always translate journal facts into writing strategy:
 
 ## Output Contract
 
-Produce:
+Return:
 
-- `Journal portrait`.
-- `Author-rule constraints`.
+- `Target journal portrait`.
 - `Same-journal article scan`.
 - `Peer-journal fallback scan` if needed.
 - `Journal fit rubric`.
-- `Landscape opinion`.
-- `Next handoff`: usually `sci-literature-evidence`, `sci-result-to-claim`, or `sci-core-story-finder`.
+- `Landscape opinion`: field saturation, gap, target-journal fit, needed evidence, recommended next step.
+- `Search log`.
 
 Read `references/landscape-output-schema.md` for the template.

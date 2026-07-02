@@ -1,7 +1,7 @@
 # Result-To-Claim Matrix
 
 ```markdown
-# Result-To-Claim Matrix
+## Result-To-Claim Matrix
 
 | Result/Figure | What It Directly Shows | Defensible Claim | Claims It Does Not Yet Support | Evidence Gap | Safe Wording | Stronger Wording If Fixed |
 |---|---|---|---|---|---|---|

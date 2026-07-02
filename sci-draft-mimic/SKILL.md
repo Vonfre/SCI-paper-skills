@@ -7,50 +7,43 @@ description: Initial SCI manuscript drafting by imitating target-journal and use
 
 ## Overview
 
-Draft the first manuscript text by imitating patterns, not wording. This module uses same-journal papers or user-provided PDFs as style models and writes a traceable first draft.
+Draft manuscript text by imitating patterns, not wording. Use model papers to learn structure, rhetorical moves, figure/citation behavior, claim strength, and section rhythm while preserving the user's evidence.
 
 ## Inputs
 
 Prefer:
 
 - Target journal portrait and article type.
-- Benchmark/model papers or PDFs.
+- Benchmark/model papers, comparable papers, or user-provided PDFs.
 - Storyline plan and figure/case order.
-- Claim-evidence map.
-- User's data or conclusions.
+- Result-to-claim matrix and citation placeholders.
+- User's data, methods, statistics, approvals, and wording constraints.
 
-If the user provides PDFs, analyze their structure and rhetorical moves before drafting. Do not copy sentences or distinctive phrasing.
+If PDFs or links are provided, analyze their structure and rhetorical moves before drafting. Do not copy sentences, distinctive phrasing, or title formulas too closely.
 
-## Model-Paper Analysis
+## Mimic Extraction
 
-Before drafting from model papers or PDFs, extract:
+Before drafting from model papers or PDFs, extract only reusable patterns:
 
 - Article type and section order.
-- Title and abstract pattern.
-- Introduction funnel and gap statement style.
+- Title shape and specificity.
+- Abstract move order.
+- Introduction funnel and gap statement.
 - Results subsection rhythm and figure citation behavior.
-- Discussion moves, limitation framing, and final implication.
+- Discussion opening, limitation style, and final implication.
 - Supplement naming and citation pattern.
-- Citation density and placement.
-- Claim strength and hedging.
+- Citation density, placement, claim strength, and hedging.
 
 Imitate these patterns only at the level of structure and rhetorical function.
 
-## Workflow
+## Drafting Rules
 
-1. Extract model-paper patterns.
-   - Title type, abstract moves, introduction funnel, result-section rhythm, figure citation style, discussion structure, hedging.
-
-2. Create a style brief.
-   - What to imitate, what to avoid, and what must be adapted to the user's topic.
-
-3. Draft by section.
-   - Start with title/abstract/section outline unless the user asks for a specific section.
-   - Use `[NEED: ...]` placeholders for missing facts.
-   - Keep citations as verified references or `[CITE: claim]` placeholders.
-
-4. Return traceability notes.
-   - List which model patterns were used and which claims need data/citation.
+- Start with title, abstract, or section outline unless the user asks for a specific section.
+- Use `[NEED: ...]` for missing scientific facts.
+- Use `[CITE: claim]` for unverified literature support.
+- Tie results to figures/tables/supplements.
+- Keep claim strength no stronger than the result-to-claim matrix.
+- List which model patterns were used and what must be verified.
 
 ## Drafting Gate
 
@@ -58,13 +51,13 @@ If journal landscape, result-to-claim mapping, and storyline are missing, draft 
 
 ## Output Contract
 
-Produce:
+Return:
 
-- `Model-paper style brief`.
-- `Draft text`.
-- `Imitation notes`: structure/style only.
-- `Missing data`.
+- `Style brief`.
+- `Draft output` for the requested section(s).
 - `Citation placeholders`.
-- `Risks for overclaiming`.
+- `Missing inputs`.
+- `Pattern-use notes`.
+- `High-risk claims`.
 
 Read `references/draft-mimic-schema.md` for templates.

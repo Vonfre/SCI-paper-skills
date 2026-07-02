@@ -7,15 +7,17 @@ description: Diagnose where a novice SCI manuscript project is stuck and choose 
 
 ## Overview
 
-Tell the user what stage they are really in and what to do next. This prevents premature drafting when the story, evidence, or journal fit is not ready.
+Tell the user what stage they are really in and what to do next. Prevent premature drafting when the story, evidence, journal fit, or claim boundaries are not ready.
 
 ## Diagnosis Questions
 
 Ask no more than three:
 
 1. Do you have a target journal or target level?
-2. Do you have main conclusions and key figures/results?
-3. Do you already have an outline or draft?
+2. What do you already have: data/figures, conclusions, outline, draft, or reviewer comments?
+3. What feels stuck: literature, claims, story, figure order, wording, citations, submission, or revision?
+
+If the user gives partial context, diagnose from it and mark missing facts as `[NEED: ...]`.
 
 ## Diagnosis Logic
 
@@ -34,15 +36,23 @@ Classify by the earliest missing foundation:
 
 ## Stage Labels
 
-- `idea-only`: scientific question exists, evidence not assembled.
-- `results-without-claims`: data exist, conclusion strength unclear.
-- `claims-without-literature`: conclusions exist, literature support unknown.
-- `storyline-unclear`: claims exist, paper logic weak.
-- `figures-unordered`: figures exist but narrative order unclear.
-- `draft-needed`: story and figures are ready for first draft.
-- `polish-needed`: draft exists but expression is weak.
-- `submission-needed`: draft is near complete.
-- `revision-needed`: reviewer/editor comments exist.
+- `No intake`: journal, field, material, or goal is missing.
+- `Journal unknown`: target journal fit and comparable papers are unknown.
+- `Evidence unknown`: literature support or conflict is unknown.
+- `Claim unclear`: results exist but defensible claims are not defined.
+- `Story unclear`: claims exist but no central manuscript message is chosen.
+- `Figure logic unclear`: figures/cases exist but the reader path is weak.
+- `Draft not ready`: story or evidence gaps block drafting.
+- `Draft repair`: a draft exists but structure, claims, or paragraphs need work.
+- `Final polish`: meaning is stable and expression/citation/style remain.
+- `Submission/revision`: journal files, cover letter, or reviewer response are needed.
+
+## Decision Rules
+
+- Recommend only one next primary module.
+- Do not recommend full drafting if claims or figure order are still unclear.
+- If two stages are plausible, choose the earlier blocker and explain the tradeoff.
+- Give the user one concrete 30-minute task, not a long wishlist.
 
 ## Do-Not-Do-Yet Guidance
 
@@ -55,6 +65,14 @@ Every diagnosis must name one premature action to avoid, for example:
 
 ## Output Contract
 
-Produce a stage diagnosis and route.
+Return:
+
+- `Current stage`.
+- `Why this is the stage`.
+- `Do not do yet`.
+- `Next best action`.
+- `Route`: next skill, input needed, expected output.
+- `30-minute task for user`.
+- `Missing information`.
 
 Read `references/stage-diagnosis-template.md` for the template.

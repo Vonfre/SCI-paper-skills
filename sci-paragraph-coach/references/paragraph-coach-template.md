@@ -1,7 +1,7 @@
 # Paragraph Coach Template
 
 ```markdown
-# Paragraph Coaching
+## Paragraph Coaching
 
 ## Paragraph Type
 

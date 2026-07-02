@@ -1,4 +1,4 @@
-# Journal Landscape Output Schema
+## Journal Landscape Output Schema
 
 ```markdown
 # Journal Landscape

@@ -7,59 +7,45 @@ description: Literature search and evidence evaluation around scientific questio
 
 ## Overview
 
-Connect the user's scientific question or conclusion to the literature. This module decides whether a conclusion is supported, risky, novel, incremental, or needs a different research angle.
+Map what the literature supports, contradicts, leaves open, or makes risky. The goal is not a broad bibliography; it is to decide what the manuscript can safely say and what work is still needed.
 
 ## Branches
 
-If the user has conclusions:
+Use one branch based on the user's state:
 
-1. Break each conclusion into claim units.
-2. Search for supporting, conflicting, and adjacent literature.
-3. Evaluate plausibility, novelty, evidence level, and missing controls.
-4. Recommend how strongly the conclusion can be written.
+- `Existing conclusion`: break each conclusion into claim units, search supporting/conflicting/adjacent literature, evaluate plausibility and missing controls, and recommend safe wording.
+- `Open question`: identify recent and foundational work, extract methods/models/variables, define unresolved gaps, and propose 2-4 feasible directions.
+- `Target-journal framing`: find same-journal or same-level papers that shape the problem, gap, and novelty frame.
 
-For each conclusion, decide whether the literature directly supports it, only supports a nearby idea, contradicts it, or leaves it untested.
-
-If the user has only a question/direction:
-
-1. Search recent and foundational literature.
-2. Identify what has already been done.
-3. Extract methods, models, variables, and unresolved gaps.
-4. Propose 2-4 feasible research directions and what evidence each would require.
-
-For each possible direction, state what previous papers already did and what new evidence would be needed for the user's target journal.
+For each conclusion or possible direction, state whether the literature directly supports it, supports only a nearby idea, contradicts it, or leaves it untested.
 
 ## Search Priorities
 
-- Recent primary research in the last 3-5 years.
-- Foundational mechanism papers.
-- High-quality reviews only for broad framing.
-- Same-journal or same-level papers when relevant to target journal fit.
+- Primary papers for specific mechanisms, methods, or findings.
+- Recent reviews for field framing, not as sole proof for precise claims.
+- Same-journal or same-level papers when journal fit matters.
 - Official database records for DOI/PMID and retraction checks when available.
 
 ## Citation Role Control
 
-Explain whether each source is useful for:
+Explain whether each source is useful for background framing, gap identification, claim support, alternative explanation, method precedent, or discussion comparison. Do not treat one review as direct evidence for a precise mechanism when a primary paper is needed.
 
-- Background framing.
-- Gap identification.
-- Claim support.
-- Alternative explanation.
-- Method precedent.
-- Discussion comparison.
+## Evidence Grading
 
-Do not treat one review as direct evidence for a precise mechanism when a primary paper is needed.
+- `Strong`: direct primary evidence plus user data can plausibly support the claim.
+- `Moderate`: related evidence exists but controls, mechanism, or context remain incomplete.
+- `Weak`: only indirect or neighboring literature supports the idea.
+- `Conflicting`: credible literature suggests an alternative explanation.
+- `Unknown`: search coverage is insufficient.
 
 ## Output Contract
 
-Produce:
+Return:
 
-- `Question/claim decomposition`.
-- `Evidence table`.
-- `Support level`: strong, moderate, weak, contradictory, or unknown.
-- `Novelty/gap assessment`.
-- `Possible directions` if conclusions are absent.
-- `Evidence needed next`.
-- `Writing risk`: which statements need softening.
+- `Evidence map` for each user question or conclusion.
+- `Support/conflict summary`.
+- `Gap assessment`.
+- `Writing recommendation`: safe wording, citations needed, or claim to avoid.
+- `Next module`: usually `sci-result-to-claim`, `sci-core-story-finder`, or `sci-citation-control`.
 
 Read `references/evidence-map-schema.md` for templates.
