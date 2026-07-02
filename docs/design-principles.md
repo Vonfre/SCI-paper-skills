@@ -54,7 +54,7 @@ Each skill must define:
 - what blocks confident handoff;
 - which next skill should run.
 
-See `sci-paper-skills/references/manuscript-state-schema.md` and `sci-paper-skills/references/handoff-contracts.md`.
+See `skills/sci-paper-skills/references/manuscript-state-schema.md` and `skills/sci-paper-skills/references/handoff-contracts.md`.
 
 ## Model-Paper Imitation Rules
 

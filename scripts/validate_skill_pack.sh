@@ -30,8 +30,8 @@ required_root_files=(
   docs/design-principles.md
   docs/skill-index.md
   scripts/sync_codex_skills.sh
-  sci-paper-skills/references/manuscript-state-schema.md
-  sci-paper-skills/references/handoff-contracts.md
+  skills/sci-paper-skills/references/manuscript-state-schema.md
+  skills/sci-paper-skills/references/handoff-contracts.md
 )
 
 for file in "${required_root_files[@]}"; do
@@ -42,7 +42,7 @@ for file in "${required_root_files[@]}"; do
 done
 
 for skill in "${SKILLS[@]}"; do
-  skill_dir="$ROOT_DIR/$skill"
+  skill_dir="$ROOT_DIR/skills/$skill"
 
   [[ -f "$skill_dir/SKILL.md" ]] || { echo "Missing $skill/SKILL.md" >&2; exit 1; }
   [[ -f "$skill_dir/agents/openai.yaml" ]] || { echo "Missing $skill/agents/openai.yaml" >&2; exit 1; }

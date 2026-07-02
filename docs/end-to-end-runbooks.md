@@ -1,6 +1,6 @@
 # End-To-End Runbooks
 
-These runbooks show how the tight workflow should behave in common real manuscript situations. They complement `sci-paper-skills/references/handoff-contracts.md`.
+These runbooks show how the tight workflow should behave in common real manuscript situations. They complement `skills/sci-paper-skills/references/handoff-contracts.md`.
 
 ## Runbook 1: Results Exist, No Paper Logic
 

@@ -70,10 +70,10 @@ $sci-paper-skills
 
 ## 紧耦合工作流
 
-`0.4` 版本加入了有状态的交接层，让这些技能作为一条连贯的论文流水线运行，而不是彼此独立的 prompt。
+紧耦合工作流加入了有状态的交接层，让这些技能作为一条连贯的论文流水线运行，而不是彼此独立的 prompt。
 
-- 共享状态：[manuscript-state-schema.md](sci-paper-skills/references/manuscript-state-schema.md)
-- 阶段交接：[handoff-contracts.md](sci-paper-skills/references/handoff-contracts.md)
+- 共享状态：[manuscript-state-schema.md](skills/sci-paper-skills/references/manuscript-state-schema.md)
+- 阶段交接：[handoff-contracts.md](skills/sci-paper-skills/references/handoff-contracts.md)
 - 端到端路线：[end-to-end-runbooks.md](docs/end-to-end-runbooks.md)
 
 每个阶段现在都要读取上游 state，更新自己负责的字段，保留 `C#`、`F#`、`S#`、`SEC#` 等 ID，并在输出结尾给出 `Manuscript State Update` 和 `Handoff`。
@@ -102,9 +102,10 @@ README.zh-CN.md
 manifest.yaml
 docs/
 scripts/
-sci-paper-skills/
-sci-stage-diagnosis/
-sci-intake-router/
+skills/
+  sci-paper-skills/
+  sci-stage-diagnosis/
+  sci-intake-router/
 ...
 ```
 
@@ -116,14 +117,14 @@ agents/openai.yaml
 references/
 ```
 
-根目录下的技能文件夹刻意保持扁平结构，方便直接复制到 Codex skills 目录。
+可安装的技能文件夹统一放在 `skills/` 下。同步或复制时应复制完整技能文件夹，而不是只复制单个 `SKILL.md` 文件。
 
 ## 项目脚手架
 
 主控技能包含一个辅助脚本：
 
 ```bash
-python sci-paper-skills/scripts/init_journal_project.py \
+python skills/sci-paper-skills/scripts/init_journal_project.py \
   --journal "The Plant Cell" \
   --topic "ABA stomatal closure" \
   --out ./journal-projects

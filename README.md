@@ -70,10 +70,10 @@ The orchestrator uses the stages in order unless the user explicitly asks for a 
 
 ## Tight Workflow
 
-Version `0.4` adds a stateful handoff layer so the skills work as a connected manuscript pipeline rather than isolated prompts.
+The tight workflow layer adds stateful handoff rules so the skills work as a connected manuscript pipeline rather than isolated prompts.
 
-- Shared state: [manuscript-state-schema.md](sci-paper-skills/references/manuscript-state-schema.md)
-- Stage contracts: [handoff-contracts.md](sci-paper-skills/references/handoff-contracts.md)
+- Shared state: [manuscript-state-schema.md](skills/sci-paper-skills/references/manuscript-state-schema.md)
+- Stage contracts: [handoff-contracts.md](skills/sci-paper-skills/references/handoff-contracts.md)
 - End-to-end routes: [end-to-end-runbooks.md](docs/end-to-end-runbooks.md)
 
 Every stage now consumes upstream state, updates its owned fields, preserves IDs such as `C#`, `F#`, `S#`, `SEC#`, and ends with `Manuscript State Update` plus `Handoff` blocks.
@@ -102,9 +102,10 @@ README.zh-CN.md
 manifest.yaml
 docs/
 scripts/
-sci-paper-skills/
-sci-stage-diagnosis/
-sci-intake-router/
+skills/
+  sci-paper-skills/
+  sci-stage-diagnosis/
+  sci-intake-router/
 ...
 ```
 
@@ -116,14 +117,14 @@ agents/openai.yaml
 references/
 ```
 
-The root-level skill folders are intentionally kept flat so they can be copied directly into a Codex skills directory.
+The installable skill folders live under `skills/`. Copy or sync the complete skill folders, not just individual `SKILL.md` files.
 
 ## Project Scaffold
 
 The orchestrator includes a helper script:
 
 ```bash
-python sci-paper-skills/scripts/init_journal_project.py \
+python skills/sci-paper-skills/scripts/init_journal_project.py \
   --journal "The Plant Cell" \
   --topic "ABA stomatal closure" \
   --out ./journal-projects

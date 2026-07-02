@@ -25,7 +25,7 @@ SKILLS=(
 mkdir -p "$TARGET_DIR"
 
 for skill in "${SKILLS[@]}"; do
-  source_dir="$ROOT_DIR/$skill"
+  source_dir="$ROOT_DIR/skills/$skill"
   target_dir="$TARGET_DIR/$skill"
 
   if [[ ! -f "$source_dir/SKILL.md" ]]; then
