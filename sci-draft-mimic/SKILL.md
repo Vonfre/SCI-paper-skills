@@ -21,6 +21,21 @@ Prefer:
 
 If the user provides PDFs, analyze their structure and rhetorical moves before drafting. Do not copy sentences or distinctive phrasing.
 
+## Model-Paper Analysis
+
+Before drafting from model papers or PDFs, extract:
+
+- Article type and section order.
+- Title and abstract pattern.
+- Introduction funnel and gap statement style.
+- Results subsection rhythm and figure citation behavior.
+- Discussion moves, limitation framing, and final implication.
+- Supplement naming and citation pattern.
+- Citation density and placement.
+- Claim strength and hedging.
+
+Imitate these patterns only at the level of structure and rhetorical function.
+
 ## Workflow
 
 1. Extract model-paper patterns.
@@ -36,6 +51,10 @@ If the user provides PDFs, analyze their structure and rhetorical moves before d
 
 4. Return traceability notes.
    - List which model patterns were used and which claims need data/citation.
+
+## Drafting Gate
+
+If journal landscape, result-to-claim mapping, and storyline are missing, draft only a skeleton or partial section with placeholders. Do not create a confident full manuscript from vague conclusions.
 
 ## Output Contract
 

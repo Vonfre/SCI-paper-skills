@@ -20,6 +20,18 @@ Ask for a simple figure inventory:
 
 If figures do not exist yet, ask for planned experiments or result blocks and build a proposed figure plan.
 
+## Figure Roles
+
+Assign every figure or table one role:
+
+- Opening phenotype/problem.
+- Core mechanism or central proof.
+- Validation/control.
+- Extension to another system or condition.
+- Resource/method performance.
+- Supplementary support.
+- Not needed for this manuscript.
+
 ## Workflow
 
 1. Define each figure's job.
@@ -36,6 +48,10 @@ If figures do not exist yet, ask for planned experiments or result blocks and bu
 
 5. Build results-section bridge text.
    - One-sentence transition from each figure to the next.
+
+## Ordering Rule
+
+Order by reader learning, not experiment chronology. The reader should move from question to evidence to interpretation with no hidden required proof in the supplement.
 
 ## Output Contract
 

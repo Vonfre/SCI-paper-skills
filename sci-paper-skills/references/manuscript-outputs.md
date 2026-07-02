@@ -1,6 +1,6 @@
 # Manuscript Outputs
 
-Use this reference after the target journal dossier and benchmark analysis exist.
+Use this reference after the journal landscape, evidence map, result-to-claim matrix, and storyline plan exist.
 
 ## Core Deliverables
 
@@ -8,12 +8,12 @@ For a full journal-specific writing engagement, produce these in order:
 
 1. Fit verdict
    - Strong fit, conditional fit, risky fit, or poor fit.
-   - One-paragraph rationale grounded in journal scope and benchmark papers.
+   - One-paragraph rationale grounded in journal scope and comparable papers.
    - Desk-rejection risks and fixes.
 
 2. Positioning statement
    - One sentence: problem, gap, approach, main finding, journal-relevant value.
-   - Avoid inflated novelty claims unless the user's evidence supports them.
+   - Avoid inflated novelty claims unless the evidence supports them.
 
 3. Story spine
    - Opening problem.
@@ -44,7 +44,8 @@ For a full journal-specific writing engagement, produce these in order:
 
 - Do not invent sample sizes, statistical tests, approvals, datasets, accession numbers, references, or conclusions.
 - Use `[NEED: ...]` placeholders for missing scientific facts.
-- Match claim strength to evidence: association, prediction, mechanism, causality, validation, and clinical utility are different claims.
+- Use `[CITE: ...]` placeholders for citation needs that have not been verified.
+- Match claim strength to evidence: association, prediction, regulation, mechanism, causality, validation, and application are different claims.
 - Keep the journal voice, but do not copy phrases from benchmark papers.
 - Preserve the user's scientific contribution; do not overfit to superficial style.
 - For Chinese-to-English work, produce idiomatic scientific English rather than literal translation.
@@ -60,7 +61,7 @@ Generate 5-10 title options when requested:
 - Method title: `A method/tool/resource for X in Y`.
 - Cautious descriptive title when evidence is preliminary.
 
-Mirror the benchmark journal's preference for colon titles, declarative titles, or noun-phrase titles only if observed.
+Mirror the target journal's preference for colon titles, declarative titles, or noun-phrase titles only if observed in comparable papers.
 
 ### Abstract
 
@@ -72,11 +73,11 @@ Use the journal's required structure. If unstructured, write a single coherent p
 4. Primary results with concrete evidence.
 5. Interpretation and journal-relevant implication.
 
-Do not include numbers unless supplied or extracted from the user's materials.
+Do not include numbers unless supplied by the user or extracted from the user's materials.
 
 ### Introduction
 
-Build 4-6 paragraphs unless benchmark papers show a different norm:
+Build 4-6 paragraphs unless comparable papers show a different norm:
 
 1. Field-level problem and journal-relevant stakes.
 2. What is known.
@@ -85,7 +86,7 @@ Build 4-6 paragraphs unless benchmark papers show a different norm:
 5. Study objective/hypothesis and design.
 6. Concise contribution statement.
 
-Avoid generic textbook openings when benchmark papers move quickly to a precise gap.
+Avoid generic textbook openings when comparable papers move quickly to a precise gap.
 
 ### Results
 
@@ -98,7 +99,7 @@ Each result subsection should have:
 - Link to figure/table/supplement.
 - Short interpretive bridge to the next result.
 
-Use benchmark papers to decide whether the journal favors mechanism-first, phenotype-first, cohort-first, or method-validation-first sequencing.
+Use comparable papers to decide whether the journal favors mechanism-first, phenotype-first, cohort-first, resource-first, or method-validation-first sequencing.
 
 ### Discussion
 
@@ -125,7 +126,7 @@ Follow journal requirements exactly. Include enough detail for reproducibility:
 
 ## Supplementary-Material Strategy
 
-Extract the target journal's observed pattern from benchmark papers:
+Extract the target journal's observed pattern from comparable papers:
 
 - Naming: `Supplementary Fig. 1`, `Fig. S1`, `Supplementary Table 1`, `Table S1`, `Supplementary Data 1`, etc.
 - Placement: parenthetical result citations, end-of-sentence citations, or methods-only citations.
@@ -143,7 +144,7 @@ We are pleased to submit our manuscript, "[Title]," for consideration as a [Arti
 
 In this study, we [one-sentence approach] and show that [main finding], addressing [specific gap] that is relevant to [journal audience/scope].
 
-The manuscript may interest readers of [Journal] because [journal-specific fit based on scope and benchmark papers].
+The manuscript may interest readers of [Journal] because [journal-specific fit based on scope and comparable papers].
 
 Key contributions include:
 1. [Contribution 1]
@@ -157,8 +158,6 @@ Sincerely,
 ```
 
 ## Final Checklist
-
-Before claiming readiness, check:
 
 - Journal and article type are exact.
 - All mandatory statements are present.

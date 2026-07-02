@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI-paper-skills"
+  short_description: "Full target-journal SCI manuscript workflow"
+  default_prompt: "Use $sci-paper-skills to help me turn my research results into a target-journal-ready SCI manuscript."

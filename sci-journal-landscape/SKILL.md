@@ -21,6 +21,18 @@ If article type is missing, infer likely choices and mark as provisional.
 
 Use current web research. Journal information and recent article lists change. Prioritize official journal/publisher pages, author guidelines, PubMed/Crossref/DOI records, journal issue pages, and reputable metrics/indexing sources.
 
+## Search Strategy
+
+Use layered searches rather than one broad query:
+
+1. Exact journal identity and author rules from official sources.
+2. Same journal plus topic keywords.
+3. Same journal plus organism, material, or system.
+4. Same journal plus method or claim type.
+5. Same publisher/society family or same-level journals when same-journal matches are weak.
+
+Do not say "no similar papers" until several query variants have been tried. If only peer-journal papers are found, label them as fallback evidence and explain why they are comparable.
+
 ## Workflow
 
 1. Resolve the journal.
@@ -45,6 +57,15 @@ Use current web research. Journal information and recent article lists change. P
    - What the target journal seems to reward.
    - What the user's manuscript must prove to fit.
    - Whether the current target is ambitious, reasonable, or risky.
+
+## Strategic Output
+
+Always translate journal facts into writing strategy:
+
+- How fast the introduction should move from broad context to exact gap.
+- Whether the journal rewards mechanistic depth, resource value, method validation, field breadth, or conceptual novelty.
+- What evidence would be expected in main figures.
+- What should be moved to supplements or removed.
 
 ## Output Contract
 

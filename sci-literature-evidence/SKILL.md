@@ -18,12 +18,16 @@ If the user has conclusions:
 3. Evaluate plausibility, novelty, evidence level, and missing controls.
 4. Recommend how strongly the conclusion can be written.
 
+For each conclusion, decide whether the literature directly supports it, only supports a nearby idea, contradicts it, or leaves it untested.
+
 If the user has only a question/direction:
 
 1. Search recent and foundational literature.
 2. Identify what has already been done.
 3. Extract methods, models, variables, and unresolved gaps.
 4. Propose 2-4 feasible research directions and what evidence each would require.
+
+For each possible direction, state what previous papers already did and what new evidence would be needed for the user's target journal.
 
 ## Search Priorities
 
@@ -32,6 +36,19 @@ If the user has only a question/direction:
 - High-quality reviews only for broad framing.
 - Same-journal or same-level papers when relevant to target journal fit.
 - Official database records for DOI/PMID and retraction checks when available.
+
+## Citation Role Control
+
+Explain whether each source is useful for:
+
+- Background framing.
+- Gap identification.
+- Claim support.
+- Alternative explanation.
+- Method precedent.
+- Discussion comparison.
+
+Do not treat one review as direct evidence for a precise mechanism when a primary paper is needed.
 
 ## Output Contract
 

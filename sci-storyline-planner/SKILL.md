@@ -18,6 +18,20 @@ Ask whether the user already has a preferred logic:
 
 Ask for the key cases/figures only if the user has data. If not, propose evidence modules needed for each plan.
 
+## Planning Inputs
+
+Use whichever artifacts exist:
+
+- Journal landscape.
+- Evidence map.
+- Result-to-claim matrix.
+- Core story memo.
+- Figure story map.
+- Comparable-paper patterns or user-provided PDFs.
+- User's current outline or preferred logic.
+
+If a required artifact is missing, make a provisional plan and mark the missing gate.
+
 ## Workflow
 
 1. Identify available story materials.
@@ -44,6 +58,16 @@ Ask for the key cases/figures only if the user has data. If not, propose evidenc
 
 6. Hand off risks.
    - Send weak transitions, overclaims, and missing controls to `sci-reviewer-simulator`.
+
+## Plan Quality Bar
+
+A good plan should tell the user:
+
+- Why this order is easier for readers.
+- Which figure/case supports each subsection.
+- Where citations are needed.
+- Where the argument is weakest.
+- What can be drafted now and what still needs evidence.
 
 ## Output Contract
 

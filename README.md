@@ -1,58 +1,65 @@
-# SCI Paper Skills
+# SCI-paper-skills
 
-A novice-adaptive SCI/SCIE manuscript coaching skill suite for researchers who have scientific results but need help turning them into a coherent, target-journal paper.
+`SCI-paper-skills` is a target-journal-adaptive skill suite for turning real research results into a coherent SCI/SCIE manuscript.
 
-The suite is designed as a manuscript mentor, not just a text generator. It helps users diagnose where a paper project is stuck, evaluate target-journal fit, connect conclusions to literature, convert results into defensible claims, build the central story, arrange figures, anticipate reviewer objections, draft by imitating model-paper structure, coach paragraph writing, polish expression, manage citations, and prepare submission or revision materials.
+It is designed for graduate students and researchers who already have data, figures, conclusions, or a rough idea, but do not yet know how to organize the logic, support claims with literature, imitate the target journal's writing pattern, and prepare a submission-ready paper.
 
 ## Entry Point
 
-Use:
+Use the orchestrator:
 
 ```text
-$sci-journal-paper
+$sci-paper-skills
 ```
 
-Main orchestrator:
+The first response should ask only the next useful questions:
 
-```text
-sci-journal-paper/
-```
+1. What journal do you want to submit to? If undecided, list candidate journals or target level.
+2. What is your research topic, field, organism/material/system, and article type if known?
+3. What do you already have: scientific question, conclusions, figures/data, outline, draft, PDFs/model papers, or reviewer comments?
 
-The orchestrator first asks:
+If enough context is already provided, the skill should proceed directly and mark missing information with `[NEED: ...]`.
 
-1. What journal do you want to submit to? If undecided, what target level or candidate journals?
-2. What is your research content and direction, including organism/material/system?
-3. What do you already have: scientific question, conclusions, figures/data, outline, draft, or reviewer comments?
+## Core Workflow
 
-## Final Workflow
+| Stage | Skill | Job | Main Artifact |
+|---:|---|---|---|
+| 0 | `sci-stage-diagnosis` | Diagnose where the paper project is stuck. | Stage diagnosis |
+| 1 | `sci-intake-router` | Collect journal, topic, system, materials, and route. | Intake brief |
+| 2 | `sci-journal-landscape` | Profile target journal and find comparable papers. | Journal landscape |
+| 3 | `sci-literature-evidence` | Check whether questions/conclusions are supported or contradicted. | Evidence map |
+| 4 | `sci-result-to-claim` | Convert results and figures into defensible claims. | Result-to-claim matrix |
+| 5 | `sci-core-story-finder` | Choose the central scientific story. | Story decision memo |
+| 6 | `sci-figure-story-builder` | Arrange figures, tables, and cases into reader logic. | Figure story map |
+| 7 | `sci-storyline-planner` | Design manuscript structure and alternative logics. | Storyline plan |
+| 8 | `sci-reviewer-simulator` | Predict editor/reviewer objections before submission. | Reviewer risk report |
+| 9 | `sci-draft-mimic` | Draft by imitating model-paper structure and rhetoric, not wording. | Draft package |
+| 10 | `sci-paragraph-coach` | Teach and write section-level paragraphs. | Paragraph coaching block |
+| 11 | `sci-language-polisher` | Polish expression while preserving meaning and evidence boundaries. | Polish report |
+| 12 | `sci-citation-control` | Verify claim-evidence-reference alignment and style. | Citation audit |
+| 13 | `sci-submission-revision` | Prepare submission files or reviewer-response materials. | Submission/revision package |
 
-| Stage | Skill | Purpose |
-|---:|---|---|
-| 0 | `sci-stage-diagnosis` | Diagnose where the manuscript project is stuck and choose the next action. |
-| 1 | `sci-intake-router` | Collect target journal, field, materials, and route the workflow. |
-| 2 | `sci-journal-landscape` | Build target-journal portrait and find same-journal or peer-journal similar papers. |
-| 3 | `sci-literature-evidence` | Search literature around scientific questions, conclusions, support, conflict, and gaps. |
-| 4 | `sci-result-to-claim` | Convert results/figures into defensible manuscript claims and evidence gaps. |
-| 5 | `sci-core-story-finder` | Identify the paper's central story and best angle for the target journal. |
-| 6 | `sci-figure-story-builder` | Arrange figures, tables, and cases into a results narrative. |
-| 7 | `sci-storyline-planner` | Plan manuscript logic, result order, and alternative structures. |
-| 8 | `sci-reviewer-simulator` | Predict editor/reviewer objections and prioritize fixes. |
-| 9 | `sci-draft-mimic` | Draft by imitating target-journal or user-provided model-paper structure without copying wording. |
-| 10 | `sci-paragraph-coach` | Coach paragraph-level writing for Introduction, Results, Discussion, Abstract, figure legends, and cover letters. |
-| 11 | `sci-language-polisher` | Polish scientific expression while preserving meaning and evidence boundaries. |
-| 12 | `sci-citation-control` | Align claims, evidence, citation placement, and reference verification. |
-| 13 | `sci-submission-revision` | Prepare submission materials, cover letters, checklists, reviewer responses, and revision plans. |
+## How The Suite Adapts
 
-## Included Skills
+- If the user has a target journal, it first builds a journal portrait and searches same-journal similar papers.
+- If the target journal has no close matches, it searches same-level or peer-journal papers and explains why they are comparable.
+- If the user has conclusions, it searches literature to support, challenge, or soften those conclusions.
+- If the user has no conclusions, it proposes possible research directions grounded in recent literature.
+- If the user has a writing logic, it improves that logic.
+- If the user has no writing logic, it derives several possible manuscript structures from comparable literature and the user's evidence.
+- If the user provides PDFs or model papers, it extracts structure, rhetorical moves, figure citation behavior, supplement style, and claim strength, then drafts by imitation without copying language.
+- If the user has no writing experience, it gives one concrete next task instead of a long abstract checklist.
 
-- `sci-journal-paper`: final orchestrator.
+## Active Skills
+
+- `sci-paper-skills`: main orchestrator and full workflow controller.
 - `sci-stage-diagnosis`: stage diagnosis and next-action selection.
 - `sci-intake-router`: first-step questions and routing.
 - `sci-journal-landscape`: journal profile and comparable-paper scan.
-- `sci-literature-evidence`: literature support and research-direction mapping.
-- `sci-result-to-claim`: result-to-claim conversion.
+- `sci-literature-evidence`: literature support, conflict, and direction mapping.
+- `sci-result-to-claim`: result-to-claim conversion and evidence-gap control.
 - `sci-core-story-finder`: central story selection.
-- `sci-figure-story-builder`: figure/case narrative construction.
+- `sci-figure-story-builder`: figure and case narrative construction.
 - `sci-storyline-planner`: manuscript logic planning.
 - `sci-reviewer-simulator`: pre-submission reviewer-risk simulation.
 - `sci-draft-mimic`: model-paper guided first drafting.
@@ -66,47 +73,19 @@ The orchestrator first asks:
 The orchestrator includes a helper script:
 
 ```bash
-python sci-journal-paper/scripts/init_journal_project.py --journal "The Plant Cell" --topic "ABA stomatal closure" --out ./journal-projects
+python sci-paper-skills/scripts/init_journal_project.py \
+  --journal "The Plant Cell" \
+  --topic "ABA stomatal closure" \
+  --out ./journal-projects
 ```
 
-It creates a working folder with:
+Generated project folders are working artifacts and are ignored by Git.
 
-```text
-00-stage-diagnosis/
-01-intake/
-02-journal-landscape/
-03-literature-evidence/
-04-result-to-claim/
-05-core-story/
-06-figure-story/
-07-storyline-planning/
-08-reviewer-simulation/
-09-draft-mimic/
-10-paragraph-coach/
-11-language-polish/
-12-citation-control/
-13-submission-revision/
-14-deconstruction-archive/
-```
+## Quality Rules
 
-## Design Principles
-
-- Ask only the next useful questions.
-- Adapt to the user's actual stage and experience level.
-- Never invent data, references, statistics, approvals, accession numbers, or findings.
-- Separate user data, literature support, interpretation, and unsupported claims.
-- Prefer evidence-backed specificity over generic writing advice.
-- Treat drafting as the result of journal landscape, literature evidence, result-to-claim mapping, story selection, and figure narrative.
-- Make every stage leave a handoff artifact for the next stage.
-
-## Validation
-
-Each skill is a standard Codex skill folder with:
-
-```text
-SKILL.md
-agents/openai.yaml
-references/
-```
-
-The final suite was validated with the skill creator `quick_validate.py` tool.
+- Do not invent data, references, statistics, approvals, accession numbers, or findings.
+- Use current web research for journal facts, article lists, metrics, OA/APC, policies, and recent literature.
+- Distinguish user data, literature support, interpretation, speculation, and unsupported claims.
+- Match claim strength to evidence: observation, association, regulation, mechanism, causality, and application are different.
+- Draft only after journal fit, literature support, result-to-claim mapping, and storyline are sufficiently clear.
+- Keep every stage traceable by producing a handoff artifact for the next stage.

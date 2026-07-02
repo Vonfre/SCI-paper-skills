@@ -1,6 +1,0 @@
-interface:
-  display_name: "Deprecated SCI Paper Reading"
-  short_description: "Deprecated; use Landscape or Draft Mimic"
-  default_prompt: "Use $sci-journal-landscape or $sci-draft-mimic instead of $sci-paper-reading."
-policy:
-  allow_implicit_invocation: false

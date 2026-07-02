@@ -22,6 +22,19 @@ Determine whether the task is:
 
 Use current web or database verification when real references, current status, retractions, or exact metadata matter. Do not invent citations.
 
+## Minimum Inputs
+
+Accept:
+
+- A draft paragraph or section.
+- A claim list.
+- A result-to-claim matrix.
+- A literature evidence map.
+- Existing reference list, DOI list, PMID list, or BibTeX.
+- Target journal or comparable-paper citation style.
+
+If references are placeholders, keep them as `[CITE: claim]` until verified.
+
 ## Workflow
 
 1. Build a claim inventory.
@@ -43,6 +56,10 @@ Use current web or database verification when real references, current status, r
 5. Format and audit.
    - Adapt in-text citation style, reference list style, DOI/URL requirements, reference order, and supplement citation style.
    - Return a risk list before submission.
+
+## Verification Rule
+
+When exact references matter, verify DOI/PMID/title/year/journal from authoritative pages or databases. Flag retractions, expression of concern, preprints used as definitive evidence, review-only support for precise claims, and metadata mismatches.
 
 ## Output Contract
 

@@ -27,6 +27,17 @@ Own the final mile from manuscript draft to journal submission and peer-review r
    - Ready, conditionally ready, or not ready.
    - List blocking issues separately from polish issues.
 
+## Readiness Rule
+
+Do not call a manuscript ready if any of these are unresolved:
+
+- Target article type or journal requirements are unknown.
+- Required statements are missing.
+- Figures/supplements do not match journal rules.
+- Major claims lack data or citation support.
+- References are unverified.
+- Placeholders remain in submission-facing text.
+
 ## Revision Workflow
 
 1. Parse decision letter and reviewer comments.
@@ -44,6 +55,16 @@ Own the final mile from manuscript draft to journal submission and peer-review r
 
 5. Prepare revised manuscript notes.
    - Identify where text, figures, tables, supplements, methods, or citations must change.
+
+## Response Rule
+
+Every reviewer response must map to one of three outcomes:
+
+- Manuscript changed, with location.
+- Additional analysis/experiment added, with location and evidence.
+- No change made, with a concise evidence-based reason.
+
+Do not promise data, experiments, or analyses the user has not performed.
 
 ## Output Contract
 

@@ -1,6 +1,0 @@
-interface:
-  display_name: "Deprecated SCI Journal Intelligence"
-  short_description: "Deprecated; use SCI Journal Landscape"
-  default_prompt: "Use $sci-journal-landscape instead of $sci-journal-intelligence."
-policy:
-  allow_implicit_invocation: false

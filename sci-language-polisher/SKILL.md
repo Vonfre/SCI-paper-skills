@@ -19,6 +19,15 @@ Identify polishing level:
 - `Translation polish`: convert Chinese scientific text into idiomatic English.
 - `Response polish`: improve rebuttal or cover-letter tone.
 
+## Before Polishing
+
+Check whether the problem is language or logic:
+
+- If claims are unsupported, route to `sci-result-to-claim` or `sci-citation-control`.
+- If paragraph purpose is unclear, route to `sci-paragraph-coach`.
+- If the whole section order is weak, route to `sci-storyline-planner`.
+- If only expression, clarity, concision, tone, or idiomatic English is weak, continue polishing.
+
 ## Workflow
 
 1. Preserve scientific meaning.
@@ -37,6 +46,10 @@ Identify polishing level:
 5. Return changes.
    - For short text, provide polished text plus notes.
    - For long text, polish section by section and list recurring issues.
+
+## Polishing Rule
+
+Do not silently strengthen claims. If a sentence changes from association to mechanism, mechanism to causality, or observation to application, flag it and provide a safer alternative.
 
 ## Output Contract
 

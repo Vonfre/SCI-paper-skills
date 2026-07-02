@@ -19,6 +19,17 @@ Ask three questions if missing:
 
 If the user cannot answer, infer story options from the result-to-claim matrix and literature landscape.
 
+## Story Types
+
+Classify candidate stories before choosing:
+
+- Mechanism: explains how X controls Y through Z.
+- Resource: provides a dataset, atlas, germplasm, platform, or benchmark.
+- Method: introduces or validates a technique, workflow, or tool.
+- Phenotype: reports an important biological, clinical, ecological, or material pattern.
+- Application: improves prediction, diagnosis, engineering, treatment, or management.
+- Comparative/evolutionary: explains differences across species, populations, tissues, or conditions.
+
 ## Workflow
 
 1. Inventory possible stories.
@@ -35,6 +46,10 @@ If the user cannot answer, infer story options from the result-to-claim matrix a
 
 5. Define story boundaries.
    - What belongs in the manuscript, what goes to supplement, what should be cut.
+
+## Recommendation Rule
+
+Give a clear recommendation. Do not leave the user with equal options unless the evidence is genuinely tied. Include a backup story for a lower-risk journal, shorter manuscript, or reduced evidence package.
 
 ## Output Contract
 

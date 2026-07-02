@@ -17,6 +17,19 @@ Act as a strict but constructive pre-submission reviewer. The goal is to find pr
 - `Reviewer 3 field/literature`: novelty, prior work, interpretation.
 - `Reader clarity`: story, figures, writing, overclaim.
 
+## Minimum Inputs
+
+Use any available package:
+
+- Target journal and article type.
+- Core story or abstract.
+- Result-to-claim matrix.
+- Figure story map.
+- Draft sections.
+- Literature evidence map.
+
+If inputs are incomplete, run a provisional review and mark which risks cannot be assessed.
+
 ## Workflow
 
 1. Read the target journal, story, claims, figures, and draft if available.
@@ -24,6 +37,15 @@ Act as a strict but constructive pre-submission reviewer. The goal is to find pr
 3. Separate blocking issues from optional improvements.
 4. Suggest the smallest credible fix and the stronger fix.
 5. Rewrite risky claims when a writing fix is enough.
+
+## Severity Rules
+
+- `Blocking`: likely desk rejection or major revision unless fixed.
+- `Major`: likely reviewer concern that needs analysis, experiment, or substantial rewrite.
+- `Moderate`: fixable with clarification, citation, figure change, or limitation.
+- `Minor`: style, wording, or formatting.
+
+For every blocking or major issue, give both the smallest credible fix and the stronger fix.
 
 ## Output Contract
 

@@ -17,6 +17,21 @@ Ask no more than three:
 2. Do you have main conclusions and key figures/results?
 3. Do you already have an outline or draft?
 
+## Diagnosis Logic
+
+Classify by the earliest missing foundation:
+
+- No target journal/level and no clear output -> start with intake.
+- Results exist but conclusion strength is unclear -> result-to-claim first.
+- Conclusions exist but literature support is unknown -> literature evidence first.
+- Claims exist but no central message -> core story first.
+- Story exists but figures are unordered -> figure story first.
+- Story and figure order exist but no section logic -> storyline planning first.
+- Logic exists but no text -> draft mimic or paragraph coach.
+- Text exists but claims/citations are risky -> reviewer simulator or citation control.
+- Text is logically sound but expression is weak -> language polisher.
+- Manuscript is near final or decision letter exists -> submission revision.
+
 ## Stage Labels
 
 - `idea-only`: scientific question exists, evidence not assembled.
@@ -28,6 +43,15 @@ Ask no more than three:
 - `polish-needed`: draft exists but expression is weak.
 - `submission-needed`: draft is near complete.
 - `revision-needed`: reviewer/editor comments exist.
+
+## Do-Not-Do-Yet Guidance
+
+Every diagnosis must name one premature action to avoid, for example:
+
+- Do not draft the abstract before the central claim is known.
+- Do not polish language before unsupported claims are fixed.
+- Do not choose a high-impact target before evidence depth is assessed.
+- Do not add citations randomly before claims are decomposed.
 
 ## Output Contract
 

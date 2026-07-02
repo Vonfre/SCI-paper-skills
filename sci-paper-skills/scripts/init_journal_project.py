@@ -60,6 +60,38 @@ def main() -> int:
         (root / folder).mkdir(parents=True, exist_ok=True)
 
     write_file(
+        root / "PROJECT.md",
+        f"""# SCI-paper-skills Project
+
+Journal: {journal}
+Topic: {topic or "[NEED: research topic]"}
+Created: {today}
+
+## Current Status
+- Stage:
+- Next skill:
+- Blocking gaps:
+- Next 30-minute task:
+
+## Handoff Artifacts
+- 00-stage-diagnosis/stage-diagnosis.md
+- 01-intake/intake-brief.md
+- 02-journal-landscape/journal-landscape.md
+- 03-literature-evidence/evidence-map.md
+- 04-result-to-claim/result-to-claim-matrix.md
+- 05-core-story/story-decision-memo.md
+- 06-figure-story/figure-story-map.md
+- 07-storyline-planning/storyline-plan.md
+- 08-reviewer-simulation/reviewer-risk-report.md
+- 09-draft-mimic/draft-package.md
+- 10-paragraph-coach/paragraph-coach.md
+- 11-language-polish/polish-report.md
+- 12-citation-control/citation-map.md
+- 13-submission-revision/submission-checklist.md
+""",
+    )
+
+    write_file(
         root / "00-stage-diagnosis" / "stage-diagnosis.md",
         f"""# Manuscript Stage Diagnosis
 
@@ -94,13 +126,17 @@ Created: {today}
 - Target journal or journal level: {journal}
 - Research field/topic: {topic or "[NEED: research topic]"}
 - Model system/material:
+- Article type:
 - Manuscript stage:
+- User experience level:
 - Desired output:
 
 ## Available Inputs
 - Scientific question:
 - Main conclusions:
 - Key figures/cases:
+- Result-to-claim clarity:
+- Storyline clarity:
 - Existing outline/draft:
 - Uploaded papers/PDFs:
 - Deadline:
@@ -109,6 +145,10 @@ Created: {today}
 - Required before journal landscape:
 - Required before literature evidence:
 - Required before result-to-claim:
+- Required before core story:
+- Required before figure story:
+- Required before storyline planning:
+- Required before reviewer simulation:
 - Required before drafting:
 - Required before final polish:
 
