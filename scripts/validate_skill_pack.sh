@@ -37,6 +37,7 @@ required_root_files=(
   docs/skill-index.md
   examples/README.md
   examples/zero-to-one-sci-manuscript/README.md
+  examples/zero-to-one-sci-manuscript/complete-manuscript.md
   examples/zero-to-one-sci-manuscript/initial-user-brief.md
   examples/zero-to-one-sci-manuscript/complete-workflow.md
   examples/zero-to-one-sci-manuscript/final-package.md
@@ -55,6 +56,7 @@ done
 
 manifest_declared_files="$(awk '
   /^  github_actions: / {print $2}
+  /^  complete_manuscript: / {print $2}
   /^  zero_to_one_workflow: / {print $2}
   /^  initial_brief: / {print $2}
   /^  complete_run: / {print $2}

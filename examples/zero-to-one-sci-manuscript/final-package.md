@@ -1,24 +1,23 @@
 # Final Package From The Example Run
 
-This is the manuscript package produced by the zero-to-one workflow. It is intentionally not marked submission-ready because the demo still contains missing statistics, unverified citations, and current journal-policy checks.
+This package records the manuscript-level decisions behind `complete-manuscript.md`. The manuscript is complete as a synthetic example, but it is not a scientific record and must not be submitted as real research.
 
-## Working Title Options
+## Final Manuscript
 
-1. DRK1 Supports ABA-Induced Stomatal Closure in Arabidopsis Guard Cells
-2. A Candidate Guard-Cell Kinase Contributes to the Full Stomatal Response to ABA
-3. DRK1 Links ABA Responsiveness With ROS Accumulation During Stomatal Closure
-
-Preferred title: option 1, because it is specific and evidence-bounded.
+- File: `complete-manuscript.md`
+- Title: DRK1 Supports ABA-Induced Stomatal Closure in Arabidopsis Guard Cells
+- Article type: synthetic research article
+- Readiness: complete demo manuscript
 
 ## Central Claim
 
-DRK1 is required for the full ABA-induced stomatal closure response under the tested conditions, with associated effects on ABA-triggered ROS accumulation and selected ABA-responsive transcripts.
+DRK1 is required for the full ABA-induced stomatal closure response under the tested synthetic conditions, with associated effects on ABA-triggered ROS accumulation and selected ABA-responsive transcripts.
 
-Do not claim yet:
+Claim boundary:
 
-- DRK1 directly regulates ABA signaling.
-- DRK1 is the upstream regulator of ROS production.
-- DRK1 defines a new ABA signaling mechanism.
+- The manuscript does not claim that DRK1 directly regulates ABA signaling.
+- The manuscript does not claim that DRK1 is upstream of ROS production.
+- The manuscript does not claim a new molecular mechanism.
 
 ## Figure Order
 
@@ -27,45 +26,48 @@ Do not claim yet:
 | F1 | Main | Establish the ABA stomatal aperture phenotype | C1 |
 | F2 | Main | Link phenotype to DRK1 by complementation | C2 |
 | F3 | Main | Connect phenotype to ABA-induced ROS response | C3 |
-| F4 | Main or supplement | Add marker-gene support if quality is strong | C4 |
+| F4 | Main | Add marker-gene support with limits | C4 |
+| F5 | Main model | Summarize bounded interpretation | C1-C4 |
 
-## Section Plan
+## Section Map
 
-| Section ID | Section | Purpose | Inputs Needed |
+| Section ID | Section | Status | Output Location |
 |---|---|---|---|
-| SEC1 | Results 1 | Show the primary stomatal phenotype | F1, C1, statistics |
-| SEC2 | Results 2 | Show complementation/rescue | F2, C2, genotype details |
-| SEC3 | Results 3 | Show ROS-associated response | F3, C3, ABA-ROS citations |
-| SEC4 | Results 4 | Present transcript marker evidence | F4, C4, marker-gene citations |
-| SEC5 | Discussion | Bound the mechanistic interpretation | C1-C4, R1-R4 |
-
-## Draft Abstract
-
-Stomatal closure in response to abscisic acid (ABA) is central to plant water-stress responses, yet the regulatory factors that tune this response in guard cells remain incompletely defined [CITE: ABA guard-cell review]. Here, we evaluate the candidate kinase DRK1 in Arabidopsis guard-cell ABA responsiveness. ABA-treated drk1 mutants maintained larger stomatal apertures than wild-type plants, and this phenotype was partially restored by DRK1 complementation ([NEED: ABA concentration, time point, n, statistical test]). DRK1 disruption was also associated with reduced ABA-induced ROS accumulation and altered expression of selected ABA-responsive marker genes ([NEED: marker gene list]; [CITE: ABA-ROS pathway]). These results support a role for DRK1 in the full ABA-induced stomatal closure response while indicating that direct pathway placement requires additional mechanistic evidence. The study provides a bounded framework for testing DRK1-dependent guard-cell ABA signaling.
-
-## Coached Results Paragraph
-
-ABA treatment decreased stomatal aperture in wild-type plants, whereas drk1 mutants maintained a significantly larger aperture under the same treatment conditions ([NEED: ABA concentration, time point, n, statistical test]; Fig. 1). The partial restoration of this response in DRK1-complemented plants further links the phenotype to DRK1 disruption (Fig. 2). Together with the reduced ABA-induced ROS signal observed in drk1 guard cells (Fig. 3), these results support a role for DRK1 in the full guard-cell response to ABA, while leaving the precise pathway position to be resolved [CITE: ABA-ROS guard-cell pathway].
+| SEC1 | Introduction | complete | `complete-manuscript.md` |
+| SEC2 | Results 1 | complete | Figure 1 section |
+| SEC3 | Results 2 | complete | Figure 2 section |
+| SEC4 | Results 3 | complete | Figure 3 section |
+| SEC5 | Results 4 | complete | Figure 4 section |
+| SEC6 | Discussion | complete | Discussion section |
+| SEC7 | Materials and Methods | complete | Methods section |
+| SEC8 | Declarations and references | complete | Back matter |
 
 ## Citation Audit
 
-| Claim | Status | Needed Action |
+| Claim | Status | Citation Behavior |
 |---|---|---|
-| C1 | Needs statistics and background citations | Verify ABA assay details and cite ABA guard-cell background |
-| C2 | Needs genotype/method detail | Confirm complementation construct and line information |
-| C3 | Needs pathway citations | Cite verified ABA-induced ROS literature |
-| C4 | Needs marker validation | Cite why selected genes are ABA-responsive markers |
+| ABA controls stomatal closure | background supported | References 1-7 |
+| ROS participates in ABA guard-cell signaling | background supported | References 1 and 3 |
+| OST1/SnRK2 context | background supported | Reference 2 |
+| Core ABA signaling network | background supported | References 4-7 |
+| DRK1 phenotype | synthetic user data | No literature citation used as proof |
+| DRK1 mechanism | not claimed | Explicitly bounded in Results and Discussion |
 
-## Submission Status
+## Synthetic Data Summary
 
-Final readiness: blocked.
+| Result | Final Text Status |
+|---|---|
+| drk1-1 has wider stomatal aperture after ABA | included with synthetic means and P value |
+| DRK1 complementation partially restores closure | included with synthetic means and P value |
+| ABA-induced ROS signal is reduced in drk1-1 | included with synthetic fold changes |
+| ABA marker transcript induction is attenuated | included with synthetic qRT-PCR results |
 
-Blocking tasks:
+## Real-Project Replacement Checklist
 
-1. Verify current target-journal author instructions and article type requirements.
-2. Add exact sample sizes, biological replicates, statistical tests, and P values.
-3. Verify all citation metadata and replace `[CITE: ...]` placeholders.
-4. Resolve whether direct pathway evidence can be added; otherwise keep bounded wording.
-5. Complete data availability, funding, author contributions, conflict-of-interest, and methods details.
+Before using this shape for real work, replace or verify:
 
-After these repairs, re-run `sci-reviewer-simulator`, `sci-citation-control`, and `sci-submission-revision` before submission.
+1. All genotype names, mutant identities, complementation constructs, and methods.
+2. All numerical data, replicate counts, statistical tests, P values, and figure panels.
+3. All claims about pathway placement and mechanism.
+4. All references, citation metadata, and journal-specific formatting.
+5. All author, funding, data availability, conflict-of-interest, and policy statements.

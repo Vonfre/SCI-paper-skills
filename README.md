@@ -75,7 +75,8 @@ The tight workflow layer adds stateful handoff rules so the skills work as a con
 - Shared state: [manuscript-state-schema.md](skills/sci-paper-skills/references/manuscript-state-schema.md)
 - Stage contracts: [handoff-contracts.md](skills/sci-paper-skills/references/handoff-contracts.md)
 - End-to-end routes: [end-to-end-runbooks.md](docs/end-to-end-runbooks.md)
-- Complete example: [zero-to-one-sci-manuscript](examples/zero-to-one-sci-manuscript/README.md)
+- Complete example paper: [complete-manuscript.md](examples/zero-to-one-sci-manuscript/complete-manuscript.md)
+- Example run notes: [zero-to-one-sci-manuscript](examples/zero-to-one-sci-manuscript/README.md)
 - Final example state: [manuscript-state-example.yaml](examples/manuscript-state-example.yaml)
 
 Every stage now consumes upstream state, updates its owned fields, preserves IDs such as `C#`, `F#`, `S#`, `SEC#`, and ends with `Manuscript State Update` plus `Handoff` blocks.

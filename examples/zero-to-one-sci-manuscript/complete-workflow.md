@@ -384,7 +384,7 @@ Citation placement plan:
 
 Handoff route: `sci-submission-revision`.
 
-## 13. Submission Revision
+## 13. Submission Revision And Complete Manuscript Assembly
 
 Call:
 
@@ -395,20 +395,16 @@ $sci-submission-revision
 Expected output:
 
 ```markdown
-Submission checklist:
-- Manuscript draft: skeleton only, not submission-ready.
-- Figures: F1-F3 main candidates, F4 main/supplement decision pending quality.
-- Required statements: [NEED: data availability], [NEED: funding], [NEED: author contributions], [NEED: conflict of interest], [NEED: plant material/source statement if required].
-- Journal requirements: [NEED: verify current author guidelines, article type, word limits, figure limits, reference style, data policy].
-- Citation status: blocked until source metadata is verified.
-- Final readiness: blocked.
+Complete manuscript assembly:
+- Manuscript file: complete-manuscript.md.
+- Included sections: title, authors, abstract, significance statement, keywords, Introduction, Results, Discussion, Materials and Methods, Data Availability, Funding, Author Contributions, Conflict Of Interest, Acknowledgements, Figure Legends, Supplementary Table, and References.
+- Citation status: background references included and DOI redirects checked for the demo.
+- Final readiness: complete synthetic demo manuscript.
 
-Final repair queue:
-1. Add exact statistics and replicate details for F1-F4.
-2. Verify comparable papers and source metadata.
-3. Decide whether The Plant Cell is realistic after mechanism repair.
-4. Complete methods and data availability details.
-5. Re-run reviewer simulator before final submission.
+Real-project caution:
+1. Replace all synthetic DRK1 data before real submission.
+2. Re-check every citation and journal instruction.
+3. Add real raw data, figures, author details, funding, and policy statements.
 ```
 
-The final package shape is shown in `final-package.md`. The final state snapshot is `../manuscript-state-example.yaml`.
+The complete paper is shown in `complete-manuscript.md`. The final package metadata is shown in `final-package.md`. The final state snapshot is `../manuscript-state-example.yaml`.

@@ -2,6 +2,12 @@
 
 All notable changes to `SCI-paper-skills` are documented here.
 
+## 0.6.2 - Complete Manuscript Example
+
+- Added `complete-manuscript.md`, a full synthetic SCI-style paper generated from the example workflow.
+- Updated the zero-to-one example so the complete manuscript is the primary artifact, with workflow trace and state as supporting files.
+- Updated manifest metadata and validation checks to require the complete manuscript example.
+
 ## 0.6.1 - Complete Zero-To-One Example
 
 - Reworked `examples/` around a complete synthetic zero-to-one SCI manuscript workflow.

@@ -75,7 +75,8 @@ $sci-paper-skills
 - 共享状态：[manuscript-state-schema.md](skills/sci-paper-skills/references/manuscript-state-schema.md)
 - 阶段交接：[handoff-contracts.md](skills/sci-paper-skills/references/handoff-contracts.md)
 - 端到端路线：[end-to-end-runbooks.md](docs/end-to-end-runbooks.md)
-- 完整示例：[zero-to-one-sci-manuscript](examples/zero-to-one-sci-manuscript/README.md)
+- 完整论文示例：[complete-manuscript.md](examples/zero-to-one-sci-manuscript/complete-manuscript.md)
+- 示例运行说明：[zero-to-one-sci-manuscript](examples/zero-to-one-sci-manuscript/README.md)
 - 最终状态示例：[manuscript-state-example.yaml](examples/manuscript-state-example.yaml)
 
 每个阶段现在都要读取上游 state，更新自己负责的字段，保留 `C#`、`F#`、`S#`、`SEC#` 等 ID，并在输出结尾给出 `Manuscript State Update` 和 `Handoff`。
