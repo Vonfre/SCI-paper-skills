@@ -15,7 +15,7 @@ Ask only the missing high-impact items, up to three:
 
 1. Target journal, candidate journals, or target level.
 2. Research topic, field, organism/material/system, and main method.
-3. Current materials: question, conclusions, figures/data, outline, draft, reviewer comments, deadline.
+3. Current materials: question, conclusions, figures/data, raw data, analysis outputs, code/notebooks, outline, draft, reviewer comments, deadline.
 
 If the user answers partially, do not restart intake. Fill the brief with what is known and mark unknowns as `[NEED: ...]`.
 
@@ -25,14 +25,16 @@ Collect only what changes the next action:
 
 - Target journal, candidate journals, or target level.
 - Research topic, field, organism/material/system, and article type if known.
-- Current materials: question, conclusions, figure list, result bullets, outline, draft, PDFs/model papers, deadline, or reviewer comments.
+- Current materials: question, conclusions, figure list, result bullets, raw data, analysis outputs, statistical tables, plotting files, outline, draft, PDFs/model papers, deadline, or reviewer comments.
 
 Do not request full methods, all raw data, author information, or final declarations during intake unless the user is already preparing submission.
+If raw data or analysis outputs are present, only record their existence, type, and whether the user wants analysis help; leave detailed exploration to adjacent analysis skills.
 
 ## Routing Logic
 
 - Target journal plus topic given -> `sci-journal-landscape`.
 - No target journal but clear research direction -> `sci-literature-evidence` or `sci-stage-diagnosis`.
+- Raw data, analysis outputs, unclear statistics, or plot-generation request -> adjacent analysis/visualization skill first, then `sci-result-to-claim`.
 - Results/figures given but claims unclear -> `sci-result-to-claim`.
 - Claims given but story unclear -> `sci-core-story-finder`.
 - Figure inventory given -> `sci-figure-story-builder`.
@@ -47,6 +49,7 @@ Before handing off, record enough context for the next module to start without r
 - Topic and model system/material.
 - Current manuscript stage.
 - Available artifacts.
+- Data/analysis/figure artifacts if present: raw data, processed data, analysis scripts, statistical output, source data, figure files.
 - Desired output and deadline if any.
 - Biggest uncertainty.
 
@@ -63,7 +66,7 @@ After routing, explain why that stage comes next in one short paragraph. End wit
 Consume:
 
 - Existing `manuscript_state.project` if present.
-- User-provided journal, topic, system, materials, stage, deadline, draft, PDFs, figures, or reviewer comments.
+- User-provided journal, topic, system, materials, stage, deadline, draft, PDFs, figures, raw data, analysis outputs, code/notebooks, source data, or reviewer comments.
 
 Update:
 

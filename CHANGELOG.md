@@ -4,6 +4,8 @@ All notable changes to `SCI-paper-skills` are documented here.
 
 ## Unreleased
 
+- Added analysis/statistics/figure/data-availability integration guidance inspired by local scientific analysis, visualization, and Nature-style skills.
+- Extended manuscript state, handoff contracts, and downstream skills with analysis provenance, figure contracts, source-data checks, and data/code availability gates.
 - Removed internal high-star project inspiration notes from the published documentation set.
 
 ## 0.6.7 - Target Journal Format Profile Gate

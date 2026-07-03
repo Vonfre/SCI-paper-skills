@@ -18,8 +18,10 @@ Ask for results in the easiest available form:
 - Current conclusions.
 - Raw result bullets.
 - Draft result paragraphs.
+- Raw data files, analysis outputs, notebooks, statistical tables, or existing plots if claim strength depends on analysis.
 
 If the user lacks polished figures, work from rough result descriptions and mark missing evidence.
+If the user has raw data or unclear statistics rather than stable results, route to adjacent exploratory data analysis, statistical analysis, or domain-specific analysis skills before treating the result as claim-ready.
 
 ## Claim Ladder
 
@@ -43,16 +45,17 @@ Accept rough input. Convert any of these into a normalized result table:
 - Conclusions without figures.
 - PDF-derived or screenshot-derived figure descriptions when available.
 
-For each result, recover: condition, comparison, method, observation, quantification/statistics if known, and what the user thinks it proves.
+For each result, recover: condition, comparison, method, observation, quantification/statistics if known, sample size, replicate unit, effect/uncertainty, analysis provenance, and what the user thinks it proves.
 
 ## Workflow
 
 1. List each result/figure and what it directly shows.
 2. Separate direct observation from interpretation.
 3. Assign the strongest defensible claim and the claims it does not support.
-4. Build the evidence package for each result: experimental design, controls, quantification, statistics, representative figure, replicate logic, and relevant literature context.
-5. Identify the smallest missing control, analysis, or citation that would unlock a stronger claim.
-6. Recommend safe wording, result-paragraph bridge language, and a next module.
+4. Build the evidence package for each result: experimental design, controls, quantification, statistics, representative figure, replicate logic, analysis provenance, and relevant literature context.
+5. Classify the result as confirmatory, exploratory, descriptive, or not yet interpretable.
+6. Identify the smallest missing control, analysis, diagnostic, effect-size report, or citation that would unlock a stronger claim.
+7. Recommend safe wording, result-paragraph bridge language, and a next module.
 
 ## Claim Discipline
 
@@ -66,16 +69,19 @@ Use these boundaries:
 - Application: X improves prediction, intervention, diagnosis, engineering, or practical outcome.
 
 Do not allow phenotype-only data to become a mechanism claim. Do not allow correlation to become causation. Do not allow one model system to become a universal statement without support.
+Do not allow p-values alone to carry a strong claim. Require direction, effect or estimate, uncertainty, sample size, replicate unit, and appropriate statistical/model assumptions whenever the claim depends on quantitative analysis.
 
 ## State Coupling
 
 Consume:
 
 - User result descriptions, figure/table inventory, draft result paragraphs, and existing `figure_registry` if available.
+- `analysis_registry` when data provenance, preprocessing, statistics, or computational workflow status already exists.
 - `journal_landscape` and `source_ledger` when they exist.
 
 Update:
 
+- `analysis_registry.datasets` and `analysis_registry.statistical_plan` when analysis provenance, statistical status, or diagnostics are part of the claim.
 - `claim_registry.claims` with stable IDs `C1`, `C2`, `C3`.
 - `linked_result_or_figure_ids`, `claim_level`, `safe_wording`, `stronger_wording_if_fixed`, `evidence_needed_for_stronger_claim`, `citation_needs`, and `status`.
 - `global_blockers` for missing decisive controls, statistics, validation, or user data.
@@ -83,6 +89,7 @@ Update:
 Block:
 
 - If no result, observation, figure, or draft result text is available, route back to intake or ask for a result list.
+- If analysis-derived results lack provenance, sample size/replicate unit, appropriate statistical test/model, or diagnostic status, mark claims provisional and route to analysis repair before drafting.
 
 Always end with `Manuscript State Update` and `Handoff`.
 
@@ -92,6 +99,7 @@ Return:
 
 - `Result-to-claim matrix`.
 - `Evidence package table`.
+- `Analysis provenance and statistical status`.
 - `Result paragraph bridge notes`.
 - `Claim-strength summary`.
 - `Evidence gaps` ranked by importance.

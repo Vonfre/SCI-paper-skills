@@ -28,6 +28,7 @@ This skill pack is designed for researchers who already have research materials 
 | What you already have | What the skills help you produce |
 |---|---|
 | Data, figures, tables, or statistical results | Defensible claims and an evidence chain |
+| Raw data, analysis outputs, code, or plotting files | Data-quality, statistical, figure-evidence, and reproducibility risks before writing |
 | A rough draft, Chinese draft, or scattered paragraphs | A target-journal-oriented manuscript structure |
 | Target journals or model papers | Journal positioning, article pattern analysis, and fit assessment |
 | Reviewer or editor comments | Revision strategy, point-by-point responses, and required materials |
@@ -38,9 +39,11 @@ This skill pack is designed for researchers who already have research materials 
 - Diagnose where a manuscript project is currently stuck.
 - Convert experimental or analytical results into defensible manuscript claims.
 - Separate what the results can support from what they cannot yet support.
+- Connect raw data, statistical analysis, figure source data, and code/data availability to the manuscript evidence chain.
 - Build background, scientific questions, research gaps, and discussion boundaries from the literature.
 - Arrange figures and storyline so the Results section becomes an evidence chain instead of a data list.
 - Check figures, tables, supplementary materials, legends, titles, and references against target-journal expectations.
+- Check statistical wording, effect size/uncertainty, replicate units, figure export quality, source data, and data/code availability risks.
 - Draft abstracts, introductions, results, discussions, methods, figure legends, cover letters, and revision letters.
 - Control claim strength to avoid over-mechanistic, over-novel, or unsupported statements.
 - Provide complete English and Chinese manuscript examples with methods, statistics, legends, references, and reproducibility checklists.
@@ -130,8 +133,9 @@ bash scripts/validate_skill_pack.sh
 
 - Diagnose first, then write.
 - Evidence first, then claims.
+- Confirm that analysis and figures can support the conclusion before writing Results prose.
 - Structure first, then polishing.
-- State only what the evidence can support; handle unsupported points through boundaries and future experiments.
+- State only what the evidence can support; handle unsupported points through boundaries, analysis/figure risks, and future experiments.
 - Do not fabricate data, references, approvals, accession numbers, methods, statistical results, or journal requirements.
 - Mimic the structure and rhetorical function of model papers, not distinctive original wording.
 

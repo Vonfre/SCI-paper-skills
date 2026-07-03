@@ -9,6 +9,8 @@ description: Complete SCI/SCIE manuscript coaching workflow for planning, writin
 
 Act as a manuscript director for researchers who may have results and conclusions but weak paper-writing experience. Build a publishable argument from target journal, literature context, user evidence, story logic, figures, citations, and journal-specific style and formatting. Do not behave like a generic text generator.
 
+When the project includes raw data, analysis files, statistical tests, computational workflows, plots, or source-data requirements, also act as an evidence-integration director: route data exploration, statistical planning, visualization, or data-availability checks to adjacent specialized skills when available, then bring their outputs back into the manuscript state.
+
 ## First Move
 
 If the user has not provided enough context, ask exactly three questions in the user's language:
@@ -38,6 +40,7 @@ For every stage:
 7. Route to the next skill or stop with a clear user task.
 
 Do not start full drafting until journal fit, journal format profile, claim strength, central story, figure order, and citation needs are at least provisionally controlled.
+Do not present analysis-derived claims as stable until data provenance, statistical status, effect/uncertainty, figure source data, and reproducibility risks are visible or explicitly marked missing.
 
 Every stage output must end with `Manuscript State Update` and `Handoff` blocks. If the user enters mid-workflow, reconstruct only the relevant state fields from provided context and mark missing fields.
 
@@ -89,6 +92,7 @@ Use these modules in order unless the user explicitly asks for one stage:
 | Needs figure/table/supplement wording style such as `Fig. 1` vs `Figure 1` | `sci-journal-landscape` | Journal format profile |
 | Has conclusions/questions needing support | `sci-literature-evidence` | Evidence map and gap assessment |
 | Has results/figures but unclear claims | `sci-result-to-claim` | Result-to-claim matrix |
+| Has raw data, analysis outputs, unclear statistics, or plot files | adjacent analysis/visualization skill, then `sci-result-to-claim` | Analysis provenance and claim-ready evidence |
 | Has several possible conclusions but no center | `sci-core-story-finder` | Story decision memo |
 | Has figures/cases but unclear order | `sci-figure-story-builder` | Figure story map |
 | Needs manuscript logic or alternative plans | `sci-storyline-planner` | Storyline plan |
@@ -107,6 +111,7 @@ Use these modules in order unless the user explicitly asks for one stage:
 - If conclusions do not exist, use recent literature to propose possible research directions and the evidence each direction would require.
 - If the user has a writing logic, critique and improve it.
 - If the user does not have a writing logic, propose 2-4 structures using comparable papers and available evidence.
+- If the user provides raw data, analysis outputs, notebooks, statistical tables, plots, or source data, first decide whether the current task needs adjacent analysis skills such as exploratory data analysis, statistical analysis, scientific visualization, or data-availability planning. Import only their final artifacts into the manuscript state.
 - If the user provides PDFs/model papers, analyze structure, rhetorical moves, citation behavior, exact figure/table/supplement callout patterns, and claim strength before drafting.
 - If the user is inexperienced, avoid large checklists; provide the next 30-minute task and a small template.
 - If the user asks for direct drafting too early, explain the missing gate and draft only with visible placeholders.
@@ -126,18 +131,20 @@ Use these modules in order unless the user explicitly asks for one stage:
 2. Journal understood: target-journal requirements and comparable papers are recorded.
 3. Journal format controlled: in-text figure/table/supplement callouts, legends, headings, references, and back-matter labels are recorded or marked as unknown.
 4. Literature understood: support, conflict, gap, and novelty boundaries are known.
-5. Claims controlled: each result maps to what it can and cannot claim.
-6. Story chosen: one central story and backup direction exist.
-7. Figures teach the story: main/supplement/cut decisions are justified.
-8. Reviewer risk handled: blocking objections are fixed or assigned.
-9. Draft traceable: text links to figures, evidence, citations, placeholders, and journal-format rules.
-10. Submission controlled: references, statements, figures, supplements, and journal rules are checked.
+5. Analysis provenance visible: datasets, preprocessing, replicate units, statistics, assumptions, effect sizes, and uncertainty are recorded or marked missing for analysis-derived results.
+6. Claims controlled: each result maps to what it can and cannot claim.
+7. Story chosen: one central story and backup direction exist.
+8. Figures teach the story: main/supplement/cut decisions, source data, statistics, export needs, and figure contracts are justified.
+9. Reviewer risk handled: blocking objections are fixed or assigned.
+10. Draft traceable: text links to figures, evidence, citations, placeholders, and journal-format rules.
+11. Submission controlled: references, statements, figures, supplements, data/code availability, and journal rules are checked.
 
 ## Tight Workflow Rules
 
 - Use `C#` for claims, `F#`/`T#` for figures/tables, `S#` for sources, `P#` for comparable papers, `SEC#` for sections, and `R#` for reviewer issues.
 - A downstream stage must consume the upstream IDs instead of renaming or flattening them.
 - A downstream stage must consume `journal_landscape.journal_format_profile` when drafting, polishing, citation-checking, or submission-checking target-journal text.
+- A downstream stage must consume `analysis_registry`, `figure_registry.figures[].figure_contract`, and `data_availability_plan` when statistical results, source data, plots, code, or repositories affect manuscript readiness.
 - If an upstream artifact is missing, produce a provisional output only and name the missing gate.
 - The order may adapt to the user's state, but the handoff contracts still apply.
 - Do not let polishing, drafting, or submission override unresolved evidence, claim, citation, journal-format, or journal-fit blockers.
@@ -150,4 +157,5 @@ Use these modules in order unless the user explicitly asks for one stage:
 - Read `references/prompt-and-research-patterns.md` when designing reusable writing prompts, literature-research passes, model-paper analysis, or source-backed outlines.
 - Read `references/workflow-architecture.md` when coordinating more than one stage.
 - Read `references/journal-intelligence.md` when a target journal or comparable-paper search is involved.
+- Read `references/analysis-figure-integration.md` when raw data, analysis outputs, statistics, figures, source data, code, or data availability affect the manuscript.
 - Read `references/manuscript-outputs.md` when drafting, polishing, submission, or revision outputs are needed.

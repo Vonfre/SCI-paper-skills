@@ -6,7 +6,7 @@ Use `manuscript_state` as the shared state object across all SCI-paper-skills mo
 
 ```yaml
 manuscript_state:
-  state_version: "0.4"
+  state_version: "0.5"
   project_id: "[NEED: project id or short topic]"
   updated_by_skill: "[skill name]"
   current_stage: "[stage label]"
@@ -97,9 +97,35 @@ source_ledger:
       confidence: "verified | plausible | weak | conflicting | unknown"
 ```
 
+## Analysis Registry
+
+```yaml
+analysis_registry:
+  datasets:
+    - dataset_id: "D1"
+      file_or_source: ""
+      data_type: ""
+      provenance_status: "verified | user-provided | needs check"
+      preprocessing_summary: ""
+      quality_risks: []
+  statistical_plan:
+    - analysis_id: "A1"
+      linked_claim_ids: []
+      endpoint_or_metric: ""
+      comparison_or_model: ""
+      sample_size_and_replicate_unit: ""
+      test_or_model: ""
+      assumptions_checked: []
+      effect_size_or_estimate: ""
+      uncertainty: ""
+      multiple_testing_or_posthoc: ""
+      status: "ready | exploratory | needs diagnostics | blocked"
+```
+
 ## Claim Registry
 
 ```yaml
+
 claim_registry:
   claims:
     - claim_id: "C1"
@@ -121,6 +147,11 @@ figure_registry:
   figures:
     - figure_id: "F1"
       title_or_label: ""
+      figure_contract:
+        core_conclusion: ""
+        evidence_chain: []
+        statistics_integrity_notes: []
+        export_requirements: []
       role: "opening | central proof | validation | extension | method | supplement | cut"
       answered_question: ""
       linked_claim_ids: []
@@ -178,10 +209,18 @@ draft_registry:
 citation_audit:
   unsupported_claim_ids: []
   verified_reference_ids: []
+  dataset_software_citation_issues: []
   metadata_risks: []
   format_issues: []
   citation_placement_plan: []
   citation_health: "pass | needs repair | blocked"
+
+data_availability_plan:
+  supporting_artifacts: []
+  repository_or_accession_status: []
+  source_data_requirements: []
+  software_code_requirements: []
+  unresolved_data_fields: []
 
 submission_package:
   file_checklist: []
@@ -195,6 +234,8 @@ submission_package:
 ## ID Rules
 
 - Claims use `C1`, `C2`, `C3`.
+- Datasets use `D1`, `D2`, `D3`.
+- Analyses use `A1`, `A2`, `A3`.
 - Figures and tables use `F1`, `F2`, `T1`.
 - Sources use `S1`, `S2`, `S3`.
 - Papers used as comparable models use `P1`, `P2`, `P3`.

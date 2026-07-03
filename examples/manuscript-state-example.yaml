@@ -1,7 +1,7 @@
 # Synthetic final state for examples/zero-to-one-sci-manuscript/.
 # This is a complete demo-manuscript fixture, not a scientific record.
 manuscript_state:
-  state_version: "0.4"
+  state_version: "0.5"
   project_id: "aba-stomatal-closure-demo"
   updated_by_skill: "sci-submission-revision"
   current_stage: "complete bilingual demo manuscripts"
@@ -146,6 +146,34 @@ source_ledger:
       contradicts_or_qualifies_claim_ids: []
       confidence: "verified for demo background"
 
+analysis_registry:
+  datasets:
+    - dataset_id: "D1"
+      file_or_source: "synthetic stomatal aperture, ROS, and qRT-PCR summary values embedded in the demo manuscript"
+      data_type: "synthetic quantitative result summaries"
+      provenance_status: "synthetic demo only"
+      preprocessing_summary: "No raw files are supplied; real projects must replace with raw data and scripts."
+      quality_risks:
+        - "Not a real scientific dataset."
+        - "No source data files or analysis code are included."
+  statistical_plan:
+    - analysis_id: "A1"
+      linked_claim_ids:
+        - "C1"
+        - "C2"
+        - "C3"
+        - "C4"
+      endpoint_or_metric: "stomatal aperture, normalized ROS fluorescence, and relative transcript abundance"
+      comparison_or_model: "synthetic genotype and treatment comparisons"
+      sample_size_and_replicate_unit: "3 synthetic biological repeats; replicate-unit logic shown for demonstration only"
+      test_or_model: "two-way ANOVA or one-way ANOVA with Tukey post hoc tests in the demo text"
+      assumptions_checked:
+        - "reported as checked in the synthetic Methods"
+      effect_size_or_estimate: "mean differences or fold changes reported in the demo text"
+      uncertainty: "SEM values reported in the demo text"
+      multiple_testing_or_posthoc: "Tukey post hoc tests"
+      status: "complete for synthetic demo; must be rerun for real data"
+
 claim_registry:
   claims:
     - claim_id: "C1"
@@ -201,6 +229,15 @@ figure_registry:
   figures:
     - figure_id: "F1"
       title_or_label: "DRK1 disruption attenuates ABA-induced stomatal closure."
+      figure_contract:
+        core_conclusion: "DRK1 disruption attenuates ABA-induced stomatal closure in the synthetic dataset."
+        evidence_chain:
+          - "Representative aperture images."
+          - "Quantified aperture across mock and ABA conditions."
+        statistics_integrity_notes:
+          - "Requires real source data, replicate unit, exclusion rules, and analysis code before submission."
+        export_requirements:
+          - "Use target-journal figure dimensions and source-data table."
       role: "opening"
       answered_question: "Does DRK1 affect ABA-induced stomatal closure?"
       linked_claim_ids:
@@ -210,6 +247,15 @@ figure_registry:
       transition_to_next_figure: "Test whether complementation restores the phenotype."
     - figure_id: "F2"
       title_or_label: "Native-promoter DRK1 complementation partially restores ABA responsiveness."
+      figure_contract:
+        core_conclusion: "Complementation links the synthetic phenotype to DRK1 disruption."
+        evidence_chain:
+          - "DRK1 transcript restoration."
+          - "Aperture rescue under ABA treatment."
+        statistics_integrity_notes:
+          - "Requires independent line validation in a real project."
+        export_requirements:
+          - "Keep source-data table aligned with figure panels."
       role: "central proof"
       answered_question: "Is the phenotype linked to DRK1 disruption?"
       linked_claim_ids:
@@ -219,6 +265,15 @@ figure_registry:
       transition_to_next_figure: "Connect the phenotype to ABA-induced ROS."
     - figure_id: "F3"
       title_or_label: "DRK1 disruption reduces ABA-induced ROS accumulation in guard cells."
+      figure_contract:
+        core_conclusion: "DRK1 disruption is associated with reduced ABA-induced ROS accumulation."
+        evidence_chain:
+          - "Representative fluorescence images."
+          - "Normalized ROS quantification."
+        statistics_integrity_notes:
+          - "Requires image-acquisition parameters and image-integrity notes before submission."
+        export_requirements:
+          - "Use lossless image panels and source-data table."
       role: "validation"
       answered_question: "Is DRK1 associated with ABA-triggered ROS accumulation?"
       linked_claim_ids:
@@ -228,6 +283,14 @@ figure_registry:
       transition_to_next_figure: "Add bounded transcript marker support."
     - figure_id: "F4"
       title_or_label: "DRK1 affects selected ABA-responsive marker transcripts."
+      figure_contract:
+        core_conclusion: "DRK1 perturbation alters selected ABA-responsive transcript markers in the synthetic dataset."
+        evidence_chain:
+          - "Relative expression values for RD29B, RAB18, and ABI5."
+        statistics_integrity_notes:
+          - "Whole-seedling qRT-PCR cannot prove guard-cell-specific transcription."
+        export_requirements:
+          - "Report primer, normalization, and source-data details in real projects."
       role: "extension"
       answered_question: "Are selected ABA-responsive transcripts altered in drk1-1?"
       linked_claim_ids:
@@ -237,6 +300,14 @@ figure_registry:
       transition_to_next_figure: "Move to evidence-bounded model."
     - figure_id: "F5"
       title_or_label: "Evidence-bounded working model."
+      figure_contract:
+        core_conclusion: "DRK1 is framed as a bounded ABA-response contributor, not a proven direct pathway component."
+        evidence_chain:
+          - "Integrates C1-C4 while marking unresolved pathway position."
+        statistics_integrity_notes:
+          - "Model figure should not add claims absent from result figures."
+        export_requirements:
+          - "Keep labels readable and mechanism arrows explicitly tentative."
       role: "model"
       answered_question: "What can the manuscript conclude without overclaiming mechanism?"
       linked_claim_ids:
@@ -388,6 +459,7 @@ citation_audit:
     - "S1"
     - "S2"
     - "S3"
+  dataset_software_citation_issues: []
   metadata_risks:
     - "References 1-10 are suitable for demo background only; re-verify before real use."
   format_issues: []
@@ -395,6 +467,18 @@ citation_audit:
     - "Use background references for ABA and ROS context."
     - "Do not use literature references as proof of synthetic DRK1 data."
   citation_health: "complete for demo"
+
+data_availability_plan:
+  supporting_artifacts:
+    - "synthetic result summaries in manuscript text"
+    - "synthetic supplementary statistical table"
+  repository_or_accession_status:
+    - "No repository or accession is used for the synthetic demo."
+  source_data_requirements:
+    - "Real submission would require figure source-data tables and raw/processed data locations."
+  software_code_requirements:
+    - "Real submission would require analysis scripts or software/version details sufficient for reproduction."
+  unresolved_data_fields: []
 
 submission_package:
   manuscript_files:

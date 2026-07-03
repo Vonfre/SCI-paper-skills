@@ -17,6 +17,7 @@ Classify the user's need:
 - `Reference discovery`: find suitable sources for specific claims.
 - `Reference verification`: confirm DOI, PMID, journal, year, metadata, retraction/status, and relevance.
 - `Citation placement`: decide where citations belong.
+- `Dataset/software citation`: decide whether datasets, repositories, software, packages, models, or code releases need formal citation.
 - `Style adaptation`: match target journal reference and supplement citation style.
 - `Journal format audit`: check figure/table/supplement callouts, legends, table titles, headings, and statement labels against `journal_format_profile`.
 - `Bibliography cleanup`: normalize, deduplicate, and flag stale or irrelevant sources.
@@ -25,7 +26,7 @@ Use current web or database verification when real references, current status, r
 
 ## Minimum Inputs
 
-Accept a draft paragraph, claim list, result-to-claim matrix, literature evidence map, DOI/PMID/BibTeX list, target-journal citation style, or `journal_format_profile`. If references are placeholders, keep them as `[CITE: claim]` until verified. If a format rule is missing, keep it as `[NEED: target-journal figure/table callout style]` until verified.
+Accept a draft paragraph, claim list, result-to-claim matrix, literature evidence map, DOI/PMID/BibTeX list, dataset/software list, target-journal citation style, or `journal_format_profile`. If references are placeholders, keep them as `[CITE: claim]` until verified. If a format rule is missing, keep it as `[NEED: target-journal figure/table callout style]` until verified.
 
 ## Evidence Matching
 
@@ -35,6 +36,7 @@ For each claim, assign the support type:
 - Primary literature.
 - Review/meta-analysis.
 - Method/tool/database/software citation.
+- Dataset, repository, model, code, or software citation.
 - Guideline/reporting standard.
 - No citation needed.
 - Unsupported or unverifiable.
@@ -57,25 +59,26 @@ When references are real or when a draft contains many citations, build a source
 2. Identify needed evidence type for each claim.
 3. Verify citation candidates using DOI/PMID/official article pages when possible.
 4. Place citations next to the claims they support.
-5. Audit figure/table/supplement callouts, legends, table titles, and statement labels against `journal_format_profile`.
-6. Flag weak clusters, outdated reviews, missing primary sources, retractions, preprints used as definitive evidence, metadata mismatches, mixed callout styles, and unknown journal-format rules.
-7. Adapt reference style only after target-journal requirements are known.
+5. Check whether datasets, repositories, software, packages, models, or code releases require formal citations.
+6. Audit figure/table/supplement callouts, legends, table titles, and statement labels against `journal_format_profile`.
+7. Flag weak clusters, outdated reviews, missing primary sources, retractions, preprints used as definitive evidence, missing dataset/software citations, metadata mismatches, mixed callout styles, and unknown journal-format rules.
+8. Adapt reference style only after target-journal requirements are known.
 
 ## State Coupling
 
 Consume:
 
-- `claim_registry`, `source_ledger`, `draft_registry`, `journal_landscape`, `journal_landscape.journal_format_profile`, and target-journal citation style.
+- `claim_registry`, `source_ledger`, `analysis_registry`, `data_availability_plan`, `draft_registry`, `journal_landscape`, `journal_landscape.journal_format_profile`, and target-journal citation style.
 
 Update:
 
-- `citation_audit.unsupported_claim_ids`, `verified_reference_ids`, `metadata_risks`, `format_issues`, `citation_placement_plan`, and `citation_health`.
+- `citation_audit.unsupported_claim_ids`, `verified_reference_ids`, `dataset_software_citation_issues`, `metadata_risks`, `format_issues`, `citation_placement_plan`, and `citation_health`.
 - `source_ledger.sources[].metadata_status`, evidence location, and confidence.
 - `draft_registry.open_citations`.
 
 Block:
 
-- If unsupported claims, fake/unverified references, unresolved format issues, or unresolved metadata risks remain, block submission and route to literature evidence, journal landscape, or writing repair.
+- If unsupported claims, fake/unverified references, missing dataset/software citations, unresolved format issues, or unresolved metadata risks remain, block submission and route to literature evidence, journal landscape, data-availability repair, or writing repair.
 
 Always end with `Manuscript State Update` and `Handoff`.
 

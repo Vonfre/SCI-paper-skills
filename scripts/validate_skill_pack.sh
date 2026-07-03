@@ -48,6 +48,7 @@ required_root_files=(
   skills/sci-journal-landscape/references/journal-format-profile.md
   skills/sci-paper-skills/references/manuscript-state-schema.md
   skills/sci-paper-skills/references/handoff-contracts.md
+  skills/sci-paper-skills/references/analysis-figure-integration.md
 )
 
 for file in "${required_root_files[@]}"; do
@@ -58,6 +59,7 @@ done
 
 manifest_declared_files="$(awk '
   /^  github_actions: / {print $2}
+  /^  analysis_figure_integration: / {print $2}
   /^  complete_manuscript_en: / {print $2}
   /^  complete_manuscript_zh: / {print $2}
   /^  zero_to_one_workflow: / {print $2}

@@ -25,9 +25,11 @@ Use `sci-paper-skills` as the orchestrator unless the user explicitly requests a
 - "I want to submit to The Plant Cell" -> `sci-journal-landscape`.
 - "Should I write Fig. 1, Figure 1, or Fig1?" -> `sci-journal-landscape`.
 - "Do these conclusions have literature support?" -> `sci-literature-evidence`.
+- "I have raw data or statistical outputs but do not know whether the result is reliable" -> adjacent analysis/statistics skill, then `sci-result-to-claim`.
 - "What can Figure 2 prove?" -> `sci-result-to-claim`.
 - "Which story should this paper tell?" -> `sci-core-story-finder`.
 - "How should I arrange these figures?" -> `sci-figure-story-builder`.
+- "Can this figure survive submission?" -> `sci-figure-story-builder` plus figure/source-data readiness checks.
 - "Give me two manuscript structures" -> `sci-storyline-planner`.
 - "What will reviewers attack?" -> `sci-reviewer-simulator`.
 - "Draft an abstract like these papers" -> `sci-draft-mimic`.
@@ -44,15 +46,16 @@ When two modules are plausible, route to the earliest unresolved gate:
 2. Journal landscape.
 3. Journal-specific format profile.
 4. Literature evidence.
-5. Claim control.
-6. Story selection.
-7. Figure narrative.
-8. Manuscript structure.
-9. Reviewer risk.
-10. Drafting and paragraph work.
-11. Language polishing.
-12. Citation audit.
-13. Submission or revision.
+5. Analysis/statistical provenance when raw data or computational outputs drive claims.
+6. Claim control.
+7. Story selection.
+8. Figure narrative and source-data readiness.
+9. Manuscript structure.
+10. Reviewer risk.
+11. Drafting and paragraph work.
+12. Language polishing.
+13. Citation audit, including dataset/software citations.
+14. Submission or revision.
 
 ## Handoff Discipline
 

@@ -18,6 +18,7 @@ Prefer:
 - Benchmark/model papers, comparable papers, or user-provided PDFs.
 - Storyline plan and figure/case order.
 - Result-to-claim matrix and citation placeholders.
+- Analysis provenance, statistical status, figure contracts, and source-data notes when results are quantitative or computational.
 - User's data, methods, statistics, approvals, and wording constraints.
 
 If PDFs or links are provided, analyze their structure and rhetorical moves before drafting. Do not copy sentences, distinctive phrasing, or title formulas too closely.
@@ -46,6 +47,7 @@ Imitate these patterns only at the level of structure and rhetorical function.
 - Normalize all manuscript-facing callouts during drafting, including `Fig1`, `Fig. 1`, `Figure 1A`, `Figs. 1 and 2`, `Table 1`, `Supplementary Fig. 1`, `Fig. S1`, and `Table S1`; if the target rule is unknown, use `[NEED: target-journal figure/table callout style]`.
 - Preserve internal state IDs (`F#`, `T#`, `C#`, `S#`) while converting them to journal-facing labels in prose.
 - Keep claim strength no stronger than the result-to-claim matrix.
+- Do not turn exploratory, underdiagnosed, or source-data-missing analysis into stable Results prose; keep `[NEED: analysis/statistics/source data]` placeholders visible.
 - Make the Introduction literature-backed: move from field background to known mechanisms, unresolved gap, scientific question, and study objective with sources assigned to each role.
 - Make Results evidence-dense: each subsection needs direct data, controls, quantification/statistics, figure references, and a brief interpretive bridge that connects to the next result without over-discussing.
 - Make Discussion multi-angle: start from the main result, then expand through prior work, mechanism, alternative explanations, significance, limitations, and future experiments.
@@ -54,13 +56,13 @@ Imitate these patterns only at the level of structure and rhetorical function.
 
 ## Drafting Gate
 
-If journal landscape, journal format profile, result-to-claim mapping, and storyline are missing, draft only a skeleton or partial section with placeholders. Do not create a confident full manuscript from vague conclusions or mixed target-journal formats.
+If journal landscape, journal format profile, result-to-claim mapping, and storyline are missing, draft only a skeleton or partial section with placeholders. Do not create a confident full manuscript from vague conclusions, unstable analysis, source-data gaps, or mixed target-journal formats.
 
 ## State Coupling
 
 Consume:
 
-- `journal_landscape`, `journal_landscape.journal_format_profile`, `source_ledger`, `claim_registry`, `figure_registry`, `story`, `storyline`, and `reviewer_risk`.
+- `journal_landscape`, `journal_landscape.journal_format_profile`, `analysis_registry`, `source_ledger`, `claim_registry`, `figure_registry`, `data_availability_plan`, `story`, `storyline`, and `reviewer_risk`.
 - Model paper IDs `P#` and source IDs `S#` when available.
 
 Update:
@@ -69,10 +71,11 @@ Update:
 - `draft_registry.open_needs`, `open_citations`, and `high_risk_claim_ids`.
 - Section drafts that preserve linked claim IDs `C#`, figure/table IDs `F#`/`T#`, and source placeholders `S#` or `[CITE: ...]`.
 - Draft-level format notes listing the journal-facing callout forms used and any unresolved format placeholders.
+- Draft-level analysis/source-data notes listing unresolved statistics, source data, and data/code availability placeholders.
 
 Block:
 
-- If journal, format, claim, story, figure, or citation gates are missing, produce a skeleton or section scaffold only.
+- If journal, format, analysis, claim, story, figure, source-data, or citation gates are missing, produce a skeleton or section scaffold only.
 
 Always end with `Manuscript State Update` and `Handoff`.
 
