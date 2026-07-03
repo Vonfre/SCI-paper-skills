@@ -15,7 +15,6 @@
 - [Who It Is For](#who-it-is-for)
 - [Core Capabilities](#core-capabilities)
 - [Skill Map](#skill-map)
-- [Recommended Workflow](#recommended-workflow)
 - [Complete Example](#complete-example)
 - [Repository Structure](#repository-structure)
 - [Installation and Updates](#installation-and-updates)
@@ -70,42 +69,6 @@ $sci-paper-skills
 | 11 | `sci-language-polisher` | Polish English or Chinese expression without changing scientific meaning |
 | 12 | `sci-citation-control` | Check citation placement, reference style, and claim-evidence alignment |
 | 13 | `sci-submission-revision` | Prepare submission materials, revision strategy, and point-by-point responses |
-
-## Recommended Workflow
-
-```mermaid
-flowchart TB
-    subgraph R1[" "]
-        direction LR
-        A["Stage diagnosis"] --> B["Intake"] --> C["Journal landscape"] --> D["Literature evidence"]
-    end
-
-    subgraph R2[" "]
-        direction RL
-        E["Result to claim"] --> F["Core story"] --> G["Figure story"] --> H["Storyline plan"]
-    end
-
-    subgraph R3[" "]
-        direction LR
-        I["Reviewer simulation"] --> J["Model-paper-guided drafting"] --> K["Paragraph coaching"] --> L["Language polishing"]
-    end
-
-    subgraph R4[" "]
-        direction RL
-        M["Citation control"] --> N["Submission or revision"]
-    end
-
-    D --> E
-    H --> I
-    L --> M
-
-    style R1 fill:transparent,stroke:transparent
-    style R2 fill:transparent,stroke:transparent
-    style R3 fill:transparent,stroke:transparent
-    style R4 fill:transparent,stroke:transparent
-```
-
-The key idea is not to generate polished text immediately. The workflow first stabilizes the scientific logic: target journal, literature background, result evidence, claim boundaries, figure order, discussion depth, and method reproducibility should all reinforce one another.
 
 ## Complete Example
 
