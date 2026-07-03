@@ -11,6 +11,7 @@
 - Data:
 - Citation:
 - Figure/table:
+- Target-journal callout style:
 - Claim:
 
 ## Sentence Scaffold
@@ -23,6 +24,10 @@
 ## Example Paragraph
 
 ## Why This Works
+
+## Format Note
+- Figure/table/supplement callouts:
+- Unknown format rules:
 
 ## User Draft Feedback
 | Issue | Why It Hurts | Fix |
@@ -38,3 +43,4 @@
 - Discussion paragraphs should expand outward from the result into literature, mechanism, alternatives, implications, and limits.
 - Introduction paragraphs should narrow from source-backed field context to exact gap and objective.
 - Methods paragraphs should contain enough procedural detail to reproduce the experiment or analysis.
+- Use `journal_format_profile` for any figure, table, supplement, heading, or legend wording in the paragraph.

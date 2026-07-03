@@ -60,6 +60,20 @@ Match types:
 - Verify "first", "novel", "largest", "gold standard", and clinical-practice claims.
 - Keep supplement citations consistent with target journal style.
 
+## Journal Format Audit
+
+| Location | Current Form | Required Form | Rule Source | Action |
+|---|---|---|---|---|
+| Results paragraph / figure legend / table title | `Fig1` / `Figure 1A` / `Table S1` | | official / benchmark / fallback / unknown | |
+
+Audit:
+
+- Main-text figure callouts.
+- Main-text table callouts.
+- Supplementary figure, table, data, source-data, and file callouts.
+- Figure legend labels and table title labels.
+- Abstract, heading, Methods, declaration, data/code, and reference style labels when the journal profile contains them.
+
 ## Final Citation Audit
 
 - [ ] Every major background claim has support.
@@ -71,3 +85,5 @@ Match types:
 - [ ] Reference style matches target journal.
 - [ ] In-text citations and reference list agree.
 - [ ] Supplement citations follow journal convention.
+- [ ] Figure/table/supplement callouts follow `journal_format_profile`.
+- [ ] Any unknown journal-format rules are listed as blockers.

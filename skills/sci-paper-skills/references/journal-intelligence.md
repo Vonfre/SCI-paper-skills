@@ -47,6 +47,15 @@ Use this reference when researching the target SCI journal and comparable papers
    - Reporting guidelines: CONSORT, PRISMA, STROBE, ARRIVE, MIAME, MDAR, CHEERS, etc.
    - AI-use, conflict-of-interest, funding, author contribution, and acknowledgments policies.
 
+5. Build a journal format profile
+   - Exact in-text main figure form: `Fig. 1`, `Figure 1`, `Fig 1`, or another required form.
+   - Exact panel form: `Fig. 1A`, `Fig. 1a`, `Figure 1A`, panel ranges, and multi-panel punctuation.
+   - Exact table, supplementary figure, supplementary table, supplementary data, and source-data callouts.
+   - Whether callouts are parenthetical, narrative, or both; whether a sentence may start with abbreviated `Fig.`.
+   - Figure legend and table title style.
+   - Abstract/headings, Methods placement, declaration headings, reference style, and supplement file naming.
+   - Rule source for each item: official instruction, same-journal benchmark, peer-journal fallback, or unknown.
+
 ## Search Tactics
 
 Use several independent searches rather than one broad query:
@@ -77,6 +86,7 @@ Select 3-8 papers. For each, record:
 - Abstract structure and approximate length.
 - Figure/table count and story sequence.
 - Supplementary files and in-text citation pattern.
+- Figure/table/supplement callout behavior, including capitalization, periods, spacing, panel letters, and parenthetical versus narrative placement.
 - Reference count and citation style.
 - Data/code/ethics statements.
 - Language features: novelty framing, hedging, transition phrases, claim strength.
@@ -129,6 +139,18 @@ Use this structure in the output or local files:
 - Ethics/reporting:
 - Required declarations:
 
+## Journal Format Profile
+| Rule Area | Required Form | Source Basis | Unknowns |
+|---|---|---|---|
+| Main figure callout | | official / benchmark / fallback / unknown | |
+| Main figure panel | | official / benchmark / fallback / unknown | |
+| Multiple figures | | official / benchmark / fallback / unknown | |
+| Main table callout | | official / benchmark / fallback / unknown | |
+| Supplementary figure/table/data | | official / benchmark / fallback / unknown | |
+| Figure legends and table titles | | official / benchmark / fallback / unknown | |
+| Abstract, headings, Methods, declarations | | official / benchmark / fallback / unknown | |
+| Reference style | | official / benchmark / fallback / unknown | |
+
 ## Benchmark Papers
 | Paper | Year | Article Type | Why Included | Structure | Figures | Supplement Pattern | Voice Notes |
 |---|---:|---|---|---|---|---|---|
@@ -141,6 +163,7 @@ Use this structure in the output or local files:
 - Discussion moves:
 - Claim style:
 - Citation behavior:
+- Figure/table callout behavior:
 - Supplement behavior:
 
 ## Implications For This Manuscript

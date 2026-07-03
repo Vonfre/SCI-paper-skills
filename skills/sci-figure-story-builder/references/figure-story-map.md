@@ -8,12 +8,12 @@
 |---:|---|---|---|---|---|---|---|
 
 ## Main-Text Figure Plan
-| Figure | Panel Logic | Required Quantification | Required Statistics | Legend Purpose |
-|---|---|---|---|---|
+| Figure | Journal-Facing Label | Panel Logic | Required Quantification | Required Statistics | Legend Purpose |
+|---|---|---|---|---|---|
 
 ## Supplement Plan
-| Supplement | Why Not Main Text | Supports Which Main Claim |
-|---|---|---|
+| Supplement | Journal-Facing Label | Why Not Main Text | Supports Which Main Claim |
+|---|---|---|---|
 
 ## Results Section Skeleton
 1. Section title:
@@ -28,3 +28,4 @@
 - Key evidence for the central claim belongs in the main text.
 - Supplements should support, validate, or extend, not carry the decisive proof.
 - If a figure cannot answer a clear question, redesign or cut it.
+- Use stable internal IDs for planning, but report journal-facing labels from `journal_format_profile` when drafting-ready text is requested.

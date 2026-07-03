@@ -39,6 +39,35 @@ journal_landscape:
   journal_portrait: ""
   author_constraints: []
   article_type_constraints: []
+  journal_format_profile:
+    source_basis:
+      figure_table_callouts: "official | benchmark | fallback | unknown"
+      supplement_callouts: "official | benchmark | fallback | unknown"
+      references: "official | benchmark | fallback | unknown"
+      abstract_headings: "official | benchmark | fallback | unknown"
+      figure_legends_tables: "official | benchmark | fallback | unknown"
+    in_text_callouts:
+      main_figure: ""
+      main_figure_panel: ""
+      multiple_figures: ""
+      main_table: ""
+      supplementary_figure: ""
+      supplementary_table: ""
+      supplementary_data: ""
+      parenthetical_or_narrative: ""
+    section_and_back_matter:
+      abstract: ""
+      heading_order: []
+      methods_placement: ""
+      figure_legend_title: ""
+      table_title: ""
+      reference_style: ""
+      data_code_statement_label: ""
+    rewrite_rules:
+      - mixed_form: ""
+        correct_form: ""
+        scope: ""
+    format_unknowns: []
   comparable_papers:
     - paper_id: "P1"
       citation: ""
@@ -150,6 +179,7 @@ citation_audit:
   unsupported_claim_ids: []
   verified_reference_ids: []
   metadata_risks: []
+  format_issues: []
   citation_placement_plan: []
   citation_health: "pass | needs repair | blocked"
 

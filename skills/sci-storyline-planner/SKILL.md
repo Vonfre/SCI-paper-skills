@@ -33,6 +33,7 @@ Use or combine:
 Use whichever artifacts exist:
 
 - Journal landscape.
+- Journal format profile.
 - Evidence map.
 - Result-to-claim matrix.
 - Core story memo.
@@ -48,7 +49,7 @@ If a required artifact is missing, make a provisional plan and mark the missing 
 2. Generate 2-3 storyline options.
 3. Compare strengths, risks, and missing evidence.
 4. Choose a recommended result order.
-5. Produce a drafting brief for title, abstract, introduction, results, and discussion.
+5. Produce a drafting brief for title, abstract, introduction, results, discussion, and target-journal callout/heading format.
 
 ## Draft-Readiness Gate
 
@@ -58,6 +59,7 @@ Drafting is ready only if:
 - Main figures support the central story in order.
 - High-risk claims have evidence or are softened.
 - Missing facts are visible as `[NEED: ...]`.
+- The target-journal figure/table/supplement callout style is known or marked as a format blocker.
 
 ## Plan Quality Bar
 
@@ -66,6 +68,7 @@ A good plan should tell the user:
 - Why this order is easier for readers.
 - Which figure/case supports each subsection.
 - Where citations are needed.
+- Which journal-format rules must be used during drafting.
 - Where the argument is weakest.
 - What can be drafted now and what still needs evidence.
 
@@ -73,7 +76,7 @@ A good plan should tell the user:
 
 Consume:
 
-- `journal_landscape`, `source_ledger`, `claim_registry`, `story`, and `figure_registry`.
+- `journal_landscape`, `journal_landscape.journal_format_profile`, `source_ledger`, `claim_registry`, `story`, and `figure_registry`.
 - User's existing outline or preferred logic if available.
 
 Update:
@@ -81,6 +84,7 @@ Update:
 - `storyline.result_order`.
 - `storyline.section_registry` with stable IDs `SEC#`.
 - `storyline.drafting_brief`, `draft_readiness`, and `draft_blockers`.
+- Journal-format instructions inside `storyline.drafting_brief`.
 - Section-to-claim, section-to-figure, and section-to-source links.
 
 Block:

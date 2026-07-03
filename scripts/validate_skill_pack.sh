@@ -45,6 +45,7 @@ required_root_files=(
   .github/workflows/validate.yml
   scripts/sync_codex_skills.sh
   skills/sci-draft-mimic/references/manuscript-section-quality.md
+  skills/sci-journal-landscape/references/journal-format-profile.md
   skills/sci-paper-skills/references/manuscript-state-schema.md
   skills/sci-paper-skills/references/handoff-contracts.md
 )
@@ -92,6 +93,13 @@ done
 for heading in "## Introduction" "## Results" "## Discussion" "## Materials And Methods"; do
   if ! grep -q "^$heading$" "$ROOT_DIR/skills/sci-draft-mimic/references/manuscript-section-quality.md"; then
     fail "Manuscript section quality standard is missing heading: $heading"
+  fi
+done
+
+format_profile="$ROOT_DIR/skills/sci-journal-landscape/references/journal-format-profile.md"
+for heading in "## In-Text Figure And Table Callouts" "## Section And Back-Matter Formatting" "## Format Rewrite Rules"; do
+  if ! grep -q "^$heading$" "$format_profile"; then
+    fail "Journal format profile is missing heading: $heading"
   fi
 done
 

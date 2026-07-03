@@ -1,6 +1,6 @@
 ---
 name: sci-paragraph-coach
-description: Paragraph-level coaching for SCI manuscript writing. Use when a user does not know how to write an Introduction, Results, Discussion, Abstract, figure legend, or cover-letter paragraph; provide paragraph purpose, evidence needs, citation needs, sentence-by-sentence scaffold, example wording, and feedback on user drafts.
+description: Paragraph-level coaching for SCI manuscript writing. Use when a user does not know how to write an Introduction, Results, Discussion, Abstract, figure legend, or cover-letter paragraph; provide paragraph purpose, evidence needs, citation needs, target-journal figure/table/supplement callout handling, sentence-by-sentence scaffold, example wording, and feedback on user drafts.
 ---
 
 # SCI Paragraph Coach
@@ -48,8 +48,9 @@ A paragraph should do one job:
 2. List required evidence and citations.
 3. Create a sentence-by-sentence scaffold.
 4. Check whether the paragraph has enough evidence density for its section type.
-5. Write an example paragraph using placeholders when facts are missing.
-6. If the user provides a draft, diagnose issue, explain why it hurts, and revise.
+5. Apply `journal_format_profile` for figure/table/supplement callouts or mark the format rule as `[NEED: target-journal figure/table callout style]`.
+6. Write an example paragraph using placeholders when facts are missing.
+7. If the user provides a draft, diagnose issue, explain why it hurts, and revise.
 
 ## Teaching Rule
 
@@ -61,11 +62,13 @@ Consume:
 
 - `storyline.section_registry`, target `section_id`, draft paragraph if available, and linked `claim_id`, `figure_id`, and `source_id` values.
 - `claim_registry` for safe wording and claim strength.
+- `journal_landscape.journal_format_profile` when the paragraph cites figures, tables, supplements, legends, or headings.
 
 Update:
 
 - `draft_registry.sections` for the coached paragraph.
 - `draft_registry.open_needs`, `open_citations`, and high-risk claim IDs.
+- Format placeholders when paragraph-level callout style is unknown.
 - Section status: `skeleton`, `drafted`, or `needs evidence`.
 
 Block:
@@ -84,6 +87,7 @@ Return:
 - `Sentence scaffold`.
 - `Example paragraph` or `Revised paragraph`.
 - `Why this works`.
+- `Format note` when figure/table/supplement callouts appear.
 - `Remaining placeholders`.
 
 Read `references/paragraph-coach-template.md` for the template.

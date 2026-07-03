@@ -1,6 +1,6 @@
 ---
 name: sci-journal-landscape
-description: Target journal profile plus comparable-paper landscape scan for SCI manuscripts. Use after intake when the user provides a target journal and research direction, or asks whether a journal has similar papers; produce journal positioning, author requirements, OA/metrics, same-journal similar articles, same-level fallback articles when same-journal matches are absent, and a high-level strategic opinion for submission.
+description: Target journal profile plus comparable-paper landscape scan for SCI manuscripts. Use after intake when the user provides a target journal and research direction, or asks whether a journal has similar papers; produce journal positioning, author requirements, article formatting rules, figure/table/supplement callout style, OA/metrics, same-journal similar articles, same-level fallback articles when same-journal matches are absent, and a high-level strategic opinion for submission.
 ---
 
 # SCI Journal Landscape
@@ -42,6 +42,18 @@ Do not say "no similar papers" until several query variants have been tried. If 
 4. If same-journal matches are weak, search comparable journals and explain why they are comparable.
 5. Score fit and state what the manuscript must prove to be plausible for the target.
 
+## Journal Format Profile
+
+Extract a target-journal format profile before any full draft or final polish. This profile must cover:
+
+- In-text figure/table/supplement callouts: `Fig. 1`, `Figure 1`, `Fig 1`, `Fig. 1A`, `Fig. 1a`, `Figs. 1 and 2`, `Table 1`, `Supplementary Fig. 1`, `Fig. S1`, `Table S1`, etc.
+- Parenthetical versus narrative callout behavior.
+- Figure legend and table title style.
+- Abstract structure, heading hierarchy, Methods placement, data/code statement labels, reference style, and supplementary-material naming.
+- Source basis for each rule: official instruction, same-journal benchmark, peer-journal fallback, or unknown.
+
+If a format rule is not found, mark it as `[NEED: journal format rule]` rather than guessing. If the user has no exact journal yet, create a provisional style profile from the candidate journal level and clearly label it provisional.
+
 ## Fit Judgment
 
 Use a plain verdict:
@@ -70,6 +82,7 @@ Consume:
 Update:
 
 - `journal_landscape.journal_portrait`, `author_constraints`, `article_type_constraints`, `fit_verdict`, `manuscript_must_prove`, `retrieval_dates`, and `journal_blockers`.
+- `journal_landscape.journal_format_profile`, including in-text callout rules, section/back-matter rules, source basis, and format unknowns.
 - `journal_landscape.comparable_papers` using stable IDs `P1`, `P2`, `P3`.
 - `source_ledger.sources` for official journal pages and comparable papers when cited.
 
@@ -88,7 +101,9 @@ Return:
 - `Same-journal article scan`.
 - `Peer-journal fallback scan` if needed.
 - `Journal fit rubric`.
+- `Journal format profile`.
 - `Landscape opinion`: field saturation, gap, target-journal fit, needed evidence, recommended next step.
 - `Search log`.
 
 Read `references/landscape-output-schema.md` for the template.
+Read `references/journal-format-profile.md` when a manuscript will be drafted, polished, citation-checked, or submitted for a target journal.

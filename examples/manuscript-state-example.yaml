@@ -40,6 +40,55 @@ journal_landscape:
     - "For real submission, verify current journal instructions."
   article_type_constraints:
     - "For real submission, verify current article type, word, figure, data, and policy requirements."
+  journal_format_profile:
+    source_basis:
+      figure_table_callouts: "fallback"
+      supplement_callouts: "fallback"
+      references: "fallback"
+      abstract_headings: "fallback"
+      figure_legends_tables: "fallback"
+    in_text_callouts:
+      main_figure: "Fig. 1"
+      main_figure_panel: "Fig. 1A"
+      multiple_figures: "Fig. 1A and 1B"
+      main_table: "Table 1"
+      supplementary_figure: "Supplementary Fig. 1"
+      supplementary_table: "Supplementary Table 1"
+      supplementary_data: "Supplementary Data 1"
+      parenthetical_or_narrative: "English demo uses parenthetical result callouts and narrative callouts when introducing the working model."
+    section_and_back_matter:
+      abstract: "Unstructured abstract"
+      heading_order:
+        - "Abstract"
+        - "Introduction"
+        - "Results"
+        - "Discussion"
+        - "Materials and Methods"
+        - "Data Availability"
+        - "Funding"
+        - "Author Contributions"
+        - "Conflict of Interest"
+        - "Acknowledgements"
+        - "Figure Legends"
+        - "Supplementary Tables"
+        - "References"
+      methods_placement: "After Discussion"
+      figure_legend_title: "Figure 1. Title sentence."
+      table_title: "Supplementary Table 1. Title"
+      reference_style: "Numbered reference list with bracketed in-text citations for literature claims"
+      data_code_statement_label: "Data Availability"
+    rewrite_rules:
+      - mixed_form: "Fig1"
+        correct_form: "Fig. 1"
+        scope: "English in-text main-figure callouts"
+      - mixed_form: "Figure 1A"
+        correct_form: "Fig. 1A"
+        scope: "English Results in-text panel callouts"
+      - mixed_form: "Table S1"
+        correct_form: "Supplementary Table 1"
+        scope: "English supplementary-table callouts"
+    format_unknowns:
+      - "Real target-journal rules must be re-verified before submission."
   comparable_papers:
     - paper_id: "P1"
       citation: "Kwak JM et al. EMBO Journal. 2003;22:2623-2633. doi:10.1093/emboj/cdg277"
@@ -279,7 +328,7 @@ storyline:
         - "S2"
         - "S3"
       draft_status: "complete"
-  drafting_brief: "Complete English and Chinese paper-format manuscripts with bounded claim strength and four quality gates: literature-backed Introduction, evidence-dense Results, result-anchored Discussion, and reproducible Methods."
+  drafting_brief: "Complete English and Chinese paper-format manuscripts with bounded claim strength and five quality gates: literature-backed Introduction, evidence-dense Results, result-anchored Discussion, reproducible Methods, and target-journal format consistency."
   draft_readiness: "complete bilingual demo manuscripts"
   draft_blockers: []
 
@@ -341,6 +390,7 @@ citation_audit:
     - "S3"
   metadata_risks:
     - "References 1-10 are suitable for demo background only; re-verify before real use."
+  format_issues: []
   citation_placement_plan:
     - "Use background references for ABA and ROS context."
     - "Do not use literature references as proof of synthetic DRK1 data."

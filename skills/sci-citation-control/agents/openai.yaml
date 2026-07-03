@@ -1,4 +1,4 @@
 interface:
   display_name: "SCI Citation Control"
-  short_description: "Evidence maps, references, and citation style"
-  default_prompt: "Use $sci-citation-control to build a claim-evidence map and format citations for my target journal."
+  short_description: "Evidence, references, citations, and format audit"
+  default_prompt: "Use $sci-citation-control to build a claim-evidence map and audit citations plus figure/table/supplement formats for my target journal."

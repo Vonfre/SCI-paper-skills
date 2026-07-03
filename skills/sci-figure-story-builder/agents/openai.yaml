@@ -1,4 +1,4 @@
 interface:
   display_name: "SCI Figure Story Builder"
-  short_description: "Build figure and evidence narrative"
-  default_prompt: "Use $sci-figure-story-builder to arrange my figures and cases into a persuasive manuscript story."
+  short_description: "Build figure narrative and labels"
+  default_prompt: "Use $sci-figure-story-builder to arrange my figures and cases into a persuasive manuscript story with target-journal labels."

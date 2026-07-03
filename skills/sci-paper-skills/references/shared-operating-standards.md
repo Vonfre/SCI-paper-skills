@@ -6,12 +6,12 @@ Use these standards when coordinating more than one SCI-paper-skills module.
 
 - Diagnose the earliest unresolved blocker before drafting.
 - Route to one primary next skill unless the user explicitly asks for parallel outputs.
-- Treat journal fit, literature evidence, claim strength, core story, figure logic, reviewer risk, draft quality, citation control, and submission compliance as different gates.
+- Treat journal fit, journal-specific formatting, literature evidence, claim strength, core story, figure logic, reviewer risk, draft quality, citation control, and submission compliance as different gates.
 - If two stages seem plausible, choose the earlier blocker and explain why.
 
 ## Evidence Boundaries
 
-- Do not invent data, references, approvals, accession numbers, methods, statistics, findings, or journal requirements.
+- Do not invent data, references, approvals, accession numbers, methods, statistics, findings, or journal requirements, including figure/table/supplement callout rules.
 - Separate verified facts, user-provided facts, literature support, interpretation, speculation, and unsupported claims.
 - Use `[NEED: ...]` for missing user facts.
 - Use `[CITE: ...]` for claims that need citation support.
@@ -35,6 +35,7 @@ Each stage should produce a named artifact with:
 - Each output must include `Manuscript State Update` and `Handoff` blocks.
 - If a required upstream artifact is missing, mark the missing gate and produce a provisional artifact rather than inventing continuity.
 - Do not rename, merge, or discard upstream IDs unless the output explicitly records the change.
+- Preserve `journal_landscape.journal_format_profile` across drafting, polishing, citation control, and submission checks.
 
 ## Drafting And Mimicry
 
@@ -42,3 +43,4 @@ Each stage should produce a named artifact with:
 - Imitate model-paper structure, rhetorical moves, section rhythm, and figure-citation behavior only.
 - Do not copy distinctive wording, title formulas, sentence order, or phrasing from model papers.
 - Keep claim strength no stronger than the result-to-claim matrix supports.
+- Apply the target journal's exact figure/table/supplement callout style while drafting; if unknown, mark it as a format blocker instead of mixing `Fig.`, `Figure`, `Fig1`, and `Table S1` forms.

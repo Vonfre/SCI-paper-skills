@@ -30,6 +30,16 @@ Claim boundary:
 | F4 | Main | Add marker-gene support with limits | C4 |
 | F5 | Main model | Summarize bounded interpretation | C1-C4 |
 
+## Journal Format Profile
+
+The demo manuscript uses a provisional target-journal format profile:
+
+- English in-text main-figure panels: `Fig. 1A`, `Fig. 1B`, `Fig. 2A`.
+- English figure legends: `Figure 1. Title sentence.`
+- English supplementary tables: `Supplementary Table 1`.
+- Chinese manuscript-facing labels: `图 1A`, `补充表 1`.
+- Real submissions must replace this provisional profile with current target-journal instructions or same-journal benchmark rules.
+
 ## Section Map
 
 | Section ID | Section | Status | Output Location |
@@ -72,6 +82,7 @@ Claim boundary:
 | Results | Added controls, replicate logic, statistics, figure links, and short transition sentences between experiments |
 | Discussion | Expanded from the central result toward prior work, mechanism, alternative explanations, limitations, and future experiments |
 | Materials and Methods | Added growth conditions, transformation details, treatment timing, buffer composition, solvent controls, blinding, exclusion rules, RNA quality control, imaging settings, replicate definitions, quantification, statistics, and software |
+| Journal format | Normalized the demo to one in-text callout pattern and recorded the provisional figure/table/supplement rules in manuscript state |
 
 ## Real-Project Replacement Checklist
 

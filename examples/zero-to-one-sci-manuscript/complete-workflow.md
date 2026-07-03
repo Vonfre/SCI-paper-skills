@@ -8,14 +8,14 @@ This is a compact run log for the demo brief. It shows the expected behavior of 
 |---:|---|---|---|---|
 | 0 | `sci-stage-diagnosis` | rough user brief | stage diagnosis | `sci-intake-router` |
 | 1 | `sci-intake-router` | target, topic, materials | intake brief | `sci-journal-landscape` |
-| 2 | `sci-journal-landscape` | target journal and topic | journal fit and comparable-paper plan | `sci-literature-evidence` |
+| 2 | `sci-journal-landscape` | target journal and topic | journal fit, format profile, and comparable-paper plan | `sci-literature-evidence` |
 | 3 | `sci-literature-evidence` | questions and possible claims | source ledger and citation needs | `sci-result-to-claim` |
 | 4 | `sci-result-to-claim` | result bullets | claim registry | `sci-core-story-finder` |
 | 5 | `sci-core-story-finder` | claims and journal fit | central story | `sci-figure-story-builder` |
 | 6 | `sci-figure-story-builder` | story and result inventory | figure story map | `sci-storyline-planner` |
 | 7 | `sci-storyline-planner` | claims, figures, sources | section plan | `sci-reviewer-simulator` |
 | 8 | `sci-reviewer-simulator` | storyline and claims | reviewer risk report | repair or `sci-draft-mimic` |
-| 9 | `sci-draft-mimic` | model patterns, storyline, claims | draft package | `sci-paragraph-coach` |
+| 9 | `sci-draft-mimic` | model patterns, journal format profile, storyline, claims | draft package | `sci-paragraph-coach` |
 | 10 | `sci-paragraph-coach` | section purpose and claim IDs | coached paragraph | `sci-language-polisher` |
 | 11 | `sci-language-polisher` | draft paragraph | polished text and risk notes | `sci-citation-control` |
 | 12 | `sci-citation-control` | claims, sources, draft | citation audit | `sci-submission-revision` |
@@ -93,6 +93,10 @@ Journal landscape:
   - same journal + guard cell + ABA signaling
   - same journal + kinase + stomatal closure
   - peer journal + ABA guard cell phenotype rescue
+- Provisional format profile:
+  - Use `Fig. 1A` for English in-text figure panels.
+  - Use `Figure 1. Title sentence.` for English figure legends.
+  - Use `Supplementary Table 1` for English supplementary tables.
 - Must prove:
   - Causal genetic link between DRK1 and ABA stomatal response.
   - Rescue or complementation is convincing.
@@ -100,6 +104,7 @@ Journal landscape:
 
 Blockers:
 - [NEED: verify current author instructions, article type, figure limits, data policy, and APC/OA]
+- [NEED: verify exact target-journal figure/table/supplement callout style]
 - [CITE: same-journal comparable paper]
 ```
 
@@ -293,6 +298,7 @@ Style brief:
 - Use phenotype-first Results headings.
 - Keep claim verbs bounded: supports, contributes to, is required for full response under tested conditions.
 - Place citations in background and boundary-setting locations, not as fake proof of DRK1.
+- Use the journal format profile for callouts: `Fig. 1A` in Results, `Figure 1.` in legends, and `Supplementary Table 1` for the demo supplement.
 
 Draft package:
 - 3 title options.

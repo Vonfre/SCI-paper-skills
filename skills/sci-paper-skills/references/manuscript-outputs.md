@@ -39,6 +39,7 @@ For a full journal-specific writing engagement, produce these in order:
    - Abstract plan or full abstract.
    - Section headings and paragraph purposes.
    - Figure/table plan.
+   - Journal-format strategy for in-text figure/table/supplement callouts, legends, headings, references, and statements.
    - Supplementary-material plan.
    - Reference strategy.
 
@@ -57,16 +58,18 @@ For a full journal-specific writing engagement, produce these in order:
 - Match claim strength to evidence: association, prediction, regulation, mechanism, causality, validation, and application are different claims.
 - Keep the journal voice, but do not copy phrases from benchmark papers.
 - Preserve the user's scientific contribution; do not overfit to superficial style.
+- Use `journal_landscape.journal_format_profile` when inserting figure, table, supplementary-material, legend, heading, reference, and back-matter text.
 - For Chinese-to-English work, produce idiomatic scientific English rather than literal translation.
 
 ## Quality Bar
 
-A manuscript is not full-draft quality until it passes four section gates:
+A manuscript is not full-draft quality until it passes five gates:
 
 1. Introduction: literature-backed funnel from background to known mechanisms, unresolved gap, scientific question, and study objective.
 2. Results: evidence-dense subsections with controls, quantification/statistics, figure links, and short transition or reliability sentences.
 3. Discussion: result-anchored expansion into prior work, mechanism, alternative explanations, implications, limitations, and future experiments.
 4. Methods: reproducible procedural detail, including materials, treatments, replicates, instruments/software, quantification, statistics, and data/code availability.
+5. Journal format: in-text callouts, figure legends, table titles, supplementary-material naming, headings, references, and declarations match the target-journal profile or are explicitly marked unknown.
 
 If one gate fails, produce a repair plan or placeholders instead of presenting the manuscript as complete.
 
@@ -121,6 +124,7 @@ Each result subsection should have:
 - Short interpretive bridge to the next result.
 
 Use comparable papers to decide whether the journal favors mechanism-first, phenotype-first, cohort-first, resource-first, or method-validation-first sequencing.
+Use the target journal's exact callout style from `journal_format_profile`, such as `Fig. 1A`, `Figure 1A`, `Figs. 1 and 2`, `Supplementary Fig. 1`, or `Table S1`; never mix styles inside one manuscript.
 Allow brief discussion-like transition sentences in Results only when they improve continuity or explain why the next experiment is needed.
 
 ### Discussion
@@ -149,6 +153,20 @@ Follow journal requirements exactly. Include enough detail for reproducibility:
 - Ethics and approvals.
 
 For wet-lab work, include treatment dose/time, buffer/media conditions, instrument settings, replicate definitions, exclusion rules, normalization, and exact statistical model whenever known.
+
+## Journal-Format Strategy
+
+Before writing or revising target-journal text, build a compact normalization table:
+
+| Element | Required Form | Example In Draft | Source Basis | Action |
+|---|---|---|---|---|
+| Main figure | | | official / benchmark / fallback / unknown | |
+| Main figure panel | | | official / benchmark / fallback / unknown | |
+| Main table | | | official / benchmark / fallback / unknown | |
+| Supplementary figure/table/data | | | official / benchmark / fallback / unknown | |
+| Figure legends/table titles | | | official / benchmark / fallback / unknown | |
+
+Apply the table during drafting, not only at final submission. If the exact target-journal rule is unknown, use a clearly provisional style and mark `[NEED: target-journal figure/table callout style]`.
 
 ## Supplementary-Material Strategy
 
@@ -188,6 +206,7 @@ Sincerely,
 - Journal and article type are exact.
 - All mandatory statements are present.
 - Figures/tables/supplements match limits and naming style.
+- In-text figure/table/supplement callouts match the target-journal format profile.
 - References match journal format and are not fabricated.
 - Abstract, highlights, keywords, graphical abstract, and cover letter satisfy requirements.
 - Data/code/ethics/reporting checklists are included when relevant.

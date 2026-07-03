@@ -1,6 +1,6 @@
 ---
 name: sci-submission-revision
-description: SCI journal submission package preparation, compliance checking, cover letters, declarations, supplementary-file organization, reviewer suggestions, reviewer-response strategy, rebuttal letters, revision plans, and post-decision manuscript repair. Use when the user is preparing files for submission, checking target-journal requirements, responding to editor or reviewer comments, resubmitting, or tracking changes after peer review.
+description: SCI journal submission package preparation, journal-format compliance checking, cover letters, declarations, supplementary-file organization, reviewer suggestions, reviewer-response strategy, rebuttal letters, revision plans, and post-decision manuscript repair. Use when the user is preparing files for submission, checking target-journal requirements, figure/table/supplement callout format, responding to editor or reviewer comments, resubmitting, or tracking changes after peer review.
 ---
 
 # SCI Submission Revision
@@ -14,7 +14,7 @@ Own the final mile from manuscript draft to journal submission and peer-review r
 1. Confirm target journal, article type, and submission goal.
 2. Use `sci-journal-landscape` constraints for author instructions, article type, files, limits, and policies.
 3. Build a file inventory: manuscript, title page, figures, tables, supplements, cover letter, highlights, graphical abstract, reporting checklists, declarations.
-4. Check compliance: word limits, abstract format, figure/table limits, supplement naming, data/code availability, ethics/consent/animal approval, funding, conflicts, author contributions, AI-use disclosure when relevant.
+4. Check compliance: word limits, abstract format, in-text figure/table/supplement callouts, figure/table limits, legend/table-title style, supplement naming, reference style, data/code availability, ethics/consent/animal approval, funding, conflicts, author contributions, AI-use disclosure when relevant.
 5. Draft or repair cover-letter content with exact scope fit, contribution, novelty, and declarations.
 
 ## Readiness Rule
@@ -24,6 +24,7 @@ Do not call a manuscript ready if any of these are unresolved:
 - Target article type or journal requirements are unknown.
 - Required statements are missing.
 - Figures/supplements do not match journal rules.
+- In-text figure/table/supplement callouts or legend/table labels do not match the journal format profile.
 - Major claims lack data or citation support.
 - References are unverified.
 - Placeholders remain in submission-facing text.
@@ -43,6 +44,7 @@ Do not claim a file is submission-ready until:
 - Journal requirements are verified from current sources.
 - Every placeholder is listed.
 - Every declaration need is resolved or marked missing.
+- Every target-journal format issue is resolved or marked as a blocker.
 - Every reviewer response maps to a manuscript change or justified no-change decision.
 
 ## Response Rule
@@ -59,18 +61,19 @@ Do not promise data, experiments, or analyses the user has not performed.
 
 Consume:
 
-- `journal_landscape`, `draft_registry`, `figure_registry`, `citation_audit`, `reviewer_risk`, and reviewer/editor comments when available.
+- `journal_landscape`, `journal_landscape.journal_format_profile`, `draft_registry`, `figure_registry`, `citation_audit`, `reviewer_risk`, and reviewer/editor comments when available.
 
 Update:
 
 - `submission_package.file_checklist`, `required_statements`, `unresolved_placeholders`, `cover_letter_status`, `rebuttal_matrix_status`, and `final_readiness`.
 - Reviewer issue IDs `R#` when parsing decision letters.
-- `global_blockers` for unresolved requirements, placeholders, unsupported claims, or missing declarations.
+- `global_blockers` for unresolved requirements, placeholders, unsupported claims, missing declarations, or target-journal format issues.
 
 Block:
 
 - If `[NEED: ...]` or `[CITE: ...]` remains in submission-facing text, mark the package blocked.
 - If target-journal requirements are unknown, route to `sci-journal-landscape` before final submission packaging.
+- If `journal_format_profile` is absent or contains unresolved callout rules, route to `sci-journal-landscape` or `sci-citation-control` before final submission packaging.
 
 Always end with `Manuscript State Update` and `Handoff`.
 
@@ -82,6 +85,7 @@ Return:
 - `Cover letter/rebuttal draft` when requested.
 - `Required manuscript changes`.
 - `Additional evidence/citation needs`.
+- `Format compliance check`.
 - `Risk flags before submission/resubmission`.
 
 Read `references/submission-revision-schema.md` for templates.

@@ -1,4 +1,4 @@
 interface:
   display_name: "SCI Paragraph Coach"
-  short_description: "Coach paragraph-level scientific writing"
-  default_prompt: "Use $sci-paragraph-coach to help me write each manuscript paragraph with purpose, evidence, and transitions."
+  short_description: "Coach paragraphs with evidence and format"
+  default_prompt: "Use $sci-paragraph-coach to help me write manuscript paragraphs with purpose, evidence, transitions, and correct figure/table callouts."

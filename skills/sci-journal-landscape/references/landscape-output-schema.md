@@ -15,6 +15,44 @@
 - Novelty/evidence threshold:
 - Desk-rejection risks:
 
+## Journal Format Profile
+
+### Source Basis
+| Rule Area | Source | Date | Status |
+|---|---|---|---|
+| Figure/table callouts | | | official / benchmark / fallback / unknown |
+| Supplement callouts | | | official / benchmark / fallback / unknown |
+| Abstract/headings | | | official / benchmark / fallback / unknown |
+| References | | | official / benchmark / fallback / unknown |
+| Figure legends/tables | | | official / benchmark / fallback / unknown |
+
+### In-Text Callout Rules
+| Item | Required Form | Example | Notes |
+|---|---|---|---|
+| Main figure | | `Fig. 1` / `Figure 1` / `Fig 1` | |
+| Main figure panel | | `Fig. 1A` / `Fig. 1a` | |
+| Multiple figures | | `Figs. 1 and 2` | |
+| Main table | | `Table 1` | |
+| Supplementary figure | | `Supplementary Fig. 1` / `Fig. S1` | |
+| Supplementary table | | `Supplementary Table 1` / `Table S1` | |
+| Supplementary data/file | | `Supplementary Data 1` / `Data S1` | |
+
+### Section And Back-Matter Rules
+- Abstract:
+- Heading order:
+- Methods placement:
+- Figure legend title style:
+- Table title/footnote style:
+- Reference style:
+- Data/code/ethics/funding/conflict labels:
+
+### Draft Rewrite Rules
+| Mixed Form Found | Correct Form | Applies To |
+|---|---|---|
+
+### Format Unknowns
+- [NEED: ...]
+
 ## Same-Journal Similar Papers
 | Paper | Year | DOI/URL | Similarity | What It Did | Structure/Style Notes | Relevance |
 |---|---:|---|---|---|---|---|

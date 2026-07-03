@@ -1,19 +1,20 @@
 ---
 name: sci-draft-mimic
-description: Initial SCI manuscript drafting by imitating target-journal and user-provided model papers at the level of structure, rhetorical moves, section flow, claim strength, figure citation behavior, and expression style without copying text. Use when the user has journal research, literature evidence, storyline plan, PDFs/model articles, or asks to draft title, abstract, introduction, results, discussion, or cover letter in the style of comparable papers.
+description: Initial SCI manuscript drafting by imitating target-journal and user-provided model papers at the level of structure, rhetorical moves, section flow, claim strength, figure/table/supplement callout style, and expression style without copying text. Use when the user has journal research, journal format profile, literature evidence, storyline plan, PDFs/model articles, or asks to draft title, abstract, introduction, results, discussion, methods, figure legends, or cover letter in the style and format of comparable papers.
 ---
 
 # SCI Draft Mimic
 
 ## Overview
 
-Draft manuscript text by imitating patterns, not wording. Use model papers to learn structure, rhetorical moves, figure/citation behavior, claim strength, and section rhythm while preserving the user's evidence.
+Draft manuscript text by imitating patterns, not wording. Use model papers to learn structure, rhetorical moves, figure/table/supplement callout behavior, claim strength, and section rhythm while preserving the user's evidence.
 
 ## Inputs
 
 Prefer:
 
 - Target journal portrait and article type.
+- Target-journal `journal_format_profile`.
 - Benchmark/model papers, comparable papers, or user-provided PDFs.
 - Storyline plan and figure/case order.
 - Result-to-claim matrix and citation placeholders.
@@ -29,7 +30,7 @@ Before drafting from model papers or PDFs, extract only reusable patterns:
 - Title shape and specificity.
 - Abstract move order.
 - Introduction funnel and gap statement.
-- Results subsection rhythm and figure citation behavior.
+- Results subsection rhythm and exact figure/table/supplement callout behavior.
 - Discussion opening, limitation style, and final implication.
 - Supplement naming and citation pattern.
 - Citation density, placement, claim strength, and hedging.
@@ -41,7 +42,9 @@ Imitate these patterns only at the level of structure and rhetorical function.
 - Start with title, abstract, or section outline unless the user asks for a specific section.
 - Use `[NEED: ...]` for missing scientific facts.
 - Use `[CITE: claim]` for unverified literature support.
-- Tie results to figures/tables/supplements.
+- Tie results to figures/tables/supplements using the exact target-journal callout style in `journal_format_profile`.
+- Normalize all manuscript-facing callouts during drafting, including `Fig1`, `Fig. 1`, `Figure 1A`, `Figs. 1 and 2`, `Table 1`, `Supplementary Fig. 1`, `Fig. S1`, and `Table S1`; if the target rule is unknown, use `[NEED: target-journal figure/table callout style]`.
+- Preserve internal state IDs (`F#`, `T#`, `C#`, `S#`) while converting them to journal-facing labels in prose.
 - Keep claim strength no stronger than the result-to-claim matrix.
 - Make the Introduction literature-backed: move from field background to known mechanisms, unresolved gap, scientific question, and study objective with sources assigned to each role.
 - Make Results evidence-dense: each subsection needs direct data, controls, quantification/statistics, figure references, and a brief interpretive bridge that connects to the next result without over-discussing.
@@ -51,13 +54,13 @@ Imitate these patterns only at the level of structure and rhetorical function.
 
 ## Drafting Gate
 
-If journal landscape, result-to-claim mapping, and storyline are missing, draft only a skeleton or partial section with placeholders. Do not create a confident full manuscript from vague conclusions.
+If journal landscape, journal format profile, result-to-claim mapping, and storyline are missing, draft only a skeleton or partial section with placeholders. Do not create a confident full manuscript from vague conclusions or mixed target-journal formats.
 
 ## State Coupling
 
 Consume:
 
-- `journal_landscape`, `source_ledger`, `claim_registry`, `figure_registry`, `story`, `storyline`, and `reviewer_risk`.
+- `journal_landscape`, `journal_landscape.journal_format_profile`, `source_ledger`, `claim_registry`, `figure_registry`, `story`, `storyline`, and `reviewer_risk`.
 - Model paper IDs `P#` and source IDs `S#` when available.
 
 Update:
@@ -65,10 +68,11 @@ Update:
 - `draft_registry.sections` with section IDs `SEC#` from `storyline.section_registry`.
 - `draft_registry.open_needs`, `open_citations`, and `high_risk_claim_ids`.
 - Section drafts that preserve linked claim IDs `C#`, figure/table IDs `F#`/`T#`, and source placeholders `S#` or `[CITE: ...]`.
+- Draft-level format notes listing the journal-facing callout forms used and any unresolved format placeholders.
 
 Block:
 
-- If journal, claim, story, figure, or citation gates are missing, produce a skeleton or section scaffold only.
+- If journal, format, claim, story, figure, or citation gates are missing, produce a skeleton or section scaffold only.
 
 Always end with `Manuscript State Update` and `Handoff`.
 
@@ -78,6 +82,7 @@ Return:
 
 - `Style brief`.
 - `Draft output` for the requested section(s).
+- `Journal format notes`.
 - `Citation placeholders`.
 - `Missing inputs`.
 - `Pattern-use notes`.

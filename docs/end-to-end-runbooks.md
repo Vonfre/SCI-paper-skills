@@ -23,11 +23,11 @@ Do not begin a confident full draft until `claim_registry`, `story`, and `figure
 Use when the user says "I want to submit to Journal X" but the manuscript angle is unclear.
 
 1. `sci-intake-router`: collect journal, topic, system, article type, and materials.
-2. `sci-journal-landscape`: create journal constraints and comparable paper IDs `P#`.
+2. `sci-journal-landscape`: create journal constraints, `journal_format_profile`, and comparable paper IDs `P#`.
 3. `sci-literature-evidence`: identify journal-shaped gaps and source ledger `S#`.
 4. `sci-result-to-claim`: normalize available results into claim IDs `C#`.
 5. `sci-core-story-finder`: choose the strongest journal-fit story.
-6. `sci-storyline-planner`: create a structure that matches the journal's article pattern.
+6. `sci-storyline-planner`: create a structure that matches the journal's article pattern and preserves exact figure/table/supplement callout rules for drafting.
 7. `sci-reviewer-simulator`: test fit, novelty, evidence depth, and overclaiming.
 
 If journal fit is weak, either lower the claim/story strength or route to a different journal before drafting.
@@ -40,7 +40,7 @@ Use when the user already has text and wants polishing, but the argument may be 
 2. `sci-result-to-claim`: extract claim IDs from the draft when claims are not already mapped.
 3. `sci-citation-control`: check whether each claim has an adjacent and appropriate source.
 4. `sci-paragraph-coach`: rebuild weak paragraphs with claim/figure/source IDs.
-5. `sci-language-polisher`: polish after meaning and claim strength are stable.
+5. `sci-language-polisher`: polish after meaning, claim strength, and journal-specific format are stable.
 6. `sci-submission-revision`: prepare files, declarations, cover letter, or response matrix.
 
 Do not language-polish unsupported claims into smoother but riskier statements.

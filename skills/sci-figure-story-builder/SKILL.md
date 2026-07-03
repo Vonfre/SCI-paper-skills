@@ -25,6 +25,7 @@ Ask for a simple figure inventory:
 - Supplements validate, extend, or document; they should not carry decisive proof.
 - Cut or defer figures that do not answer a clear question or distract from the central story.
 - Order figures by reader logic, not experiment chronology.
+- Keep internal IDs stable as `F#`/`T#`, but let `journal_format_profile` decide the manuscript-facing labels such as `Fig. 1`, `Figure 1`, `Supplementary Fig. 1`, or `Table S1`.
 
 ## Figure Roles
 
@@ -45,6 +46,7 @@ Assign every figure or table one role:
 3. Choose main/supplement/cut placement.
 4. Identify missing panels, controls, quantification, statistics, or legends.
 5. Build a result-section skeleton with transitions between figures.
+6. Note the target-journal-facing callout style if `journal_format_profile` is available.
 
 ## Ordering Rule
 
@@ -56,12 +58,14 @@ Consume:
 
 - `story.recommended_story.selected_claim_ids`.
 - `claim_registry` with safe wording and evidence gaps.
+- `journal_landscape.journal_format_profile` when available.
 - User figure/table/case inventory or existing `figure_registry`.
 
 Update:
 
 - `figure_registry.figures` with stable IDs `F#` or `T#`.
 - Each figure's role, answered question, linked claim IDs, placement, missing panels/controls/statistics, and transition.
+- Target-journal-facing label notes when the callout style is known.
 - `storyline.result_order` provisionally when figure order is clear.
 
 Block:

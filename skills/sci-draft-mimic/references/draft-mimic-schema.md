@@ -11,6 +11,17 @@
 | Figure citation behavior | | | |
 | Discussion limitation style | | | |
 
+## Journal Format Profile
+
+| Element | Required Journal Form | Source Basis | Applied In Draft | Unresolved Need |
+|---|---|---|---|---|
+| Main figure | | official / benchmark / fallback / unknown | | |
+| Main figure panel | | official / benchmark / fallback / unknown | | |
+| Multiple figures | | official / benchmark / fallback / unknown | | |
+| Main table | | official / benchmark / fallback / unknown | | |
+| Supplementary figure/table/data | | official / benchmark / fallback / unknown | | |
+| Figure legends/table titles | | official / benchmark / fallback / unknown | | |
+
 ## Draft Output
 
 ```markdown
@@ -51,6 +62,12 @@
 - [CITE: ...]
 ```
 
+## Format Normalization Notes
+
+| Mixed Or Provisional Form | Draft Form Used | Source Basis | Location | Follow-Up |
+|---|---|---|---|---|
+| `Fig1` / `Figure 1A` / `Fig. S1` | | official / benchmark / fallback / unknown | | |
+
 ## Mimic Rules
 
 - Imitate organization and rhetorical function, not exact language.
@@ -58,3 +75,4 @@
 - Keep scientific claims tied to evidence.
 - Preserve the user's data and meaning over superficial style matching.
 - Do not write a full manuscript until each major section has its evidence role: Introduction uses source roles, Results uses data packages, Discussion uses result-anchored expansion, and Methods is reproducible.
+- Do not mix figure/table/supplement callout styles; use the target journal profile or mark the rule as unresolved.

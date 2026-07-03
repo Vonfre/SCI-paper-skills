@@ -9,8 +9,12 @@
 | Abstract | | | | |
 | Keywords | | | | |
 | Figures | | | | |
+| In-text figure callouts | | | | |
 | Tables | | | | |
+| In-text table callouts | | | | |
 | Supplements | | | | |
+| Supplementary-material callouts | | | | |
+| Figure legends and table titles | | | | |
 | Cover letter | | | | |
 | Highlights/significance | | | | |
 | Graphical abstract | | | | |
@@ -21,6 +25,17 @@
 | Conflicts | | | | |
 | Author contributions | | | | |
 | Reporting checklist | | | | |
+
+## Format Compliance Check
+
+| Element | Required Journal Form | Current Manuscript Form | Status | Action |
+|---|---|---|---|---|
+| Main figure callouts | | | pass / needs repair / unknown | |
+| Main table callouts | | | pass / needs repair / unknown | |
+| Supplementary figure/table/data callouts | | | pass / needs repair / unknown | |
+| Figure legend labels | | | pass / needs repair / unknown | |
+| Table titles and footnotes | | | pass / needs repair / unknown | |
+| Heading and declaration labels | | | pass / needs repair / unknown | |
 
 ## Cover Letter Skeleton
 

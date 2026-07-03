@@ -1,13 +1,13 @@
 ---
 name: sci-citation-control
-description: Evidence, reference, and citation management for SCI manuscripts. Use when the user asks to find or verify references, build a claim-evidence map, decide where citations belong, audit unsupported claims, format references for a target journal, compare citation behavior in benchmark papers, manage DOI/PMID/BibTeX metadata, cite supplementary materials, or prevent fabricated/outdated/irrelevant citations.
+description: Evidence, reference, citation, and journal-format management for SCI manuscripts. Use when the user asks to find or verify references, build a claim-evidence map, decide where citations belong, audit unsupported claims, format references for a target journal, compare citation behavior in benchmark papers, manage DOI/PMID/BibTeX metadata, cite or format figure/table/supplement callouts, or prevent fabricated/outdated/irrelevant citations and mixed journal formats.
 ---
 
 # SCI Citation Control
 
 ## Overview
 
-Control the relationship between claims, evidence, and references. Prevent fabricated citations, unsupported statements, weak literature framing, and target-journal citation-style errors.
+Control the relationship between claims, evidence, references, and target-journal format. Prevent fabricated citations, unsupported statements, weak literature framing, mixed figure/table/supplement callouts, and target-journal citation-style errors.
 
 ## First Move
 
@@ -18,13 +18,14 @@ Classify the user's need:
 - `Reference verification`: confirm DOI, PMID, journal, year, metadata, retraction/status, and relevance.
 - `Citation placement`: decide where citations belong.
 - `Style adaptation`: match target journal reference and supplement citation style.
+- `Journal format audit`: check figure/table/supplement callouts, legends, table titles, headings, and statement labels against `journal_format_profile`.
 - `Bibliography cleanup`: normalize, deduplicate, and flag stale or irrelevant sources.
 
 Use current web or database verification when real references, current status, retractions, or exact metadata matter. Do not invent citations.
 
 ## Minimum Inputs
 
-Accept a draft paragraph, claim list, result-to-claim matrix, literature evidence map, DOI/PMID/BibTeX list, or target-journal citation style. If references are placeholders, keep them as `[CITE: claim]` until verified.
+Accept a draft paragraph, claim list, result-to-claim matrix, literature evidence map, DOI/PMID/BibTeX list, target-journal citation style, or `journal_format_profile`. If references are placeholders, keep them as `[CITE: claim]` until verified. If a format rule is missing, keep it as `[NEED: target-journal figure/table callout style]` until verified.
 
 ## Evidence Matching
 
@@ -56,24 +57,25 @@ When references are real or when a draft contains many citations, build a source
 2. Identify needed evidence type for each claim.
 3. Verify citation candidates using DOI/PMID/official article pages when possible.
 4. Place citations next to the claims they support.
-5. Flag weak clusters, outdated reviews, missing primary sources, retractions, preprints used as definitive evidence, and metadata mismatches.
-6. Adapt reference style only after target-journal requirements are known.
+5. Audit figure/table/supplement callouts, legends, table titles, and statement labels against `journal_format_profile`.
+6. Flag weak clusters, outdated reviews, missing primary sources, retractions, preprints used as definitive evidence, metadata mismatches, mixed callout styles, and unknown journal-format rules.
+7. Adapt reference style only after target-journal requirements are known.
 
 ## State Coupling
 
 Consume:
 
-- `claim_registry`, `source_ledger`, `draft_registry`, `journal_landscape`, and target-journal citation style.
+- `claim_registry`, `source_ledger`, `draft_registry`, `journal_landscape`, `journal_landscape.journal_format_profile`, and target-journal citation style.
 
 Update:
 
-- `citation_audit.unsupported_claim_ids`, `verified_reference_ids`, `metadata_risks`, `citation_placement_plan`, and `citation_health`.
+- `citation_audit.unsupported_claim_ids`, `verified_reference_ids`, `metadata_risks`, `format_issues`, `citation_placement_plan`, and `citation_health`.
 - `source_ledger.sources[].metadata_status`, evidence location, and confidence.
 - `draft_registry.open_citations`.
 
 Block:
 
-- If unsupported claims, fake/unverified references, or unresolved metadata risks remain, block submission and route to literature evidence or writing repair.
+- If unsupported claims, fake/unverified references, unresolved format issues, or unresolved metadata risks remain, block submission and route to literature evidence, journal landscape, or writing repair.
 
 Always end with `Manuscript State Update` and `Handoff`.
 
@@ -87,6 +89,7 @@ Return:
 - `Reference candidates` with DOI/PMID/URL and relevance notes.
 - `Citation placement plan`.
 - `Journal style notes`.
+- `Format issue list`.
 - `Risk flags`.
 - `Final citation audit`.
 

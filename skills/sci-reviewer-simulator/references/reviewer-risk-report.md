@@ -22,6 +22,7 @@
 | Method rigor | | | |
 | Figure logic | | | |
 | Citation health | | | |
+| Journal format consistency | | | |
 | Writing logic | | | |
 
 ## Overclaim Audit

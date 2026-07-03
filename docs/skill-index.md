@@ -6,23 +6,24 @@ Use `sci-paper-skills` as the orchestrator unless the user explicitly requests a
 |---:|---|---|---|---|
 | 0 | `sci-stage-diagnosis` | The project feels stuck or the user does not know where to begin | Stage diagnosis | `sci-intake-router` or earliest blocker |
 | 1 | `sci-intake-router` | Journal, topic, material, article type, or available inputs are unclear | Intake brief | `sci-journal-landscape` |
-| 2 | `sci-journal-landscape` | A target journal or candidate list is available | Journal portrait and comparable-paper landscape | `sci-literature-evidence` |
+| 2 | `sci-journal-landscape` | A target journal or candidate list is available | Journal portrait, format profile, and comparable-paper landscape | `sci-literature-evidence` |
 | 3 | `sci-literature-evidence` | Conclusions, hypotheses, novelty, or gaps need literature support | Evidence map | `sci-result-to-claim` |
 | 4 | `sci-result-to-claim` | Figures, tables, data, cases, or result blocks need defensible claims | Result-to-claim matrix | `sci-core-story-finder` |
 | 5 | `sci-core-story-finder` | Several manuscript angles are possible | Story decision memo | `sci-figure-story-builder` |
 | 6 | `sci-figure-story-builder` | Main/supplement choices and result order are unclear | Figure story map | `sci-storyline-planner` |
 | 7 | `sci-storyline-planner` | The manuscript needs structure, section order, or alternative logic | Storyline plan | `sci-reviewer-simulator` |
 | 8 | `sci-reviewer-simulator` | Editor or reviewer objections need to be predicted before drafting/submission | Reviewer risk report | Repair blocker or `sci-draft-mimic` |
-| 9 | `sci-draft-mimic` | Model papers or target-journal patterns should guide drafting | Style brief and draft package | `sci-paragraph-coach` |
+| 9 | `sci-draft-mimic` | Model papers or target-journal patterns and formats should guide drafting | Style brief, format notes, and draft package | `sci-paragraph-coach` |
 | 10 | `sci-paragraph-coach` | A specific paragraph, section opening, figure legend, or cover-letter paragraph needs help | Paragraph scaffold and coached text | `sci-language-polisher` |
-| 11 | `sci-language-polisher` | The meaning is stable and scientific expression needs polishing | Polished text and claim notes | `sci-citation-control` |
-| 12 | `sci-citation-control` | References, citation placement, metadata, or unsupported claims need auditing | Citation audit | `sci-submission-revision` |
-| 13 | `sci-submission-revision` | Files, cover letter, declarations, reviewer response, or revision strategy are needed | Submission/revision package | Final check or resubmission |
+| 11 | `sci-language-polisher` | The meaning is stable and expression or journal format needs polishing | Polished text, format corrections, and claim notes | `sci-citation-control` |
+| 12 | `sci-citation-control` | References, citation placement, metadata, unsupported claims, or format callouts need auditing | Citation and format audit | `sci-submission-revision` |
+| 13 | `sci-submission-revision` | Files, cover letter, declarations, format compliance, reviewer response, or revision strategy are needed | Submission/revision package | Final check or resubmission |
 
 ## Trigger Examples
 
 - "I have data but cannot write the paper" -> `sci-stage-diagnosis`.
 - "I want to submit to The Plant Cell" -> `sci-journal-landscape`.
+- "Should I write Fig. 1, Figure 1, or Fig1?" -> `sci-journal-landscape`.
 - "Do these conclusions have literature support?" -> `sci-literature-evidence`.
 - "What can Figure 2 prove?" -> `sci-result-to-claim`.
 - "Which story should this paper tell?" -> `sci-core-story-finder`.
@@ -41,16 +42,17 @@ When two modules are plausible, route to the earliest unresolved gate:
 
 1. Intake and journal target.
 2. Journal landscape.
-3. Literature evidence.
-4. Claim control.
-5. Story selection.
-6. Figure narrative.
-7. Manuscript structure.
-8. Reviewer risk.
-9. Drafting and paragraph work.
-10. Language polishing.
-11. Citation audit.
-12. Submission or revision.
+3. Journal-specific format profile.
+4. Literature evidence.
+5. Claim control.
+6. Story selection.
+7. Figure narrative.
+8. Manuscript structure.
+9. Reviewer risk.
+10. Drafting and paragraph work.
+11. Language polishing.
+12. Citation audit.
+13. Submission or revision.
 
 ## Handoff Discipline
 

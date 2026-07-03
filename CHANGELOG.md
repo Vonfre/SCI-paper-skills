@@ -2,6 +2,12 @@
 
 All notable changes to `SCI-paper-skills` are documented here.
 
+## 0.6.7 - Target Journal Format Profile Gate
+
+- Added a target-journal format profile for in-text figure/table/supplement callouts, legends, table titles, headings, references, and back-matter labels.
+- Wired the format profile through journal landscape, drafting, polishing, citation audit, submission checks, shared state, handoff contracts, templates, and examples.
+- Updated the complete demo state/package to show provisional `Fig. 1A`, `Figure 1.`, and `Supplementary Table 1` handling.
+
 ## 0.6.6 - Chinese GitHub README
 
 - Made `README.md` the Chinese-first GitHub landing page.

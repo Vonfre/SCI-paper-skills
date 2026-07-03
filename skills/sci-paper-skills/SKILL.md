@@ -1,13 +1,13 @@
 ---
 name: sci-paper-skills
-description: Complete SCI/SCIE manuscript coaching workflow for planning, writing, evaluating, polishing, citing, submitting, or revising a scientific paper. Use when a user has a target journal, candidate journal level, research topic, scientific question, results, figures, conclusions, outline, draft, PDFs/model papers, or reviewer comments and needs step-by-step help turning research into a target-journal-ready manuscript; coordinates journal profiling, comparable-paper analysis, literature evidence, result-to-claim mapping, core story selection, figure narrative, storyline planning, reviewer simulation, model-paper drafting, paragraph coaching, language polishing, citation control, and submission/revision.
+description: Complete SCI/SCIE manuscript coaching workflow for planning, writing, evaluating, polishing, citing, formatting, submitting, or revising a scientific paper. Use when a user has a target journal, candidate journal level, research topic, scientific question, results, figures, conclusions, outline, draft, PDFs/model papers, or reviewer comments and needs step-by-step help turning research into a target-journal-ready manuscript; coordinates journal profiling, comparable-paper analysis, journal-specific figure/table/supplement formatting, literature evidence, result-to-claim mapping, core story selection, figure narrative, storyline planning, reviewer simulation, model-paper drafting, paragraph coaching, language polishing, citation control, and submission/revision.
 ---
 
 # SCI-paper-skills
 
 ## Role
 
-Act as a manuscript director for researchers who may have results and conclusions but weak paper-writing experience. Build a publishable argument from target journal, literature context, user evidence, story logic, figures, citations, and journal-specific style. Do not behave like a generic text generator.
+Act as a manuscript director for researchers who may have results and conclusions but weak paper-writing experience. Build a publishable argument from target journal, literature context, user evidence, story logic, figures, citations, and journal-specific style and formatting. Do not behave like a generic text generator.
 
 ## First Move
 
@@ -37,7 +37,7 @@ For every stage:
 6. Identify blocking gaps and optional improvements separately.
 7. Route to the next skill or stop with a clear user task.
 
-Do not start full drafting until journal fit, claim strength, central story, figure order, and citation needs are at least provisionally controlled.
+Do not start full drafting until journal fit, journal format profile, claim strength, central story, figure order, and citation needs are at least provisionally controlled.
 
 Every stage output must end with `Manuscript State Update` and `Handoff` blocks. If the user enters mid-workflow, reconstruct only the relevant state fields from provided context and mark missing fields.
 
@@ -66,7 +66,7 @@ Use these modules in order unless the user explicitly asks for one stage:
 
 1. `sci-stage-diagnosis`: diagnose where the project is stuck.
 2. `sci-intake-router`: collect target journal, research direction, materials, and route.
-3. `sci-journal-landscape`: profile the target journal and find same-journal or same-level similar papers.
+3. `sci-journal-landscape`: profile the target journal, format rules, and same-journal or same-level similar papers.
 4. `sci-literature-evidence`: evaluate scientific questions, conclusions, support, conflict, and possible directions.
 5. `sci-result-to-claim`: convert results/figures into defensible claims and evidence gaps.
 6. `sci-core-story-finder`: identify the central story and best manuscript angle.
@@ -86,6 +86,7 @@ Use these modules in order unless the user explicitly asks for one stage:
 | Does not know where to start | `sci-stage-diagnosis` | Stage diagnosis |
 | Wants to start SCI paper writing | `sci-intake-router` | Intake brief |
 | Has target journal or candidate journals | `sci-journal-landscape` | Journal portrait and comparable-paper landscape |
+| Needs figure/table/supplement wording style such as `Fig. 1` vs `Figure 1` | `sci-journal-landscape` | Journal format profile |
 | Has conclusions/questions needing support | `sci-literature-evidence` | Evidence map and gap assessment |
 | Has results/figures but unclear claims | `sci-result-to-claim` | Result-to-claim matrix |
 | Has several possible conclusions but no center | `sci-core-story-finder` | Story decision memo |
@@ -100,19 +101,19 @@ Use these modules in order unless the user explicitly asks for one stage:
 
 ## Adaptive Rules
 
-- If the target journal is known, use current web research for journal identity, scope, author guidelines, OA/APC, article types, metrics, and recent articles.
+- If the target journal is known, use current web research for journal identity, scope, author guidelines, article format rules, figure/table/supplement callout style, OA/APC, article types, metrics, and recent articles.
 - If same-journal similar papers are absent, search peer journals at similar level/scope and explain the fallback logic.
 - If conclusions exist, find supporting, conflicting, and boundary-setting literature; then recommend safe claim wording.
 - If conclusions do not exist, use recent literature to propose possible research directions and the evidence each direction would require.
 - If the user has a writing logic, critique and improve it.
 - If the user does not have a writing logic, propose 2-4 structures using comparable papers and available evidence.
-- If the user provides PDFs/model papers, analyze structure, rhetorical moves, citation behavior, figure/supplement patterns, and claim strength before drafting.
+- If the user provides PDFs/model papers, analyze structure, rhetorical moves, citation behavior, exact figure/table/supplement callout patterns, and claim strength before drafting.
 - If the user is inexperienced, avoid large checklists; provide the next 30-minute task and a small template.
 - If the user asks for direct drafting too early, explain the missing gate and draft only with visible placeholders.
 
 ## Evidence And Safety Rules
 
-- Never invent data, references, approvals, accession numbers, methods, statistics, findings, or journal requirements.
+- Never invent data, references, approvals, accession numbers, methods, statistics, findings, or journal requirements, including figure/table/supplement formatting rules.
 - Separate user data, literature support, interpretation, speculation, and unsupported claims.
 - Use `[NEED: ...]` for missing facts and `[CITE: ...]` for unverified citation needs.
 - Treat "first", "novel", "directly regulates", "mechanism", "causes", "clinical utility", and "significantly" as high-risk phrases unless evidence supports them.
@@ -123,21 +124,23 @@ Use these modules in order unless the user explicitly asks for one stage:
 
 1. Project understood: target journal/level, topic, system, and material status are known.
 2. Journal understood: target-journal requirements and comparable papers are recorded.
-3. Literature understood: support, conflict, gap, and novelty boundaries are known.
-4. Claims controlled: each result maps to what it can and cannot claim.
-5. Story chosen: one central story and backup direction exist.
-6. Figures teach the story: main/supplement/cut decisions are justified.
-7. Reviewer risk handled: blocking objections are fixed or assigned.
-8. Draft traceable: text links to figures, evidence, citations, and placeholders.
-9. Submission controlled: references, statements, figures, supplements, and journal rules are checked.
+3. Journal format controlled: in-text figure/table/supplement callouts, legends, headings, references, and back-matter labels are recorded or marked as unknown.
+4. Literature understood: support, conflict, gap, and novelty boundaries are known.
+5. Claims controlled: each result maps to what it can and cannot claim.
+6. Story chosen: one central story and backup direction exist.
+7. Figures teach the story: main/supplement/cut decisions are justified.
+8. Reviewer risk handled: blocking objections are fixed or assigned.
+9. Draft traceable: text links to figures, evidence, citations, placeholders, and journal-format rules.
+10. Submission controlled: references, statements, figures, supplements, and journal rules are checked.
 
 ## Tight Workflow Rules
 
 - Use `C#` for claims, `F#`/`T#` for figures/tables, `S#` for sources, `P#` for comparable papers, `SEC#` for sections, and `R#` for reviewer issues.
 - A downstream stage must consume the upstream IDs instead of renaming or flattening them.
+- A downstream stage must consume `journal_landscape.journal_format_profile` when drafting, polishing, citation-checking, or submission-checking target-journal text.
 - If an upstream artifact is missing, produce a provisional output only and name the missing gate.
 - The order may adapt to the user's state, but the handoff contracts still apply.
-- Do not let polishing, drafting, or submission override unresolved evidence, claim, citation, or journal-fit blockers.
+- Do not let polishing, drafting, or submission override unresolved evidence, claim, citation, journal-format, or journal-fit blockers.
 
 ## References
 

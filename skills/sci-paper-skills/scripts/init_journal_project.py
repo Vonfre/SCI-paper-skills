@@ -175,6 +175,17 @@ Created: {today}
 - Novelty/evidence threshold:
 - Desk-rejection risks:
 
+## Journal Format Profile
+| Rule Area | Required Form | Source Basis | Unknowns |
+|---|---|---|---|
+| Main figure callout | | official / benchmark / fallback / unknown | |
+| Main figure panel | | official / benchmark / fallback / unknown | |
+| Main table callout | | official / benchmark / fallback / unknown | |
+| Supplementary figure/table/data | | official / benchmark / fallback / unknown | |
+| Figure legends and table titles | | official / benchmark / fallback / unknown | |
+| Abstract, headings, Methods, declarations | | official / benchmark / fallback / unknown | |
+| Reference style | | official / benchmark / fallback / unknown | |
+
 ## Same-Journal Similar Papers
 | Paper | Year | DOI/URL | Similarity | What It Did | Structure/Style Notes | Relevance |
 |---|---:|---|---|---|---|---|
@@ -249,8 +260,8 @@ Created: {today}
         """# Figure Story Map
 
 ## Recommended Figure Order
-| Order | Figure/Case | Question Answered | Evidence Type | Direct Claim | Main/Supplement/Cut | Missing Panel/Control | Transition |
-|---:|---|---|---|---|---|---|---|
+| Order | Figure/Case | Journal-Facing Label | Question Answered | Evidence Type | Direct Claim | Main/Supplement/Cut | Missing Panel/Control | Transition |
+|---:|---|---|---|---|---|---|---|---|
 
 ## Results Section Skeleton
 1. Section title:
@@ -310,6 +321,13 @@ Topic: {topic or "[NEED: research topic]"}
 | Model Pattern | Observed In | Use In Draft | Adaptation |
 |---|---|---|---|
 
+## Journal Format Notes
+| Element | Required Journal Form | Applied In Draft | Unresolved Need |
+|---|---|---|---|
+| Main figure callout | | | |
+| Main table callout | | | |
+| Supplementary-material callout | | | |
+
 ## Title Options
 
 ## Abstract
@@ -365,6 +383,10 @@ Topic: {topic or "[NEED: research topic]"}
 | Original | Polished | Reason |
 |---|---|---|
 
+## Format Corrections
+| Location | Original | Corrected | Rule Source |
+|---|---|---|---|
+
 ## Remaining Placeholders
 - [NEED: missing scientific fact]
 - [CITE: unsupported literature claim]
@@ -383,6 +405,10 @@ Topic: {topic or "[NEED: research topic]"}
 - Outdated citation:
 - Missing primary source:
 - Style issue:
+
+## Journal Format Audit
+| Location | Current Form | Required Form | Rule Source | Action |
+|---|---|---|---|---|
 """,
     )
 
@@ -406,6 +432,8 @@ Topic: {topic or "[NEED: research topic]"}
 - [ ] Word limits checked
 - [ ] Abstract format checked
 - [ ] Reference style checked
+- [ ] In-text figure/table/supplement callouts checked
+- [ ] Figure legend and table title style checked
 - [ ] Figure/table limits checked
 - [ ] Supplement naming checked
 - [ ] Data/code availability statement included

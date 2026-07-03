@@ -1,6 +1,6 @@
 ---
 name: sci-reviewer-simulator
-description: Simulate reviewer and editor objections before SCI submission. Use when the user wants to know what reviewers will question, whether conclusions are overclaimed, what controls or analyses are missing, why a target journal might desk-reject, or how to prioritize revisions before submission.
+description: Simulate reviewer and editor objections before SCI submission. Use when the user wants to know what reviewers will question, whether conclusions are overclaimed, what controls or analyses are missing, why a target journal might desk-reject, whether journal-format issues remain, or how to prioritize revisions before submission.
 ---
 
 # SCI Reviewer Simulator
@@ -18,6 +18,7 @@ Use the relevant modes:
 - `Mechanism reviewer`: causality, pathway depth, alternative explanations.
 - `Field expert`: novelty, prior work, citation omissions, overclaiming.
 - `Writing reviewer`: structure, figure clarity, paragraph logic, tone.
+- `Format reviewer`: target-journal callouts, legends, table titles, references, headings, and supplementary-material naming.
 
 Run separate passes when enough input is available. Do not merge all concerns into one generic critique; preserve which reviewer type would raise each issue.
 
@@ -45,7 +46,7 @@ If inputs are incomplete, run a provisional review and mark which risks cannot b
 
 1. Read the target journal, story, claims, figures, and draft if available.
 2. Identify the submission bar and most likely reviewer expertise.
-3. Score journal fit, novelty, evidence strength, method rigor, figure logic, citation health, and writing logic.
+3. Score journal fit, novelty, evidence strength, method rigor, figure logic, citation health, journal-format consistency, and writing logic.
 4. List objections with severity and evidence.
 5. Separate fixes that need new data from fixes possible by writing, analysis, citation, or figure reorganization.
 6. Recommend submit, revise before submission, do more work, or reconsider journal.
@@ -63,7 +64,7 @@ For every blocking or major issue, give both the smallest credible fix and the s
 
 Consume:
 
-- `journal_landscape`, `source_ledger`, `claim_registry`, `figure_registry`, `story`, `storyline`, `draft_registry`, and `citation_audit` if available.
+- `journal_landscape`, `journal_landscape.journal_format_profile`, `source_ledger`, `claim_registry`, `figure_registry`, `story`, `storyline`, `draft_registry`, and `citation_audit` if available.
 
 Update:
 
