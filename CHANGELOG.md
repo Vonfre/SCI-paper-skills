@@ -2,6 +2,10 @@
 
 All notable changes to `SCI-paper-skills` are documented here.
 
+## Unreleased
+
+- Removed internal high-star project inspiration notes from the published documentation set.
+
 ## 0.6.7 - Target Journal Format Profile Gate
 
 - Added a target-journal format profile for in-text figure/table/supplement callouts, legends, table titles, headings, references, and back-matter labels.
