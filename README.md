@@ -74,20 +74,35 @@ $sci-paper-skills
 ## 推荐工作流
 
 ```mermaid
-flowchart LR
-    A["阶段诊断"] --> B["输入收集"]
-    B --> C["期刊画像"]
-    C --> D["文献证据"]
-    D --> E["结果到论点"]
-    E --> F["中心故事"]
-    F --> G["图表故事"]
-    G --> H["论文结构"]
-    H --> I["审稿模拟"]
-    I --> J["范文模仿起草"]
-    J --> K["段落辅导"]
-    K --> L["语言润色"]
-    L --> M["引用控制"]
-    M --> N["投稿或返修"]
+flowchart TB
+    subgraph R1[" "]
+        direction LR
+        A["阶段诊断"] --> B["输入收集"] --> C["期刊画像"] --> D["文献证据"]
+    end
+
+    subgraph R2[" "]
+        direction RL
+        E["结果到论点"] --> F["中心故事"] --> G["图表故事"] --> H["论文结构"]
+    end
+
+    subgraph R3[" "]
+        direction LR
+        I["审稿模拟"] --> J["范文模仿起草"] --> K["段落辅导"] --> L["语言润色"]
+    end
+
+    subgraph R4[" "]
+        direction RL
+        M["引用控制"] --> N["投稿或返修"]
+    end
+
+    D --> E
+    H --> I
+    L --> M
+
+    style R1 fill:transparent,stroke:transparent
+    style R2 fill:transparent,stroke:transparent
+    style R3 fill:transparent,stroke:transparent
+    style R4 fill:transparent,stroke:transparent
 ```
 
 这条流程的关键不是“直接生成漂亮文字”，而是先把论文的科学逻辑搭稳：目标期刊、文献背景、结果证据、论点边界、图表顺序、讨论深度和方法可复现性都要彼此咬合。

@@ -74,20 +74,35 @@ $sci-paper-skills
 ## Recommended Workflow
 
 ```mermaid
-flowchart LR
-    A["Stage diagnosis"] --> B["Intake"]
-    B --> C["Journal landscape"]
-    C --> D["Literature evidence"]
-    D --> E["Result to claim"]
-    E --> F["Core story"]
-    F --> G["Figure story"]
-    G --> H["Storyline plan"]
-    H --> I["Reviewer simulation"]
-    I --> J["Model-paper-guided drafting"]
-    J --> K["Paragraph coaching"]
-    K --> L["Language polishing"]
-    L --> M["Citation control"]
-    M --> N["Submission or revision"]
+flowchart TB
+    subgraph R1[" "]
+        direction LR
+        A["Stage diagnosis"] --> B["Intake"] --> C["Journal landscape"] --> D["Literature evidence"]
+    end
+
+    subgraph R2[" "]
+        direction RL
+        E["Result to claim"] --> F["Core story"] --> G["Figure story"] --> H["Storyline plan"]
+    end
+
+    subgraph R3[" "]
+        direction LR
+        I["Reviewer simulation"] --> J["Model-paper-guided drafting"] --> K["Paragraph coaching"] --> L["Language polishing"]
+    end
+
+    subgraph R4[" "]
+        direction RL
+        M["Citation control"] --> N["Submission or revision"]
+    end
+
+    D --> E
+    H --> I
+    L --> M
+
+    style R1 fill:transparent,stroke:transparent
+    style R2 fill:transparent,stroke:transparent
+    style R3 fill:transparent,stroke:transparent
+    style R4 fill:transparent,stroke:transparent
 ```
 
 The key idea is not to generate polished text immediately. The workflow first stabilizes the scientific logic: target journal, literature background, result evidence, claim boundaries, figure order, discussion depth, and method reproducibility should all reinforce one another.
