@@ -1,6 +1,6 @@
 # SCI-paper-skills
 
-[![Version](https://img.shields.io/badge/version-0.6.10-0f766e)](manifest.yaml)
+[![Version](https://img.shields.io/badge/version-0.6.11-0f766e)](manifest.yaml)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-15-7c3aed)](skills)
 

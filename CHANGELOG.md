@@ -4,6 +4,13 @@ All notable changes to `SCI-paper-skills` are documented here.
 
 ## Unreleased
 
+## 0.6.11 - Word Repair Warning Fix
+
+- Fixed DOCX post-processing so `word/styles.xml` preserves valid style child order (`pPr` before `rPr`) instead of triggering Word repair.
+- Preserved namespace declarations referenced by `mc:Ignorable` after OOXML serialization, including `w14` and `wp14`.
+- Repaired `word/settings.xml` zoom metadata by adding the required `w:percent` attribute when missing.
+- Extended the DOCX checker to catch style-order, ignorable-namespace, and zoom metadata problems before release.
+
 ## 0.6.10 - Times New Roman Word Font Control
 
 - Added Times New Roman as a required DOCX manuscript font family across Word formatting rules, state fields, examples, and submission checks.
