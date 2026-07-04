@@ -86,7 +86,7 @@ The demo manuscript uses a provisional target-journal format profile:
 | Materials and Methods | Added growth conditions, transformation details, treatment timing, buffer composition, solvent controls, blinding, exclusion rules, RNA quality control, imaging settings, replicate definitions, quantification, statistics, and software |
 | Journal format | Normalized the demo to one in-text callout pattern and recorded the provisional figure/table/supplement rules in manuscript state |
 | Paragraph plan | Regenerated the manuscript around a 1-paragraph abstract, 4-paragraph Introduction, 2-paragraph Results subsections, 4-paragraph Discussion, and subheaded Methods |
-| Word/DOCX output | Generated English and Chinese DOCX files with continuous line numbers, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings |
+| Word/DOCX output | Generated English and Chinese DOCX files with continuous line numbers, Times New Roman, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings |
 
 ## Real-Project Replacement Checklist
 

@@ -58,7 +58,7 @@ Imitate these patterns only at the level of structure and rhetorical function.
 - Make Results evidence-dense: each subsection needs direct data, controls, quantification/statistics, figure references, and a brief interpretive bridge that connects to the next result without over-discussing.
 - Make Discussion multi-angle: start from the main result, then expand through prior work, mechanism, alternative explanations, significance, limitations, and future experiments.
 - Make Methods reproducible: include biological material, treatment details, sample sizes, controls, instrumentation, analysis software, statistical model, and data availability when known.
-- For Word/DOCX output, apply continuous line numbering, black 12 pt text, 1.5 line spacing, justified body paragraphs, and left-aligned headings; after file creation, run `../sci-paper-skills/scripts/enforce_manuscript_docx_format.py` and `--check` unless an equivalent validated tool is used.
+- For Word/DOCX output, apply continuous line numbering, Times New Roman, black 12 pt text, 1.5 line spacing, justified body paragraphs, and left-aligned headings; after file creation, run `../sci-paper-skills/scripts/enforce_manuscript_docx_format.py` and `--check` unless an equivalent validated tool is used.
 - List which model patterns were used and what must be verified.
 
 ## Drafting Gate

@@ -38,7 +38,7 @@ Each stage follows:
 4. `sci-language-polisher` must not strengthen claims unless `claim_registry` supports the stronger wording.
 5. Analysis-derived results must keep provenance, sample size/replicate unit, statistical status, and effect/uncertainty visible until submission.
 6. Full-manuscript and major-section drafts must have a `storyline.paragraph_plan`; Results subsections default to 2-3 natural paragraphs unless the target journal or model papers justify a different count.
-7. Word/DOCX outputs must have continuous line numbering, black 12 pt text, 1.5 spacing, justified body text, and left-aligned headings checked through `document_output.word_format_profile`.
+7. Word/DOCX outputs must have continuous line numbering, Times New Roman, black 12 pt text, 1.5 spacing, justified body text, and left-aligned headings checked through `document_output.word_format_profile`.
 8. `sci-submission-revision` must not mark the package ready while `[NEED: ...]`, `[CITE: ...]`, unresolved journal-format placeholders, paragraph-plan gaps, DOCX format failures, data/source-code gaps, or missing dataset/software citations remain in submission-facing text.
 
 ## Handoff Footer

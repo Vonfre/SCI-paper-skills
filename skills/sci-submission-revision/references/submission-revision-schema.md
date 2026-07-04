@@ -9,6 +9,7 @@
 | Abstract | | | | |
 | Paragraph plan | | | | |
 | Word/DOCX line numbering | | | | |
+| Word/DOCX font family | | | | |
 | Word/DOCX text color | | | | |
 | Word/DOCX font size | | | | |
 | Word/DOCX spacing/alignment | | | | |
@@ -47,6 +48,7 @@
 | Element | Required | Current Manuscript Form | Status | Action |
 |---|---|---|---|---|
 | Line numbering | continuous | | pass / needs repair / unknown | |
+| Font family | Times New Roman | | pass / needs repair / unknown | |
 | Text color | black `000000` | | pass / needs repair / unknown | |
 | Font size | 12 pt | | pass / needs repair / unknown | |
 | Body paragraphs | justified | | pass / needs repair / unknown | |

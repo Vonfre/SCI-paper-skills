@@ -225,6 +225,7 @@ document_output:
   requested_formats: []
   word_format_profile:
     line_numbering: "continuous | newPage | newSection | none | unknown"
+    font_family: "Times New Roman | journal exception | unknown"
     text_color: "000000 | unknown"
     font_size_pt: 12
     line_spacing: 1.5
@@ -272,7 +273,7 @@ submission_package:
 
 Every draftable sentence that makes a scientific claim should be traceable to at least one claim ID and either a figure/table ID, user-data note, or source ID. Every full-section draft should also trace to a paragraph-plan entry unless the user explicitly asks for a quick sketch.
 
-For Word/DOCX manuscript outputs, `document_output.word_format_profile.validation_status` should be `pass` before final delivery unless the target journal explicitly requires a different format and the exception is recorded.
+For Word/DOCX manuscript outputs, `document_output.word_format_profile.validation_status` should be `pass` before final delivery, including Times New Roman font-family verification, unless the target journal explicitly requires a different format and the exception is recorded.
 
 ## State Update Block
 

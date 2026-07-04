@@ -31,7 +31,7 @@ Full drafting should not begin until these gates are at least provisionally hand
 - Figures, tables, and supplements have a reader-facing order plus source-data, statistics, integrity, and export notes when submission-facing.
 - A paragraph plan exists for major sections, with Results subsections normally limited to 2-3 natural paragraphs.
 - Citation needs are visible.
-- Word/DOCX requirements are known when a manuscript file is requested: continuous line numbering, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings.
+- Word/DOCX requirements are known when a manuscript file is requested: continuous line numbering, Times New Roman, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings.
 - Data/code availability and dataset/software citation needs are visible when the manuscript is near submission.
 
 If a user asks for drafting before these gates are ready, create a skeleton or partial draft with visible placeholders instead of inventing a complete manuscript.
@@ -97,4 +97,4 @@ When a project includes raw data, statistical outputs, analysis code, plots, or 
 - treat p-values alone as insufficient for strong claims; require effect/estimate, uncertainty, sample size, replicate unit, and diagnostic status where relevant;
 - make every main figure defend one core conclusion, with each panel linked to a claim and source data;
 - block submission-readiness when source data, code, dataset citations, or data-availability routes remain unresolved.
-- block Word/DOCX readiness when line numbering, text color, font size, line spacing, body alignment, or heading alignment has not been checked.
+- block Word/DOCX readiness when line numbering, font family, text color, font size, line spacing, body alignment, or heading alignment has not been checked.

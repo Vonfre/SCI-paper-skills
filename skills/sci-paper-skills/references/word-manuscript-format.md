@@ -9,13 +9,14 @@ For Word manuscript outputs, enforce these defaults unless the target journal re
 | Element | Required Setting |
 |---|---|
 | Line numbering | Continuous line numbers, count every line |
+| Font family | Times New Roman for all manuscript text, including headings, hyperlinks, tables, legends, declarations, Chinese text, and complex-script runs |
 | Text color | Black (`000000`) for all manuscript text, including headings, hyperlinks, tables, legends, and declarations |
 | Font size | 12 pt for all manuscript text, headings, legends, tables, and references |
 | Body alignment | Justified |
 | Title and headings | Left aligned |
 | Line spacing | 1.5 lines |
 
-Do not call a Word manuscript final if line numbers, all-black text, 12 pt size, 1.5 spacing, justified body paragraphs, and left-aligned headings have not been checked.
+Do not call a Word manuscript final if line numbers, Times New Roman font, all-black text, 12 pt size, 1.5 spacing, justified body paragraphs, and left-aligned headings have not been checked.
 
 ## DOCX Implementation
 
@@ -30,6 +31,7 @@ python scripts/enforce_manuscript_docx_format.py output.docx --check
 Use the same script after converting Markdown, LaTeX, or another source into DOCX. The script enforces the OOXML equivalents:
 
 - Section line numbering: `<w:lnNumType w:countBy="1" w:restart="continuous"/>`.
+- Times New Roman font family: `<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="Times New Roman" w:cs="Times New Roman"/>`.
 - 12 pt font size: `<w:sz w:val="24"/>` and `<w:szCs w:val="24"/>`.
 - Black text: `<w:color w:val="000000"/>`.
 - 1.5 line spacing: `<w:spacing w:line="360" w:lineRule="auto"/>`.
@@ -98,6 +100,7 @@ document_output:
   requested_formats: ["docx"]
   word_format_profile:
     line_numbering: "continuous"
+    font_family: "Times New Roman"
     text_color: "000000"
     font_size_pt: 12
     line_spacing: 1.5

@@ -22,6 +22,7 @@ Own the final mile from manuscript draft to journal submission and peer-review r
 When a Word manuscript is requested, run or request equivalent verification for:
 
 - Continuous line numbering.
+- Times New Roman font throughout.
 - Black text (`000000`) throughout.
 - 12 pt font size throughout.
 - 1.5 line spacing.
@@ -38,7 +39,7 @@ Do not call a manuscript ready if any of these are unresolved:
 - Required statements are missing.
 - Figures/supplements do not match journal rules.
 - Paragraph counts exceed the approved paragraph plan without justification.
-- A requested DOCX manuscript has not passed Word format checks or a target-journal exception has not been recorded.
+- A requested DOCX manuscript has not passed Word format checks, including Times New Roman font, or a target-journal exception has not been recorded.
 - In-text figure/table/supplement callouts or legend/table labels do not match the journal format profile.
 - Figure source data, statistics, image-integrity notes, or export requirements are unresolved.
 - Major claims lack data or citation support.

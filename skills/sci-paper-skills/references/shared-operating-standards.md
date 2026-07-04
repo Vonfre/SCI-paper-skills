@@ -47,4 +47,4 @@ Each stage should produce a named artifact with:
 - Keep claim strength no stronger than the result-to-claim matrix supports.
 - Apply the target journal's exact figure/table/supplement callout style while drafting; if unknown, mark it as a format blocker instead of mixing `Fig.`, `Figure`, `Fig1`, and `Table S1` forms.
 - Create or consume a paragraph plan before drafting a full manuscript or major section; Results subsections default to 2-3 natural paragraphs unless model papers justify an exception.
-- For Word/DOCX manuscript outputs, enforce continuous line numbers, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings before calling the file final.
+- For Word/DOCX manuscript outputs, enforce continuous line numbers, Times New Roman, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings before calling the file final.

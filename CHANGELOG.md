@@ -4,6 +4,12 @@ All notable changes to `SCI-paper-skills` are documented here.
 
 ## Unreleased
 
+## 0.6.10 - Times New Roman Word Font Control
+
+- Added Times New Roman as a required DOCX manuscript font family across Word formatting rules, state fields, examples, and submission checks.
+- Extended the DOCX enforcement script to write and verify Times New Roman in OOXML `w:rFonts` slots for ASCII, high ANSI, East Asian, and complex-script text.
+- Regenerated the English and Chinese DOCX examples with the stricter font-family check.
+
 ## 0.6.9 - Regenerated DOCX Example And Skill Cleanup
 
 - Regenerated the bilingual zero-to-one example with paragraph-plan discipline: 4-paragraph Introduction, 2-paragraph Results subsections, and 4-paragraph Discussion.

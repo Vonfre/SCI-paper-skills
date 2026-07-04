@@ -21,7 +21,7 @@ Identify the polish mode:
 - `Journal-style polish`: align with observed target-journal patterns.
 - `Journal-format polish`: normalize figure/table/supplement callouts, legend labels, headings, statements, and reference style against `journal_format_profile`.
 - `Paragraph-plan polish`: keep sections within planned natural paragraph counts and repair overlong Results subsections.
-- `Word-format polish`: preserve or flag DOCX line numbering, black 12 pt text, 1.5 spacing, justified body text, and left-aligned headings.
+- `Word-format polish`: preserve or flag DOCX line numbering, Times New Roman, black 12 pt text, 1.5 spacing, justified body text, and left-aligned headings.
 
 Ask for target journal, section type, and word limit only when needed.
 

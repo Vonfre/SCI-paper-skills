@@ -412,7 +412,7 @@ Complete manuscript assembly:
 - Included sections: title, authors, abstract/摘要, significance statement/重要性说明, keywords/关键词, Introduction/引言, Results/结果, Discussion/讨论, Materials and Methods/材料与方法, Data Availability/数据可用性, Funding/经费资助, Author Contributions/作者贡献, Conflict Of Interest/利益冲突, Acknowledgements/致谢, Figure Legends/图注, Supplementary Table/补充表, and References/参考文献.
 - Citation status: background references included and DOI redirects checked for the demo.
 - Paragraph-plan status: pass; Introduction, Results subsections, and Discussion follow the planned natural paragraph counts.
-- Word/DOCX compliance: pass; line numbers, all-black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings checked.
+- Word/DOCX compliance: pass; line numbers, Times New Roman, all-black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings checked.
 - Final readiness: complete bilingual synthetic demo manuscripts with Markdown and DOCX outputs.
 
 Real-project caution:

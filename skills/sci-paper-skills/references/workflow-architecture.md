@@ -114,7 +114,7 @@ Gate 9: final text is submission-aware
 - Meaning is preserved.
 - References, statements, figures, supplements, and journal requirements are checked.
 - Submission files and declarations match the target journal.
-- Word/DOCX deliverables have continuous line numbering, black 12 pt text, 1.5 spacing, justified body text, and left-aligned headings, unless a journal exception is recorded.
+- Word/DOCX deliverables have continuous line numbering, Times New Roman, black 12 pt text, 1.5 spacing, justified body text, and left-aligned headings, unless a journal exception is recorded.
 
 ## Artifact Contracts
 

@@ -117,7 +117,7 @@ Use these modules in order unless the user explicitly asks for one stage:
 - If the user does not have a writing logic, propose 2-4 structures using comparable papers and available evidence.
 - If the user provides raw data, analysis outputs, notebooks, statistical tables, plots, or source data, first decide whether the current task needs adjacent analysis skills such as exploratory data analysis, statistical analysis, scientific visualization, or data-availability planning. Import only their final artifacts into the manuscript state.
 - If the user provides PDFs/model papers, analyze structure, rhetorical moves, citation behavior, exact figure/table/supplement callout patterns, and claim strength before drafting.
-- If the user asks for Word/DOCX output, read `references/word-manuscript-format.md`, add `document_output.word_format_profile`, and plan line numbering, all-black text, 12 pt font, 1.5 spacing, justified body paragraphs, and left-aligned headings before producing the file.
+- If the user asks for Word/DOCX output, read `references/word-manuscript-format.md`, add `document_output.word_format_profile`, and plan line numbering, Times New Roman font, all-black text, 12 pt size, 1.5 spacing, justified body paragraphs, and left-aligned headings before producing the file.
 - If the user asks for paragraph planning or full drafting, use model papers or the local bamboo-reference baseline in `references/word-manuscript-format.md`; Results subsections should default to 2-3 natural paragraphs unless the target journal or model papers justify a different count.
 - If the user is inexperienced, avoid large checklists; provide the next 30-minute task and a small template.
 - If the user asks for direct drafting too early, explain the missing gate and draft only with visible placeholders.
@@ -144,7 +144,7 @@ Use these modules in order unless the user explicitly asks for one stage:
 9. Paragraph plan controlled: major sections and Results subsections have target paragraph counts, paragraph jobs, and a model-paper or fallback basis.
 10. Reviewer risk handled: blocking objections are fixed or assigned.
 11. Draft traceable: text links to figures, evidence, citations, placeholders, paragraph plan, and journal-format rules.
-12. Word output controlled: DOCX outputs have continuous line numbers, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings, unless a target-journal exception is recorded.
+12. Word output controlled: DOCX outputs have continuous line numbers, Times New Roman, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings, unless a target-journal exception is recorded.
 13. Submission controlled: references, statements, figures, supplements, data/code availability, document formatting, and journal rules are checked.
 
 ## Tight Workflow Rules

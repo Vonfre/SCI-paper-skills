@@ -65,6 +65,15 @@ if [[ ! -x "$ROOT_DIR/skills/sci-paper-skills/scripts/enforce_manuscript_docx_fo
   fail "DOCX format enforcement script must be executable"
 fi
 
+for docx_file in \
+  examples/zero-to-one-sci-manuscript/complete-manuscript.docx \
+  examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.docx
+do
+  if ! "$ROOT_DIR/skills/sci-paper-skills/scripts/enforce_manuscript_docx_format.py" "$ROOT_DIR/$docx_file" --check >/dev/null; then
+    fail "DOCX format check failed: $docx_file"
+  fi
+done
+
 manifest_declared_files="$(awk '
   /^  github_actions: / {print $2}
   /^  analysis_figure_integration: / {print $2}

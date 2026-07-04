@@ -2,8 +2,8 @@
 """Enforce SCI manuscript DOCX formatting in OOXML.
 
 The script is intentionally narrow: it standardizes line numbering,
-font size, text color, line spacing, and paragraph alignment for a
-manuscript document without rewriting document content.
+font family, font size, text color, line spacing, and paragraph
+alignment for a manuscript document without rewriting document content.
 """
 
 from __future__ import annotations
@@ -18,6 +18,8 @@ from xml.etree import ElementTree as ET
 
 W_NS = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 ET.register_namespace("w", W_NS)
+FONT_ATTRS = ("ascii", "hAnsi", "eastAsia", "cs")
+FONT_THEME_ATTRS = ("asciiTheme", "hAnsiTheme", "eastAsiaTheme", "cstheme", "csTheme")
 
 
 def qn(local: str) -> str:
@@ -168,7 +170,13 @@ def paragraph_style_id(paragraph: ET.Element) -> str | None:
     return wval(pstyle) if pstyle is not None else None
 
 
-def apply_run_format(rpr: ET.Element, color: str, size_half_points: str) -> None:
+def apply_run_format(rpr: ET.Element, font_family: str, color: str, size_half_points: str) -> None:
+    rfonts = ensure_child(rpr, "rFonts", RPR_ORDER)
+    for attr in FONT_ATTRS:
+        rfonts.set(qn(attr), font_family)
+    for attr in FONT_THEME_ATTRS:
+        rfonts.attrib.pop(qn(attr), None)
+
     color_el = ensure_child(rpr, "color", RPR_ORDER)
     set_wval(color_el, color)
     sz = ensure_child(rpr, "sz", RPR_ORDER)
@@ -203,14 +211,14 @@ def apply_section_format(sect_pr: ET.Element, count_by: str, restart: str) -> No
     ln_num.set(qn("restart"), restart)
 
 
-def apply_styles(root: ET.Element, color: str, size_half_points: str, line_twips: str) -> None:
+def apply_styles(root: ET.Element, font_family: str, color: str, size_half_points: str, line_twips: str) -> None:
     doc_defaults = root.find(qn("docDefaults"))
     if doc_defaults is None:
         doc_defaults = ET.Element(qn("docDefaults"))
         root.insert(0, doc_defaults)
 
     rpr_default = ensure_child(doc_defaults, "rPrDefault")
-    apply_run_format(ensure_child(rpr_default, "rPr"), color, size_half_points)
+    apply_run_format(ensure_child(rpr_default, "rPr"), font_family, color, size_half_points)
 
     ppr_default = ensure_child(doc_defaults, "pPrDefault")
     apply_paragraph_format(ensure_child(ppr_default, "pPr"), "both", line_twips)
@@ -219,7 +227,7 @@ def apply_styles(root: ET.Element, color: str, size_half_points: str, line_twips
         style_id = style.get(qn("styleId"))
         style_type = style.get(qn("type"))
         if style_type in {None, "paragraph", "character"}:
-            apply_run_format(ensure_child(style, "rPr"), color, size_half_points)
+            apply_run_format(ensure_child(style, "rPr"), font_family, color, size_half_points)
         if style_type in {None, "paragraph"}:
             alignment = "left" if style_is_heading(style_id) else "both"
             apply_paragraph_format(ensure_child(style, "pPr"), alignment, line_twips)
@@ -228,17 +236,17 @@ def apply_styles(root: ET.Element, color: str, size_half_points: str, line_twips
     # variants. Normalize those text properties without treating borders or
     # shading colors as manuscript text.
     for rpr in root.iter(qn("rPr")):
-        apply_run_format(rpr, color, size_half_points)
+        apply_run_format(rpr, font_family, color, size_half_points)
 
 
-def apply_document_part(root: ET.Element, color: str, size_half_points: str, line_twips: str, count_by: str, restart: str) -> None:
+def apply_document_part(root: ET.Element, font_family: str, color: str, size_half_points: str, line_twips: str, count_by: str, restart: str) -> None:
     for paragraph in root.iter(qn("p")):
         ppr = ensure_ppr(paragraph)
         alignment = "left" if style_is_heading(paragraph_style_id(paragraph)) else "both"
         apply_paragraph_format(ppr, alignment, line_twips)
 
     for run in root.iter(qn("r")):
-        apply_run_format(ensure_rpr(run), color, size_half_points)
+        apply_run_format(ensure_rpr(run), font_family, color, size_half_points)
 
     for sect_pr in root.iter(qn("sectPr")):
         apply_section_format(sect_pr, count_by, restart)
@@ -260,7 +268,7 @@ def xml_targets(names: list[str]) -> list[str]:
     return targets
 
 
-def enforce_docx(input_path: Path, output_path: Path, color: str, size_half_points: str, line_twips: str, count_by: str, restart: str) -> None:
+def enforce_docx(input_path: Path, output_path: Path, font_family: str, color: str, size_half_points: str, line_twips: str, count_by: str, restart: str) -> None:
     with zipfile.ZipFile(input_path, "r") as zin:
         infos = zin.infolist()
         xml_names = set(xml_targets([info.filename for info in infos]))
@@ -273,9 +281,9 @@ def enforce_docx(input_path: Path, output_path: Path, color: str, size_half_poin
                     if info.filename in xml_names:
                         root = ET.fromstring(data)
                         if info.filename == "word/styles.xml":
-                            apply_styles(root, color, size_half_points, line_twips)
+                            apply_styles(root, font_family, color, size_half_points, line_twips)
                         else:
-                            apply_document_part(root, color, size_half_points, line_twips, count_by, restart)
+                            apply_document_part(root, font_family, color, size_half_points, line_twips, count_by, restart)
                         data = ET.tostring(root, encoding="utf-8", xml_declaration=True)
                     zout.writestr(info, data)
             output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -287,7 +295,24 @@ def enforce_docx(input_path: Path, output_path: Path, color: str, size_half_poin
             tmp_path.unlink(missing_ok=True)
 
 
-def collect_check_errors(docx_path: Path, color: str, size_half_points: str, line_twips: str, count_by: str, restart: str) -> list[str]:
+def font_family_errors(rpr: ET.Element | None, font_family: str, context: str) -> list[str]:
+    if rpr is None:
+        return [f"{context}: run properties are missing"]
+    rfonts = rpr.find(qn("rFonts"))
+    if rfonts is None:
+        return [f"{context}: run font family is not {font_family}"]
+
+    errors = []
+    for attr in FONT_ATTRS:
+        if rfonts.get(qn(attr)) != font_family:
+            errors.append(f"{context}: run font {attr} is not {font_family}")
+    for attr in FONT_THEME_ATTRS:
+        if rfonts.get(qn(attr)) is not None:
+            errors.append(f"{context}: run font theme {attr} should be removed in favor of {font_family}")
+    return errors
+
+
+def collect_check_errors(docx_path: Path, font_family: str, color: str, size_half_points: str, line_twips: str, count_by: str, restart: str) -> list[str]:
     errors: list[str] = []
     with zipfile.ZipFile(docx_path, "r") as zf:
         for name in xml_targets(zf.namelist()):
@@ -311,6 +336,7 @@ def collect_check_errors(docx_path: Path, color: str, size_half_points: str, lin
                         errors.append(f"{name}: paragraph alignment is not {expected_jc}")
                 for run in root.iter(qn("r")):
                     rpr = run.find(qn("rPr"))
+                    errors.extend(font_family_errors(rpr, font_family, name))
                     color_el = rpr.find(qn("color")) if rpr is not None else None
                     sz = rpr.find(qn("sz")) if rpr is not None else None
                     sz_cs = rpr.find(qn("szCs")) if rpr is not None else None
@@ -320,6 +346,7 @@ def collect_check_errors(docx_path: Path, color: str, size_half_points: str, lin
                         errors.append(f"{name}: run size is not {size_half_points} half-points")
             else:
                 for rpr in root.iter(qn("rPr")):
+                    errors.extend(font_family_errors(rpr, font_family, name))
                     color_el = rpr.find(qn("color"))
                     sz = rpr.find(qn("sz"))
                     sz_cs = rpr.find(qn("szCs"))
@@ -337,6 +364,7 @@ def main() -> int:
     parser.add_argument("input_docx", type=Path)
     parser.add_argument("output_docx", type=Path, nargs="?", help="Output DOCX. Omit with --check.")
     parser.add_argument("--check", action="store_true", help="Check formatting without writing.")
+    parser.add_argument("--font-family", default="Times New Roman", help="Font family for all manuscript text.")
     parser.add_argument("--color", default="000000", help="OOXML text color, default black.")
     parser.add_argument("--size-pt", type=float, default=12.0, help="Font size in points.")
     parser.add_argument("--line-spacing", type=float, default=1.5, help="Line spacing multiplier.")
@@ -354,7 +382,7 @@ def main() -> int:
     line_twips = str(int(round(240 * args.line_spacing)))
 
     if args.check:
-        errors = collect_check_errors(args.input_docx, color, size_half_points, line_twips, args.line_count_by, args.line_restart)
+        errors = collect_check_errors(args.input_docx, args.font_family, color, size_half_points, line_twips, args.line_count_by, args.line_restart)
         if errors:
             for error in errors[:50]:
                 print(error, file=sys.stderr)
@@ -365,7 +393,7 @@ def main() -> int:
         return 0
 
     assert args.output_docx is not None
-    enforce_docx(args.input_docx, args.output_docx, color, size_half_points, line_twips, args.line_count_by, args.line_restart)
+    enforce_docx(args.input_docx, args.output_docx, args.font_family, color, size_half_points, line_twips, args.line_count_by, args.line_restart)
     print(f"Wrote formatted DOCX: {args.output_docx}")
     return 0
 

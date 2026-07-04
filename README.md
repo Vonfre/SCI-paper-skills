@@ -1,6 +1,6 @@
 # SCI-paper-skills
 
-[![Version](https://img.shields.io/badge/version-0.6.9-0f766e)](manifest.yaml)
+[![Version](https://img.shields.io/badge/version-0.6.10-0f766e)](manifest.yaml)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-15-7c3aed)](skills)
 
@@ -44,7 +44,7 @@
 - 组织 figure/storyline，让 Results 不只是罗列数据，而是形成证据链。
 - 根据目标期刊和范文规划各部分自然段数量，Results 小节默认控制在 2-3 段。
 - 按目标期刊检查图表、附表、补充材料、图注、表题和引用格式。
-- 生成或检查 Word/DOCX manuscript：连续行号、全黑文字、12 号字体、1.5 倍行距、正文两端对齐、标题左对齐。
+- 生成或检查 Word/DOCX manuscript：连续行号、Times New Roman 字体、全黑文字、12 号字号、1.5 倍行距、正文两端对齐、标题左对齐。
 - 检查统计表述、效应量/不确定性、重复单位、图件导出质量、source data 和数据/代码可用性风险。
 - 起草摘要、引言、结果、讨论、方法、图注、投稿信和返修信。
 - 控制 claim strength，避免过度机制化、过度新颖性或无证据表达。
@@ -94,7 +94,7 @@ $sci-paper-skills
 2. 结果必须以证据为核心，包含对照、统计、重复、图表引用和必要的过渡句。
 3. 讨论必须从结果出发，扩展到既有文献、机制可能性、替代解释、局限和未来实验。
 4. 材料与方法必须足够可复现，说明材料、处理、仪器/软件、重复、排除规则、定量和统计模型。
-5. Word 输出必须通过 DOCX 格式检查，包括行号、字体颜色/字号、行距和段落对齐。
+5. Word 输出必须通过 DOCX 格式检查，包括行号、字体族、字体颜色/字号、行距和段落对齐。
 
 ## 仓库结构
 

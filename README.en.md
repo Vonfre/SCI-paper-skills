@@ -1,6 +1,6 @@
 # SCI-paper-skills
 
-[![Version](https://img.shields.io/badge/version-0.6.9-0f766e)](manifest.yaml)
+[![Version](https://img.shields.io/badge/version-0.6.10-0f766e)](manifest.yaml)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-15-7c3aed)](skills)
 
@@ -44,7 +44,7 @@ This skill pack is designed for researchers who already have research materials 
 - Arrange figures and storyline so the Results section becomes an evidence chain instead of a data list.
 - Plan natural paragraph counts from target-journal/model-paper patterns, with ordinary Results subsections defaulting to 2-3 paragraphs.
 - Check figures, tables, supplementary materials, legends, titles, and references against target-journal expectations.
-- Generate or check Word/DOCX manuscripts with continuous line numbers, black text, 12 pt font, 1.5 spacing, justified body paragraphs, and left-aligned headings.
+- Generate or check Word/DOCX manuscripts with continuous line numbers, Times New Roman font, black text, 12 pt size, 1.5 spacing, justified body paragraphs, and left-aligned headings.
 - Check statistical wording, effect size/uncertainty, replicate units, figure export quality, source data, and data/code availability risks.
 - Draft abstracts, introductions, results, discussions, methods, figure legends, cover letters, and revision letters.
 - Control claim strength to avoid over-mechanistic, over-novel, or unsupported statements.
@@ -94,7 +94,7 @@ The example manuscript includes an abstract, introduction, results, discussion, 
 2. The Results section must be evidence-centered, with controls, statistics, replication, figure calls, and necessary transition sentences.
 3. The Discussion must start from the results and expand to existing literature, mechanistic possibilities, alternative explanations, limitations, and future experiments.
 4. Materials and Methods must be reproducible enough to describe materials, treatments, instruments/software, replication, exclusion rules, quantification, and statistical models.
-5. Word outputs must pass DOCX formatting checks for line numbers, font color/size, spacing, and paragraph alignment.
+5. Word outputs must pass DOCX formatting checks for line numbers, font family, font color/size, spacing, and paragraph alignment.
 
 ## Repository Structure
 

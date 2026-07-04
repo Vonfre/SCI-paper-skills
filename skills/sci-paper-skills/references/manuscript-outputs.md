@@ -62,7 +62,7 @@ For a full journal-specific writing engagement, produce these in order:
 - Preserve the user's scientific contribution; do not overfit to superficial style.
 - Use `journal_landscape.journal_format_profile` when inserting figure, table, supplementary-material, legend, heading, reference, and back-matter text.
 - Use `storyline.paragraph_plan` before drafting major sections; if absent, create one rather than writing a full section with uncontrolled paragraph counts.
-- Use `document_output.word_format_profile` for DOCX deliverables and verify line numbering, text color, font size, spacing, and alignment before calling a file final.
+- Use `document_output.word_format_profile` for DOCX deliverables and verify line numbering, font family, text color, font size, spacing, and alignment before calling a file final.
 - For Chinese-to-English work, produce idiomatic scientific English rather than literal translation.
 
 ## Quality Bar
@@ -74,7 +74,7 @@ A manuscript is not full-draft quality until it passes five gates:
 3. Discussion: result-anchored expansion into prior work, mechanism, alternative explanations, implications, limitations, and future experiments.
 4. Methods: reproducible procedural detail, including materials, treatments, replicates, instruments/software, quantification, statistics, and data/code availability.
 5. Journal format: in-text callouts, figure legends, table titles, supplementary-material naming, headings, references, and declarations match the target-journal profile or are explicitly marked unknown.
-6. Word format: DOCX outputs have continuous line numbers, black 12 pt text, 1.5 line spacing, justified body text, and left-aligned headings, unless a target-journal exception is recorded.
+6. Word format: DOCX outputs have continuous line numbers, Times New Roman, black 12 pt text, 1.5 line spacing, justified body text, and left-aligned headings, unless a target-journal exception is recorded.
 
 If one gate fails, produce a repair plan or placeholders instead of presenting the manuscript as complete.
 
@@ -180,6 +180,7 @@ document_output:
   requested_formats: ["docx"]
   word_format_profile:
     line_numbering: "continuous"
+    font_family: "Times New Roman"
     text_color: "000000"
     font_size_pt: 12
     line_spacing: 1.5
@@ -188,7 +189,7 @@ document_output:
     validation_status: "not checked | pass | needs repair"
 ```
 
-After creating the DOCX, run `scripts/enforce_manuscript_docx_format.py` and its `--check` mode unless another validated DOCX tool has already proved the same conditions.
+After creating the DOCX, run `scripts/enforce_manuscript_docx_format.py` and its `--check` mode unless another validated DOCX tool has already proved the same conditions, including Times New Roman font family.
 
 ## Journal-Format Strategy
 

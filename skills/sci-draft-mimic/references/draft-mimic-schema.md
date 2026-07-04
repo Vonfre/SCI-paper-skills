@@ -86,6 +86,7 @@
 | Element | Required | Applied | Status | Follow-Up |
 |---|---|---|---|---|
 | Line numbering | continuous | | pass / not checked / needs repair | |
+| Font family | Times New Roman | | pass / not checked / needs repair | |
 | Text color | black `000000` | | pass / not checked / needs repair | |
 | Font size | 12 pt | | pass / not checked / needs repair | |
 | Body alignment | justified | | pass / not checked / needs repair | |
@@ -102,4 +103,4 @@
 - Do not write full major sections until paragraph counts and paragraph jobs are planned.
 - Keep ordinary Results subsections to 2-3 natural paragraphs unless the paragraph plan records a justified exception.
 - Do not mix figure/table/supplement callout styles; use the target journal profile or mark the rule as unresolved.
-- Do not call a DOCX final until Word formatting is applied and checked.
+- Do not call a DOCX final until Word formatting, including Times New Roman font family, is applied and checked.

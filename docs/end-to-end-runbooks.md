@@ -56,4 +56,4 @@ Use when the user asks for a `.docx` manuscript, line numbers, or Word-style for
 5. Run the same script with `--check`.
 6. `sci-submission-revision`: record the Word/DOCX compliance result before calling the file ready.
 
-Default Word profile: continuous line numbering, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings.
+Default Word profile: continuous line numbering, Times New Roman, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings.
