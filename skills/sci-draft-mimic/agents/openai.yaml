@@ -1,4 +1,4 @@
 interface:
   display_name: "SCI Draft Mimic"
-  short_description: "Draft with target article and format patterns"
-  default_prompt: "Use $sci-draft-mimic to draft my manuscript by imitating target-journal article structure, style, and figure/table callout format."
+  short_description: "Draft with model-paper and DOCX patterns"
+  default_prompt: "Use $sci-draft-mimic to draft my manuscript by imitating target-journal article structure, paragraph rhythm, style, figure/table callout format, and Word/DOCX requirements."

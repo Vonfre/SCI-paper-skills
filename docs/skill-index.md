@@ -11,13 +11,13 @@ Use `sci-paper-skills` as the orchestrator unless the user explicitly requests a
 | 4 | `sci-result-to-claim` | Figures, tables, data, cases, or result blocks need defensible claims | Result-to-claim matrix | `sci-core-story-finder` |
 | 5 | `sci-core-story-finder` | Several manuscript angles are possible | Story decision memo | `sci-figure-story-builder` |
 | 6 | `sci-figure-story-builder` | Main/supplement choices and result order are unclear | Figure story map | `sci-storyline-planner` |
-| 7 | `sci-storyline-planner` | The manuscript needs structure, section order, or alternative logic | Storyline plan | `sci-reviewer-simulator` |
+| 7 | `sci-storyline-planner` | The manuscript needs structure, section order, paragraph counts, or alternative logic | Storyline and paragraph plan | `sci-reviewer-simulator` |
 | 8 | `sci-reviewer-simulator` | Editor or reviewer objections need to be predicted before drafting/submission | Reviewer risk report | Repair blocker or `sci-draft-mimic` |
-| 9 | `sci-draft-mimic` | Model papers or target-journal patterns and formats should guide drafting | Style brief, format notes, and draft package | `sci-paragraph-coach` |
-| 10 | `sci-paragraph-coach` | A specific paragraph, section opening, figure legend, or cover-letter paragraph needs help | Paragraph scaffold and coached text | `sci-language-polisher` |
-| 11 | `sci-language-polisher` | The meaning is stable and expression or journal format needs polishing | Polished text, format corrections, and claim notes | `sci-citation-control` |
+| 9 | `sci-draft-mimic` | Model papers or target-journal patterns, paragraph rhythms, and formats should guide drafting | Style brief, paragraph notes, format notes, and draft package | `sci-paragraph-coach` |
+| 10 | `sci-paragraph-coach` | A specific paragraph, paragraph count, section opening, figure legend, or cover-letter paragraph needs help | Paragraph scaffold, count note, and coached text | `sci-language-polisher` |
+| 11 | `sci-language-polisher` | The meaning is stable and expression, paragraph discipline, or journal format needs polishing | Polished text, paragraph notes, format corrections, and claim notes | `sci-citation-control` |
 | 12 | `sci-citation-control` | References, citation placement, metadata, unsupported claims, or format callouts need auditing | Citation and format audit | `sci-submission-revision` |
-| 13 | `sci-submission-revision` | Files, cover letter, declarations, format compliance, reviewer response, or revision strategy are needed | Submission/revision package | Final check or resubmission |
+| 13 | `sci-submission-revision` | Files, Word/DOCX checks, cover letter, declarations, format compliance, reviewer response, or revision strategy are needed | Submission/revision package | Final check or resubmission |
 
 ## Trigger Examples
 
@@ -31,8 +31,10 @@ Use `sci-paper-skills` as the orchestrator unless the user explicitly requests a
 - "How should I arrange these figures?" -> `sci-figure-story-builder`.
 - "Can this figure survive submission?" -> `sci-figure-story-builder` plus figure/source-data readiness checks.
 - "Give me two manuscript structures" -> `sci-storyline-planner`.
+- "Plan the paragraph counts for each section" -> `sci-storyline-planner`.
 - "What will reviewers attack?" -> `sci-reviewer-simulator`.
 - "Draft an abstract like these papers" -> `sci-draft-mimic`.
+- "Generate a Word manuscript with line numbers" -> `sci-draft-mimic`, then `sci-submission-revision`.
 - "Help me write this Discussion paragraph" -> `sci-paragraph-coach`.
 - "Polish this SCI English" -> `sci-language-polisher`.
 - "Check whether my citations support each claim" -> `sci-citation-control`.
@@ -51,11 +53,12 @@ When two modules are plausible, route to the earliest unresolved gate:
 7. Story selection.
 8. Figure narrative and source-data readiness.
 9. Manuscript structure.
-10. Reviewer risk.
-11. Drafting and paragraph work.
-12. Language polishing.
-13. Citation audit, including dataset/software citations.
-14. Submission or revision.
+10. Paragraph plan and Word/DOCX output requirements when requested.
+11. Reviewer risk.
+12. Drafting and paragraph work.
+13. Language polishing.
+14. Citation audit, including dataset/software citations.
+15. Submission or revision.
 
 ## Handoff Discipline
 

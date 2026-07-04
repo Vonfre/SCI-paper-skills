@@ -1,6 +1,6 @@
 # SCI-paper-skills
 
-[![Version](https://img.shields.io/badge/version-0.6.7-0f766e)](manifest.yaml)
+[![Version](https://img.shields.io/badge/version-0.6.8-0f766e)](manifest.yaml)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-15-7c3aed)](skills)
 
@@ -42,7 +42,9 @@
 - 将原始数据、统计分析、图件源数据和代码/数据可用性接入论文证据链。
 - 根据文献建立背景、科学问题、研究缺口和讨论边界。
 - 组织 figure/storyline，让 Results 不只是罗列数据，而是形成证据链。
+- 根据目标期刊和范文规划各部分自然段数量，Results 小节默认控制在 2-3 段。
 - 按目标期刊检查图表、附表、补充材料、图注、表题和引用格式。
+- 生成或检查 Word/DOCX manuscript：连续行号、全黑文字、12 号字体、1.5 倍行距、正文两端对齐、标题左对齐。
 - 检查统计表述、效应量/不确定性、重复单位、图件导出质量、source data 和数据/代码可用性风险。
 - 起草摘要、引言、结果、讨论、方法、图注、投稿信和返修信。
 - 控制 claim strength，避免过度机制化、过度新颖性或无证据表达。
@@ -65,13 +67,13 @@ $sci-paper-skills
 | 4 | `sci-result-to-claim` | 把结果转换为可防守的论文论点 |
 | 5 | `sci-core-story-finder` | 从多个可能结论中确定中心故事 |
 | 6 | `sci-figure-story-builder` | 安排图表顺序、主文/补充材料和图-论点关系 |
-| 7 | `sci-storyline-planner` | 设计论文结构和 Results/Discussion 逻辑 |
+| 7 | `sci-storyline-planner` | 设计论文结构、自然段数量和 Results/Discussion 逻辑 |
 | 8 | `sci-reviewer-simulator` | 模拟编辑和审稿人风险，提前修补弱点 |
-| 9 | `sci-draft-mimic` | 参考目标期刊范文的结构和修辞功能起草正文 |
-| 10 | `sci-paragraph-coach` | 写单个段落、图注、摘要或 cover letter 片段 |
-| 11 | `sci-language-polisher` | 在不改变科学含义的前提下润色中英文表达 |
+| 9 | `sci-draft-mimic` | 参考目标期刊范文的结构、段落节奏和修辞功能起草正文 |
+| 10 | `sci-paragraph-coach` | 写单个段落、图注、摘要或 cover letter 片段，并控制段落角色 |
+| 11 | `sci-language-polisher` | 在不改变科学含义的前提下润色中英文表达和段落纪律 |
 | 12 | `sci-citation-control` | 检查引用位置、参考文献格式和 claim-evidence 对齐 |
-| 13 | `sci-submission-revision` | 准备投稿材料、返修策略和逐点回复 |
+| 13 | `sci-submission-revision` | 准备投稿材料、检查 Word/DOCX/期刊格式、返修策略和逐点回复 |
 
 ## 完整示例
 
@@ -84,12 +86,13 @@ $sci-paper-skills
 | [manuscript-state-example.yaml](examples/manuscript-state-example.yaml) | 示例状态文件 |
 | [final-package.md](examples/zero-to-one-sci-manuscript/final-package.md) | 最终打包说明 |
 
-示例论文包含摘要、引言、结果、讨论、材料与方法、数据可用性、作者贡献、图注、补充表和参考文献。它重点展示四个质量门槛：
+示例论文包含摘要、引言、结果、讨论、材料与方法、数据可用性、作者贡献、图注、补充表和参考文献。它重点展示五个质量门槛：
 
 1. 引言必须由文献支撑，从背景、已知机制、未解决问题推进到科学问题。
 2. 结果必须以证据为核心，包含对照、统计、重复、图表引用和必要的过渡句。
 3. 讨论必须从结果出发，扩展到既有文献、机制可能性、替代解释、局限和未来实验。
 4. 材料与方法必须足够可复现，说明材料、处理、仪器/软件、重复、排除规则、定量和统计模型。
+5. Word 输出必须通过 DOCX 格式检查，包括行号、字体颜色/字号、行距和段落对齐。
 
 ## 仓库结构
 
@@ -135,6 +138,7 @@ bash scripts/validate_skill_pack.sh
 - 先证据，再论点。
 - 先确认分析和图件能支撑结论，再进入结果写作。
 - 先结构，再润色。
+- 先规划自然段数量，再写完整章节。
 - 能证明什么就写什么，不能证明的内容用边界、统计/图件风险和未来实验处理。
 - 不编造数据、参考文献、审批信息、登录号、方法、统计结果或期刊要求。
 - 模仿范文的结构和功能，不复制有辨识度的原文表达。

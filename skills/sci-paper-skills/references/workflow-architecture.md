@@ -19,13 +19,13 @@ The workflow is stateful. Every module reads and updates `manuscript_state`, usi
 | 4 | `sci-result-to-claim` | What can the user's results actually claim? | Result-to-claim matrix |
 | 5 | `sci-core-story-finder` | What is the paper's central story? | Story decision memo |
 | 6 | `sci-figure-story-builder` | How should figures/cases teach the story? | Figure story map |
-| 7 | `sci-storyline-planner` | What is the best manuscript logic? | Storyline plan |
+| 7 | `sci-storyline-planner` | What is the best manuscript logic and paragraph budget? | Storyline and paragraph plan |
 | 8 | `sci-reviewer-simulator` | What will editors/reviewers challenge? | Reviewer risk report |
-| 9 | `sci-draft-mimic` | How should the first draft imitate target/model papers? | Draft package |
+| 9 | `sci-draft-mimic` | How should the first draft imitate target/model papers and planned paragraph counts? | Draft package |
 | 10 | `sci-paragraph-coach` | How should each paragraph be built? | Paragraph coaching block |
 | 11 | `sci-language-polisher` | How should expression be polished without changing meaning? | Polish report |
 | 12 | `sci-citation-control` | Are claims, evidence, and citations aligned? | Citation audit |
-| 13 | `sci-submission-revision` | Is the manuscript ready for submission or revision? | Submission/rebuttal package |
+| 13 | `sci-submission-revision` | Is the manuscript ready for submission, revision, or DOCX delivery? | Submission/rebuttal package |
 
 ## Three User Scenarios
 
@@ -106,6 +106,7 @@ Gate 7: reviewer risk is handled
 
 Gate 8: draft is traceable
 - Draft text follows model-paper structure without copying language.
+- Major sections follow `storyline.paragraph_plan`, including 2-3 natural paragraphs for ordinary Results subsections unless justified.
 - Missing facts and citations are visible.
 - Each result claim points to a figure/table/supplement or user data.
 
@@ -113,6 +114,7 @@ Gate 9: final text is submission-aware
 - Meaning is preserved.
 - References, statements, figures, supplements, and journal requirements are checked.
 - Submission files and declarations match the target journal.
+- Word/DOCX deliverables have continuous line numbering, black 12 pt text, 1.5 spacing, justified body text, and left-aligned headings, unless a journal exception is recorded.
 
 ## Artifact Contracts
 
@@ -125,13 +127,13 @@ Every stage should leave a structured output the next stage can reuse:
 - Result-to-claim matrix: defensible claims, unsafe claims, evidence gaps, safe wording.
 - Story memo: recommended central story, backup story, manuscript boundary.
 - Figure story map: main/supplement/cut decisions, result transitions, missing panels.
-- Storyline plan: recommended section order, alternative plans, drafting brief.
+- Storyline plan: recommended section order, alternative plans, paragraph plan, drafting brief.
 - Reviewer report: predicted objections, severity, minimum fixes, claim rewrites.
-- Draft package: model-paper style brief, draft text, placeholders, imitation notes.
+- Draft package: model-paper style brief, paragraph-plan adherence, draft text, placeholders, imitation notes, Word output notes when requested.
 - Paragraph coach: paragraph purpose, sentence scaffold, example, draft feedback.
 - Polish report: polished text, claim-strength changes, unresolved risks.
 - Citation audit: claim-reference placement, verification, style and metadata risks.
-- Submission package: file checklist, cover letter, declarations, rebuttal matrix when needed.
+- Submission package: file checklist, cover letter, declarations, paragraph/Word format compliance, rebuttal matrix when needed.
 
 For required upstream and downstream fields, follow `handoff-contracts.md`. For the shared state shape, follow `manuscript-state-schema.md`.
 

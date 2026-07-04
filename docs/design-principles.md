@@ -5,7 +5,7 @@ This repository treats manuscript writing as a staged evidence-control workflow,
 ## Shared Standards
 
 1. Diagnose before drafting.
-2. Keep journal fit, journal-specific formatting, literature support, analysis provenance, statistical credibility, claim strength, figure logic, citation control, data/code availability, and submission compliance as separate checks.
+2. Keep journal fit, journal-specific formatting, literature support, analysis provenance, statistical credibility, claim strength, figure logic, paragraph planning, Word/DOCX formatting, citation control, data/code availability, and submission compliance as separate checks.
 3. Ask only the next useful questions. Prefer three or fewer questions when context is missing.
 4. Produce a named handoff artifact at every stage.
 5. Read and update `manuscript_state` for every multi-stage workflow.
@@ -29,7 +29,9 @@ Full drafting should not begin until these gates are at least provisionally hand
 - Results are converted into defensible claims.
 - One central scientific story is selected.
 - Figures, tables, and supplements have a reader-facing order plus source-data, statistics, integrity, and export notes when submission-facing.
+- A paragraph plan exists for major sections, with Results subsections normally limited to 2-3 natural paragraphs.
 - Citation needs are visible.
+- Word/DOCX requirements are known when a manuscript file is requested: continuous line numbering, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings.
 - Data/code availability and dataset/software citation needs are visible when the manuscript is near submission.
 
 If a user asks for drafting before these gates are ready, create a skeleton or partial draft with visible placeholders instead of inventing a complete manuscript.
@@ -67,6 +69,7 @@ Model papers are used to learn:
 - Abstract move order.
 - Introduction funnel shape.
 - Results subsection rhythm.
+- Natural paragraph counts per section and Results subsection.
 - Figure citation behavior.
 - Figure/table/supplement callout format.
 - Discussion limitation style.
@@ -94,3 +97,4 @@ When a project includes raw data, statistical outputs, analysis code, plots, or 
 - treat p-values alone as insufficient for strong claims; require effect/estimate, uncertainty, sample size, replicate unit, and diagnostic status where relevant;
 - make every main figure defend one core conclusion, with each panel linked to a claim and source data;
 - block submission-readiness when source data, code, dataset citations, or data-availability routes remain unresolved.
+- block Word/DOCX readiness when line numbering, text color, font size, line spacing, body alignment, or heading alignment has not been checked.

@@ -12,11 +12,11 @@ Use when the user has data, figures, or result bullets but cannot turn them into
 4. `sci-literature-evidence`: build source ledger `S#` for support, conflict, and novelty boundaries.
 5. `sci-core-story-finder`: choose one story using claim IDs.
 6. `sci-figure-story-builder`: assign figure IDs `F#` and map figures to claims.
-7. `sci-storyline-planner`: create section IDs `SEC#` and a drafting brief.
+7. `sci-storyline-planner`: create section IDs `SEC#`, paragraph plan, and a drafting brief.
 8. `sci-reviewer-simulator`: repair blocking objections before drafting.
 9. `sci-draft-mimic`: draft only sections whose claim/figure/source links are known.
 
-Do not begin a confident full draft until `claim_registry`, `story`, and `figure_registry` exist.
+Do not begin a confident full draft until `claim_registry`, `story`, `figure_registry`, and `storyline.paragraph_plan` exist.
 
 ## Runbook 2: Target Journal Known, Story Weak
 
@@ -27,7 +27,7 @@ Use when the user says "I want to submit to Journal X" but the manuscript angle 
 3. `sci-literature-evidence`: identify journal-shaped gaps and source ledger `S#`.
 4. `sci-result-to-claim`: normalize available results into claim IDs `C#`.
 5. `sci-core-story-finder`: choose the strongest journal-fit story.
-6. `sci-storyline-planner`: create a structure that matches the journal's article pattern and preserves exact figure/table/supplement callout rules for drafting.
+6. `sci-storyline-planner`: create a structure and paragraph plan that match the journal's article pattern and preserve exact figure/table/supplement callout rules for drafting.
 7. `sci-reviewer-simulator`: test fit, novelty, evidence depth, and overclaiming.
 
 If journal fit is weak, either lower the claim/story strength or route to a different journal before drafting.
@@ -44,3 +44,16 @@ Use when the user already has text and wants polishing, but the argument may be 
 6. `sci-submission-revision`: prepare files, declarations, cover letter, or response matrix.
 
 Do not language-polish unsupported claims into smoother but riskier statements.
+
+## Runbook 4: Word Manuscript Requested
+
+Use when the user asks for a `.docx` manuscript, line numbers, or Word-style formatting.
+
+1. `sci-storyline-planner`: create or repair the paragraph plan before full-section drafting.
+2. `sci-draft-mimic`: draft using the paragraph plan and target-journal/model-paper rhythm.
+3. Create or convert the manuscript to DOCX.
+4. Run `skills/sci-paper-skills/scripts/enforce_manuscript_docx_format.py input.docx output.docx`.
+5. Run the same script with `--check`.
+6. `sci-submission-revision`: record the Word/DOCX compliance result before calling the file ready.
+
+Default Word profile: continuous line numbering, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings.

@@ -1,6 +1,6 @@
 # SCI-paper-skills
 
-[![Version](https://img.shields.io/badge/version-0.6.7-0f766e)](manifest.yaml)
+[![Version](https://img.shields.io/badge/version-0.6.8-0f766e)](manifest.yaml)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-15-7c3aed)](skills)
 
@@ -42,7 +42,9 @@ This skill pack is designed for researchers who already have research materials 
 - Connect raw data, statistical analysis, figure source data, and code/data availability to the manuscript evidence chain.
 - Build background, scientific questions, research gaps, and discussion boundaries from the literature.
 - Arrange figures and storyline so the Results section becomes an evidence chain instead of a data list.
+- Plan natural paragraph counts from target-journal/model-paper patterns, with ordinary Results subsections defaulting to 2-3 paragraphs.
 - Check figures, tables, supplementary materials, legends, titles, and references against target-journal expectations.
+- Generate or check Word/DOCX manuscripts with continuous line numbers, black text, 12 pt font, 1.5 spacing, justified body paragraphs, and left-aligned headings.
 - Check statistical wording, effect size/uncertainty, replicate units, figure export quality, source data, and data/code availability risks.
 - Draft abstracts, introductions, results, discussions, methods, figure legends, cover letters, and revision letters.
 - Control claim strength to avoid over-mechanistic, over-novel, or unsupported statements.
@@ -65,13 +67,13 @@ $sci-paper-skills
 | 4 | `sci-result-to-claim` | Convert results into defensible manuscript claims |
 | 5 | `sci-core-story-finder` | Select the central story from multiple possible conclusions |
 | 6 | `sci-figure-story-builder` | Arrange figure order, main/supplementary placement, and figure-claim links |
-| 7 | `sci-storyline-planner` | Design manuscript structure and Results/Discussion logic |
+| 7 | `sci-storyline-planner` | Design manuscript structure, paragraph counts, and Results/Discussion logic |
 | 8 | `sci-reviewer-simulator` | Simulate editor and reviewer risks before submission |
-| 9 | `sci-draft-mimic` | Draft sections using the structure and rhetorical function of target-journal model papers |
-| 10 | `sci-paragraph-coach` | Coach individual paragraphs, figure legends, abstracts, or cover-letter passages |
-| 11 | `sci-language-polisher` | Polish English or Chinese expression without changing scientific meaning |
+| 9 | `sci-draft-mimic` | Draft sections using the structure, paragraph rhythm, and rhetorical function of target-journal model papers |
+| 10 | `sci-paragraph-coach` | Coach individual paragraphs, figure legends, abstracts, or cover-letter passages with planned paragraph roles |
+| 11 | `sci-language-polisher` | Polish English or Chinese expression and paragraph discipline without changing scientific meaning |
 | 12 | `sci-citation-control` | Check citation placement, reference style, and claim-evidence alignment |
-| 13 | `sci-submission-revision` | Prepare submission materials, revision strategy, and point-by-point responses |
+| 13 | `sci-submission-revision` | Prepare submission materials, check Word/DOCX and journal-format compliance, and handle revision responses |
 
 ## Complete Example
 
@@ -84,12 +86,13 @@ The repository includes a synthetic zero-to-one example showing how a research q
 | [manuscript-state-example.yaml](examples/manuscript-state-example.yaml) | Example manuscript state file |
 | [final-package.md](examples/zero-to-one-sci-manuscript/final-package.md) | Final package notes |
 
-The example manuscript includes an abstract, introduction, results, discussion, materials and methods, data availability, author contributions, figure legends, supplementary tables, and references. It demonstrates four quality gates:
+The example manuscript includes an abstract, introduction, results, discussion, materials and methods, data availability, author contributions, figure legends, supplementary tables, and references. It demonstrates five quality gates:
 
 1. The Introduction must be literature-supported and move from background, known mechanisms, and unresolved problems to the scientific question.
 2. The Results section must be evidence-centered, with controls, statistics, replication, figure calls, and necessary transition sentences.
 3. The Discussion must start from the results and expand to existing literature, mechanistic possibilities, alternative explanations, limitations, and future experiments.
 4. Materials and Methods must be reproducible enough to describe materials, treatments, instruments/software, replication, exclusion rules, quantification, and statistical models.
+5. Word outputs must pass DOCX formatting checks for line numbers, font color/size, spacing, and paragraph alignment.
 
 ## Repository Structure
 
@@ -135,6 +138,7 @@ bash scripts/validate_skill_pack.sh
 - Evidence first, then claims.
 - Confirm that analysis and figures can support the conclusion before writing Results prose.
 - Structure first, then polishing.
+- Plan paragraph counts before drafting complete sections.
 - State only what the evidence can support; handle unsupported points through boundaries, analysis/figure risks, and future experiments.
 - Do not fabricate data, references, approvals, accession numbers, methods, statistical results, or journal requirements.
 - Mimic the structure and rhetorical function of model papers, not distinctive original wording.

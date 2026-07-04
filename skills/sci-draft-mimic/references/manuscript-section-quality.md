@@ -6,6 +6,11 @@ Use these standards before drafting or revising a full manuscript, Introduction,
 
 Write the Introduction as a literature-backed funnel, not a generic opening.
 
+Default paragraph budget:
+
+- Use 4 natural paragraphs for concise Nature Communications/PNAS-like research articles unless comparable papers show a different norm.
+- Expand to 5-6 only when the target journal or model papers use longer field framing.
+
 Required sequence:
 
 1. Field-level problem and why the journal audience should care.
@@ -25,6 +30,13 @@ Quality checks:
 
 Write Results around evidence, not only around claims.
 
+Default paragraph budget:
+
+- Use named Results subsections.
+- Each ordinary Results subsection should contain 2-3 natural paragraphs.
+- Use 4 only for complex multiomics, resource-building, or multi-assay subsections when model papers justify it.
+- If a subsection needs more than 3 paragraphs without justification, split it into smaller result questions or move detail to Methods/Supplementary Material.
+
 Each result subsection should contain:
 
 1. Purpose sentence explaining why this experiment was done.
@@ -42,6 +54,11 @@ Allowed micro-discussion in Results:
 ## Discussion
 
 Write Discussion as result-anchored expansion.
+
+Default paragraph budget:
+
+- Use 3-4 paragraphs for concise Nature Communications/PNAS-like research articles.
+- Expand to 5-7 only when comparable papers use a broader discussion pattern.
 
 Recommended movement:
 

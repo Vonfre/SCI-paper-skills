@@ -4,6 +4,11 @@ All notable changes to `SCI-paper-skills` are documented here.
 
 ## Unreleased
 
+## 0.6.8 - Word Manuscript Formatting And Paragraph Planning
+
+- Added Word/DOCX manuscript formatting rules and an OOXML enforcement/check script for continuous line numbers, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings.
+- Added paragraph-count planning across storyline, drafting, paragraph coaching, polishing, and submission checks, with Results subsections defaulting to 2-3 natural paragraphs.
+- Calibrated default paragraph budgets from the two local bamboo reference papers: 1-paragraph abstract, 4-paragraph introduction, 2-3 paragraphs per Results subsection, 3-4-paragraph discussion, and subheaded Methods.
 - Added analysis/statistics/figure/data-availability integration guidance inspired by local scientific analysis, visualization, and Nature-style skills.
 - Extended manuscript state, handoff contracts, and downstream skills with analysis provenance, figure contracts, source-data checks, and data/code availability gates.
 - Removed internal high-star project inspiration notes from the published documentation set.

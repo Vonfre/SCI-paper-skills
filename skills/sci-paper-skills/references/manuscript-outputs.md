@@ -5,6 +5,7 @@
 - Core Deliverables
 - Writing Rules
 - Section Guidance
+- Paragraph And Word Output Planning
 - Supplementary-Material Strategy
 - Cover Letter Skeleton
 - Final Checklist
@@ -37,9 +38,10 @@ For a full journal-specific writing engagement, produce these in order:
    - Target article type.
    - Proposed title options.
    - Abstract plan or full abstract.
-   - Section headings and paragraph purposes.
+   - Section headings, paragraph counts, and paragraph purposes.
    - Figure/table plan.
    - Journal-format strategy for in-text figure/table/supplement callouts, legends, headings, references, and statements.
+   - Word/DOCX format strategy when the user requests a manuscript file.
    - Supplementary-material plan.
    - Reference strategy.
 
@@ -59,6 +61,8 @@ For a full journal-specific writing engagement, produce these in order:
 - Keep the journal voice, but do not copy phrases from benchmark papers.
 - Preserve the user's scientific contribution; do not overfit to superficial style.
 - Use `journal_landscape.journal_format_profile` when inserting figure, table, supplementary-material, legend, heading, reference, and back-matter text.
+- Use `storyline.paragraph_plan` before drafting major sections; if absent, create one rather than writing a full section with uncontrolled paragraph counts.
+- Use `document_output.word_format_profile` for DOCX deliverables and verify line numbering, text color, font size, spacing, and alignment before calling a file final.
 - For Chinese-to-English work, produce idiomatic scientific English rather than literal translation.
 
 ## Quality Bar
@@ -70,6 +74,7 @@ A manuscript is not full-draft quality until it passes five gates:
 3. Discussion: result-anchored expansion into prior work, mechanism, alternative explanations, implications, limitations, and future experiments.
 4. Methods: reproducible procedural detail, including materials, treatments, replicates, instruments/software, quantification, statistics, and data/code availability.
 5. Journal format: in-text callouts, figure legends, table titles, supplementary-material naming, headings, references, and declarations match the target-journal profile or are explicitly marked unknown.
+6. Word format: DOCX outputs have continuous line numbers, black 12 pt text, 1.5 line spacing, justified body text, and left-aligned headings, unless a target-journal exception is recorded.
 
 If one gate fails, produce a repair plan or placeholders instead of presenting the manuscript as complete.
 
@@ -100,7 +105,7 @@ Do not include numbers unless supplied by the user or extracted from the user's 
 
 ### Introduction
 
-Build 4-6 paragraphs unless comparable papers show a different norm:
+Build 4 paragraphs by default when the target journal resembles the local Nature Communications/PNAS bamboo-reference pattern; use 4-6 paragraphs when comparable papers show a broader norm:
 
 1. Field-level problem and journal-relevant stakes.
 2. What is known.
@@ -125,11 +130,12 @@ Each result subsection should have:
 
 Use comparable papers to decide whether the journal favors mechanism-first, phenotype-first, cohort-first, resource-first, or method-validation-first sequencing.
 Use the target journal's exact callout style from `journal_format_profile`, such as `Fig. 1A`, `Figure 1A`, `Figs. 1 and 2`, `Supplementary Fig. 1`, or `Table S1`; never mix styles inside one manuscript.
+Plan Results as named subsections, not one long section. Each result subsection should default to 2-3 natural paragraphs: setup/purpose, evidence/statistics/figure support, and a concise interpretation or transition. Use 4 only for unusually complex multiomics/resource-building subsections when model papers justify it.
 Allow brief discussion-like transition sentences in Results only when they improve continuity or explain why the next experiment is needed.
 
 ### Discussion
 
-Use 4-7 paragraphs:
+Use 3-4 paragraphs for concise Nature Communications/PNAS-like research articles unless comparable papers show a longer norm. Use 4-7 paragraphs for longer discussion-forward journals:
 
 1. Principal findings.
 2. Relation to prior work.
@@ -153,6 +159,36 @@ Follow journal requirements exactly. Include enough detail for reproducibility:
 - Ethics and approvals.
 
 For wet-lab work, include treatment dose/time, buffer/media conditions, instrument settings, replicate definitions, exclusion rules, normalization, and exact statistical model whenever known.
+
+## Paragraph And Word Output Planning
+
+Read `word-manuscript-format.md` before full-manuscript drafting, section paragraph planning, or DOCX generation.
+
+The article architecture must include a paragraph plan:
+
+| Section/Subsection | Target Paragraphs | Paragraph Jobs | Basis | Linked IDs |
+|---|---:|---|---|---|
+| Abstract | 1 | Context/gap; approach; result; implication | model / fallback | |
+| Introduction | 4 | Stakes; known work; gap; objective/contribution | model / fallback | `S#` |
+| Result subsection | 2-3 | Purpose; evidence; bridge | model / fallback | `C#`, `F#` |
+| Discussion | 3-4 | Principal finding; literature/mechanism; limits; future/conclusion | model / fallback | `C#`, `S#` |
+
+For DOCX deliverables, add or update:
+
+```yaml
+document_output:
+  requested_formats: ["docx"]
+  word_format_profile:
+    line_numbering: "continuous"
+    text_color: "000000"
+    font_size_pt: 12
+    line_spacing: 1.5
+    body_alignment: "justified"
+    heading_alignment: "left"
+    validation_status: "not checked | pass | needs repair"
+```
+
+After creating the DOCX, run `scripts/enforce_manuscript_docx_format.py` and its `--check` mode unless another validated DOCX tool has already proved the same conditions.
 
 ## Journal-Format Strategy
 
@@ -209,5 +245,7 @@ Sincerely,
 - In-text figure/table/supplement callouts match the target-journal format profile.
 - References match journal format and are not fabricated.
 - Abstract, highlights, keywords, graphical abstract, and cover letter satisfy requirements.
+- Paragraph counts and paragraph jobs match the paragraph plan or recorded target-journal/model-paper exception.
+- Word/DOCX formatting has been applied and checked when a manuscript file is requested.
 - Data/code/ethics/reporting checklists are included when relevant.
 - All placeholders are listed for the user.

@@ -1,6 +1,6 @@
 ---
 name: sci-language-polisher
-description: Final scientific-language and journal-format polishing for SCI manuscripts. Use when the user has draft text and wants clearer, more precise, journal-appropriate English or Chinese-to-English polishing; improve logic, concision, transitions, claim strength, hedging, terminology, abstract flow, results wording, discussion tone, figure/table/supplement callout style, headings, cover letters, and reviewer responses without changing the scientific meaning or inventing evidence.
+description: Final scientific-language, paragraph-plan, Word/DOCX, and journal-format polishing for SCI manuscripts. Use when the user has draft text and wants clearer, more precise, journal-appropriate English or Chinese-to-English polishing; improve logic, concision, transitions, claim strength, hedging, terminology, abstract flow, results wording, discussion tone, paragraph count discipline, figure/table/supplement callout style, Word manuscript formatting notes, headings, cover letters, and reviewer responses without changing the scientific meaning or inventing evidence.
 ---
 
 # SCI Language Polisher
@@ -20,6 +20,8 @@ Identify the polish mode:
 - `Reviewer-facing polish`: make response or revision wording precise and calm.
 - `Journal-style polish`: align with observed target-journal patterns.
 - `Journal-format polish`: normalize figure/table/supplement callouts, legend labels, headings, statements, and reference style against `journal_format_profile`.
+- `Paragraph-plan polish`: keep sections within planned natural paragraph counts and repair overlong Results subsections.
+- `Word-format polish`: preserve or flag DOCX line numbering, black 12 pt text, 1.5 spacing, justified body text, and left-aligned headings.
 
 Ask for target journal, section type, and word limit only when needed.
 
@@ -45,10 +47,12 @@ Check whether the problem is language or logic:
 2. Remove ambiguity, redundancy, vague verbs, and unsupported superlatives.
 3. Improve transitions and sentence order when logic is local.
 4. Normalize journal-format items from `journal_format_profile`: `Fig.`/`Figure` forms, panel letters, multi-figure callouts, supplementary labels, figure legends, table titles, headings, references, and statements.
-5. For Results, preserve evidence-first order while adding only short reliability or transition clauses.
-6. For Discussion, improve breadth by linking the main result to literature, mechanism, alternative explanations, limitations, and implications without inventing new evidence.
-7. Return before/after examples for recurring language or format problems when useful.
-8. Flag claims that still need data, citation, format-rule verification, or upstream logic repair.
+5. Check the paragraph plan when polishing full sections; do not expand Results subsections beyond 2-3 paragraphs unless already justified.
+6. For Results, preserve evidence-first order while adding only short reliability or transition clauses.
+7. For Discussion, improve breadth by linking the main result to literature, mechanism, alternative explanations, limitations, and implications without inventing new evidence.
+8. For DOCX-facing outputs, flag any action that could disturb Word formatting and route final file checks to `sci-submission-revision`.
+9. Return before/after examples for recurring language or format problems when useful.
+10. Flag claims that still need data, citation, format-rule verification, or upstream logic repair.
 
 ## Polishing Rule
 
@@ -58,7 +62,7 @@ Do not silently strengthen claims. If a sentence changes from association to mec
 
 Consume:
 
-- `draft_registry.sections`, source text, `claim_registry`, `citation_audit`, `journal_landscape.journal_format_profile`, and target-journal tone/style when available.
+- `draft_registry.sections`, source text, `claim_registry`, `citation_audit`, `storyline.paragraph_plan`, `document_output.word_format_profile`, `journal_landscape.journal_format_profile`, and target-journal tone/style when available.
 
 Update:
 
@@ -66,6 +70,7 @@ Update:
 - `draft_registry.high_risk_claim_ids` when polishing reveals overclaiming.
 - A meaning-change log that lists any softened or preserved claims by `claim_id`.
 - A format-correction log for changed figure/table/supplement callouts, headings, legends, tables, references, and statement labels.
+- Paragraph-plan repair notes and Word-format follow-up notes when relevant.
 
 Block:
 

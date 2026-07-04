@@ -1,4 +1,4 @@
 interface:
   display_name: "SCI Storyline Planner"
-  short_description: "Plan logic, result order, and format brief"
-  default_prompt: "Use $sci-storyline-planner to design my manuscript logic, result order, and target-journal drafting brief."
+  short_description: "Plan logic, result order, and paragraph counts"
+  default_prompt: "Use $sci-storyline-planner to design my manuscript logic, result order, paragraph counts, and target-journal drafting brief."

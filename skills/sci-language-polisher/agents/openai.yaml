@@ -1,4 +1,4 @@
 interface:
   display_name: "SCI Language Polisher"
-  short_description: "Final language and journal-format polish"
-  default_prompt: "Use $sci-language-polisher to polish my SCI manuscript text for clarity, precision, journal style, and figure/table format consistency."
+  short_description: "Final language, paragraph, and format polish"
+  default_prompt: "Use $sci-language-polisher to polish my SCI manuscript text for clarity, precision, paragraph discipline, journal style, and figure/table format consistency."

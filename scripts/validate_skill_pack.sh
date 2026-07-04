@@ -49,6 +49,8 @@ required_root_files=(
   skills/sci-paper-skills/references/manuscript-state-schema.md
   skills/sci-paper-skills/references/handoff-contracts.md
   skills/sci-paper-skills/references/analysis-figure-integration.md
+  skills/sci-paper-skills/references/word-manuscript-format.md
+  skills/sci-paper-skills/scripts/enforce_manuscript_docx_format.py
 )
 
 for file in "${required_root_files[@]}"; do
@@ -57,9 +59,14 @@ for file in "${required_root_files[@]}"; do
   fi
 done
 
+if [[ ! -x "$ROOT_DIR/skills/sci-paper-skills/scripts/enforce_manuscript_docx_format.py" ]]; then
+  fail "DOCX format enforcement script must be executable"
+fi
+
 manifest_declared_files="$(awk '
   /^  github_actions: / {print $2}
   /^  analysis_figure_integration: / {print $2}
+  /^  word_manuscript_format: / {print $2}
   /^  complete_manuscript_en: / {print $2}
   /^  complete_manuscript_zh: / {print $2}
   /^  zero_to_one_workflow: / {print $2}

@@ -1,11 +1,12 @@
 name: SCI-paper-skills
-version: 0.6.7
+version: 0.6.8
 license: MIT
-description: Target-journal-adaptive Codex skills for SCI/SCIE manuscript planning, data/analysis evidence integration, drafting, journal-format control, polishing, citation control, submission, and revision.
+description: Target-journal-adaptive Codex skills for SCI/SCIE manuscript planning, data/analysis evidence integration, paragraph planning, Word/DOCX formatting, drafting, journal-format control, polishing, citation control, submission, and revision.
 workflow:
   state_schema: skills/sci-paper-skills/references/manuscript-state-schema.md
   handoff_contracts: skills/sci-paper-skills/references/handoff-contracts.md
   analysis_figure_integration: skills/sci-paper-skills/references/analysis-figure-integration.md
+  word_manuscript_format: skills/sci-paper-skills/references/word-manuscript-format.md
   runbooks: docs/end-to-end-runbooks.md
 install:
   default_target: ~/.codex/skills
@@ -76,7 +77,7 @@ skills:
     stage: 7
     path: skills/sci-storyline-planner
     trigger: Manuscript structure, result order, or alternative logic plans are needed.
-    artifact: Storyline plan.
+    artifact: Storyline and paragraph plan.
   - name: sci-reviewer-simulator
     status: stable
     stage: 8

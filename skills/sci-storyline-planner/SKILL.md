@@ -1,6 +1,6 @@
 ---
 name: sci-storyline-planner
-description: Manuscript logic and storyline planning for SCI papers. Use when the user asks how to organize the paper, has or lacks a proposed writing logic, wants alternative result-order plans, needs to arrange several key cases/figures, or wants to imitate how comparable literature structures the argument before drafting.
+description: Manuscript logic, paragraph-count planning, and storyline planning for SCI papers. Use when the user asks how to organize the paper, plan natural paragraph counts, control Results subsection paragraph numbers, has or lacks a proposed writing logic, wants alternative result-order plans, needs to arrange several key cases/figures, or wants to imitate how comparable literature structures the argument before drafting.
 ---
 
 # SCI Storyline Planner
@@ -8,6 +8,7 @@ description: Manuscript logic and storyline planning for SCI papers. Use when th
 ## Overview
 
 Plan the manuscript's argument path before drafting. Compare possible result orders and choose the one that best teaches the reader, fits the target journal, and keeps claim strength honest.
+Also produce a paragraph plan for full manuscripts or major sections so drafting does not become an uncontrolled long block.
 
 ## First Move
 
@@ -40,6 +41,7 @@ Use whichever artifacts exist:
 - Figure story map.
 - Comparable-paper patterns or user-provided PDFs.
 - User's current outline or preferred logic.
+- Word/DOCX or paragraph-count requirements if the user asks for manuscript-file generation.
 
 If a required artifact is missing, make a provisional plan and mark the missing gate.
 
@@ -49,7 +51,20 @@ If a required artifact is missing, make a provisional plan and mark the missing 
 2. Generate 2-3 storyline options.
 3. Compare strengths, risks, and missing evidence.
 4. Choose a recommended result order.
-5. Produce a drafting brief for title, abstract, introduction, results, discussion, and target-journal callout/heading format.
+5. Produce a paragraph plan for abstract, introduction, each Results subsection, discussion, and methods.
+6. Produce a drafting brief for title, abstract, introduction, results, discussion, Word/DOCX output, and target-journal callout/heading format.
+
+## Paragraph Planning
+
+When model papers are supplied, count natural paragraphs per major section and per named Results subsection, then record the count basis. When no better model exists, use the local bamboo-reference baseline from `sci-paper-skills/references/word-manuscript-format.md`:
+
+- Abstract: 1 paragraph.
+- Introduction: 4 paragraphs for concise Nature Communications/PNAS-like research articles.
+- Results: named subsections, usually 2-3 natural paragraphs per subsection.
+- Discussion: 3-4 paragraphs for concise research articles.
+- Methods: subheaded reproducible blocks rather than one fixed paragraph count.
+
+If a Results subsection needs more than 3 paragraphs, justify it as a complex multiomics/resource-building subsection or split it into smaller result questions.
 
 ## Draft-Readiness Gate
 
@@ -60,6 +75,7 @@ Drafting is ready only if:
 - High-risk claims have evidence or are softened.
 - Missing facts are visible as `[NEED: ...]`.
 - The target-journal figure/table/supplement callout style is known or marked as a format blocker.
+- A paragraph plan exists for full-manuscript or major-section drafting.
 
 ## Plan Quality Bar
 
@@ -68,7 +84,9 @@ A good plan should tell the user:
 - Why this order is easier for readers.
 - Which figure/case supports each subsection.
 - Where citations are needed.
+- How many natural paragraphs each major section and Results subsection should use.
 - Which journal-format rules must be used during drafting.
+- Which Word/DOCX formatting rules must be used if a manuscript file is requested.
 - Where the argument is weakest.
 - What can be drafted now and what still needs evidence.
 
@@ -83,6 +101,7 @@ Update:
 
 - `storyline.result_order`.
 - `storyline.section_registry` with stable IDs `SEC#`.
+- `storyline.paragraph_plan` with section/subsection paragraph counts, paragraph roles, and model-paper or fallback basis.
 - `storyline.drafting_brief`, `draft_readiness`, and `draft_blockers`.
 - Journal-format instructions inside `storyline.drafting_brief`.
 - Section-to-claim, section-to-figure, and section-to-source links.
@@ -99,6 +118,7 @@ Return:
 
 - `Storyline options`.
 - `Recommended plan`.
+- `Paragraph plan`.
 - `Core message`.
 - `Result order`.
 - `Main figures`.

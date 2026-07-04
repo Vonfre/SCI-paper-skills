@@ -344,6 +344,92 @@ storyline:
     - "F3"
     - "F4"
     - "F5"
+  paragraph_plan:
+    basis: "local bamboo-reference baseline"
+    reference_papers:
+      - paper_id: "P_bamboo_NC"
+        citation: "Nature Communications bamboo pangenome reference pattern"
+        paragraph_pattern: "1-paragraph abstract, 4-paragraph introduction, named Results subsections, concise 3-paragraph Discussion."
+      - paper_id: "P_bamboo_PNAS"
+        citation: "PNAS bamboo single-nucleus/spatial transcriptomics reference pattern"
+        paragraph_pattern: "1-paragraph abstract, 4-paragraph introduction, 2-3 paragraphs for ordinary Results subsections, concise Discussion."
+    sections:
+      - section_id: "SEC1"
+        section_type: "introduction"
+        target_paragraphs: "4"
+        paragraph_roles:
+          - "ABA guard-cell signaling stakes"
+          - "known ROS/kinase context"
+          - "synthetic DRK1 gap"
+          - "study objective and bounded contribution"
+        linked_claim_ids: []
+        linked_figure_ids: []
+        needed_source_ids:
+          - "S1"
+          - "S2"
+          - "S3"
+        basis_note: "Uses the 4-paragraph concise research-article baseline."
+      - section_id: "SEC2"
+        section_type: "results"
+        target_paragraphs: "2-3"
+        paragraph_roles:
+          - "purpose and tested comparison"
+          - "primary evidence/statistics with figure callout"
+          - "short bridge to complementation"
+        linked_claim_ids:
+          - "C1"
+        linked_figure_ids:
+          - "F1"
+        needed_source_ids: []
+        basis_note: "Ordinary Results subsection default."
+      - section_id: "SEC3"
+        section_type: "results"
+        target_paragraphs: "2-3"
+        paragraph_roles:
+          - "purpose and complementation setup"
+          - "evidence/statistics with figure callout"
+          - "bridge to ROS assay"
+        linked_claim_ids:
+          - "C2"
+        linked_figure_ids:
+          - "F2"
+        needed_source_ids: []
+        basis_note: "Ordinary Results subsection default."
+      - section_id: "SEC4"
+        section_type: "results"
+        target_paragraphs: "2-3"
+        paragraph_roles:
+          - "purpose and ROS comparison"
+          - "evidence/statistics with figure callout"
+          - "bounded interpretation"
+        linked_claim_ids:
+          - "C3"
+        linked_figure_ids:
+          - "F3"
+        needed_source_ids:
+          - "S1"
+          - "S2"
+        basis_note: "Ordinary Results subsection default."
+      - section_id: "SEC5"
+        section_type: "discussion"
+        target_paragraphs: "3-4"
+        paragraph_roles:
+          - "principal findings"
+          - "relation to ABA/ROS literature"
+          - "mechanistic boundary and limitations"
+          - "future work and conclusion"
+        linked_claim_ids:
+          - "C1"
+          - "C2"
+          - "C3"
+          - "C4"
+        linked_figure_ids:
+          - "F5"
+        needed_source_ids:
+          - "S1"
+          - "S2"
+          - "S3"
+        basis_note: "Concise discussion baseline."
   section_registry:
     - section_id: "SEC1"
       section_type: "introduction"
@@ -452,6 +538,21 @@ draft_registry:
   high_risk_claim_ids:
     - "C3"
     - "C4"
+
+document_output:
+  requested_formats:
+    - "markdown"
+    - "docx-ready"
+  word_format_profile:
+    line_numbering: "continuous"
+    text_color: "000000"
+    font_size_pt: 12
+    line_spacing: 1.5
+    body_alignment: "justified"
+    heading_alignment: "left"
+    enforcement_script: "scripts/enforce_manuscript_docx_format.py"
+    validation_status: "not requested"
+    exceptions: []
 
 citation_audit:
   unsupported_claim_ids: []

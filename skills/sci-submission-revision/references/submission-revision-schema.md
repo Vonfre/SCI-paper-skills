@@ -7,6 +7,11 @@
 | Main manuscript | | | | |
 | Title page | | | | |
 | Abstract | | | | |
+| Paragraph plan | | | | |
+| Word/DOCX line numbering | | | | |
+| Word/DOCX text color | | | | |
+| Word/DOCX font size | | | | |
+| Word/DOCX spacing/alignment | | | | |
 | Keywords | | | | |
 | Figures | | | | |
 | In-text figure callouts | | | | |
@@ -36,6 +41,19 @@
 | Figure legend labels | | | pass / needs repair / unknown | |
 | Table titles and footnotes | | | pass / needs repair / unknown | |
 | Heading and declaration labels | | | pass / needs repair / unknown | |
+
+## Word/DOCX Compliance Check
+
+| Element | Required | Current Manuscript Form | Status | Action |
+|---|---|---|---|---|
+| Line numbering | continuous | | pass / needs repair / unknown | |
+| Text color | black `000000` | | pass / needs repair / unknown | |
+| Font size | 12 pt | | pass / needs repair / unknown | |
+| Body paragraphs | justified | | pass / needs repair / unknown | |
+| Title/headings | left aligned | | pass / needs repair / unknown | |
+| Line spacing | 1.5 | | pass / needs repair / unknown | |
+
+Use `../sci-paper-skills/scripts/enforce_manuscript_docx_format.py` to repair a local `.docx` and rerun with `--check` before marking the Word manuscript ready.
 
 ## Cover Letter Skeleton
 
@@ -91,3 +109,4 @@ Response strategies:
 - Avoid defensive tone.
 - Do not promise experiments, data, or analyses that the user has not performed.
 - Update citations and methods when new analyses are added.
+- Do not mark a requested DOCX file ready until paragraph-plan and Word-format checks pass or a target-journal exception is recorded.

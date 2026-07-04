@@ -6,7 +6,7 @@ Use these standards when coordinating more than one SCI-paper-skills module.
 
 - Diagnose the earliest unresolved blocker before drafting.
 - Route to one primary next skill unless the user explicitly asks for parallel outputs.
-- Treat journal fit, journal-specific formatting, literature evidence, claim strength, core story, figure logic, reviewer risk, draft quality, citation control, and submission compliance as different gates.
+- Treat journal fit, journal-specific formatting, literature evidence, claim strength, core story, figure logic, paragraph planning, reviewer risk, draft quality, Word/DOCX formatting, citation control, and submission compliance as different gates.
 - If two stages seem plausible, choose the earlier blocker and explain why.
 
 ## Evidence Boundaries
@@ -36,6 +36,8 @@ Each stage should produce a named artifact with:
 - If a required upstream artifact is missing, mark the missing gate and produce a provisional artifact rather than inventing continuity.
 - Do not rename, merge, or discard upstream IDs unless the output explicitly records the change.
 - Preserve `journal_landscape.journal_format_profile` across drafting, polishing, citation control, and submission checks.
+- Preserve `storyline.paragraph_plan` across drafting and paragraph coaching.
+- Preserve `document_output.word_format_profile` across DOCX generation, polishing, citation control, and submission checks when a Word manuscript is requested.
 
 ## Drafting And Mimicry
 
@@ -44,3 +46,5 @@ Each stage should produce a named artifact with:
 - Do not copy distinctive wording, title formulas, sentence order, or phrasing from model papers.
 - Keep claim strength no stronger than the result-to-claim matrix supports.
 - Apply the target journal's exact figure/table/supplement callout style while drafting; if unknown, mark it as a format blocker instead of mixing `Fig.`, `Figure`, `Fig1`, and `Table S1` forms.
+- Create or consume a paragraph plan before drafting a full manuscript or major section; Results subsections default to 2-3 natural paragraphs unless model papers justify an exception.
+- For Word/DOCX manuscript outputs, enforce continuous line numbers, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings before calling the file final.

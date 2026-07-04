@@ -177,6 +177,21 @@ story:
 
 storyline:
   result_order: []
+  paragraph_plan:
+    basis: "official | model papers | local bamboo-reference baseline | fallback | unknown"
+    reference_papers:
+      - paper_id: "P1"
+        citation: ""
+        paragraph_pattern: ""
+    sections:
+      - section_id: "SEC1"
+        section_type: "abstract | introduction | results | discussion | methods | figure_legend | cover_letter"
+        target_paragraphs: "1 | 2-3 | 3-4 | 4 | subheaded | [NEED: ...]"
+        paragraph_roles: []
+        linked_claim_ids: []
+        linked_figure_ids: []
+        needed_source_ids: []
+        basis_note: ""
   section_registry:
     - section_id: "SEC1"
       section_type: "title | abstract | introduction | results | discussion | methods | cover_letter | rebuttal"
@@ -205,6 +220,19 @@ draft_registry:
   open_needs: []
   open_citations: []
   high_risk_claim_ids: []
+
+document_output:
+  requested_formats: []
+  word_format_profile:
+    line_numbering: "continuous | newPage | newSection | none | unknown"
+    text_color: "000000 | unknown"
+    font_size_pt: 12
+    line_spacing: 1.5
+    body_alignment: "justified | left | unknown"
+    heading_alignment: "left | unknown"
+    enforcement_script: "scripts/enforce_manuscript_docx_format.py"
+    validation_status: "not requested | not checked | pass | needs repair | journal exception"
+    exceptions: []
 
 citation_audit:
   unsupported_claim_ids: []
@@ -242,7 +270,9 @@ submission_package:
 - Sections use `SEC1`, `SEC2`, `SEC3`.
 - Reviewer issues use `R1`, `R2`, `R3`.
 
-Every draftable sentence that makes a scientific claim should be traceable to at least one claim ID and either a figure/table ID, user-data note, or source ID.
+Every draftable sentence that makes a scientific claim should be traceable to at least one claim ID and either a figure/table ID, user-data note, or source ID. Every full-section draft should also trace to a paragraph-plan entry unless the user explicitly asks for a quick sketch.
+
+For Word/DOCX manuscript outputs, `document_output.word_format_profile.validation_status` should be `pass` before final delivery unless the target journal explicitly requires a different format and the exception is recorded.
 
 ## State Update Block
 

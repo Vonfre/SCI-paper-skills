@@ -1,6 +1,6 @@
 ---
 name: sci-paper-skills
-description: Complete SCI/SCIE manuscript coaching workflow for planning, writing, evaluating, polishing, citing, formatting, submitting, or revising a scientific paper. Use when a user has a target journal, candidate journal level, research topic, scientific question, results, figures, conclusions, outline, draft, PDFs/model papers, or reviewer comments and needs step-by-step help turning research into a target-journal-ready manuscript; coordinates journal profiling, comparable-paper analysis, journal-specific figure/table/supplement formatting, literature evidence, result-to-claim mapping, core story selection, figure narrative, storyline planning, reviewer simulation, model-paper drafting, paragraph coaching, language polishing, citation control, and submission/revision.
+description: Complete SCI/SCIE manuscript coaching workflow for planning, writing, evaluating, polishing, citing, formatting, Word/DOCX generation, submitting, or revising a scientific paper. Use when a user has a target journal, candidate journal level, research topic, scientific question, results, figures, conclusions, outline, draft, PDFs/model papers, Word manuscript requirements, or reviewer comments and needs step-by-step help turning research into a target-journal-ready manuscript; coordinates journal profiling, comparable-paper analysis, journal-specific figure/table/supplement formatting, Word line-number/style control, paragraph-count planning, literature evidence, result-to-claim mapping, core story selection, figure narrative, storyline planning, reviewer simulation, model-paper drafting, paragraph coaching, language polishing, citation control, and submission/revision.
 ---
 
 # SCI-paper-skills
@@ -41,6 +41,8 @@ For every stage:
 
 Do not start full drafting until journal fit, journal format profile, claim strength, central story, figure order, and citation needs are at least provisionally controlled.
 Do not present analysis-derived claims as stable until data provenance, statistical status, effect/uncertainty, figure source data, and reproducibility risks are visible or explicitly marked missing.
+Do not produce a Word/DOCX manuscript as final unless the Word format profile has been applied or explicitly marked as a target-journal exception.
+Do not draft a full manuscript or major section without a paragraph plan that records section/subsection paragraph counts, paragraph jobs, and model-paper or fallback basis.
 
 Every stage output must end with `Manuscript State Update` and `Handoff` blocks. If the user enters mid-workflow, reconstruct only the relevant state fields from provided context and mark missing fields.
 
@@ -95,12 +97,14 @@ Use these modules in order unless the user explicitly asks for one stage:
 | Has raw data, analysis outputs, unclear statistics, or plot files | adjacent analysis/visualization skill, then `sci-result-to-claim` | Analysis provenance and claim-ready evidence |
 | Has several possible conclusions but no center | `sci-core-story-finder` | Story decision memo |
 | Has figures/cases but unclear order | `sci-figure-story-builder` | Figure story map |
-| Needs manuscript logic or alternative plans | `sci-storyline-planner` | Storyline plan |
+| Needs manuscript logic or alternative plans | `sci-storyline-planner` | Storyline and paragraph plan |
+| Needs natural paragraph counts or section paragraph planning | `sci-storyline-planner` | Paragraph plan |
 | Wants to know rejection risks | `sci-reviewer-simulator` | Reviewer risk report |
 | Has model papers/PDFs and wants a draft | `sci-draft-mimic` | Style brief and draft |
 | Needs help writing a specific paragraph | `sci-paragraph-coach` | Paragraph scaffold and coached text |
 | Has text needing final expression polish | `sci-language-polisher` | Polished text and claim notes |
 | Needs references, citation placement, or style | `sci-citation-control` | Citation audit |
+| Needs a Word/DOCX manuscript with line numbers and controlled formatting | `sci-draft-mimic`, then `sci-submission-revision` | DOCX draft and format compliance check |
 | Is submitting, revising, or responding to reviewers | `sci-submission-revision` | Submission or rebuttal package |
 
 ## Adaptive Rules
@@ -113,6 +117,8 @@ Use these modules in order unless the user explicitly asks for one stage:
 - If the user does not have a writing logic, propose 2-4 structures using comparable papers and available evidence.
 - If the user provides raw data, analysis outputs, notebooks, statistical tables, plots, or source data, first decide whether the current task needs adjacent analysis skills such as exploratory data analysis, statistical analysis, scientific visualization, or data-availability planning. Import only their final artifacts into the manuscript state.
 - If the user provides PDFs/model papers, analyze structure, rhetorical moves, citation behavior, exact figure/table/supplement callout patterns, and claim strength before drafting.
+- If the user asks for Word/DOCX output, read `references/word-manuscript-format.md`, add `document_output.word_format_profile`, and plan line numbering, all-black text, 12 pt font, 1.5 spacing, justified body paragraphs, and left-aligned headings before producing the file.
+- If the user asks for paragraph planning or full drafting, use model papers or the local bamboo-reference baseline in `references/word-manuscript-format.md`; Results subsections should default to 2-3 natural paragraphs unless the target journal or model papers justify a different count.
 - If the user is inexperienced, avoid large checklists; provide the next 30-minute task and a small template.
 - If the user asks for direct drafting too early, explain the missing gate and draft only with visible placeholders.
 
@@ -135,9 +141,11 @@ Use these modules in order unless the user explicitly asks for one stage:
 6. Claims controlled: each result maps to what it can and cannot claim.
 7. Story chosen: one central story and backup direction exist.
 8. Figures teach the story: main/supplement/cut decisions, source data, statistics, export needs, and figure contracts are justified.
-9. Reviewer risk handled: blocking objections are fixed or assigned.
-10. Draft traceable: text links to figures, evidence, citations, placeholders, and journal-format rules.
-11. Submission controlled: references, statements, figures, supplements, data/code availability, and journal rules are checked.
+9. Paragraph plan controlled: major sections and Results subsections have target paragraph counts, paragraph jobs, and a model-paper or fallback basis.
+10. Reviewer risk handled: blocking objections are fixed or assigned.
+11. Draft traceable: text links to figures, evidence, citations, placeholders, paragraph plan, and journal-format rules.
+12. Word output controlled: DOCX outputs have continuous line numbers, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings, unless a target-journal exception is recorded.
+13. Submission controlled: references, statements, figures, supplements, data/code availability, document formatting, and journal rules are checked.
 
 ## Tight Workflow Rules
 
@@ -145,9 +153,10 @@ Use these modules in order unless the user explicitly asks for one stage:
 - A downstream stage must consume the upstream IDs instead of renaming or flattening them.
 - A downstream stage must consume `journal_landscape.journal_format_profile` when drafting, polishing, citation-checking, or submission-checking target-journal text.
 - A downstream stage must consume `analysis_registry`, `figure_registry.figures[].figure_contract`, and `data_availability_plan` when statistical results, source data, plots, code, or repositories affect manuscript readiness.
+- A downstream drafting or submission stage must consume `storyline.paragraph_plan` and `document_output.word_format_profile` when paragraph counts or DOCX output are requested.
 - If an upstream artifact is missing, produce a provisional output only and name the missing gate.
 - The order may adapt to the user's state, but the handoff contracts still apply.
-- Do not let polishing, drafting, or submission override unresolved evidence, claim, citation, journal-format, or journal-fit blockers.
+- Do not let polishing, drafting, Word formatting, or submission override unresolved evidence, claim, citation, paragraph-plan, journal-format, or journal-fit blockers.
 
 ## References
 
@@ -159,3 +168,4 @@ Use these modules in order unless the user explicitly asks for one stage:
 - Read `references/journal-intelligence.md` when a target journal or comparable-paper search is involved.
 - Read `references/analysis-figure-integration.md` when raw data, analysis outputs, statistics, figures, source data, code, or data availability affect the manuscript.
 - Read `references/manuscript-outputs.md` when drafting, polishing, submission, or revision outputs are needed.
+- Read `references/word-manuscript-format.md` when Word/DOCX output, line numbers, font/alignment/spacing requirements, paragraph counts, Results paragraph planning, full-manuscript drafting, or model-paper section rhythm are involved.
