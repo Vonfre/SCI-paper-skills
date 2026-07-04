@@ -13,7 +13,7 @@ This is a compact run log for the demo brief. It shows the expected behavior of 
 | 4 | `sci-result-to-claim` | result bullets | claim registry | `sci-core-story-finder` |
 | 5 | `sci-core-story-finder` | claims and journal fit | central story | `sci-figure-story-builder` |
 | 6 | `sci-figure-story-builder` | story and result inventory | figure story map | `sci-storyline-planner` |
-| 7 | `sci-storyline-planner` | claims, figures, sources | section plan | `sci-reviewer-simulator` |
+| 7 | `sci-storyline-planner` | claims, figures, sources | section and paragraph plan | `sci-reviewer-simulator` |
 | 8 | `sci-reviewer-simulator` | storyline and claims | reviewer risk report | repair or `sci-draft-mimic` |
 | 9 | `sci-draft-mimic` | model patterns, journal format profile, storyline, claims | draft package | `sci-paragraph-coach` |
 | 10 | `sci-paragraph-coach` | section purpose and claim IDs | coached paragraph | `sci-language-polisher` |
@@ -249,8 +249,9 @@ Manuscript structure:
   - SEC3/F3: DRK1 disruption attenuates ABA-induced ROS accumulation.
   - SEC4/F4: ABA-responsive marker genes are altered in drk1.
 - Discussion: DRK1 as a contributor to ABA response, limits of pathway placement, next experiments.
+- Paragraph plan: 1-paragraph abstract, 4-paragraph Introduction, 2 paragraphs per Results subsection, 4-paragraph Discussion, and subheaded Methods.
 
-Draft readiness: skeleton only until statistics and citations are verified.
+Draft readiness: skeleton only until statistics, citations, paragraph plan, and DOCX requirements are verified.
 ```
 
 Handoff route: `sci-reviewer-simulator`.
@@ -306,6 +307,8 @@ Draft package:
 - Result subsection headings.
 - One Results subsection scaffold for SEC1.
 - Discussion paragraph plan.
+- Paragraph-plan adherence notes for each full section.
+- Word/DOCX output notes when a manuscript file is requested.
 
 High-risk claims:
 - C1, C3, C4 require citation and statistics checks before strengthening.
@@ -404,9 +407,13 @@ Expected output:
 Complete manuscript assembly:
 - English manuscript file: complete-manuscript.md.
 - Chinese manuscript file: complete-manuscript.zh-CN.md.
+- English Word file: complete-manuscript.docx.
+- Chinese Word file: complete-manuscript.zh-CN.docx.
 - Included sections: title, authors, abstract/摘要, significance statement/重要性说明, keywords/关键词, Introduction/引言, Results/结果, Discussion/讨论, Materials and Methods/材料与方法, Data Availability/数据可用性, Funding/经费资助, Author Contributions/作者贡献, Conflict Of Interest/利益冲突, Acknowledgements/致谢, Figure Legends/图注, Supplementary Table/补充表, and References/参考文献.
 - Citation status: background references included and DOI redirects checked for the demo.
-- Final readiness: complete bilingual synthetic demo manuscripts.
+- Paragraph-plan status: pass; Introduction, Results subsections, and Discussion follow the planned natural paragraph counts.
+- Word/DOCX compliance: pass; line numbers, all-black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings checked.
+- Final readiness: complete bilingual synthetic demo manuscripts with Markdown and DOCX outputs.
 
 Real-project caution:
 1. Replace all synthetic DRK1 data before real submission.
@@ -414,4 +421,4 @@ Real-project caution:
 3. Add real raw data, figures, author details, funding, and policy statements.
 ```
 
-The complete papers are shown in `complete-manuscript.md` and `complete-manuscript.zh-CN.md`. The final package metadata is shown in `final-package.md`. The final state snapshot is `../manuscript-state-example.yaml`.
+The complete papers are shown in `complete-manuscript.md`, `complete-manuscript.zh-CN.md`, `complete-manuscript.docx`, and `complete-manuscript.zh-CN.docx`. The final package metadata is shown in `final-package.md`. The final state snapshot is `../manuscript-state-example.yaml`.

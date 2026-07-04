@@ -38,6 +38,8 @@ required_root_files=(
   examples/zero-to-one-sci-manuscript/README.md
   examples/zero-to-one-sci-manuscript/complete-manuscript.md
   examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md
+  examples/zero-to-one-sci-manuscript/complete-manuscript.docx
+  examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.docx
   examples/zero-to-one-sci-manuscript/initial-user-brief.md
   examples/zero-to-one-sci-manuscript/complete-workflow.md
   examples/zero-to-one-sci-manuscript/final-package.md
@@ -69,6 +71,8 @@ manifest_declared_files="$(awk '
   /^  word_manuscript_format: / {print $2}
   /^  complete_manuscript_en: / {print $2}
   /^  complete_manuscript_zh: / {print $2}
+  /^  complete_manuscript_docx_en: / {print $2}
+  /^  complete_manuscript_docx_zh: / {print $2}
   /^  zero_to_one_workflow: / {print $2}
   /^  initial_brief: / {print $2}
   /^  complete_run: / {print $2}

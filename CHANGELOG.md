@@ -4,6 +4,13 @@ All notable changes to `SCI-paper-skills` are documented here.
 
 ## Unreleased
 
+## 0.6.9 - Regenerated DOCX Example And Skill Cleanup
+
+- Regenerated the bilingual zero-to-one example with paragraph-plan discipline: 4-paragraph Introduction, 2-paragraph Results subsections, and 4-paragraph Discussion.
+- Added checked English and Chinese DOCX manuscript examples produced from the regenerated manuscript and verified against the Word format profile.
+- Updated manifest, README files, example package notes, and validation checks so DOCX examples are part of the published package.
+- Removed the unused `init_journal_project.py` skill script and generated Python cache clutter from the skills tree.
+
 ## 0.6.8 - Word Manuscript Formatting And Paragraph Planning
 
 - Added Word/DOCX manuscript formatting rules and an OOXML enforcement/check script for continuous line numbers, black 12 pt text, 1.5 spacing, justified body paragraphs, and left-aligned headings.

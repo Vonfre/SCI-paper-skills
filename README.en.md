@@ -1,6 +1,6 @@
 # SCI-paper-skills
 
-[![Version](https://img.shields.io/badge/version-0.6.8-0f766e)](manifest.yaml)
+[![Version](https://img.shields.io/badge/version-0.6.9-0f766e)](manifest.yaml)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-15-7c3aed)](skills)
 
@@ -77,12 +77,14 @@ $sci-paper-skills
 
 ## Complete Example
 
-The repository includes a synthetic zero-to-one example showing how a research question can be organized into a real manuscript-style Markdown document:
+The repository includes a synthetic zero-to-one example showing how a research question can be organized into real manuscript-style Markdown and Word/DOCX outputs:
 
 | File | Description |
 |---|---|
 | [complete-manuscript.md](examples/zero-to-one-sci-manuscript/complete-manuscript.md) | Complete English manuscript |
 | [complete-manuscript.zh-CN.md](examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md) | Complete Chinese manuscript |
+| [complete-manuscript.docx](examples/zero-to-one-sci-manuscript/complete-manuscript.docx) | Checked English Word example |
+| [complete-manuscript.zh-CN.docx](examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.docx) | Checked Chinese Word example |
 | [manuscript-state-example.yaml](examples/manuscript-state-example.yaml) | Example manuscript state file |
 | [final-package.md](examples/zero-to-one-sci-manuscript/final-package.md) | Final package notes |
 

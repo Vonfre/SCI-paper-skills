@@ -1,6 +1,6 @@
 # SCI-paper-skills
 
-[![Version](https://img.shields.io/badge/version-0.6.8-0f766e)](manifest.yaml)
+[![Version](https://img.shields.io/badge/version-0.6.9-0f766e)](manifest.yaml)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-15-7c3aed)](skills)
 
@@ -77,12 +77,14 @@ $sci-paper-skills
 
 ## 完整示例
 
-仓库提供了一个从 0 到 1 的合成示例，展示如何把一个研究问题组织成真正论文格式的 Markdown：
+仓库提供了一个从 0 到 1 的合成示例，展示如何把一个研究问题组织成真正论文格式的 Markdown 和 Word/DOCX：
 
 | 文件 | 内容 |
 |---|---|
 | [complete-manuscript.md](examples/zero-to-one-sci-manuscript/complete-manuscript.md) | 英文完整论文 |
 | [complete-manuscript.zh-CN.md](examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md) | 中文完整论文 |
+| [complete-manuscript.docx](examples/zero-to-one-sci-manuscript/complete-manuscript.docx) | 英文 Word 示例，已通过 DOCX 格式检查 |
+| [complete-manuscript.zh-CN.docx](examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.docx) | 中文 Word 示例，已通过 DOCX 格式检查 |
 | [manuscript-state-example.yaml](examples/manuscript-state-example.yaml) | 示例状态文件 |
 | [final-package.md](examples/zero-to-one-sci-manuscript/final-package.md) | 最终打包说明 |
 

@@ -1,5 +1,5 @@
 name: SCI-paper-skills
-version: 0.6.8
+version: 0.6.9
 license: MIT
 description: Target-journal-adaptive Codex skills for SCI/SCIE manuscript planning, data/analysis evidence integration, paragraph planning, Word/DOCX formatting, drafting, journal-format control, polishing, citation control, submission, and revision.
 workflow:
@@ -17,6 +17,8 @@ validation:
 examples:
   complete_manuscript_en: examples/zero-to-one-sci-manuscript/complete-manuscript.md
   complete_manuscript_zh: examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md
+  complete_manuscript_docx_en: examples/zero-to-one-sci-manuscript/complete-manuscript.docx
+  complete_manuscript_docx_zh: examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.docx
   zero_to_one_workflow: examples/zero-to-one-sci-manuscript/README.md
   initial_brief: examples/zero-to-one-sci-manuscript/initial-user-brief.md
   complete_run: examples/zero-to-one-sci-manuscript/complete-workflow.md

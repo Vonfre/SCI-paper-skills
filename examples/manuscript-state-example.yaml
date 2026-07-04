@@ -30,6 +30,8 @@ project:
   available_artifacts:
     - "complete-manuscript.md"
     - "complete-manuscript.zh-CN.md"
+    - "complete-manuscript.docx"
+    - "complete-manuscript.zh-CN.docx"
     - "final-package.md"
     - "complete-workflow.md"
   missing_inputs: []
@@ -411,6 +413,21 @@ storyline:
           - "S2"
         basis_note: "Ordinary Results subsection default."
       - section_id: "SEC5"
+        section_type: "results"
+        target_paragraphs: "2"
+        paragraph_roles:
+          - "synthesize evidence chain into bounded model"
+          - "state boundary and prevent mechanism overclaim"
+        linked_claim_ids:
+          - "C1"
+          - "C2"
+          - "C3"
+          - "C4"
+        linked_figure_ids:
+          - "F5"
+        needed_source_ids: []
+        basis_note: "Model-style Results subsection kept to two natural paragraphs."
+      - section_id: "SEC6"
         section_type: "discussion"
         target_paragraphs: "3-4"
         paragraph_roles:
@@ -471,6 +488,18 @@ storyline:
         - "S2"
       draft_status: "complete"
     - section_id: "SEC5"
+      section_type: "results"
+      purpose: "Synthesize the bounded DRK1 ABA-response model."
+      linked_claim_ids:
+        - "C1"
+        - "C2"
+        - "C3"
+        - "C4"
+      linked_figure_ids:
+        - "F5"
+      needed_source_ids: []
+      draft_status: "complete"
+    - section_id: "SEC6"
       section_type: "discussion"
       purpose: "Bound the mechanistic interpretation."
       linked_claim_ids:
@@ -485,8 +514,8 @@ storyline:
         - "S2"
         - "S3"
       draft_status: "complete"
-  drafting_brief: "Complete English and Chinese paper-format manuscripts with bounded claim strength and five quality gates: literature-backed Introduction, evidence-dense Results, result-anchored Discussion, reproducible Methods, and target-journal format consistency."
-  draft_readiness: "complete bilingual demo manuscripts"
+  drafting_brief: "Complete English and Chinese paper-format manuscripts with bounded claim strength and six quality gates: literature-backed 4-paragraph Introduction, 2-paragraph Results subsections, 4-paragraph result-anchored Discussion, reproducible Methods, target-journal format consistency, and checked DOCX formatting."
+  draft_readiness: "complete bilingual demo manuscripts with DOCX-ready outputs"
   draft_blockers: []
 
 reviewer_risk:
@@ -510,6 +539,8 @@ draft_registry:
   manuscript_files:
     english: "examples/zero-to-one-sci-manuscript/complete-manuscript.md"
     chinese: "examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md"
+    english_docx: "examples/zero-to-one-sci-manuscript/complete-manuscript.docx"
+    chinese_docx: "examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.docx"
   sections:
     - section_id: "SEC1"
       status: "complete"
@@ -533,6 +564,13 @@ draft_registry:
         - "C2"
         - "C3"
         - "C4"
+    - section_id: "SEC6"
+      status: "complete"
+      linked_claim_ids:
+        - "C1"
+        - "C2"
+        - "C3"
+        - "C4"
   open_needs: []
   open_citations: []
   high_risk_claim_ids:
@@ -542,7 +580,7 @@ draft_registry:
 document_output:
   requested_formats:
     - "markdown"
-    - "docx-ready"
+    - "docx"
   word_format_profile:
     line_numbering: "continuous"
     text_color: "000000"
@@ -551,7 +589,7 @@ document_output:
     body_alignment: "justified"
     heading_alignment: "left"
     enforcement_script: "scripts/enforce_manuscript_docx_format.py"
-    validation_status: "not requested"
+    validation_status: "pass"
     exceptions: []
 
 citation_audit:
@@ -585,9 +623,13 @@ submission_package:
   manuscript_files:
     english: "examples/zero-to-one-sci-manuscript/complete-manuscript.md"
     chinese: "examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.md"
+    english_docx: "examples/zero-to-one-sci-manuscript/complete-manuscript.docx"
+    chinese_docx: "examples/zero-to-one-sci-manuscript/complete-manuscript.zh-CN.docx"
   file_checklist:
     - "complete English manuscript"
     - "complete Chinese manuscript"
+    - "checked English DOCX manuscript"
+    - "checked Chinese DOCX manuscript"
     - "synthetic figure legends"
     - "synthetic supplementary statistical table"
     - "data availability statement"
@@ -603,4 +645,4 @@ submission_package:
   unresolved_placeholders: []
   cover_letter_status: "not included in manuscript example"
   rebuttal_matrix_status: "not applicable"
-  final_readiness: "complete bilingual synthetic demo manuscripts"
+  final_readiness: "complete bilingual synthetic demo manuscripts with DOCX format checks"
