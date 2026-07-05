@@ -58,7 +58,7 @@ The local reference folder contained two bamboo research articles used as calibr
 | Section | Paragraph Budget | Planning Rule |
 |---|---:|---|
 | Abstract | 1 | One compact paragraph moving from context/gap to approach, main findings, and implication. |
-| Introduction | 4 | Field/problem; system or known mechanism; unresolved technical or biological gap; study objective and contribution. |
+| Introduction | 4 | Research background and current status; central problem/question; concrete difficulty, boundary, or technical/biological details; study viewpoint, objective, design, and main contribution. |
 | Results overview | Named subsections | Do not write Results as one long block; each subsection should answer one scientific question. |
 | Result subsection | 2-3 | Purpose/setup, direct evidence with statistics/figures, and short interpretation or bridge. Use 4 only for unusually complex multiomics or resource-building subsections. |
 | Discussion | 3-4 | Principal findings; method/resource or mechanism significance; limitations/boundaries; conservation/application/future direction and closing. |
@@ -71,7 +71,7 @@ For the user's stated preference, Results should default to 2-3 natural paragrap
 Use these roles when planning:
 
 - Abstract: context/gap; approach; primary result sequence; interpretation and implication.
-- Introduction: background/stakes; known work; unresolved gap; objective/design/contribution.
+- Introduction: background/current status; problem/question; specific difficulty/details; viewpoint/objective/design/contribution.
 - Result subsection: why tested; what was compared; what was observed; quantitative/statistical support; bridge to the next question.
 - Discussion: main answer; relation to literature; mechanism/model or resource value; limitations/alternative explanations; future/application/conclusion.
 - Methods: sample/material; protocol or computational workflow; quantification/statistics; software/data availability.

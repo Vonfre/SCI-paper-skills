@@ -107,30 +107,40 @@ Do not include numbers unless supplied by the user or extracted from the user's 
 
 Build 4 paragraphs by default when the target journal resembles the local Nature Communications/PNAS bamboo-reference pattern; use 4-6 paragraphs when comparable papers show a broader norm:
 
-1. Field-level problem and journal-relevant stakes.
-2. What is known.
-3. What remains unresolved.
-4. Why current approaches are insufficient.
-5. Study objective/hypothesis and design.
-6. Concise contribution statement.
+1. Research background and current field status, including the main source-backed context the target audience needs.
+2. The central problem, gap, or scientific question that follows from that status.
+3. The concrete difficulty, boundary, or technical/biological details that make the problem nontrivial and explain why existing approaches are insufficient.
+4. This study's viewpoint, objective or hypothesis, design, and concise contribution statement.
 
 Avoid generic textbook openings when comparable papers move quickly to a precise gap.
 Each paragraph should have a source role, and the gap should emerge from the literature rather than appearing as an unsupported assertion.
+When introducing the study's contribution, avoid formulaic or conversational openers such as `Here, we...`; prefer a precise bridge from the previous gap or problem, such as `To address this challenge...` or `To address this need...`.
 
 ### Results
 
 Each result subsection should have:
 
 - Purpose sentence.
-- Method or comparison.
+- Method, comparison, or named result object.
 - Main observation.
 - Quantitative/statistical support.
 - Link to figure/table/supplement.
 - Short interpretive bridge to the next result.
 
+For algorithm, software, platform, workflow, or resource-building Results with limited direct data or figure support, convert process steps into tangible results. Each major action should yield a named artifact, module, interface, output table, evidence report, quality-control layer, or reusable resource. The result claim should be what was produced and why it matters, while benchmark accuracy, biological validation, or user utility should be reserved for sections with supporting data.
+For benchmark or head-to-head Results, write the comparison so it is fair but advantage-forward. Start with the shared dataset/task design, report the most granular advantage first, then show stability across groups or conditions, then test an orthogonal comparator or validation setting, and only then discuss the distinctive feature or mechanism behind the advantage. Do not give equal space to secondary wrappers, implementation checks, or exception cases unless they alter the main claim; summarize them briefly and move supporting detail to supplements, but include a conclusion-level number when mentioning them.
+For resource-building, computational-analysis, or theory-generating Results, make each subsection a self-contained mini-story rather than a carry-over from the previous Result. Avoid weak openers such as "Next, we asked..." when the section can open with the produced resource, evidence object, or analytical question. Tie the prose to the main figure panel ladder: resource source and scope, representative case or selection logic, grouping or feature structure, functional interpretation with conservative literature support, and real-data example. Combine adjacent panels into one paragraph when they serve the same evidence layer; do not force one paragraph per panel.
+For interface, browser, workflow, or implementation panels that precede biological data panels, state what later panel or case the interface enables readers to inspect. Do not treat the interface screenshot as an independent result if its role is to contextualize the data panels.
+For refinement, re-clustering, subpopulation, or cell-state Results, first explain the decision logic being compared before reporting the split. For example, distinguish expression-neighbourhood partitioning from graph-guided candidate identity scoring, then show why the new split is biologically meaningful.
+When a refinement result identifies a weak, rare, masked, or visually non-obvious state, use controlled wording such as candidate state, weakly marked rare-state signal, or putative missing label. Pair the claim with concise validation numbers, such as cell counts, purity or agreement, GO gene counts and FDR, rather than treating the state as fully resolved.
+When GO enrichment, pathway enrichment, ontology terms, or functional annotation are used as biological support without direct experimental validation, pair the strongest terms and numbers with literature-backed biological context. State that the enrichment provides a literature-consistent biological or functional consistency check, not orthogonal validation or mechanistic proof. One brief discussion-like sentence at the start or end of the case is usually enough; do not leave GO terms as an uncited list, and do not turn the Results paragraph into a mini-review.
+When adding secondary evidence inside a Results paragraph, keep it conclusion-serving and brief: state the result, the key number or range, and the claim it supports. Do not explain a metric, panel grammar, or intermediate calculation unless readers need it to understand the main claim; low-weight evidence should function as support, not become a methods aside.
+Quantify exceptions and weak spots. Avoid vague claims such as "some datasets performed worse"; give counts, ranks, margins, affected groups, or dispersion so readers can see the boundary of the weakness and why it does not overturn the central result.
+When a result is non-ideal, write it as a bounded and interpretable condition rather than an unqualified failure. Pair the number with the context that explains where it occurs, such as a data-rich subgroup, sparse reference evidence, a small margin, a comparator-specific advantage, a species/context boundary, or a known analysis constraint. The goal is not to hide weakness, but to show that the limitation is measurable, explainable, and controlled by the study design.
+Avoid stiff transition sentences that merely announce a new dimension, such as "Accuracy was only one part of the benchmark result." Prefer a finding-linked bridge that names the added evidence layer, such as decision inspectability, robustness, mechanism, validation, or biological interpretation.
 Use comparable papers to decide whether the journal favors mechanism-first, phenotype-first, cohort-first, resource-first, or method-validation-first sequencing.
 Use the target journal's exact callout style from `journal_format_profile`, such as `Fig. 1A`, `Figure 1A`, `Figs. 1 and 2`, `Supplementary Fig. 1`, or `Table S1`; never mix styles inside one manuscript.
-Plan Results as named subsections, not one long section. Each result subsection should default to 2-3 natural paragraphs: setup/purpose, evidence/statistics/figure support, and a concise interpretation or transition. Use 4 only for unusually complex multiomics/resource-building subsections when model papers justify it.
+Plan Results as named subsections, not one long section. Each result subsection should default to 2-3 natural paragraphs: setup/purpose, evidence/statistics/figure support, and a concise interpretation or transition. If two adjacent paragraphs make the same comparison or explain the same figure-panel layer, merge them. Use 4 only for unusually complex multiomics/resource-building subsections when model papers justify it.
 Allow brief discussion-like transition sentences in Results only when they improve continuity or explain why the next experiment is needed.
 
 ### Discussion

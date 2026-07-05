@@ -28,6 +28,12 @@ Ask for a simple figure inventory:
 - Order figures by reader logic, not experiment chronology.
 - Keep internal IDs stable as `F#`/`T#`, but let `journal_format_profile` decide the manuscript-facing labels such as `Fig. 1`, `Figure 1`, `Supplementary Fig. 1`, or `Table S1`.
 - Treat every main figure as a visual argument: write its core conclusion, panel evidence chain, statistics/integrity notes, and export requirements before drafting Results prose.
+- For benchmark or comparison figures, align the Results prose with the panel ladder: first establish dataset breadth and fair comparison design, then show the strongest dataset-level advantage, then group/species/condition-level stability, then an orthogonal comparator or validation setting, and finally the distinctive capability that competitors lack. A panel ladder is an evidence order, not a one-panel-one-paragraph rule; merge adjacent panels when they serve the same comparison layer.
+- For resource-building or analysis-derived main figures, make the Result subsection a self-contained mini-story rather than a continuation opened by "next" or "we then asked". A useful panel ladder is: resource/provenance overview, representative case or selection logic, grouping/feature structure, functional or literature-supported interpretation, and real-data example. Group panels into natural paragraphs when they form one evidence layer; do not force one paragraph per panel.
+- For figures where an interface, browser, or workflow panel precedes data panels, assign the interface panel a support role: it should tell readers how the later case or dataset can be inspected, not become a standalone result.
+- For refinement or re-clustering figures, write the comparison logic before the panel results: expression-neighbourhood partitioning, graph-guided candidate scoring, manual gating, or another decision rule should be named before counts, UMAPs, or GO terms are interpreted.
+- For weak, masked, rare, or visually subtle cell states, keep the figure contract conservative. Use candidate/putative/weakly marked language and require concise supporting numbers such as cell counts, purity or agreement, GO gene counts and FDR.
+- For GO, pathway, ontology, or functional-enrichment panels that substitute for direct experimental validation, require the panel contract to include both enrichment numbers and cited biological context. Treat the panel as a literature-consistent biological check, not as standalone proof of the refined state or mechanism.
 
 ## Figure Roles
 
@@ -51,6 +57,7 @@ Assign every figure or table one role:
 5. Identify missing panels, controls, source data, quantification, statistics, image-integrity notes, legends, or export issues.
 6. Build a result-section skeleton with transitions between figures.
 7. Note the target-journal-facing callout style if `journal_format_profile` is available.
+8. For benchmark figures, assign each panel a rhetorical job and weight the prose accordingly: main advantage panels receive detailed text, while implementation checks, sanity checks, and secondary wrappers are summarized briefly and pushed to supplements unless they change the central claim.
 
 ## Ordering Rule
 

@@ -13,17 +13,17 @@ Default paragraph budget:
 
 Required sequence:
 
-1. Field-level problem and why the journal audience should care.
-2. Established knowledge with sources grouped by role, not pasted as a list.
-3. Mechanistic or conceptual boundary that remains unresolved.
-4. Specific scientific question or hypothesis.
-5. Study design and contribution, stated without inflated novelty.
+1. Research background and current field status, with sources grouped by role rather than pasted as a list.
+2. The central problem, gap, or scientific question that follows from the current status.
+3. The concrete difficulty, boundary, or technical/biological details that make the problem nontrivial.
+4. This study's viewpoint, objective or hypothesis, design, and contribution, stated without inflated novelty.
 
 Quality checks:
 
 - Every paragraph should have a citation role: background, mechanism, gap, contradiction, method precedent, or target-journal framing.
 - Use reviews for framing and primary papers for precise mechanisms.
 - Do not let the gap appear only in the final sentence; build toward it.
+- Avoid formulaic or conversational contribution openers such as `Here, we...`; use a gap-linked bridge such as `To address this challenge...` or `To address this need...` when introducing the study.
 - Avoid textbook openings when the target field already has a mature literature.
 
 ## Results
@@ -35,15 +35,21 @@ Default paragraph budget:
 - Use named Results subsections.
 - Each ordinary Results subsection should contain 2-3 natural paragraphs.
 - Use 4 only for complex multiomics, resource-building, or multi-assay subsections when model papers justify it.
-- If a subsection needs more than 3 paragraphs without justification, split it into smaller result questions or move detail to Methods/Supplementary Material.
+- If a subsection needs more than 3 paragraphs without justification, merge adjacent same-job paragraphs, split the subsection into smaller result questions, or move detail to Methods/Supplementary Material.
 
 Each result subsection should contain:
 
 1. Purpose sentence explaining why this experiment was done.
-2. Experimental comparison and control.
-3. Direct observation with figure/table citation.
-4. Quantification, sample size/replicate logic, and statistical test when known.
+2. Experimental comparison, control, or named result object.
+3. Direct observation, output, artifact, or module definition with figure/table citation where available.
+4. Quantification, sample size/replicate logic, statistical test, or inspectable artifact details when known.
 5. A concise reliability or transition sentence that connects to the next result.
+
+For algorithm, software, workflow, platform, or resource-building Results, make invisible operations visible by turning each major action into a named result object, such as an evidence graph, resolver, scoring layer, refinement module, online interface, agent-callable wrapper, output table, evidence report, or quality-control layer. Keep the claim at the artifact/module level unless benchmark or validation data support a stronger performance claim.
+
+For benchmark or head-to-head Results, the subsection should not read as a neutral list of all comparisons. Establish the fair shared task, lead with the strongest direct result, show robustness across groups or conditions, add any orthogonal comparator that expands the claim space, and then explain the distinctive feature that competitors do not provide. Exceptions, deployment wrappers, and sanity checks should be concise unless they change the central result, but they still need a conclusion-level number, count, margin, rank, or dispersion value if mentioned.
+
+For result subsection headings, name the core finding rather than the action performed. Prefer concise finding-led headings over generic process titles, and for DOCX outputs ensure heading text remains black like the rest of the manuscript.
 
 Allowed micro-discussion in Results:
 

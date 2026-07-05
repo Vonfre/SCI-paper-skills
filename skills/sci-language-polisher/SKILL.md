@@ -45,14 +45,15 @@ Check whether the problem is language or logic:
 
 1. Identify paragraph/section purpose and claim strength.
 2. Remove ambiguity, redundancy, vague verbs, and unsupported superlatives.
-3. Improve transitions and sentence order when logic is local.
+3. Improve transitions and sentence order when logic is local; replace generic, conversational section openers such as `Here, we...` with precise bridges that name the gap, challenge, need, or objective being addressed.
 4. Normalize journal-format items from `journal_format_profile`: `Fig.`/`Figure` forms, panel letters, multi-figure callouts, supplementary labels, figure legends, table titles, headings, references, and statements.
-5. Check the paragraph plan when polishing full sections; do not expand Results subsections beyond 2-3 paragraphs unless already justified.
-6. For Results, preserve evidence-first order while adding only short reliability or transition clauses.
-7. For Discussion, improve breadth by linking the main result to literature, mechanism, alternative explanations, limitations, and implications without inventing new evidence.
-8. For DOCX-facing outputs, flag any action that could disturb Word formatting and route final file checks to `sci-submission-revision`.
-9. Return before/after examples for recurring language or format problems when useful.
-10. Flag claims that still need data, citation, format-rule verification, or upstream logic repair.
+5. Check the paragraph plan when polishing full sections; do not expand Results subsections beyond 2-3 paragraphs unless already justified, and merge adjacent paragraphs that have the same role or evidence layer.
+6. For Results, preserve evidence-first order while adding only short reliability or transition clauses; in benchmark or comparison Results, make the advantage visible through fair design, concrete metrics, stability checks, quantified exceptions, and a distinctive capability rather than promotional wording.
+7. When polishing a non-ideal or locally weaker result, do not leave it as a blunt admission or over-soften it into vagueness. Keep the number, bound the affected cases, name the plausible and evidence-supported condition behind the deviation, and then return to the main claim.
+8. For Discussion, improve breadth by linking the main result to literature, mechanism, alternative explanations, limitations, and implications without inventing new evidence.
+9. For DOCX-facing outputs, flag any action that could disturb Word formatting and route final file checks to `sci-submission-revision`.
+10. Return before/after examples for recurring language or format problems when useful.
+11. Flag claims that still need data, citation, format-rule verification, or upstream logic repair.
 
 ## Polishing Rule
 

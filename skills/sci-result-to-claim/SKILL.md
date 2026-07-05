@@ -44,18 +44,21 @@ Accept rough input. Convert any of these into a normalized result table:
 - Figure legends.
 - Conclusions without figures.
 - PDF-derived or screenshot-derived figure descriptions when available.
+- Algorithm, software, workflow, platform, or resource-construction descriptions when the result is a named artifact, module, interface, or inspectable output rather than a conventional measurement.
 
-For each result, recover: condition, comparison, method, observation, quantification/statistics if known, sample size, replicate unit, effect/uncertainty, analysis provenance, and what the user thinks it proves.
+For each result, recover: condition, comparison, method, observation, quantification/statistics if known, sample size, replicate unit, effect/uncertainty, analysis provenance, named artifact/module/interface when relevant, and what the user thinks it proves.
 
 ## Workflow
 
 1. List each result/figure and what it directly shows.
 2. Separate direct observation from interpretation.
-3. Assign the strongest defensible claim and the claims it does not support.
-4. Build the evidence package for each result: experimental design, controls, quantification, statistics, representative figure, replicate logic, analysis provenance, and relevant literature context.
-5. Classify the result as confirmatory, exploratory, descriptive, or not yet interpretable.
-6. Identify the smallest missing control, analysis, diagnostic, effect-size report, or citation that would unlock a stronger claim.
-7. Recommend safe wording, result-paragraph bridge language, and a next module.
+3. For algorithm, tool, workflow, platform, or resource-building sections, build a process-to-result map: each invisible action should produce a tangible result object such as a named graph, resolver, scoring layer, refinement module, interface, evidence report, dataset, or quality-control output.
+4. Assign the strongest defensible claim and the claims it does not support.
+5. Build the evidence package for each result: experimental design, controls, quantification, statistics, representative figure, replicate logic, analysis provenance, named artifact/module/interface, and relevant literature context.
+6. Classify the result as confirmatory, exploratory, descriptive, methodological, resource-building, or not yet interpretable.
+7. For non-ideal, mixed, or locally weaker results, define the boundary before drafting: affected count or subgroup, rank/margin/dispersion, likely data or design condition, whether it is comparator-specific, and why it does not overturn the main claim.
+8. Identify the smallest missing control, analysis, diagnostic, effect-size report, artifact description, module definition, boundary explanation, or citation that would unlock a stronger claim.
+9. Recommend safe wording, result-paragraph bridge language, and a next module.
 
 ## Claim Discipline
 
@@ -70,6 +73,7 @@ Use these boundaries:
 
 Do not allow phenotype-only data to become a mechanism claim. Do not allow correlation to become causation. Do not allow one model system to become a universal statement without support.
 Do not allow p-values alone to carry a strong claim. Require direction, effect or estimate, uncertainty, sample size, replicate unit, and appropriate statistical/model assumptions whenever the claim depends on quantitative analysis.
+For tool or algorithm results, do not present a procedural step as if it were validation. State what the step produced, such as an evidence graph, label resolver, candidate-gene module, online interface, agent-callable wrapper, output table, or audit trail, and reserve performance claims for benchmark or validation data.
 
 ## State Coupling
 
@@ -100,6 +104,7 @@ Return:
 - `Result-to-claim matrix`.
 - `Evidence package table`.
 - `Analysis provenance and statistical status`.
+- `Process-to-result map` when method, software, platform, workflow, or resource-building content lacks conventional figure/data support.
 - `Result paragraph bridge notes`.
 - `Claim-strength summary`.
 - `Evidence gaps` ranked by importance.

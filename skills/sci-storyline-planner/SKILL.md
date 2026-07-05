@@ -59,7 +59,7 @@ If a required artifact is missing, make a provisional plan and mark the missing 
 When model papers are supplied, count natural paragraphs per major section and per named Results subsection, then record the count basis. When no better model exists, use the local bamboo-reference baseline from `sci-paper-skills/references/word-manuscript-format.md`:
 
 - Abstract: 1 paragraph.
-- Introduction: 4 paragraphs for concise Nature Communications/PNAS-like research articles.
+- Introduction: 4 paragraphs for concise Nature Communications/PNAS-like research articles: (1) research background and current field status; (2) the central problem or question; (3) the concrete difficulty, boundary, or technical/biological details that make the problem nontrivial; (4) this study's viewpoint, objective, design, and main contribution.
 - Results: named subsections, usually 2-3 natural paragraphs per subsection.
 - Discussion: 3-4 paragraphs for concise research articles.
 - Methods: subheaded reproducible blocks rather than one fixed paragraph count.

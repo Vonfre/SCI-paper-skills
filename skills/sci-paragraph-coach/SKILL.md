@@ -25,8 +25,8 @@ Ask for data, figure, claim, and citation only when they are needed for that par
 
 ## Paragraph Patterns
 
-- Introduction: broad field context -> source-backed known mechanisms -> unresolved boundary -> exact scientific question -> study objective.
-- Results: purpose -> method/comparison -> direct observation -> quantification/statistics/control -> short reliability or transition bridge.
+- Introduction: four-paragraph funnel by default: research background and current status -> central problem/question -> concrete difficulty and details -> study viewpoint, objective, design, and contribution.
+- Results: purpose -> method/comparison or named result object -> direct observation/output -> quantification/statistics/control or artifact/module definition -> short reliability or transition bridge.
 - Discussion: principal finding -> relation to literature -> mechanism or model -> alternative explanation -> implication -> limitation/future work.
 - Figure legend: what was tested -> what is shown -> sample/statistics -> abbreviations.
 - Cover letter: fit to journal -> contribution -> why readers care.
@@ -47,8 +47,10 @@ A paragraph should do one job:
 
 - Check `storyline.paragraph_plan` before coaching a paragraph inside a full section.
 - Abstract should usually be 1 paragraph unless the journal requires structured headings.
-- Introduction should usually be 4 paragraphs for concise Nature Communications/PNAS-like articles.
+- Introduction should usually be 4 paragraphs for concise Nature Communications/PNAS-like articles: background/current status; problem/question; specific difficulty/details; study viewpoint/objective/contribution.
 - Results subsections should usually be 2-3 natural paragraphs: setup/purpose, evidence/statistics/figure support, and bridge/limited interpretation.
+- If adjacent Results paragraphs serve the same rhetorical job, evidence layer, or figure-panel group, merge them before sentence polishing; do not split one comparison layer into separate paragraphs only because it covers multiple panels.
+- For algorithm, software, platform, workflow, or resource-building Results, avoid method-only narration by naming the concrete result produced by each action, such as a graph, resolver, module, interface, output table, evidence report, or quality-control layer.
 - Discussion should usually be 3-4 paragraphs for concise articles.
 - If the user's draft exceeds the planned count, recommend merge/split/move actions before polishing sentences.
 

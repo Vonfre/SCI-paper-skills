@@ -31,7 +31,11 @@ KNOWN_NAMESPACES = {
     "w14": "http://schemas.microsoft.com/office/word/2010/wordml",
     "w15": "http://schemas.microsoft.com/office/word/2012/wordml",
     "w16": "http://schemas.microsoft.com/office/word/2018/wordml",
+    "w16cex": "http://schemas.microsoft.com/office/word/2018/wordml/cex",
     "w16cid": "http://schemas.microsoft.com/office/word/2016/wordml/cid",
+    "w16du": "http://schemas.microsoft.com/office/word/2023/wordml/word16du",
+    "w16sdtdh": "http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash",
+    "w16sdtfl": "http://schemas.microsoft.com/office/word/2024/wordml/sdtformatlock",
     "w16se": "http://schemas.microsoft.com/office/word/2015/wordml/symex",
     "sl": "http://schemas.openxmlformats.org/schemaLibrary/2006/main",
 }

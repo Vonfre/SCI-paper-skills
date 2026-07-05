@@ -48,6 +48,7 @@
 - Results paragraphs should show evidence before interpretation.
 - Results subsections should usually stay within 2-3 natural paragraphs; if a fourth paragraph is needed, record the model-paper or complexity reason.
 - Results paragraphs may include a short final bridge sentence when it increases continuity or reliability.
+- If a Results paragraph includes a non-ideal finding, write it as a quantified boundary with a controlled explanation, not as an unframed weakness.
 - Discussion paragraphs should not introduce stronger claims than the results.
 - Discussion paragraphs should expand outward from the result into literature, mechanism, alternatives, implications, and limits.
 - Introduction paragraphs should narrow from source-backed field context to exact gap and objective.

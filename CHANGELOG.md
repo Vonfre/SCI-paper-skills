@@ -4,6 +4,12 @@ All notable changes to `SCI-paper-skills` are documented here.
 
 ## Unreleased
 
+## 0.6.12 - Resource And Benchmark Result Guidance
+
+- Added result-writing guidance for algorithm, software, platform, workflow, and resource-building manuscripts so process steps become named result artifacts, modules, interfaces, or inspectable outputs.
+- Strengthened benchmark, comparison, refinement, weak-state, and GO/enrichment guidance across figure story building, result-to-claim control, paragraph coaching, drafting, and polishing.
+- Added newer Word namespace prefixes to the DOCX formatting script so Word-generated documents with recent `w16*` metadata remain checkable.
+
 ## 0.6.11 - Word Repair Warning Fix
 
 - Fixed DOCX post-processing so `word/styles.xml` preserves valid style child order (`pPr` before `rPr`) instead of triggering Word repair.
