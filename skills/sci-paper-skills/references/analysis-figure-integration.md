@@ -10,7 +10,10 @@ When the local environment has specialized skills, route the task to them rather
 |---|---|---|
 | File structure, format, quality, and preprocessing needs | `exploratory-data-analysis` | `analysis_registry.datasets` and quality risks |
 | Test selection, assumptions, effect sizes, power, diagnostics | `statistical-analysis` or domain-specific modeling skill | `analysis_registry.statistical_plan` and `statistics_report` |
-| Manuscript-grade plots, multi-panel figures, export QA | `scientific-visualization`, `matplotlib`, `plotly`, or `nature-figure` | `figure_registry.figures[].figure_contract` and export notes |
+| Manuscript-grade plots, multi-panel figures, export QA | `scientific-visualization`, `matplotlib`, `plotly`, `nature-figure`, `figure-style`, or `figure-composer` | `figure_registry.figures[].figure_contract` and export notes |
+| Whole-paper figure arc, Fig. 1 hook, panel moves, missing panels, or kill list | `paper-narrative`, then `figure-composer` when figures must be rebuilt | `story.arc`, `figure_registry` moves, missing-panel analysis tasks, and defensible Fig. 1 claim |
+| Public datasets, repository records, accessions, dataset companion papers, FAIR checks | domain repository connector, `nature-data`, or journal-specific data policy check | dataset evidence cards, `analysis_registry.datasets`, source IDs, and `data_availability_plan` |
+| Related papers, citation-graph context, dataset/software citations, source-role synthesis | literature connector, `literature-review`, or `sci-literature-evidence` | `source_ledger`, related-paper map, citation roles, and novelty boundaries |
 | Data Availability, repositories, accessions, FAIR checks | `nature-data` or journal-specific data policy check | `data_availability_plan` |
 | Domain-specific analysis such as single-cell, bulk RNA-seq, imaging, metabolomics, phylogenetics | matching domain skill | verified analysis summary linked to claim IDs |
 

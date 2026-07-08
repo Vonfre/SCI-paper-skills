@@ -4,6 +4,9 @@ All notable changes to `SCI-paper-skills` are documented here.
 
 ## Unreleased
 
+- Added dataset and related-paper integration guidance for public datasets, repository accessions, benchmark resources, companion papers, citation-graph context, and dataset/software citation decisions.
+- Strengthened literature, citation, result-to-claim, journal-landscape, state-schema, and routing guidance so dataset suitability and related-paper evidence are tracked before drafting or submission.
+
 ## 0.6.12 - Resource And Benchmark Result Guidance
 
 - Added result-writing guidance for algorithm, software, platform, workflow, and resource-building manuscripts so process steps become named result artifacts, modules, interfaces, or inspectable outputs.

@@ -51,6 +51,7 @@ required_root_files=(
   skills/sci-paper-skills/references/manuscript-state-schema.md
   skills/sci-paper-skills/references/handoff-contracts.md
   skills/sci-paper-skills/references/analysis-figure-integration.md
+  skills/sci-paper-skills/references/dataset-and-related-paper-integration.md
   skills/sci-paper-skills/references/word-manuscript-format.md
   skills/sci-paper-skills/scripts/enforce_manuscript_docx_format.py
 )
@@ -77,6 +78,7 @@ done
 manifest_declared_files="$(awk '
   /^  github_actions: / {print $2}
   /^  analysis_figure_integration: / {print $2}
+  /^  dataset_related_paper_integration: / {print $2}
   /^  word_manuscript_format: / {print $2}
   /^  complete_manuscript_en: / {print $2}
   /^  complete_manuscript_zh: / {print $2}

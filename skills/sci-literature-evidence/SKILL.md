@@ -22,9 +22,22 @@ For each conclusion or possible direction, state whether the literature directly
 ## Search Priorities
 
 - Primary papers for specific mechanisms, methods, or findings.
+- Dataset descriptor papers, repository records, benchmark papers, and software/model papers when datasets or computational resources affect the claim.
 - Recent reviews for field framing, not as sole proof for precise claims.
 - Same-journal or same-level papers when journal fit matters.
-- Official database records for DOI/PMID and retraction checks when available.
+- Official database records for DOI/PMID, accession, version, license/access route, companion paper, and retraction/status checks when available.
+
+Do not answer related-paper or seminal-paper requests from memory alone when real citations will enter the manuscript. Resolve DOI/PMID/URL metadata through available scholarly or repository sources before treating a source as verified.
+
+## Related-Paper And Dataset Context
+
+When the task asks for related papers, comparable papers, source datasets, benchmark resources, or dataset companion papers, use a retrieval-first map rather than a reading list:
+
+1. Run topic, organism/system, method, dataset/accession, and target-journal query variants.
+2. For the most relevant papers, inspect reference and citation neighborhoods when available to recover foundational work, recent extensions, contradictions, and uptake.
+3. Separate source roles: direct claim support, conflicting evidence, method precedent, dataset descriptor, benchmark comparator, journal-style model, background review, or discussion boundary.
+4. Link dataset records to companion papers and claim IDs when datasets affect user claims.
+5. Synthesize what the paper set collectively establishes, contests, or leaves open; do not summarize one paper per bullet unless the output is explicitly a ledger.
 
 ## Research Question Planning
 
@@ -72,7 +85,7 @@ Consume:
 Update:
 
 - `source_ledger.research_questions` and `source_ledger.sources` with stable IDs `S#`.
-- Literature support, conflict, novelty boundaries, and source confidence.
+- Literature support, conflict, novelty boundaries, related-paper roles, dataset companion-paper links, and source confidence.
 - `claim_registry.claims[].citation_needs`, `evidence_needed_for_stronger_claim`, and status when claims already exist.
 
 Block:
@@ -87,6 +100,8 @@ Return:
 
 - `Research question matrix`.
 - `Source ledger` with source role, metadata status, evidence location, and confidence.
+- `Related-paper map` when the user asks for comparable papers, seminal papers, citation context, dataset companion papers, or method/dataset precedent.
+- `Dataset-source links` when public datasets, benchmark resources, or repository records affect the claim.
 - `Evidence map` for each user question or conclusion.
 - `Introduction evidence ladder` when drafting or improving an Introduction.
 - `Support/conflict summary`.

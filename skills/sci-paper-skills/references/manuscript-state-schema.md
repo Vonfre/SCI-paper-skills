@@ -103,11 +103,24 @@ source_ledger:
 analysis_registry:
   datasets:
     - dataset_id: "D1"
+      name_or_accession: ""
+      repository: ""
+      url_or_doi: ""
+      companion_paper_source_id: "S# | [NEED: companion paper]"
       file_or_source: ""
       data_type: ""
+      organism_material_system: ""
+      sample_size_and_unit: ""
+      raw_processed_available: "raw | processed | both | unknown"
       provenance_status: "verified | user-provided | needs check"
       preprocessing_summary: ""
+      license_access_restriction: ""
+      manuscript_role: "primary | validation | benchmark | comparator | background | citation-only"
+      linked_claim_ids: []
+      linked_figure_ids: []
+      suitability_verdict: "suitable | limited | unsuitable | unknown"
       quality_risks: []
+      citation_requirement: "dataset citation | companion paper | repository URL | software/model citation | unknown"
   statistical_plan:
     - analysis_id: "A1"
       linked_claim_ids: []

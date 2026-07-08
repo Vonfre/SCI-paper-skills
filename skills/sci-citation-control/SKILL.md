@@ -22,7 +22,7 @@ Classify the user's need:
 - `Journal format audit`: check figure/table/supplement callouts, legends, table titles, headings, and statement labels against `journal_format_profile`.
 - `Bibliography cleanup`: normalize, deduplicate, and flag stale or irrelevant sources.
 
-Use current web or database verification when real references, current status, retractions, or exact metadata matter. Do not invent citations.
+Use current web, scholarly-index, DOI/PMID, repository, or database verification when real references, current status, retractions, accessions, dataset metadata, software/model releases, or exact source roles matter. Do not invent citations, accession numbers, repository records, or dataset/software metadata.
 
 ## Minimum Inputs
 
@@ -48,7 +48,8 @@ Prefer primary papers for precise claims. Use reviews for broad framing unless t
 When references are real or when a draft contains many citations, build a source ledger before final advice. Track:
 
 - Claim ID and claim strength.
-- Source ID, DOI/PMID/URL, year, and source type.
+- Source ID, DOI/PMID/URL/accession, year, and source type.
+- Dataset/software/model/repository identifier and version when the source is not a conventional article.
 - Whether metadata and retraction/status were checked.
 - Exact evidence location when available.
 - Whether the source directly supports, indirectly supports, contradicts, or only frames the claim.
@@ -89,7 +90,8 @@ Return:
 - `Claim-evidence-citation map`.
 - `Source ledger` with metadata status and exact evidence location where available.
 - `Unsupported claim list`.
-- `Reference candidates` with DOI/PMID/URL and relevance notes.
+- `Reference candidates` with DOI/PMID/URL/accession and relevance notes.
+- `Related-paper or dataset-source map` when sources are used to establish novelty, companion papers, benchmark context, or dataset/software citation requirements.
 - `Citation placement plan`.
 - `Journal style notes`.
 - `Format issue list`.

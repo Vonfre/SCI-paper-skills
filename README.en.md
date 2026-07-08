@@ -28,7 +28,7 @@ This skill pack is designed for researchers who already have research materials 
 | What you already have | What the skills help you produce |
 |---|---|
 | Data, figures, tables, or statistical results | Defensible claims and an evidence chain |
-| Raw data, analysis outputs, code, or plotting files | Data-quality, statistical, figure-evidence, and reproducibility risks before writing |
+| Raw data, public datasets, repository accessions, analysis outputs, code, or plotting files | Data-quality, statistical, figure-evidence, dataset-suitability, citation/availability, and reproducibility risks before writing |
 | A rough draft, Chinese draft, or scattered paragraphs | A target-journal-oriented manuscript structure |
 | Target journals or model papers | Journal positioning, article pattern analysis, and fit assessment |
 | Reviewer or editor comments | Revision strategy, point-by-point responses, and required materials |
@@ -41,6 +41,7 @@ This skill pack is designed for researchers who already have research materials 
 - Separate what the results can support from what they cannot yet support.
 - Connect raw data, statistical analysis, figure source data, and code/data availability to the manuscript evidence chain.
 - Build background, scientific questions, research gaps, and discussion boundaries from the literature.
+- Integrate public datasets, repository accessions, benchmark resources, source data, software/model releases, and related papers into claim, figure, citation, and data-availability decisions.
 - Arrange figures and storyline so the Results section becomes an evidence chain instead of a data list.
 - Plan natural paragraph counts from target-journal/model-paper patterns, with ordinary Results subsections defaulting to 2-3 paragraphs.
 - Check figures, tables, supplementary materials, legends, titles, and references against target-journal expectations.

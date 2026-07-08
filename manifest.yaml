@@ -1,11 +1,12 @@
 name: SCI-paper-skills
 version: 0.6.12
 license: MIT
-description: Target-journal-adaptive Codex skills for SCI/SCIE manuscript planning, data/analysis evidence integration, paragraph planning, Word/DOCX formatting, drafting, journal-format control, polishing, citation control, submission, and revision.
+description: Target-journal-adaptive Codex skills for SCI/SCIE manuscript planning, literature and related-paper evidence, dataset/repository integration, data/analysis evidence control, paragraph planning, Word/DOCX formatting, drafting, journal-format control, polishing, citation control, submission, and revision.
 workflow:
   state_schema: skills/sci-paper-skills/references/manuscript-state-schema.md
   handoff_contracts: skills/sci-paper-skills/references/handoff-contracts.md
   analysis_figure_integration: skills/sci-paper-skills/references/analysis-figure-integration.md
+  dataset_related_paper_integration: skills/sci-paper-skills/references/dataset-and-related-paper-integration.md
   word_manuscript_format: skills/sci-paper-skills/references/word-manuscript-format.md
   runbooks: docs/end-to-end-runbooks.md
 install:

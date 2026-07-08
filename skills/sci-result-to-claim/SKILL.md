@@ -18,7 +18,7 @@ Ask for results in the easiest available form:
 - Current conclusions.
 - Raw result bullets.
 - Draft result paragraphs.
-- Raw data files, analysis outputs, notebooks, statistical tables, or existing plots if claim strength depends on analysis.
+- Raw data files, analysis outputs, notebooks, statistical tables, public dataset records, benchmark resources, repository accessions, companion papers, or existing plots if claim strength depends on analysis or external validation.
 
 If the user lacks polished figures, work from rough result descriptions and mark missing evidence.
 If the user has raw data or unclear statistics rather than stable results, route to adjacent exploratory data analysis, statistical analysis, or domain-specific analysis skills before treating the result as claim-ready.
@@ -46,7 +46,7 @@ Accept rough input. Convert any of these into a normalized result table:
 - PDF-derived or screenshot-derived figure descriptions when available.
 - Algorithm, software, workflow, platform, or resource-construction descriptions when the result is a named artifact, module, interface, or inspectable output rather than a conventional measurement.
 
-For each result, recover: condition, comparison, method, observation, quantification/statistics if known, sample size, replicate unit, effect/uncertainty, analysis provenance, named artifact/module/interface when relevant, and what the user thinks it proves.
+For each result, recover: condition, comparison, method, observation, quantification/statistics if known, sample size, replicate unit, effect/uncertainty, analysis provenance, dataset or accession provenance when applicable, companion-paper/source link, named artifact/module/interface when relevant, and what the user thinks it proves.
 
 ## Workflow
 
@@ -54,7 +54,7 @@ For each result, recover: condition, comparison, method, observation, quantifica
 2. Separate direct observation from interpretation.
 3. For algorithm, tool, workflow, platform, or resource-building sections, build a process-to-result map: each invisible action should produce a tangible result object such as a named graph, resolver, scoring layer, refinement module, interface, evidence report, dataset, or quality-control output.
 4. Assign the strongest defensible claim and the claims it does not support.
-5. Build the evidence package for each result: experimental design, controls, quantification, statistics, representative figure, replicate logic, analysis provenance, named artifact/module/interface, and relevant literature context.
+5. Build the evidence package for each result: experimental design, controls, quantification, statistics, representative figure, replicate logic, analysis provenance, dataset suitability and companion-paper link when applicable, named artifact/module/interface, and relevant literature context.
 6. Classify the result as confirmatory, exploratory, descriptive, methodological, resource-building, or not yet interpretable.
 7. For non-ideal, mixed, or locally weaker results, define the boundary before drafting: affected count or subgroup, rank/margin/dispersion, likely data or design condition, whether it is comparator-specific, and why it does not overturn the main claim.
 8. Identify the smallest missing control, analysis, diagnostic, effect-size report, artifact description, module definition, boundary explanation, or citation that would unlock a stronger claim.
@@ -105,6 +105,7 @@ Return:
 - `Evidence package table`.
 - `Analysis provenance and statistical status`.
 - `Process-to-result map` when method, software, platform, workflow, or resource-building content lacks conventional figure/data support.
+- `Dataset evidence cards` when public datasets, benchmark resources, accessions, or external validation sets affect claim strength.
 - `Result paragraph bridge notes`.
 - `Claim-strength summary`.
 - `Evidence gaps` ranked by importance.

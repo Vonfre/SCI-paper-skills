@@ -1,6 +1,6 @@
 ---
 name: sci-paper-skills
-description: Complete SCI/SCIE manuscript coaching workflow for planning, writing, evaluating, polishing, citing, formatting, Word/DOCX generation, submitting, or revising a scientific paper. Use when a user has a target journal, candidate journal level, research topic, scientific question, results, figures, conclusions, outline, draft, PDFs/model papers, Word manuscript requirements, or reviewer comments and needs step-by-step help turning research into a target-journal-ready manuscript; coordinates journal profiling, comparable-paper analysis, journal-specific figure/table/supplement formatting, Word line-number/style control, paragraph-count planning, literature evidence, result-to-claim mapping, core story selection, figure narrative, storyline planning, reviewer simulation, model-paper drafting, paragraph coaching, language polishing, citation control, and submission/revision.
+description: Complete SCI/SCIE manuscript coaching workflow for planning, writing, evaluating, polishing, citing, formatting, Word/DOCX generation, submitting, or revising a scientific paper. Use when a user has a target journal, candidate journal level, research topic, scientific question, results, figures, conclusions, outline, draft, PDFs/model papers, Word manuscript requirements, reviewer comments, public datasets, repository accessions, source-data needs, benchmark resources, or related-paper questions and needs step-by-step help turning research into a target-journal-ready manuscript; coordinates journal profiling, comparable-paper analysis, related-paper and citation-graph synthesis, dataset/source-data integration, journal-specific figure/table/supplement formatting, Word line-number/style control, paragraph-count planning, literature evidence, result-to-claim mapping, core story selection, figure narrative, storyline planning, reviewer simulation, model-paper drafting, paragraph coaching, language polishing, citation control, and submission/revision.
 ---
 
 # SCI-paper-skills
@@ -9,7 +9,9 @@ description: Complete SCI/SCIE manuscript coaching workflow for planning, writin
 
 Act as a manuscript director for researchers who may have results and conclusions but weak paper-writing experience. Build a publishable argument from target journal, literature context, user evidence, story logic, figures, citations, and journal-specific style and formatting. Do not behave like a generic text generator.
 
-When the project includes raw data, analysis files, statistical tests, computational workflows, plots, or source-data requirements, also act as an evidence-integration director: route data exploration, statistical planning, visualization, or data-availability checks to adjacent specialized skills when available, then bring their outputs back into the manuscript state.
+When the project includes raw data, analysis files, statistical tests, computational workflows, plots, or source-data requirements, also act as an evidence-integration director: route data exploration, statistical planning, visualization, dataset discovery, repository/accession checking, or data-availability checks to adjacent specialized skills or connected data resources when available, then bring their outputs back into the manuscript state.
+
+When the project includes public datasets, benchmark resources, database records, software/model releases, or related-paper questions, also act as a dataset-and-literature integration director: verify identifiers and source roles before using them, connect datasets to companion papers and claim IDs, and keep dataset suitability separate from literature support.
 
 ## First Move
 
@@ -95,6 +97,8 @@ Use these modules in order unless the user explicitly asks for one stage:
 | Has conclusions/questions needing support | `sci-literature-evidence` | Evidence map and gap assessment |
 | Has results/figures but unclear claims | `sci-result-to-claim` | Result-to-claim matrix |
 | Has raw data, analysis outputs, unclear statistics, or plot files | adjacent analysis/visualization skill, then `sci-result-to-claim` | Analysis provenance and claim-ready evidence |
+| Needs public datasets, repository accessions, benchmark resources, or source-data reuse | dataset/domain repository connector or adjacent data skill, then `sci-result-to-claim` and `sci-citation-control` | Dataset evidence cards and data-availability actions |
+| Needs related papers, seminal papers, citation-graph context, or dataset companion papers | `sci-literature-evidence` or `sci-journal-landscape` depending on goal | Related-paper map and source ledger |
 | Has several possible conclusions but no center | `sci-core-story-finder` | Story decision memo |
 | Has figures/cases but unclear order | `sci-figure-story-builder` | Figure story map |
 | Needs manuscript logic or alternative plans | `sci-storyline-planner` | Storyline and paragraph plan |
@@ -111,6 +115,9 @@ Use these modules in order unless the user explicitly asks for one stage:
 
 - If the target journal is known, use current web research for journal identity, scope, author guidelines, article format rules, figure/table/supplement callout style, OA/APC, article types, metrics, and recent articles.
 - If same-journal similar papers are absent, search peer journals at similar level/scope and explain the fallback logic.
+- If the user asks for related papers, do not answer from memory alone. Use a layered retrieval pass: keyword search, dataset/method/organism variants, same-journal or peer-journal scan when relevant, and backward/forward citation context for the top papers when available.
+- If the user asks for datasets or repository records, resolve stable identifiers and metadata before using them in claims: accession/DOI/URL, version or release date, sample unit, organism/system, platform, access restrictions, companion paper, and citation requirement.
+- If a dataset is proposed for validation or benchmarking, judge suitability before writing: independence from the training/discovery data, matching endpoint or assay, sample size and replicate unit, preprocessing state, quality risks, and whether raw/processed data are accessible.
 - If conclusions exist, find supporting, conflicting, and boundary-setting literature; then recommend safe claim wording.
 - If conclusions do not exist, use recent literature to propose possible research directions and the evidence each direction would require.
 - If the user has a writing logic, critique and improve it.
@@ -167,5 +174,6 @@ Use these modules in order unless the user explicitly asks for one stage:
 - Read `references/workflow-architecture.md` when coordinating more than one stage.
 - Read `references/journal-intelligence.md` when a target journal or comparable-paper search is involved.
 - Read `references/analysis-figure-integration.md` when raw data, analysis outputs, statistics, figures, source data, code, or data availability affect the manuscript.
+- Read `references/dataset-and-related-paper-integration.md` when public datasets, benchmark resources, repository accessions, related-paper discovery, dataset companion papers, citation-graph context, or data/software citation decisions affect the manuscript.
 - Read `references/manuscript-outputs.md` when drafting, polishing, submission, or revision outputs are needed.
 - Read `references/word-manuscript-format.md` when Word/DOCX output, line numbers, font/alignment/spacing requirements, paragraph counts, Results paragraph planning, full-manuscript drafting, or model-paper section rhythm are involved.

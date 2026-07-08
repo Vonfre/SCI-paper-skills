@@ -29,7 +29,7 @@ Use layered searches rather than one broad query:
 1. Exact journal identity and author rules from official sources.
 2. Same journal plus topic keywords.
 3. Same journal plus organism, material, or system.
-4. Same journal plus method or claim type.
+4. Same journal plus method, dataset, accession, benchmark resource, or claim type.
 5. Same publisher/society family or same-level journals when same-journal matches are weak.
 
 Do not say "no similar papers" until several query variants have been tried. If only peer-journal papers are found, label them as fallback evidence and explain why they are comparable.

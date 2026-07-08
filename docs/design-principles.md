@@ -5,7 +5,7 @@ This repository treats manuscript writing as a staged evidence-control workflow,
 ## Shared Standards
 
 1. Diagnose before drafting.
-2. Keep journal fit, journal-specific formatting, literature support, analysis provenance, statistical credibility, claim strength, figure logic, paragraph planning, Word/DOCX formatting, citation control, data/code availability, and submission compliance as separate checks.
+2. Keep journal fit, journal-specific formatting, literature support, related-paper context, dataset/repository provenance, analysis provenance, statistical credibility, claim strength, figure logic, paragraph planning, Word/DOCX formatting, citation control, data/code availability, and submission compliance as separate checks.
 3. Ask only the next useful questions. Prefer three or fewer questions when context is missing.
 4. Produce a named handoff artifact at every stage.
 5. Read and update `manuscript_state` for every multi-stage workflow.
@@ -25,6 +25,7 @@ Full drafting should not begin until these gates are at least provisionally hand
 - Comparable-paper pattern is known or explicitly unavailable.
 - Target-journal format profile is known or explicitly provisional.
 - Literature support, conflict, and novelty boundaries are mapped.
+- Public datasets, benchmark resources, repository accessions, companion papers, and dataset/software citation needs are resolved or marked as `[NEED: ...]` when they affect claims or submission.
 - Data provenance, preprocessing, statistical tests/models, assumptions, effect sizes, uncertainty, and replicate units are recorded when results depend on analysis.
 - Results are converted into defensible claims.
 - One central scientific story is selected.

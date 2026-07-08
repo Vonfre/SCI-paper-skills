@@ -26,6 +26,8 @@ Use `sci-paper-skills` as the orchestrator unless the user explicitly requests a
 - "Should I write Fig. 1, Figure 1, or Fig1?" -> `sci-journal-landscape`.
 - "Do these conclusions have literature support?" -> `sci-literature-evidence`.
 - "I have raw data or statistical outputs but do not know whether the result is reliable" -> adjacent analysis/statistics skill, then `sci-result-to-claim`.
+- "Find reusable public datasets, benchmark cohorts, source data, or accession records for this manuscript" -> dataset/domain repository connector, then `sci-result-to-claim` and `sci-citation-control`.
+- "Find related papers or the companion paper for this dataset" -> `sci-literature-evidence` or `sci-journal-landscape` depending on whether the goal is evidence support or journal fit.
 - "What can Figure 2 prove?" -> `sci-result-to-claim`.
 - "Which story should this paper tell?" -> `sci-core-story-finder`.
 - "How should I arrange these figures?" -> `sci-figure-story-builder`.
@@ -47,8 +49,8 @@ When two modules are plausible, route to the earliest unresolved gate:
 1. Intake and journal target.
 2. Journal landscape.
 3. Journal-specific format profile.
-4. Literature evidence.
-5. Analysis/statistical provenance when raw data or computational outputs drive claims.
+4. Literature evidence, related-paper context, and dataset companion-paper links.
+5. Analysis/statistical provenance when raw data, public datasets, repository records, or computational outputs drive claims.
 6. Claim control.
 7. Story selection.
 8. Figure narrative and source-data readiness.
